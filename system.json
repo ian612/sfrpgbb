@@ -65,11 +65,11 @@
 			"entity": "Item"
 		},
 		{
-			"label": "Classes",
-			"entity": "Item",
 			"name": "classes",
+			"label": "Classes",
+			"system": "sfrpg",
 			"path": "./packs/classes.db",
-			"system": "sfrpg"
+			"entity": "Item"
 		},
 		{
 			"label": "Themes",
