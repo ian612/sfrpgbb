@@ -4,10 +4,15 @@ export default class sfrpgbbItemSheet extends ItemSheet {
     }
 
     getData() {
-        const data = super.getData();
+        let baseData = super.getData();
+        let sheetData = {
+            owner: this.item.isOwner,
+            editable: this.item.isEditable,
+            item: baseData.item,
+            data: baseData.item.data.data,
+            config: CONFIG.sfrpgbb
+        };
 
-        data.config = CONFIG.sfrpgbb;
-
-        return data;
+        return sheetData;
     }
 }

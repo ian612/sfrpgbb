@@ -17,7 +17,7 @@
                     <select name="data.type">
                         {{#select data.type}}
                         {{#each config.attackTypes as |name type|}}
-                        <option value="{{type}}">{{name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -32,7 +32,7 @@
                     <select name="data.specialProperty">
                         {{#select data.specialProperty}}
                         {{#each config.weaponSpecials as |name type|}}
-                        <option value="{{type}}">{{name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -41,7 +41,7 @@
                     <select name="data.critical">
                         {{#select data.critical}}
                         {{#each config.weaponCriticals as |name type|}}
-                        <option value="{{type}}">{{name}}</option>
+                        <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
