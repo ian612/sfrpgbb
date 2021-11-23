@@ -1,135 +1,113 @@
 {
-	"name": "sfrpgbb",
+	"name":"sfrpgbb",
 	"title": "Starfinder Beginner Box",
 	"description": "An implementation of the Starfinder Beginner Box ruleset for Foundy VTT.",
-	"version": "0.0.1",
-	"templateVersion": 2,
 	"author": "ian612",
-	"flags": {
-		"sfrpgbb": {
-			"schema": 0.005
-		}
-	},
-	"scripts": [
-		"lib/popperjs/core/popper.min.js",
-		"lib/tippy/tippy.min.js"
-	],
+	"version": "0.0.1",
+	"minimumCoreVersion": "0.8.9",
+	"compatibleCoreVersion": "0.8.9",
 	"esmodules": [
-		"sfrpg.js"
+		"sfrpgbb.js"
 	],
-	"styles": [
-		"styles/tippy.css",
-		"sfrpg.css"
+	"styles":[
+		"sfrpgbb.css"
 	],
-	"packs": [
-		{	
-			"name": "archetypes",
-			"label": "Archetypes",
-			"system": "sfrpg",
-			"path": "./packs/archetypes.db",
-			"entity": "Item"
-		},
-		{
-			"name": "characters",
-			"label": "Characters",
-			"system": "sfrpg",
-			"path": "./packs/characters.db",
-			"entity": "Actor"
-		},
-		{
-			"name": "equipment",
-			"label": "Equipment",
-			"system": "sfrpg",
-			"path": "./packs/equipment.db",
-			"entity": "Item"
-		},
-		{
-			"name": "feats",
-			"label": "Feats",
-			"system": "sfrpg",
-			"path": "./packs/feats.db",
-			"entity": "Item"
-		},
-		{
-			"name": "spells",
-			"label": "Spells",
-			"system": "sfrpg",
-			"path": "./packs/spells.db",
-			"entity": "Item"
-		},
-		{
-			"name": "races",
-			"label": "Races",
-			"system": "sfrpg",
-			"path": "./packs/races.db",
-			"entity": "Item"
-		},
-		{
-			"name": "classes",
-			"label": "Classes",
-			"system": "sfrpg",
-			"path": "./packs/classes.db",
-			"entity": "Item"
-		},
-		{
-			"label": "Themes",
-			"entity": "Item",
-			"name": "themes",
-			"path": "./packs/themes.db",
-			"system": "sfrpg"
-		},
-		{
-			"label": "Setting",
-			"entity": "JournalEntry",
-			"name": "setting",
-			"path": "./packs/setting.db",
-			"system": "sfrpg"
-		},
-		{
-			"label": "SFRPGBB Rules",
-			"entity": "JournalEntry",
-			"name": "rules",
-			"path": "./packs/rules.db",
-			"system": "sfrpg"
-		},
-		{
-			"label": "Tables",
-			"entity": "RollTable",
-			"name": "tables",
-			"path": "./packs/tables.db",
-			"system": "sfrpg"
-		},
-		{
-			"label": "Conditions",
-			"entity": "Item",
-			"name": "conditions",
-			"path": "./packs/conditions.db",
-			"system": "sfrpg"
-		},
-		{
-			"label": "Class Features",
-			"entity": "Item",
-			"name": "class-features",
-			"path": "./packs/class-features.db",
-			"system": "sfrpg"
-		}
-	],
-	"languages": [
+	"languages":[
 		{
 			"lang": "en",
 			"name": "English",
 			"path": "lang/en.json"
 		}
 	],
-	"socket": false,
 	"initiative": "1d20 + @abilities.dex.mod + @attributes.init.value",
 	"gridDistance": 5,
 	"gridUnits": "ft",
 	"primaryTokenAttribute": "attributes.hp",
 	"secondaryTokenAttribute": "attributes.rp",
-	"minimumCoreVersion": "0.8.9",
-    "compatibleCoreVersion": "0.8.9",
-	"url": "",
-	"manifest": "",
-	"download": ""
+	"packs": [
+		{	
+			"name": "archetypes",
+			"label": "Archetypes",
+			"system": "sfrpgbb",
+			"path": "./packs/archetypes.db",
+			"entity": "Item"
+		},
+		{
+			"name": "characters",
+			"label": "Characters",
+			"system": "sfrpgbb",
+			"path": "./packs/characters.db",
+			"entity": "Actor"
+		},
+		{
+			"name": "equipment",
+			"label": "Equipment",
+			"system": "sfrpgbb",
+			"path": "./packs/equipment.db",
+			"entity": "Item"
+		},
+		{
+			"name": "feats",
+			"label": "Feats",
+			"system": "sfrpgbb",
+			"path": "./packs/feats.db",
+			"entity": "Item"
+		},
+		{
+			"name": "spells",
+			"label": "Spells",
+			"system": "sfrpgbb",
+			"path": "./packs/spells.db",
+			"entity": "Item"
+		},
+		{
+			"name": "races",
+			"label": "Races",
+			"system": "sfrpgbb",
+			"path": "./packs/races.db",
+			"entity": "Item"
+		},
+		{
+			"name": "classes",
+			"label": "Classes",
+			"system": "sfrpgbb",
+			"path": "./packs/classes.db",
+			"entity": "Item"
+		},
+		{
+			"name": "themes",
+			"label": "Themes",
+			"system": "sfrpgbb",
+			"path": "./packs/themes.db",
+			"entity": "Item"
+		},
+		{
+			"name": "setting",
+			"label": "Setting",
+			"system": "sfrpg",
+			"path": "./packs/setting.db",
+			"entity": "JournalEntry"
+		},
+		{
+			"name": "rules",
+			"label": "SFRPGBB Rules",
+			"system": "sfrpg",
+			"path": "./packs/rules.db",
+			"entity": "JournalEntry"
+		},
+		{
+			"name": "conditions",
+			"label": "Conditions",
+			"system": "sfrpg",
+			"path": "./packs/conditions.db",
+			"entity": "Item"
+		},
+		{
+			"name": "class-features",
+			"label": "Class Features",
+			"system": "sfrpg",
+			"path": "./packs/class-features.db",
+			"entity": "Item"
+		}
+	]
 }

@@ -1,0 +1,29 @@
+{
+    "sfrpgbb": {
+        "attack": {
+            "none": "",
+            "meleeBasic": "Basic Melee",
+            "meleeAdvanced": "Advanced Melee",
+            "smallArms": "Small Arms",
+            "longArms": "Long Arms",
+            "grenades": "Grenades"
+        },
+        "equipment": {
+            "price": "Price",
+            "description": "Description"
+        },
+        "weapon": {
+            "type": "Type",
+            "damage": "Damage",
+            "range": "Range",
+            "specialProperty": "Special Property",
+            "specialEffect": "Special Effect",
+            "critical": "Critical Hit Effect",
+            "savingThrow": "Saving Throw",
+            "blast": "Blast",
+            "boost": "Boost",
+            "knockdown": "Knockdown",
+            "stagger": "Stagger"
+        }
+    }
+}
