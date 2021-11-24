@@ -8,11 +8,9 @@
             <tr>
                 <th>{{localize "sfrpgbb.equipment.price"}}</th>
                 <th>{{localize "sfrpgbb.weapon.weaponType"}}</th>
-                <th>{{localize "sfrpgbb.weapon.damage"}}</th>
-                <th>{{localize "sfrpgbb.weapon.damageType"}}</th>
-                <th>{{localize "sfrpgbb.weapon.range"}}</th>
-                <th>{{localize "sfrpgbb.weapon.specialProperty"}}</th>
-                <th>{{localize "sfrpgbb.weapon.critical"}}</th>
+                <th>{{localize "sfrpgbb.equipment.isTech"}}</th>
+                <th>{{localize "sfrpgbb.equipment.isMagic"}}</th>
+                <th></th>
             </tr>
             <tr>
                 <td>
@@ -27,6 +25,21 @@
                         {{/select}}
                     </select>
                 </td>
+                <td>
+                    <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
+                </td>
+                <td>
+                    <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
+                </td>
+            </tr>
+            <tr>
+                <th>{{localize "sfrpgbb.weapon.damage"}}</th>
+                <th>{{localize "sfrpgbb.weapon.damageType"}}</th>
+                <th>{{localize "sfrpgbb.weapon.range"}}</th>
+                <th>{{localize "sfrpgbb.weapon.specialProperty"}}</th>
+                <th>{{localize "sfrpgbb.weapon.critical"}}</th>
+            </tr>
+            <tr>
                 <td>
                     <input name="data.damage" type="text" value="{{data.damage}}" />
                 </td>
@@ -65,5 +78,4 @@
         {{localize "sfrpgbb.equipment.description"}}
         <textarea name="data.description">{{data.description}}</textarea>
     </div>
-    <p>Yo what up homie?</p>
 </form>

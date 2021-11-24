@@ -10,7 +10,7 @@ sfrpgbb.attackTypes = {
 }
 
 sfrpgbb.damageTypes = {
-    none: "",
+    none: "None",
     kinetic: "sfrpgbb.damage.kinetic",
     acid: "sfrpgbb.damage.acid",
     cold: "sfrpgbb.damage.cold",
@@ -20,13 +20,14 @@ sfrpgbb.damageTypes = {
 }
 
 sfrpgbb.weaponSpecials = {
-    none: "",
+    none: "None",
     blast: "sfrpgbb.weapon.blast",
-    boost: "sfrpgbb.weapon.boost"
+    boost: "sfrpgbb.weapon.boost",
+    blastBoost: "sfrpgbb.weapon.blastBoost"
 }
 
 sfrpgbb.weaponCriticals = {
-    none: "",
+    none: "None",
     knockdown: "sfrpgbb.weapon.knockdown",
     stagger: "sfrpgbb.weapon.stagger"
 }

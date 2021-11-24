@@ -18,7 +18,9 @@
         },
         "equipment": {
             "price": "Price (CR)",
-            "description": "Description"
+            "description": "Description",
+            "isMagic": "Magical",
+            "isTech": "Technological"
         },
         "weapon": {
             "weaponType": "Weapon Type",
@@ -31,10 +33,9 @@
             "savingThrow": "Saving Throw",
             "blast": "Blast",
             "boost": "Boost",
+            "blastBoost": "Blast, Boost",
             "knockdown": "Knockdown",
-            "stagger": "Stagger",
-            "isMagic": "Magical",
-            "isTech": "Technological"
+            "stagger": "Stagger"
         }
     }
 }
