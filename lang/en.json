@@ -8,14 +8,23 @@
             "longArms": "Long Arms",
             "grenades": "Grenades"
         },
+        "damage": {
+            "kinetic": "Kinetic",
+            "acid": "Acid",
+            "cold": "Cold",
+            "electricity": "Electricity",
+            "fire": "Fire",
+            "sonic": "Sonic"
+        },
         "equipment": {
-            "price": "Price",
+            "price": "Price (CR)",
             "description": "Description"
         },
         "weapon": {
-            "type": "Type",
+            "weaponType": "Weapon Type",
             "damage": "Damage",
-            "range": "Range",
+            "damageType": "Damage Type",
+            "range": "Range (ft)",
             "specialProperty": "Special Property",
             "specialEffect": "Special Effect",
             "critical": "Critical Hit Effect",
@@ -23,7 +32,9 @@
             "blast": "Blast",
             "boost": "Boost",
             "knockdown": "Knockdown",
-            "stagger": "Stagger"
+            "stagger": "Stagger",
+            "isMagic": "Magical",
+            "isTech": "Technological"
         }
     }
 }

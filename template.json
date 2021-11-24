@@ -28,9 +28,9 @@
         },
         "weapon": {
             "templates": ["equipment"],
-            "type": "meleeBasic",
+            "weaponType": "meleeBasic",
             "damage": null,
-            "damagetype": "kinetic",
+            "damageType": "kinetic",
             "range": "melee",
             "special": null,
             "critical": null

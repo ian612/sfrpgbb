@@ -9,6 +9,16 @@ sfrpgbb.attackTypes = {
     grenades: "sfrpgbb.attack.grenades"
 }
 
+sfrpgbb.damageTypes = {
+    none: "",
+    kinetic: "sfrpgbb.damage.kinetic",
+    acid: "sfrpgbb.damage.acid",
+    cold: "sfrpgbb.damage.cold",
+    electricity: "sfrpgbb.damage.electricity",
+    fire: "sfrpgbb.damage.fire",
+    sonic: "sfrpgbb.damage.sonic"
+}
+
 sfrpgbb.weaponSpecials = {
     none: "",
     blast: "sfrpgbb.weapon.blast",

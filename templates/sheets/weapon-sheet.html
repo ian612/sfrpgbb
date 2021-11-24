@@ -6,15 +6,20 @@
     <div>
         <table>
             <tr>
-                <th>{{localize "sfrpgbb.weapon.type"}}</th>
+                <th>{{localize "sfrpgbb.equipment.price"}}</th>
+                <th>{{localize "sfrpgbb.weapon.weaponType"}}</th>
                 <th>{{localize "sfrpgbb.weapon.damage"}}</th>
+                <th>{{localize "sfrpgbb.weapon.damageType"}}</th>
                 <th>{{localize "sfrpgbb.weapon.range"}}</th>
                 <th>{{localize "sfrpgbb.weapon.specialProperty"}}</th>
                 <th>{{localize "sfrpgbb.weapon.critical"}}</th>
             </tr>
             <tr>
                 <td>
-                    <select name="data.type">
+                    <input name="data.price" type="text" value="{{data.price}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <select name="data.weaponType">
                         {{#select data.type}}
                         {{#each config.attackTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
@@ -26,11 +31,20 @@
                     <input name="data.damage" type="text" value="{{data.damage}}" />
                 </td>
                 <td>
+                    <select name="data.damageType">
+                        {{#select data.damageType}}
+                        {{#each config.damageTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
                     <input name="data.range" type="text" value="{{data.range}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <select name="data.specialProperty">
-                        {{#select data.specialProperty}}
+                    <select name="data.special">
+                        {{#select data.special}}
                         {{#each config.weaponSpecials as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -48,6 +62,7 @@
                 </td>
             </tr>
         </table>
+        {{localize "sfrpgbb.equipment.description"}}
         <textarea name="data.description">{{data.description}}</textarea>
     </div>
     <p>Yo what up homie?</p>
