@@ -3,7 +3,7 @@
         <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
     </header>
-    <div>
+    <div class="sheet-content">
         <table>
             <tr>
                 <th>{{localize "sfrpgbb.equipment.price"}}</th>
@@ -76,6 +76,6 @@
             </tr>
         </table>
         {{localize "sfrpgbb.equipment.description"}}
-        {<textarea name="data.description">{{data.description}}</textarea>}
+        {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
     </div>
 </form>
