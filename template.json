@@ -1,5 +1,98 @@
 {
-    "Actor":{},
+    "Actor":{
+        "types":[
+            "character",
+            "npc",
+            "trap"
+        ],
+        "templates": {
+            "skills": {
+                "athletics": 0,
+                "culture": 0,
+                "interaction": 0,
+                "medicine": 0,
+                "mysticism": 0,
+                "perception": 0,
+                "science": 0,
+                "stealth": 0,
+                "survival": 0,
+                "technology": 0
+            },
+            "spells": {
+                "hasSpells": false,
+                "slots": {
+                    "lvl1": 0,
+                    "lvl2": 0
+                }
+            }
+        },
+        "character": {
+            "templates": ["skills", "spells"],
+            "info": {
+                "description": "",
+                "pronouns": "",
+                "race": "",
+                "theme": "",
+                "class": "",
+                "xp": 0,
+                "alignment": ""
+            },
+            "abilities": {
+                "strength": 10,
+                "dexterity": 10,
+                "constitution": 10,
+                "intelligence": 10,
+                "wisdom": 10,
+                "charisma": 10
+            },
+            "movement": {
+                "speed": 30,
+                "initiative": 0
+            },
+            "defense": {
+                "hp": {
+                    "value": 0,
+                    "max": 0
+                },
+                "rp": {
+                    "value": 0,
+                    "max": 0
+                },
+                "armor": {
+                    "ac": 10,
+                    "proficiency": {
+                        "light": true,
+                        "heavy": false
+                    }
+                }
+            },
+            "attack": {
+                "bonus": {
+                    "melee": 0,
+                    "ranged": 0
+                },
+                "proficiency": {
+                    "meleeBasic": true,
+                    "meleeAdvanced": false,
+                    "smallArms": true,
+                    "longArms": false,
+                    "grenades": false
+                }
+            }
+        },
+        "npc": {
+
+        },
+        "trap": {
+            "cr": 0,
+            "disableskill": "",
+            "trigger": "",
+            "reset": "",
+            "effect": "",
+            "commonUses": ""
+        }
+
+    },
     "Item":{
         "types":[
             "armor",
