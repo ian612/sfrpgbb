@@ -11,5 +11,5 @@ Hooks.once("init", function() {
     Items.registerSheet("sfrpgbb", sfrpgbbItemSheet, {makeDefault: true});
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("sfrpgbb", sfrpgbbItemSheet, {makeDefault: true});
+    Actors.registerSheet("sfrpgbb", sfrpgbbCharacterSheet, {makeDefault: true});
 });

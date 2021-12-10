@@ -12,12 +12,11 @@
 }
 .sfrpgbb.sheet.character form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
-.sfrpgbb.sheet.character .leftcolumn {
+.sfrpgbb.sheet.character .leftColumn {
   flex: 50%;
-  font-family: "verdana";
 }
-.sfrpgbb.sheet.character .rightcolumn {
+.sfrpgbb.sheet.character .rightColumn {
   flex: 50%;
 }
