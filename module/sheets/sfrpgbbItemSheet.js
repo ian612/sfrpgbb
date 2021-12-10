@@ -1,6 +1,6 @@
 export default class sfrpgbbItemSheet extends ItemSheet {
     get template() {
-        return `systems/sfrpgbb/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/sfrpgbb/templates/sheets/${this.item.data.type}-sheet.hbs`;
     }
 
     static get defaultOptions() {
