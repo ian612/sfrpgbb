@@ -10,3 +10,14 @@
 .sfrpgbb.sheet.item .sheet-content .editor {
   height: 100%;
 }
+.sfrpgbb.sheet.character form {
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.character .leftcolumn {
+  flex: 50%;
+  font-family: "verdana";
+}
+.sfrpgbb.sheet.character .rightcolumn {
+  flex: 50%;
+}
