@@ -6,6 +6,30 @@
             "trap"
         ],
         "templates": {
+            "senses":{
+                "darkvision": {
+                    "hasDarkvision": true,
+                    "range": 60
+                },
+                "seeInvisible": false
+            },
+            "abilities": {
+                "strength": 10,
+                "dexterity": 10,
+                "constitution": 10,
+                "intelligence": 10,
+                "wisdom": 10,
+                "charisma": 10
+            },
+            "movement": {
+                "initiative": 0,
+                "speed": 30,
+                "flight": {
+                    "hasFlight": false,
+                    "limited": false,
+                    "flySpeed": 30
+                }
+            },
             "skills": {
                 "athletics": 0,
                 "culture": 0,
@@ -21,40 +45,18 @@
             "spells": {
                 "hasSpells": false,
                 "slots": {
-                    "lvl1": 0,
-                    "lvl2": 0
+                    "lvl1": {
+                        "value": 0,
+                        "max": 0
+                    },
+                    "lvl2": {
+                        "value": 0,
+                        "max": 0
+                    }
                 }
-            }
-        },
-        "character": {
-            "templates": ["skills", "spells"],
-            "info": {
-                "description": "",
-                "pronouns": "",
-                "race": "",
-                "theme": "",
-                "class": "",
-                "xp": 0,
-                "alignment": ""
-            },
-            "abilities": {
-                "strength": 10,
-                "dexterity": 10,
-                "constitution": 10,
-                "intelligence": 10,
-                "wisdom": 10,
-                "charisma": 10
-            },
-            "movement": {
-                "speed": 30,
-                "initiative": 0
             },
             "defense": {
                 "hp": {
-                    "value": 0,
-                    "max": 0
-                },
-                "rp": {
                     "value": 0,
                     "max": 0
                 },
@@ -64,6 +66,27 @@
                         "light": true,
                         "heavy": false
                     }
+                },
+                "save": {
+                    "fortitude": 0,
+                    "reflex": 0,
+                    "will": 0
+                }
+            }
+        },
+        "character": {
+            "templates": ["senses", "abilities", "movement", "skills", "spells", "defense"],
+            "info": {
+                "description": "",
+                "pronouns": "",
+                "race": "",
+                "theme": "",
+                "class": "",
+                "xp": 0,
+                "alignment": "",
+                "rp": {
+                    "value": 0,
+                    "max": 0
                 }
             },
             "attack": {
@@ -81,7 +104,31 @@
             }
         },
         "npc": {
-
+            "templates": ["senses", "abilities", "movement", "skills", "spells", "defense"],
+            "info": {
+                "description": null,
+                "cr": 0
+            },
+            "attack": {
+                "melee": {
+                    "name": "",
+                    "damage": null,
+                    "damageType": "kinetic",
+                    "special": null,
+                    "critical": null
+                },
+                "ranged": {
+                    "name": "",
+                    "damage": null,
+                    "damageType": "kinetic",
+                    "range": 30,
+                    "special": null,
+                    "critical": null
+                }
+            },
+            "specialAbilities": {
+                "description": ""
+            }
         },
         "trap": {
             "cr": 0,
