@@ -23,7 +23,7 @@ Hooks.once("init", function() {
 
     preloadHandlebarsTemplates();
 
-    preloadHandlebarsTemplates.registerHelper("times", function (n, content){
+    Handlebars.registerHelper("times", function (n, content){
         let result = "";
         for (let i = 0; i < n; ++i) {
             result += content.fn(i);
