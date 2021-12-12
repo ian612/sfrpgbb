@@ -1,6 +1,6 @@
 import {sfrpgbb} from "./module/config.js";
 import sfrpgbbItemSheet from "./module/sheets/sfrpgbbItemSheet.js";
-import sfrpgbbCharacterSheet from "./module/sheets/sfrpgbbCharacterSheet.js";
+import sfrpgbbActorSheet from "./module/sheets/sfrpgbbActorSheet.js";
 
 Hooks.once("init", function() {
     console.log("sfrpgbb | Initializing Starfinder Beginner Box System");
@@ -11,5 +11,5 @@ Hooks.once("init", function() {
     Items.registerSheet("sfrpgbb", sfrpgbbItemSheet, {makeDefault: true});
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("sfrpgbb", sfrpgbbCharacterSheet, {makeDefault: true});
+    Actors.registerSheet("sfrpgbb", sfrpgbbActorSheet, {makeDefault: true});
 });

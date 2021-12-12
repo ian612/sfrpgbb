@@ -1,7 +1,12 @@
-export default class sfrpgbbCharacterSheet extends ActorSheet {
+export default class sfrpgbbActorSheet extends ActorSheet {
+    get template() {
+        console.log(`Opening ${this.actor.data.type} sheet...`)
+        return `systems/sfrpgbb/templates/sheets/${this.actor.data.type}-sheet.hbs`;
+    }
+
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            template: "systems/sfrpgbb/templates/sheets/character-sheet.hbs",
+            //template: "systems/sfrpgbb/templates/sheets/character-sheet.hbs",
             classes: ["sfrpgbb", "sheet", "character"]
         });
     }
