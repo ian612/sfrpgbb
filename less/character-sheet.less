@@ -3,10 +3,46 @@
         display: flex;
         flex-direction: row;
     }
+    th {
+        background-color: black;
+        color: white;
+    }
+    th, td {
+        padding: 5px;
+        text-align: center
+    }
     .leftColumn {
         flex: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
     }
     .rightColumn {
         flex: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+    }
+    .abilities {
+        table, td {
+            border: 2px solid blue;
+        }
+        td:nth-child(even){
+            background-color: #c7eafb;
+        }
+        td:nth-child(odd){
+            background-color: #ffffff;
+        }
+    }
+    .information {
+        table, td {
+            border: 1px solid blue;
+        }
+        tr:nth-child(odd){
+            background-color: #ffffff;
+        }
+        tr:nth-child(even){
+            background-color: #c7eafb;
+        }
     }
 }

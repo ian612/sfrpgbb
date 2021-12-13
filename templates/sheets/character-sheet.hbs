@@ -1,12 +1,12 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="leftColumn">
         <div class="abilities">
-            <p> Hello World!</p>
+            {{> "systems/sfrpgbb/templates/partials/character-abilities.hbs"}}
         </div>
     </div>
     <div class="rightColumn">
-        <div class="abilities">
-            <p> Hello Again!</p>
+        <div class="information">
+            {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
         </div>
     </div>
 </form>
