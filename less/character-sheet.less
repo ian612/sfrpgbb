@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Nodesto";
+    src: url('fonts/NodestoCapsCondensed.otf');
+}
+@font-face {
+    font-family: "Orbitron";
+    src: url('fonts/Orbitron-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: "Exo 2";
+    src: url('fonts/Exo2-VariableFont_wght.ttf');
+}
+
 .sfrpgbb.sheet.character {
     form {
         display: flex;
@@ -6,10 +19,19 @@
     th {
         background-color: black;
         color: white;
-    }
-    th, td {
+        font-family: "Orbitron";
+        font-size: 12pt;
         padding: 5px;
-        text-align: center
+        text-align: center;
+        text-transform: uppercase;
+    }
+    td {
+        font-weight: bold;
+        font-family: "Exo 2";
+        font-size: 10pt;
+        padding: 5px;
+        text-align: center;
+        text-transform: uppercase;
     }
     .leftColumn {
         flex: 50%;
@@ -37,12 +59,25 @@
     .information {
         table, td {
             border: 1px solid blue;
+            text-align: left;
         }
         tr:nth-child(odd){
             background-color: #ffffff;
         }
         tr:nth-child(even){
             background-color: #c7eafb;
+        }
+        .superscript {
+            font-family: "Exo 2";
+            font-size: 7pt;
+            color: blue;
+        }
+    }
+    .defence {
+        .superscript {
+            font-family: "Exo 2";
+            font-size: 7pt;
+            color: blue;
         }
     }
 }

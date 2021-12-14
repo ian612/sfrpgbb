@@ -6,7 +6,27 @@
             "meleeAdvanced": "Advanced Melee",
             "smallArms": "Small Arms",
             "longArms": "Long Arms",
-            "grenades": "Grenades"
+            "grenades": "Grenades",
+            "attacks": "Attacks",
+            "meleeAttack": "Melee Attack",
+            "rangedAttack": "Ranged Attack"
+        },
+        "defence": {
+            "ac": "AC",
+            "armor": "Armor",
+            "armorClassAC": "Armor Class (AC)",
+            "armorUpgrades": "Armor Upgrades",
+            "armorProficiencies": "Armor Proficiencies",
+            "light": "Light",
+            "heavy": "Heavy",
+            "savingThrow": "Saving Throw",
+            "savingThrows": "Saving Throws",
+            "fortitude": "Fortitude",
+            "fortitudeSave": "Fortitude Save",
+            "reflex": "Reflex",
+            "reflexSave": "Reflex Save",
+            "will": "Will",
+            "willSave": "Will Save"
         },
         "damage": {
             "kinetic": "Kinetic",
@@ -24,6 +44,8 @@
         },
         "weapon": {
             "weaponType": "Weapon Type",
+            "weaponFusion": "Weapon Fusion",
+            "totalAttack": "Total Attack",
             "damage": "Damage",
             "damageType": "Damage Type",
             "range": "Range (ft)",
@@ -35,7 +57,61 @@
             "boost": "Boost",
             "blastBoost": "Blast, Boost",
             "knockdown": "Knockdown",
-            "stagger": "Stagger"
+            "stagger": "Stagger",
+            "reflexSaveDC": "Reflex Save DC",
+            "vs": "VS",
+            "weaponProficiencies": "Weapon Proficiencies",
+            "notProficientAsterisk": "to attack if not proficient",
+            "strAsterisk": "* Add your STR to melee weapon damage."
+        },
+        "general": {
+            "total": "Total",
+            "level": "Level",
+            "class": "Class",
+            "misc": "Misc",
+            "current": "Current",
+            "page": "Page"
+        },
+        "character": {
+            "name": "Name",
+            "pronouns": "Pronouns",
+            "race": "Race",
+            "theme": "Theme",
+            "alignment": "Alignment",
+            "currentXP": "Current XP",
+            "nextLevelXP": "Next Level XP"
+        },
+        "ability": {
+            "abilityMod": "Ability Mod",
+            "abilityMods": "Ability Mods",
+            "abilityScores": "Ability Scores",
+            "str": "STR",
+            "strength": "Strength",
+            "dex": "DEX",
+            "dexterity": "Dexterity",
+            "con": "CON",
+            "constitution": "constitution",
+            "int": "INT",
+            "intelligence": "intelligence",
+            "wis": "WIS",
+            "wisdom": "Wisdom",
+            "cha": "CHA",
+            "charisma": "Charisma"
+        },
+        "skill": {
+            "skill": "Skill",
+            "skills": "Skills",
+            "athletics": "Athletics",
+            "culture": "Culture",
+            "interaction": "Interaction",
+            "medicine": "Medicine",
+            "mysticism": "Mysticism",
+            "perception": "Perception",
+            "science": "Science",
+            "stealth": "Stealth",
+            "survival": "Survival",
+            "technology": "Technology",
+            "themeKnowledge": "Theme Knowledge"
         }
     }
 }
