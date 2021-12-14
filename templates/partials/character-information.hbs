@@ -3,11 +3,11 @@
         <th colspan="4">Character Information</th>
     </tr>
     <tr>
-        <td colspan="3">{{document.name}}</td>
-        <td>Pronouns</td>
+        <td colspan="3"><input name="actor.name" type="text" value="{{actor.name}}" placeholder="Name"/></td>
+        <td><input name="data.information.pronouns" type="text" value="{{data.information.pronouns}}" placeholder="Pronouns"/></td>
     </tr>
     <tr>
-        <td>Race</td>
+        <td>{{data.senses.darkvision.hasDarkvision}}</td>
         <td>Theme</td>
         <td>Class</td>
         <td>Level</td>
@@ -15,6 +15,6 @@
     <tr>
         <td colspan="2">Alignment</td>
         <td>Current XP</td>
-        <td>Next Level</td>
+        <td>XP for Next Level</td>
     </tr>
 </table>

@@ -40,6 +40,8 @@ export class sfrpgbbActor extends Actor {
 
         const data = actorData.data;
 
+        console.log(data.information.pronouns);
+
         //data.abilities.str = Math.floor((data.abilities.strength - 10) / 2);
         for (let [key, ability] of Object.entries(data.abilities)) {
             // Calculate the modifier using d20 rules.

@@ -16,7 +16,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         let sheetData = {
             owner: this.actor.isOwner,
             editable: this.actor.isEditable,
-            item: baseData.actor,
+            actor: baseData.actor,
             data: baseData.actor.data.data,
             config: CONFIG.sfrpgbb,
             //weapons: data.items.filter(function (item) { return item.type == "weapon"}),

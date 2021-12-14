@@ -76,9 +76,9 @@
         },
         "character": {
             "templates": ["senses", "abilities", "movement", "skills", "spells", "defense"],
-            "info": {
+            "information": {
                 "description": "",
-                "pronouns": "",
+                "pronouns": "derp",
                 "race": "",
                 "theme": "",
                 "class": "",
