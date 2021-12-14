@@ -12,7 +12,7 @@ export default class sfrpgbbItemSheet extends ItemSheet {
     }
 
     getData() {
-        let baseData = super.getData();
+        const baseData = super.getData();
         let sheetData = {
             owner: this.item.isOwner,
             editable: this.item.isEditable,

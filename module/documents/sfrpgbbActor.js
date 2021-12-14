@@ -40,7 +40,8 @@ export class sfrpgbbActor extends Actor {
 
         const data = actorData.data;
 
-        console.log(data.information.pronouns);
+        //print out the data structure in the console if needed
+        //console.log(data);
 
         //data.abilities.str = Math.floor((data.abilities.strength - 10) / 2);
         for (let [key, ability] of Object.entries(data.abilities)) {

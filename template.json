@@ -7,78 +7,102 @@
         ],
         "templates": {
             "senses":{
-                "darkvision": {
-                    "hasDarkvision": true,
-                    "range": 60
-                },
-                "seeInvisible": false
+                "senses":{
+                    "darkvision": {
+                        "hasDarkvision": true,
+                        "range": 60
+                    },
+                    "seeInvisible": false
+                }
             },
             "abilities": {
-                "strength": 10,
-                "dexterity": 10,
-                "constitution": 10,
-                "intelligence": 10,
-                "wisdom": 10,
-                "charisma": 10
+                "abilities": {
+                    "strength": {
+                        "value": 10
+                    },
+                    "dexterity": {
+                        "value": 10
+                    },
+                    "constitution": {
+                        "value": 10
+                    },
+                    "intelligence": {
+                        "value": 10
+                    },
+                    "wisdom": {
+                        "value": 10
+                    },
+                    "charisma": {
+                        "value": 10
+                    }
+                }
             },
             "movement": {
-                "initiative": 0,
-                "speed": 30,
-                "flight": {
-                    "hasFlight": false,
-                    "limited": false,
-                    "flySpeed": 30
+                "movement": {
+                    "initiative": 0,
+                    "speed": 30,
+                    "flight": {
+                        "hasFlight": false,
+                        "limited": false,
+                        "flySpeed": 30
+                    }
                 }
             },
             "skills": {
-                "athletics": 0,
-                "culture": 0,
-                "interaction": 0,
-                "medicine": 0,
-                "mysticism": 0,
-                "perception": 0,
-                "science": 0,
-                "stealth": 0,
-                "survival": 0,
-                "technology": 0
+                "skills": {
+                    "athletics": 0,
+                    "culture": 0,
+                    "interaction": 0,
+                    "medicine": 0,
+                    "mysticism": 0,
+                    "perception": 0,
+                    "science": 0,
+                    "stealth": 0,
+                    "survival": 0,
+                    "technology": 0
+                }
             },
             "spells": {
-                "hasSpells": false,
-                "slots": {
-                    "lvl1": {
-                        "value": 0,
-                        "max": 0
-                    },
-                    "lvl2": {
-                        "value": 0,
-                        "max": 0
+                "spells": {
+                    "hasSpells": false,
+                    "slots": {
+                        "lvl1": {
+                            "value": 0,
+                            "max": 0
+                        },
+                        "lvl2": {
+                            "value": 0,
+                            "max": 0
+                        }
                     }
                 }
             },
-            "defense": {
-                "hp": {
-                    "value": 0,
-                    "max": 0
-                },
-                "armor": {
-                    "ac": 10,
-                    "proficiency": {
-                        "light": true,
-                        "heavy": false
+            "defence": {
+                "defence": {
+                    "hp": {
+                        "value": 0,
+                        "max": 0
+                    },
+                    "armor": {
+                        "ac": 10,
+                        "proficiency": {
+                            "light": true,
+                            "heavy": false
+                        }
+                    },
+                    "save": {
+                        "fortitude": 0,
+                        "reflex": 0,
+                        "will": 0
                     }
-                },
-                "save": {
-                    "fortitude": 0,
-                    "reflex": 0,
-                    "will": 0
                 }
             }
         },
         "character": {
-            "templates": ["senses", "abilities", "movement", "skills", "spells", "defense"],
+            "templates": ["senses", "abilities", "movement", "skills", "spells", "defence"],
             "information": {
                 "description": "",
-                "pronouns": "derp",
+                "pronouns": "",
                 "race": "",
                 "theme": "",
                 "class": "",
@@ -104,8 +128,8 @@
             }
         },
         "npc": {
-            "templates": ["senses", "abilities", "movement", "skills", "spells", "defense"],
-            "info": {
+            "templates": ["senses", "abilities", "movement", "skills", "spells", "defence"],
+            "information": {
                 "description": null,
                 "cr": 0
             },

@@ -1,24 +1,23 @@
 export default class sfrpgbbActorSheet extends ActorSheet {
     get template() {
-        console.log(`Opening ${this.actor.data.type} sheet...`)
         return `systems/sfrpgbb/templates/sheets/${this.actor.data.type}-sheet.hbs`;
     }
 
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            //template: "systems/sfrpgbb/templates/sheets/character-sheet.hbs",
             classes: ["sfrpgbb", "sheet", "character"]
         });
     }
 
     getData() {
-        let baseData = super.getData();
+        const baseData = super.getData();
         let sheetData = {
             owner: this.actor.isOwner,
             editable: this.actor.isEditable,
             actor: baseData.actor,
             data: baseData.actor.data.data,
             config: CONFIG.sfrpgbb,
+
             //weapons: data.items.filter(function (item) { return item.type == "weapon"}),
             //armor: data.items.filter(function (item) { return item.type == "armor"})
         };
