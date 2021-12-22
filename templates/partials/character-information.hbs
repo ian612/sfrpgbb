@@ -7,9 +7,36 @@
         <td><input name="data.information.pronouns" type="text" value="{{data.information.pronouns}}" placeholder={{localize "sfrpgbb.character.pronouns"}} /></td>
     </tr>
     <tr>
-        <td><sup class="superscript">{{localize "sfrpgbb.character.race"}}</sup></td>
-        <td><sup class="superscript">{{localize "sfrpgbb.character.theme"}}</sup></td>
-        <td><sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup></td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.character.race"}}</sup>
+            <select name="data.information.race">
+                {{#select data.information.race}}
+                {{#each config.races as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.character.theme"}}</sup>
+            <select name="data.information.theme">
+                {{#select data.information.theme}}
+                {{#each config.themes as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup>
+            <select name="data.information.class">
+                {{#select data.information.class}}
+                {{#each config.races as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </td>
         <td><sup class="superscript">{{localize "sfrpgbb.general.level"}}</sup></td>
     </tr>
     <tr>

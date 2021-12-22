@@ -76,7 +76,31 @@
             "name": "Name",
             "pronouns": "Pronouns",
             "race": "Race",
+            "races": {
+                "android": "Android",
+                "human": "Human",
+                "lashunta": "Lashunta",
+                "shirren": "Shirren",
+                "vesk": "Vesk",
+                "ysoki": "Ysoki"
+            },
             "theme": "Theme",
+            "themes": {
+                "bountyHunter": "Bounty Hunter",
+                "icon": "Icon",
+                "mercenary": "Mercenary",
+                "outlaw": "Outlaw",
+                "priest": "Priest",
+                "spacefarer": "Spacefarer"
+            },
+            "classes": {
+                "envoy": "Envoy",
+                "mechanic": "Mechanic",
+                "mystic": "Mystic",
+                "operative": "Operative",
+                "soldier": "Soldier",
+                "technomancer": "Technomancer"
+            },
             "alignment": "Alignment",
             "currentXP": "Current XP",
             "nextLevelXP": "Next Level XP"

@@ -60,4 +60,11 @@ export class sfrpgbbActor extends Actor {
         const data = actorData.data;
         //data.xp = (data.cr * data.cr) * 100;
     }
+
+    /**
+     * Calculate character level
+     */
+    calculateLevel(XP) {
+        
+    }
 }
