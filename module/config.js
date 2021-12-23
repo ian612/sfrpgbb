@@ -59,5 +59,18 @@ sfrpgbb.classes = {
     mystic: "sfrpgbb.character.classes.mystic",
     operative: "sfrpgbb.character.classes.operative",
     soldier: "sfrpgbb.character.classes.soldier",
-    technomancer: "sfrpgbb.character.classes.technomanccer"
+    technomancer: "sfrpgbb.character.classes.technomancer"
+}
+
+sfrpgbb.alignments = {
+    none: "",
+    lawfulGood: "sfrpgbb.character.alignments.lawfulGood",
+    neutralGood: "sfrpgbb.character.alignments.neutralGood",
+    chaoticGood: "sfrpgbb.character.alignments.chaoticGood",
+    lawfulNeutral: "sfrpgbb.character.alignments.lawfulNeutral",
+    trueNeutral: "sfrpgbb.character.alignments.trueNeutral",
+    chaoticNeutral: "sfrpgbb.character.alignments.chaoticNeutral",
+    lawfulEvil: "sfrpgbb.character.alignments.lawfulEvil",
+    neutralEvil: "sfrpgbb.character.alignments.neutralEvil",
+    chaoticEvil: "sfrpgbb.character.alignments.chaoticEvil"
 }

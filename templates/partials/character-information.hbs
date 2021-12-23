@@ -8,7 +8,7 @@
     </tr>
     <tr>
         <td>
-            <sup class="superscript">{{localize "sfrpgbb.character.race"}}</sup>
+            <sup class="superscript">{{localize "sfrpgbb.character.race"}}</sup><br>
             <select name="data.information.race">
                 {{#select data.information.race}}
                 {{#each config.races as |name type|}}
@@ -18,7 +18,7 @@
             </select>
         </td>
         <td>
-            <sup class="superscript">{{localize "sfrpgbb.character.theme"}}</sup>
+            <sup class="superscript">{{localize "sfrpgbb.character.theme"}}</sup><br>
             <select name="data.information.theme">
                 {{#select data.information.theme}}
                 {{#each config.themes as |name type|}}
@@ -28,20 +28,38 @@
             </select>
         </td>
         <td>
-            <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup>
+            <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
             <select name="data.information.class">
                 {{#select data.information.class}}
-                {{#each config.races as |name type|}}
+                {{#each config.classes as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
                 {{/select}}
             </select>
         </td>
-        <td><sup class="superscript">{{localize "sfrpgbb.general.level"}}</sup></td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.general.level"}}</sup><br>
+            {{numberFormat data.information.level decimals=0 sign=false}}
+        </td>
     </tr>
     <tr>
-        <td colspan="2"><sup class="superscript">{{localize "sfrpgbb.character.alignment"}}</sup></td>
-        <td><sup class="superscript">{{localize "sfrpgbb.character.currentXP"}}</sup></td>
-        <td><sup class="superscript">{{localize "sfrpgbb.character.nextLevelXP"}}</sup></td>
+        <td colspan="2">
+            <sup class="superscript">{{localize "sfrpgbb.character.alignment"}}</sup><br>
+            <select name="data.information.alignment">
+                {{#select data.information.alignment}}
+                {{#each config.alignments as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.character.currentXP"}}</sup><br>
+            <input name="data.information.xp" type="text" value="{{data.information.xp}}" placeholder="0" />
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.character.nextLevelXP"}}</sup><br>
+            {{numberFormat data.information.nextXP decimals=0 sign=false}}
+        </td>
     </tr>
 </table>

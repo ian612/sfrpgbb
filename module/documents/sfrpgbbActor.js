@@ -48,6 +48,13 @@ export class sfrpgbbActor extends Actor {
             // Calculate the modifier using d20 rules.
             ability.mod = Math.floor((ability.value - 10) / 2);
         }
+
+        // Calculate character level based on XP
+        this._calculateLevel(actorData);
+        // Calculate character initiative
+        this._calculateInitiative(actorData);
+        // Enforce maximum and minimum HP and RP amounts
+        this._enforceMaxPoints(actorData);
     }
 
     /**
@@ -62,9 +69,60 @@ export class sfrpgbbActor extends Actor {
     }
 
     /**
-     * Calculate character level
+     * Calculate character level and next level xp
      */
-    calculateLevel(XP) {
+    _calculateLevel(actorData) {
+        const data = actorData.data;
+        const XP = data.information.xp;
+        const levelXP = [0, 1300, 3300, 6000];
+        let lvl = 0;
+        let nextXP = 0;
         
+        for (const lvlXP of levelXP) {
+            if (XP >= lvlXP) {
+                lvl += 1;
+            } else {
+                nextXP = lvlXP - XP;
+                break;
+            }
+        }
+        data.information.level = lvl;
+        data.information.nextXP = nextXP;
+    }
+
+    /**
+     * Calculate character initiative
+     */
+     _calculateInitiative(actorData) {
+        const data = actorData.data;
+        const dex = data.abilities.dexterity.mod;
+        const misc = data.movement.miscInitiative;
+        //console.log(data);
+        
+        data.movement.initiative = dex + misc;
+    }
+
+    /**
+     * Enforce Maximum HP and RP
+     */
+     _enforceMaxPoints(actorData) {
+        const data = actorData.data;
+        const HP = data.defence.hp.value;
+        const maxHP = data.defence.hp.max;
+        const RP = data.defence.rp.value;
+        const maxRP = data.defence.rp.max;
+        console.log(data);
+        
+        if (HP > maxHP) {
+            actorData.data.defence.hp.value = maxHP;
+        } else if (HP < 0){
+            actorData.data.defence.hp.value = 0;
+        }
+
+        if (RP > maxRP) {
+            actorData.data.defence.rp.value = maxRP;
+        } else if (RP < 0){
+            actorData.data.defence.rp.value = 0;
+        }
     }
 }

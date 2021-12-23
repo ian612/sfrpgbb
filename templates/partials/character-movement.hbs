@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <th colspan="5">{{localize "sfrpgbb.movement.initiative"}}</th>
+        <th colspan="2">{{localize "sfrpgbb.movement.speed"}}</th>
+    </tr>
+    <tr>
+        <td>
+            {{localize "sfrpgbb.general.total"}}
+        </td>
+        <td>
+            {{numberFormat data.movement.initiative decimals=0 sign=true}}
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
+            {{numberFormat data.abilities.dexterity.mod decimals=0}}
+        </td>
+        <td>
+            +
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
+            {{numberFormat data.movement.miscInitiative decimals=0}}
+        </td>
+        <td>
+            {{numberFormat data.movement.speed decimals=0}}
+        </td>
+        <td>
+            {{localize "sfrpgbb.movement.feet"}}
+        </td>
+    </tr>
+</table>

@@ -7,6 +7,8 @@ async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/sfrpgbb/templates/partials/character-abilities.hbs",
         "systems/sfrpgbb/templates/partials/character-information.hbs",
+        "systems/sfrpgbb/templates/partials/character-movement.hbs",
+        "systems/sfrpgbb/templates/partials/character-defence.hbs"
     ];
 
     return loadTemplates(templatePaths);

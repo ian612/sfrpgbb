@@ -40,6 +40,7 @@
             "movement": {
                 "movement": {
                     "initiative": 0,
+                    "miscInitiative": 0,
                     "speed": 30,
                     "flight": {
                         "hasFlight": false,
@@ -83,6 +84,10 @@
                         "value": 0,
                         "max": 0
                     },
+                    "rp": {
+                        "value": 0,
+                        "max": 0
+                    },
                     "armor": {
                         "ac": 10,
                         "proficiency": {
@@ -107,11 +112,7 @@
                 "theme": "",
                 "class": "",
                 "xp": 0,
-                "alignment": "",
-                "rp": {
-                    "value": 0,
-                    "max": 0
-                }
+                "alignment": ""
             },
             "attack": {
                 "bonus": {

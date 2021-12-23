@@ -12,6 +12,7 @@
             "rangedAttack": "Ranged Attack"
         },
         "defence": {
+            "defence": "Defence",
             "ac": "AC",
             "armor": "Armor",
             "armorClassAC": "Armor Class (AC)",
@@ -26,7 +27,9 @@
             "reflex": "Reflex",
             "reflexSave": "Reflex Save",
             "will": "Will",
-            "willSave": "Will Save"
+            "willSave": "Will Save",
+            "hitPoints": "Hit Points",
+            "resolvePoints": "Resolve Points"
         },
         "damage": {
             "kinetic": "Kinetic",
@@ -102,6 +105,17 @@
                 "technomancer": "Technomancer"
             },
             "alignment": "Alignment",
+            "alignments": {
+                "lawfulGood": "Lawful Good",
+                "neutralGood": "Neutral Good",
+                "chaoticGood": "Chaotic Good",
+                "lawfulNeutral": "Lawful Neutral",
+                "trueNeutral": "True Neutral",
+                "chaoticNeutral": "Chaotic Neutral",
+                "lawfulEvil": "Lawful Evil",
+                "neutralEvil": "Neutral Evil",
+                "chaoticEvil": "Chaotic Evil"
+            },
             "currentXP": "Current XP",
             "nextLevelXP": "Next Level XP"
         },
@@ -136,6 +150,11 @@
             "survival": "Survival",
             "technology": "Technology",
             "themeKnowledge": "Theme Knowledge"
+        },
+        "movement": {
+            "initiative": "Initiative",
+            "speed": "Speed",
+            "feet": "Feet"
         }
     }
 }
