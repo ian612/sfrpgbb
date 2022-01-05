@@ -81,6 +81,11 @@
   font-size: 7pt;
   color: blue;
 }
+.sfrpgbb.sheet.character .movement .superscript {
+  font-family: "Exo 2";
+  font-size: 7pt;
+  color: blue;
+}
 .sfrpgbb.sheet.character .defence .superscript {
   font-family: "Exo 2";
   font-size: 7pt;
