@@ -16,16 +16,22 @@
         display: flex;
         flex-direction: row;
     }
+    table {
+        border: 1px solid blue;
+    }
     th {
         background-color: black;
+        border: 1px solid blue;
         color: white;
         font-family: "Orbitron";
-        font-size: 12pt;
+        font-size: 10pt;
         padding: 5px;
         text-align: center;
         text-transform: uppercase;
     }
     td {
+        background-color: white;
+        border: 1px solid blue;
         font-weight: bold;
         font-family: "Exo 2";
         font-size: 10pt;
@@ -45,46 +51,57 @@
         flex-direction: column;
         padding: 7px;
     }
+    .superscript {
+        font-family: "Exo 2";
+        font-size: 6pt;
+        color: blue;
+    }
+    .rightThickBorder{
+        border-right: 3px solid blue;
+    }
+    .blockTitle {
+        font-family: "Exo 2";
+        font-size: 12pt;
+        background-color: white;
+    }
+    .blueBox {
+        font-family: "Exo 2";
+        font-size: 12pt;
+        background-color: #c7eafb;
+    }
+    .plus {
+        font-family: "Exo 2";
+        font-size: 10pt;
+        color: white;
+        background-color: blue;
+        padding: 1px;
+    }
+
     .abilities {
-        table, td {
-            border: 2px solid blue;
-        }
         td:nth-child(even){
             background-color: #c7eafb;
         }
         td:nth-child(odd){
-            background-color: #ffffff;
+            background-color: white;
         }
     }
     .information {
         table, td {
-            border: 1px solid blue;
             text-align: left;
         }
         tr:nth-child(odd){
-            background-color: #ffffff;
+            background-color: white;
         }
         tr:nth-child(even){
             background-color: #c7eafb;
         }
-        .superscript {
-            font-family: "Exo 2";
-            font-size: 7pt;
-            color: blue;
-        }
     }
     .movement {
-        .superscript {
-            font-family: "Exo 2";
-            font-size: 7pt;
-            color: blue;
-        }
+        
     }
     .defence {
         .superscript {
-            font-family: "Exo 2";
-            font-size: 7pt;
-            color: blue;
+            text-align: center;
         }
     }
 }

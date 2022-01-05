@@ -4,27 +4,27 @@
         <th colspan="2">{{localize "sfrpgbb.movement.speed"}}</th>
     </tr>
     <tr>
-        <td>
+        <td class="blockTitle">
             {{localize "sfrpgbb.general.total"}}
         </td>
-        <td>
+        <td class="blueBox rightThickBorder">
             {{numberFormat data.movement.initiative decimals=0 sign=true}}
         </td>
-        <td>
+        <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
             {{numberFormat data.abilities.dexterity.mod decimals=0}}
         </td>
-        <td>
+        <td class="plus">
             +
         </td>
-        <td>
+        <td class="blockTitle rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
             {{numberFormat data.movement.miscInitiative decimals=0}}
         </td>
-        <td>
+        <td class="blueBox">
             {{numberFormat data.movement.speed decimals=0}}
         </td>
-        <td>
+        <td class="blockTitle">
             {{localize "sfrpgbb.movement.feet"}}
         </td>
     </tr>
