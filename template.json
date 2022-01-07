@@ -130,8 +130,14 @@
             },
             "attack": {
                 "bonus": {
-                    "melee": 0,
-                    "ranged": 0
+                    "melee": {
+                        "value": 0,
+                        "class": 0
+                    },
+                    "ranged": {
+                        "value": 0,
+                        "class": 0
+                    }
                 },
                 "proficiency": {
                     "meleeBasic": true,

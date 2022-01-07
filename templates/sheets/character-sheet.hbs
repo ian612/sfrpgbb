@@ -1,15 +1,18 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="leftColumn">
+        <div class="information">
+            {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
+        </div>
         <div class="abilities">
             {{> "systems/sfrpgbb/templates/partials/character-abilities.hbs"}}
         </div>
     </div>
     <div class="rightColumn">
-        <div class="information">
-            {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
-        </div>
-        <div>
+        <div class="movement">
             {{> "systems/sfrpgbb/templates/partials/character-movement.hbs"}}
+        </div>
+        <div class="attack">
+            {{> "systems/sfrpgbb/templates/partials/character-attack.hbs"}}
         </div>
         <div class="defence">
             {{> "systems/sfrpgbb/templates/partials/character-defence.hbs"}}

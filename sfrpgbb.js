@@ -8,7 +8,10 @@ async function preloadHandlebarsTemplates() {
         "systems/sfrpgbb/templates/partials/character-abilities.hbs",
         "systems/sfrpgbb/templates/partials/character-information.hbs",
         "systems/sfrpgbb/templates/partials/character-movement.hbs",
-        "systems/sfrpgbb/templates/partials/character-defence.hbs"
+        "systems/sfrpgbb/templates/partials/character-defence.hbs",
+        "systems/sfrpgbb/templates/partials/character-attack.hbs",
+        "systems/sfrpgbb/templates/partials/character-proficiencies.hbs",
+        "systems/sfrpgbb/templates/partials/character-skills.hbs"
     ];
 
     return loadTemplates(templatePaths);

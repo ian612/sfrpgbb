@@ -1,0 +1,45 @@
+<table>
+    <tr>
+        <th colspan="5">{{localize "sfrpgbb.attack.attacks"}}</th>
+    </tr>
+    <tr>
+        <td class="blockTitle">
+            {{localize "sfrpgbb.attack.meleeAttack"}}
+        </td>
+        <td class="blueBox rightThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
+            {{numberFormat data.attack.bonus.melee.value decimals=0 sign=true}}
+        </td>
+        <td class="blockTitle">
+            <sup class="superscript">{{localize "sfrpgbb.ability.strength"}}</sup><br>
+            {{numberFormat data.abilities.strength.mod decimals=0}}
+        </td>
+        <td class="plus">
+            <br>+
+        </td>
+        <td class="blockTitle">
+            <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
+            {{numberFormat data.attack.bonus.melee.class decimals=0}}
+        </td>
+    </tr>
+    <tr>
+        <td class="blockTitle">
+            {{localize "sfrpgbb.attack.rangedAttack"}}
+        </td>
+        <td class="blueBox rightThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
+            {{numberFormat data.attack.bonus.ranged.value decimals=0 sign=true}}
+        </td>
+        <td class="blockTitle">
+            <sup class="superscript">{{localize "sfrpgbb.ability.dexterity"}}</sup><br>
+            {{numberFormat data.abilities.dexterity.mod decimals=0}}
+        </td>
+        <td class="plus">
+            <br>+
+        </td>
+        <td class="blockTitle">
+            <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
+            {{numberFormat data.attack.bonus.ranged.class decimals=0}}
+        </td>
+    </tr>
+</table>
