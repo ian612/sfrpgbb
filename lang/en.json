@@ -68,12 +68,13 @@
             "strAsterisk": "* Add your STR to melee weapon damage."
         },
         "general": {
-            "total": "Total",
-            "level": "Level",
             "class": "Class",
-            "misc": "Misc",
             "current": "Current",
-            "page": "Page"
+            "level": "Level",
+            "misc": "Misc",
+            "name": "Name",
+            "page": "Page",
+            "total": "Total"
         },
         "character": {
             "name": "Name",
