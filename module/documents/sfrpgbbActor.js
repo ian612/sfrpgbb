@@ -57,7 +57,10 @@ export class sfrpgbbActor extends Actor {
         this._enforceMaxPoints(actorData);
         // Calculate armor class
         this._calculateAC(actorData);
+        // Calculate Saving Throws
+        this._calculateSaves(actorData);
 
+        // Output data to a console (for debugging)
         console.log(data);
     }
 
@@ -137,5 +140,28 @@ export class sfrpgbbActor extends Actor {
         const misc = data.defence.armor.misc;
 
         data.defence.armor.ac = 10 + dex + armor + misc;
+    }
+
+    /**
+     * Calculate Saving Throws
+     */
+     _calculateSaves(actorData) {
+        const data = actorData.data;
+
+        const con = data.abilities.constitution.mod;
+        const fortitudeClass = data.defence.save.fortitude.class;
+        const fortitudeMisc = data.defence.save.fortitude.misc;
+
+        const dex = data.abilities.dexterity.mod;
+        const reflexClass = data.defence.save.reflex.class;
+        const reflexMisc = data.defence.save.reflex.misc;
+        
+        const wis = data.abilities.wisdom.mod;
+        const willClass = data.defence.save.will.class;
+        const willMisc = data.defence.save.will.misc;
+
+        data.defence.save.fortitude.value = con + fortitudeClass + fortitudeMisc;
+        data.defence.save.reflex.value = con + reflexClass + reflexMisc;
+        data.defence.save.will.value = con + willClass + willMisc;
     }
 }

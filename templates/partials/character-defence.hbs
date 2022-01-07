@@ -49,7 +49,7 @@
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.defence.armor"}}</sup><br>
-            {{numberFormat data.defence.armor.armorBonus decimals=0}}
+            <input name="data.defence.armor.armorBonus" type="number" value="{{data.defence.armor.armorBonus}}" />
         </td>
         <td class="plus">
             <br>+
@@ -89,7 +89,7 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.save.fortitude.value decimals=0}}
+            {{numberFormat data.defence.save.fortitude.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.con"}}</sup><br>
@@ -99,15 +99,13 @@
             <br>+
         </td>
         <td class="blockTitle">
-            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.save.fortitude.class" type="number" value="{{data.defence.save.fortitude.class}}" />
+            <br><input name="data.defence.save.fortitude.class" type="number" value="{{data.defence.save.fortitude.class}}" />
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.save.fortitude.misc" type="number" value="{{data.defence.save.fortitude.misc}}" />
+            <br><input name="data.defence.save.fortitude.misc" type="number" value="{{data.defence.save.fortitude.misc}}" />
         </td>
     </tr>
     <tr>
@@ -116,7 +114,7 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.save.reflex.value decimals=0}}
+            {{numberFormat data.defence.save.reflex.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
@@ -126,15 +124,13 @@
             <br>+
         </td>
         <td class="blockTitle">
-            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.save.reflex.class" type="number" value="{{data.defence.save.reflex.class}}" />
+            <br><input name="data.defence.save.reflex.class" type="number" value="{{data.defence.save.reflex.class}}" />
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.save.reflex.misc" type="number" value="{{data.defence.save.reflex.misc}}" />
+            <br><input name="data.defence.save.reflex.misc" type="number" value="{{data.defence.save.reflex.misc}}" />
         </td>
     </tr>
     <tr>
@@ -143,7 +139,7 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.save.will.value decimals=0}}
+            {{numberFormat data.defence.save.will.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
@@ -153,15 +149,13 @@
             <br>+
         </td>
         <td class="blockTitle">
-            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.save.will.class" type="number" value="{{data.defence.save.will.class}}" />
+            <br><input name="data.defence.save.will.class" type="number" value="{{data.defence.save.will.class}}" />
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.save.will.misc" type="number" value="{{data.defence.save.will.misc}}" />
+            <br><input name="data.defence.save.will.misc" type="number" value="{{data.defence.save.will.misc}}" />
         </td>
     </tr>
 </table>
