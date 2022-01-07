@@ -59,6 +59,8 @@ export class sfrpgbbActor extends Actor {
         this._calculateAC(actorData);
         // Calculate Saving Throws
         this._calculateSaves(actorData);
+        // Calculate Skills
+        this._calculateSkills(actorData);
 
         // Output data to a console (for debugging)
         console.log(data);
@@ -161,7 +163,85 @@ export class sfrpgbbActor extends Actor {
         const willMisc = data.defence.save.will.misc;
 
         data.defence.save.fortitude.value = con + fortitudeClass + fortitudeMisc;
-        data.defence.save.reflex.value = con + reflexClass + reflexMisc;
-        data.defence.save.will.value = con + willClass + willMisc;
+        data.defence.save.reflex.value = dex + reflexClass + reflexMisc;
+        data.defence.save.will.value = wis + willClass + willMisc;
     }
+
+    /**
+     * Calculate Skills
+     */
+         _calculateSkills(actorData) {
+            const data = actorData.data;
+            
+            // Ability Score Modifiers
+            const str = data.abilities.strength.mod;
+            const dex = data.abilities.dexterity.mod;
+            const con = data.abilities.constitution.mod;
+            const int = data.abilities.intelligence.mod;
+            const wis = data.abilities.wisdom.mod;
+            const cha = data.abilities.charisma.mod;
+
+            // Athletics
+            const athleticsClass = data.skills.athletics.class;
+            const athleticsLevel = data.skills.athletics.level;
+            const athleticsMisc = data.skills.athletics.misc;
+            
+            // Culture
+            const cultureClass = data.skills.culture.class;
+            const cultureLevel = data.skills.culture.level;
+            const cultureMisc = data.skills.culture.misc;
+
+            // Interaction
+            const interactionClass = data.skills.interaction.class;
+            const interactionLevel = data.skills.interaction.level;
+            const interactionMisc = data.skills.interaction.misc;
+
+            // Medicine
+            const medicineClass = data.skills.medicine.class;
+            const medicineLevel = data.skills.medicine.level;
+            const medicineMisc = data.skills.medicine.misc;
+
+            // Mysticism
+            const mysticismClass = data.skills.mysticism.class;
+            const mysticismLevel = data.skills.mysticism.level;
+            const mysticismMisc = data.skills.mysticism.misc;
+
+            // Perception
+            const perceptionClass = data.skills.perception.class;
+            const perceptionLevel = data.skills.perception.level;
+            const perceptionMisc = data.skills.perception.misc;
+
+            // Science
+            const scienceClass = data.skills.science.class;
+            const scienceLevel = data.skills.science.level;
+            const scienceMisc = data.skills.science.misc;
+
+            // Stealth
+            const stealthClass = data.skills.stealth.class;
+            const stealthLevel = data.skills.stealth.level;
+            const stealthMisc = data.skills.stealth.misc;
+
+            // Survival
+            const survivalClass = data.skills.survival.class;
+            const survivalLevel = data.skills.survival.level;
+            const survivalMisc = data.skills.survival.misc;
+
+            // Technology
+            const technologyClass = data.skills.technology.class;
+            const technologyLevel = data.skills.technology.level;
+            const technologyMisc = data.skills.technology.misc;
+            
+            // Calculations
+            data.skills.athletics.value = str + athleticsClass + athleticsLevel + athleticsMisc;
+            data.skills.culture.value = int + cultureClass + cultureLevel + cultureMisc;
+            data.skills.interaction.value = cha + interactionClass + interactionLevel + interactionMisc;
+            data.skills.medicine.value = int + medicineClass + medicineLevel + medicineMisc;
+            data.skills.mysticism.value = wis + mysticismClass + mysticismLevel + mysticismMisc;
+            data.skills.perception.value = wis + perceptionClass + perceptionLevel + perceptionMisc;
+            data.skills.science.value = int + scienceClass + scienceLevel + scienceMisc;
+            data.skills.stealth.value = dex + stealthClass + stealthLevel + stealthMisc;
+            data.skills.survival.value = wis + survivalClass + survivalLevel + survivalMisc;
+            data.skills.technology.value = int + technologyClass + technologyLevel + technologyMisc;
+
+        }
 }

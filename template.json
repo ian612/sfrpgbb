@@ -51,16 +51,67 @@
             },
             "skills": {
                 "skills": {
-                    "athletics": 0,
-                    "culture": 0,
-                    "interaction": 0,
-                    "medicine": 0,
-                    "mysticism": 0,
-                    "perception": 0,
-                    "science": 0,
-                    "stealth": 0,
-                    "survival": 0,
-                    "technology": 0
+                    "athletics": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "culture": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "interaction": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "medicine": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "mysticism": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "perception": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "science": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "stealth": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "survival": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "technology": {
+                        "value": 0,
+                        "class": 0,
+                        "level": 0,
+                        "misc": 0
+                    },
+                    "themeKnowledge": ""
                 }
             },
             "spells": {

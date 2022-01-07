@@ -5,8 +5,8 @@ export default class sfrpgbbActorSheet extends ActorSheet {
 
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            width: 800,
-            height: 540,
+            width: 765,
+            height: 990,
             classes: ["sfrpgbb", "sheet", "character"]
         });
     }
