@@ -44,22 +44,22 @@
   border: 1px solid blue;
   font-weight: bold;
   font-family: "Exo 2";
-  font-size: 10pt;
-  padding: 5px;
+  font-size: 8pt;
+  padding: 2px;
   text-align: center;
   text-transform: uppercase;
 }
 .sfrpgbb.sheet.character .leftColumn {
-  flex: 50%;
+  flex: 40%;
   display: flex;
   flex-direction: column;
-  padding: 7px;
+  padding: 4px;
 }
 .sfrpgbb.sheet.character .rightColumn {
-  flex: 50%;
+  flex: 60%;
   display: flex;
   flex-direction: column;
-  padding: 7px;
+  padding: 4px;
 }
 .sfrpgbb.sheet.character .superscript {
   font-family: "Exo 2";
@@ -71,12 +71,12 @@
 }
 .sfrpgbb.sheet.character .blockTitle {
   font-family: "Exo 2";
-  font-size: 12pt;
+  font-size: 10pt;
   background-color: white;
 }
 .sfrpgbb.sheet.character .blueBox {
   font-family: "Exo 2";
-  font-size: 12pt;
+  font-size: 10pt;
   background-color: #c7eafb;
 }
 .sfrpgbb.sheet.character .plus {
@@ -102,6 +102,7 @@
 .sfrpgbb.sheet.character .information tr:nth-child(even) {
   background-color: #c7eafb;
 }
-.sfrpgbb.sheet.character .defence .superscript {
-  text-align: center;
+.sfrpgbb.sheet.character .blueRow {
+  background-color: #00aeef;
+  color: white;
 }

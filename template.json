@@ -90,15 +90,29 @@
                     },
                     "armor": {
                         "ac": 10,
+                        "armorBonus": 0,
+                        "misc": 0,
                         "proficiency": {
                             "light": true,
                             "heavy": false
                         }
                     },
                     "save": {
-                        "fortitude": 0,
-                        "reflex": 0,
-                        "will": 0
+                        "fortitude": {
+                            "value": 0,
+                            "class": 0,
+                            "misc": 0
+                        },
+                        "reflex": {
+                            "value": 0,
+                            "class": 0,
+                            "misc": 0
+                        },
+                        "will": {
+                            "value": 0,
+                            "class": 0,
+                            "misc": 0
+                        }
                     }
                 }
             }

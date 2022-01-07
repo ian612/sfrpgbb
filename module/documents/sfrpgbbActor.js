@@ -55,6 +55,10 @@ export class sfrpgbbActor extends Actor {
         this._calculateInitiative(actorData);
         // Enforce maximum and minimum HP and RP amounts
         this._enforceMaxPoints(actorData);
+        // Calculate armor class
+        this._calculateAC(actorData);
+
+        console.log(data);
     }
 
     /**
@@ -93,25 +97,22 @@ export class sfrpgbbActor extends Actor {
     /**
      * Calculate character initiative
      */
-     _calculateInitiative(actorData) {
+    _calculateInitiative(actorData) {
         const data = actorData.data;
         const dex = data.abilities.dexterity.mod;
         const misc = data.movement.miscInitiative;
-        //console.log(data);
-        
         data.movement.initiative = dex + misc;
     }
 
     /**
      * Enforce Maximum HP and RP
      */
-     _enforceMaxPoints(actorData) {
+    _enforceMaxPoints(actorData) {
         const data = actorData.data;
         const HP = data.defence.hp.value;
         const maxHP = data.defence.hp.max;
         const RP = data.defence.rp.value;
         const maxRP = data.defence.rp.max;
-        console.log(data);
         
         if (HP > maxHP) {
             actorData.data.defence.hp.value = maxHP;
@@ -124,5 +125,17 @@ export class sfrpgbbActor extends Actor {
         } else if (RP < 0){
             actorData.data.defence.rp.value = 0;
         }
+    }
+
+    /**
+     * Calculate Armor Class
+     */
+    _calculateAC(actorData) {
+        const data = actorData.data;
+        const dex = data.abilities.dexterity.mod;
+        const armor = data.defence.armor.armorBonus;
+        const misc = data.defence.armor.misc;
+
+        data.defence.armor.ac = 10 + dex + armor + misc;
     }
 }
