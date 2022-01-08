@@ -177,7 +177,10 @@
                 "theme": "",
                 "class": "",
                 "xp": 0,
-                "alignment": ""
+                "alignment": "",
+                "racialTraits": "",
+                "classFeatures": "",
+                "feats": ""
             },
             "attack": {
                 "bonus": {

@@ -80,6 +80,7 @@
             "name": "Name",
             "pronouns": "Pronouns",
             "race": "Race",
+            "racialTraits": "Racial Traits",
             "races": {
                 "android": "Android",
                 "human": "Human",
@@ -97,6 +98,7 @@
                 "priest": "Priest",
                 "spacefarer": "Spacefarer"
             },
+            "classFeatures": "Class Features",
             "classes": {
                 "envoy": "Envoy",
                 "mechanic": "Mechanic",
@@ -105,6 +107,7 @@
                 "soldier": "Soldier",
                 "technomancer": "Technomancer"
             },
+            "feats": "Feats",
             "alignment": "Alignment",
             "alignments": {
                 "lawfulGood": "Lawful Good",
