@@ -1,26 +1,29 @@
 <table>
     <tr>
-        <th>{{localize "sfrpgbb.character.racialTraits"}}</th>
+        <th colspan=4>{{localize "sfrpgbb.spell.spells"}}</th>
     </tr>
     <tr>
-        <td><textarea name="data.information.racialTraits" value="{{data.information.racialTraits}}" type="text" data-dtype="String"></textarea></td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <th>{{localize "sfrpgbb.character.classFeatures"}}</th>
-    </tr>
-    <tr>
-        <td><textarea name="data.information.classFeatures" value="{{data.information.classFeatures}}" type="text" data-dtype="String"></textarea></td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <th>{{localize "sfrpgbb.character.feats"}}</th>
+        <td class="blueRow bottomThickBorder">{{localize "sfrpgbb.spell.firstLevel"}}</td>
+        <td class="blueBox bottomThickBorder">{{localize "sfrpgbb.spell.spellSlots"}}</td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.spell.used"}}</sup><br>
+            <input name="data.spells.lvl1.value" value="{{data.spells.lvl1.value}}" type="number" data-dtype="Number"/>
+        </td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
+            <input name="data.spells.lvl1.max" value="{{data.spells.lvl1.max}}" type="number" data-dtype="Number"/>
+        </td>
     </tr>
     <tr>
-        <td><textarea name="data.information.feats" value="{{data.information.feats}}" type="text" data-dtype="String"></textarea></td>
+        <td class="blueRow bottomThickBorder">{{localize "sfrpgbb.spell.secondLevel"}}</td>
+        <td class="blueBox bottomThickBorder">{{localize "sfrpgbb.spell.spellSlots"}}</td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.spell.used"}}</sup><br>
+            <input name="data.spells.lvl2.value" value="{{data.spells.lvl2.value}}" type="number" data-dtype="Number"/>
+        </td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
+            <input name="data.spells.lvl2.max" value="{{data.spells.lvl2.max}}" type="number" data-dtype="Number"/>
+        </td>
     </tr>
 </table>
