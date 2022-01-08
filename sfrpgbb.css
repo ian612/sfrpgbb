@@ -22,6 +22,22 @@
   font-family: "Exo 2";
   src: url('fonts/Exo2-VariableFont_wght.ttf');
 }
+.sfrpgbb.sheet.character header {
+  display: flex;
+  flex-direction: row;
+}
+.sfrpgbb.sheet.character header .leftColumn {
+  flex: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
+.sfrpgbb.sheet.character header .rightColumn {
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
 .sfrpgbb.sheet.character form {
   display: flex;
   flex-direction: row;
@@ -49,17 +65,21 @@
   text-align: center;
   text-transform: uppercase;
 }
+.sfrpgbb.sheet.character .topInfo {
+  padding: 2px;
+  float: bottom;
+}
 .sfrpgbb.sheet.character .leftColumn {
   flex: 55%;
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 2px;
 }
 .sfrpgbb.sheet.character .rightColumn {
   flex: 45%;
   display: flex;
   flex-direction: column;
-  padding: 4px;
+  padding: 2px;
 }
 .sfrpgbb.sheet.character .superscript {
   font-family: "Exo 2";
