@@ -55,10 +55,12 @@ export class sfrpgbbActor extends Actor {
         this._calculateInitiative(actorData);
         // Enforce maximum and minimum HP and RP amounts
         this._enforceMaxPoints(actorData);
-        // Calculate armor class
+        // Calculate Armor Class
         this._calculateAC(actorData);
         // Calculate Saving Throws
         this._calculateSaves(actorData);
+        // Calculate Attack
+        this._calculateAttack(actorData);
         // Calculate Skills
         this._calculateSkills(actorData);
 
@@ -165,6 +167,19 @@ export class sfrpgbbActor extends Actor {
         data.defence.save.fortitude.value = con + fortitudeClass + fortitudeMisc;
         data.defence.save.reflex.value = dex + reflexClass + reflexMisc;
         data.defence.save.will.value = wis + willClass + willMisc;
+    }
+
+    /**
+     * Calculate Attack
+     */
+     _calculateAttack(actorData) {
+        const data = actorData.data;
+        const str = data.abilities.strength.mod;
+        const dex = data.abilities.dexterity.mod;
+        const meleeClass = data.attack.bonus.melee.class;
+        const rangedClass = data.attack.bonus.ranged.class;
+        data.attack.bonus.melee.value = str + meleeClass;
+        data.attack.bonus.ranged.value = dex + rangedClass;
     }
 
     /**

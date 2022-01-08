@@ -25,6 +25,7 @@
         </td>
     </tr>
 </table>
+
 <table>
     <tr>
         <td class="blockTitle">
@@ -60,21 +61,20 @@
         </td>
     </tr>
     <tr>
-        <td class="blockTitle">
-            {{localize "sfrpgbb.defence.armor"}}
+        <td class="blockTitle blueRow" colspan=5>
+            {{localize "sfrpgbb.defence.armorProficiencies"}}
         </td>
-        <td colspan=4>
-            Worn Armor
-        </td>
-        <td colspan=4>
-            <sup class="superscript">{{localize "sfrpgbb.defence.armorProficiencies"}}</sup><br>
+        <td colspan=2>
             <input type="checkbox" name="data.defence.armor.proficiency.light" id="lightArmor" {{checked data.defence.armor.proficiency.light}} />
             <label for="lightArmor">{{localize "sfrpgbb.defence.light"}}</label>
+        </td>
+        <td colspan=2>
             <input type="checkbox" name="data.defence.armor.proficiency.heavy" id="heavyArmor" {{checked data.defence.armor.proficiency.heavy}} />
             <label for="heavyArmor">{{localize "sfrpgbb.defence.heavy"}}</label>
         </td>
     </tr>
 </table>
+
 <table>
     <tr>
         <td class="blueRow">{{localize "sfrpgbb.defence.savingThrows"}}</td>

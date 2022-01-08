@@ -55,18 +55,21 @@
         text-align: center;
         text-transform: uppercase;
     }
+    textarea {
+        resize: none;
+    }
     .topInfo {
         padding: 3px;
         float: bottom;
     }
     .leftColumn {
-        flex: 55%;
+        flex: 50%;
         display: flex;
         flex-direction: column;
         padding: 3px;
     }
     .rightColumn {
-        flex: 45%;
+        flex: 50%;
         display: flex;
         flex-direction: column;
         padding: 3px;
@@ -133,6 +136,12 @@
         }
         tr:nth-child(even){
             background-color: #c7eafb;
+        }
+    }
+    .defence {
+        td {
+            font-family: "Exo 2";
+            font-size: 10pt;
         }
     }
 }
