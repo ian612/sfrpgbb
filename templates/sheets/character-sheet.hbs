@@ -3,12 +3,21 @@
         <div class="information">
             {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
         </div>
+        <div>
+            <button onclick="openPage('characterSheet', 'equipment')">Character Sheet</button>
+        </div>
     </div>
     <div class="rightColumn">
-        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
+        <div class="image">
+            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
+        </div>
+        <div>
+            <button onclick="openPage('equipment', 'characterSheet')">Equipment</button>
+        </div>
     </div>
 </header>
-<form class="{{cssClass}}" autocomplete="off">
+
+<form class="{{cssClass}}" id="characterSheet" autocomplete="off">
     <div class="leftColumn">
         <div class="abilities">
             {{> "systems/sfrpgbb/templates/partials/character-abilities.hbs"}}
@@ -38,3 +47,23 @@
         </div>
     </div>
 </form>
+
+<form class="{{cssClass}}" id="equipment" autocomplete="off">
+    <div class="leftColumn">
+        Stuff here
+    </div>
+    <div class="rightColumn">
+        more stuff here
+    </div>
+</form>
+
+
+<script>
+function openPage(onPage, offPage) {
+    var x = document.getElementById(onPage)
+    var y = document.getElementById(offPage)
+    x.style.display = "flex";
+    y.style.display = "none";
+}
+window.onload = openPage('characterSheet', 'equipment');
+</script>
