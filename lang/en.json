@@ -167,7 +167,7 @@
             "firstLevel": "1st Level",
             "secondLevel": "2nd Level",
             "spellSlots": "Spell Slots",
-            "used": "Used",
+            "available": "Available",
             "damageOrDuration": "Damage or Duration",
             "dc": "DC"
         }

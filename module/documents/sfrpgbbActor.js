@@ -49,6 +49,7 @@ export class sfrpgbbActor extends Actor {
             ability.mod = Math.floor((ability.value - 10) / 2);
         }
 
+        // Character Sheet Stuff
         // Calculate character level based on XP
         this._calculateLevel(actorData);
         // Calculate character initiative
@@ -63,6 +64,10 @@ export class sfrpgbbActor extends Actor {
         this._calculateAttack(actorData);
         // Calculate Skills
         this._calculateSkills(actorData);
+
+        // Owned Items and related stuff
+        data.weapons = actorData.items.filter(function (item) { return item.type == "weapon"});
+        data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
 
         // Output data to a console (for debugging)
         console.log(actorData);
@@ -112,15 +117,17 @@ export class sfrpgbbActor extends Actor {
     }
 
     /**
-     * Enforce Maximum HP and RP
+     * Enforce Maximum HP, RP, and Spell Slots
      */
     _enforceMaxPoints(actorData) {
         const data = actorData.data;
+        
+        // HP and RP
         const HP = data.defence.hp.value;
         const maxHP = data.defence.hp.max;
         const RP = data.defence.rp.value;
         const maxRP = data.defence.rp.max;
-        
+
         if (HP > maxHP) {
             actorData.data.defence.hp.value = maxHP;
         } else if (HP < 0){
@@ -131,6 +138,24 @@ export class sfrpgbbActor extends Actor {
             actorData.data.defence.rp.value = maxRP;
         } else if (RP < 0){
             actorData.data.defence.rp.value = 0;
+        }
+
+        // Spell Slots
+        const lvl1Slots = data.spells.lvl1.value;
+        const maxLvl1Slots = data.spells.lvl1.max;
+        const lvl2Slots = data.spells.lvl2.value;
+        const maxLvl2Slots = data.spells.lvl2.max;
+        
+        if (lvl1Slots > maxLvl1Slots) {
+            actorData.data.spells.lvl1.value = maxLvl1Slots;
+        } else if (lvl1Slots < 0){
+            actorData.data.spells.lvl1.value = 0;
+        }
+
+        if (lvl2Slots > maxLvl2Slots) {
+            actorData.data.spells.lvl2.value = maxLvl2Slots;
+        } else if (lvl2Slots < 0){
+            actorData.data.spells.lvl2.value = 0;
         }
     }
 
