@@ -40,6 +40,7 @@
             "sonic": "Sonic"
         },
         "equipment": {
+            "credits": "Credits",
             "price": "Price (CR)",
             "description": "Description",
             "isMagic": "Magical",
@@ -159,6 +160,9 @@
             "initiative": "Initiative",
             "speed": "Speed",
             "feet": "Feet"
+        },
+        "spell": {
+            ""
         }
     }
 }

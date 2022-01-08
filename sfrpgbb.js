@@ -12,7 +12,8 @@ async function preloadHandlebarsTemplates() {
         "systems/sfrpgbb/templates/partials/character-attack.hbs",
         "systems/sfrpgbb/templates/partials/character-proficiencies.hbs",
         "systems/sfrpgbb/templates/partials/character-skills.hbs",
-        "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs"
+        "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs",
+        "systems/sfrpgbb/templates/partials/character-spells.hbs"
     ];
 
     return loadTemplates(templatePaths);
