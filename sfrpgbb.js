@@ -35,12 +35,19 @@ Hooks.once("init", function() {
 
     preloadHandlebarsTemplates();
 
+    // Handlebars replace newline characters with <br> in text display
+    Handlebars.registerHelper('breaklines', function(text) {
+        text = Handlebars.Utils.escapeExpression(text);
+        text = text.replace(/(\r\n|\n|\r)/gm, '&#10;');
+        return new Handlebars.SafeString(text);
+    });
+
+    // Handlebars for loop
     Handlebars.registerHelper("times", function (n, content){
         let result = "";
         for (let i = 0; i < n; ++i) {
             result += content.fn(i);
         }
-
         return result;
     });
 });
