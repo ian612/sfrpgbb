@@ -96,6 +96,10 @@
   background-color: none;
   border: none;
 }
+.sfrpgbb.sheet.character .abilities td {
+  font-family: "Exo 2";
+  font-size: 10pt;
+}
 .sfrpgbb.sheet.character .abilities td:nth-child(even) {
   background-color: #c7eafb;
 }
