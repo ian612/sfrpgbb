@@ -35,7 +35,7 @@ Hooks.once("init", function() {
 
     preloadHandlebarsTemplates();
 
-    // Handlebars replace newline characters with <br> in text display
+    // Handlebars replace newline characters with html newline in textarea display
     Handlebars.registerHelper('breaklines', function(text) {
         text = Handlebars.Utils.escapeExpression(text);
         text = text.replace(/(\r\n|\n|\r)/gm, '&#10;');
