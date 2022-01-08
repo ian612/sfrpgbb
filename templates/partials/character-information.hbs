@@ -1,9 +1,9 @@
 <table>
     <tr>
-        <th colspan="4">Character Information</th>
+        <th colspan="5">Character Information</th>
     </tr>
     <tr>
-        <td colspan="3"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "sfrpgbb.character.name"}}"/></td>
+        <td colspan="4"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "sfrpgbb.character.name"}}"/></td>
         <td><input name="data.information.pronouns" type="text" value="{{data.information.pronouns}}" placeholder={{localize "sfrpgbb.character.pronouns"}} /></td>
     </tr>
     <tr>
@@ -27,7 +27,7 @@
                 {{/select}}
             </select>
         </td>
-        <td>
+        <td colspan=2>
             <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
             <select name="data.information.class">
                 {{#select data.information.class}}
@@ -38,8 +38,8 @@
             </select>
         </td>
         <td>
-            <sup class="superscript">{{localize "sfrpgbb.general.level"}}</sup><br>
-            {{numberFormat data.information.level decimals=0 sign=false}}
+            <sup class="superscript">{{localize "sfrpgbb.equipment.credits"}}</sup><br>
+            <input name="data.information.credits" type="number" value="{{data.information.credits}}" placeholder="0" data-dtype="Number" />
         </td>
     </tr>
     <tr>
@@ -60,6 +60,10 @@
         <td>
             <sup class="superscript">{{localize "sfrpgbb.character.nextLevelXP"}}</sup><br>
             {{numberFormat data.information.nextXP decimals=0 sign=false}}
+        </td>
+        <td>
+            <sup class="superscript">{{localize "sfrpgbb.general.level"}}</sup><br>
+            {{numberFormat data.information.level decimals=0 sign=false}}
         </td>
     </tr>
 </table>
