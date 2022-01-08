@@ -65,7 +65,7 @@ export class sfrpgbbActor extends Actor {
         this._calculateSkills(actorData);
 
         // Output data to a console (for debugging)
-        console.log(data);
+        console.log(actorData);
     }
 
     /**

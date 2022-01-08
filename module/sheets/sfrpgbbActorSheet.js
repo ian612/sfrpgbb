@@ -20,17 +20,8 @@ export default class sfrpgbbActorSheet extends ActorSheet {
             data: baseData.actor.data.data,
             config: CONFIG.sfrpgbb
         };
-        if (sheetData.actor.items) {
-            sheetData.data.weapons = sheetData.actor.items.filter(function (item) { return item.type == "weapon"});
-        } else {
-            sheetData.data.weapons = [];
-        }
-        if (sheetData.actor.items) {
-            sheetData.data.armor = sheetData.actor.items.filter(function (item) { return item.type == "armor"});
-        } else {
-            sheetData.data.armor = [];
-        }
-
+        sheetData.data.weapons = sheetData.actor.items.filter(function (item) { return item.type == "weapon"});
+        sheetData.data.armor = sheetData.actor.items.filter(function (item) { return item.type == "armor"});
         return sheetData;
     }
 }
