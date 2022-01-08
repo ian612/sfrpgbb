@@ -18,7 +18,7 @@
                 </td>
                 <td>
                     <select name="data.weaponType">
-                        {{#select data.type}}
+                        {{#select data.weaponType}}
                         {{#each config.attackTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}

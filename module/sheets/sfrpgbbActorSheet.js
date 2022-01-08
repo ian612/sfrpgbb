@@ -18,7 +18,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
             editable: this.actor.isEditable,
             actor: baseData.actor,
             data: baseData.actor.data.data,
-            config: CONFIG.sfrpgbb,
+            config: CONFIG.sfrpgbb
 
             //weapons: data.items.filter(function (item) { return item.type == "weapon"}),
             //armor: data.items.filter(function (item) { return item.type == "armor"})
