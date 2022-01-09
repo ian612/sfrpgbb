@@ -1,4 +1,14 @@
 {
+    "ACTOR.TypeCharacter": "Player Character",
+    "ACTOR.TypeNpc": "Non-Player Character",
+    "ACTOR.TypeTrap": "Trap",
+    "ITEM.TypeArmor": "Armor",
+    "ITEM.TypeArmorupgrade": "Armor Upgrade",
+    "ITEM.TypeWeapon": "Weapon",
+    "ITEM.TypeWeaponfusion": "Weapon Fusion",
+    "ITEM.TypeGrenade": "Grenade",
+    "ITEM.TypeGear": "Gear",
+
     "sfrpgbb": {
         "attack": {
             "none": "",

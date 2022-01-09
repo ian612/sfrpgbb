@@ -243,8 +243,8 @@
             "armor",
             "armorUpgrade",
             "weapon",
-            "grenade",
             "weaponFusion",
+            "grenade",
             "gear"
         ],
         "templates": {
