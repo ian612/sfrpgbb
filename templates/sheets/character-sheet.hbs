@@ -50,10 +50,12 @@
 
 <form class="{{cssClass}}" id="equipment" autocomplete="off">
     <div class="leftColumn">
-        Stuff and whatnot
+        <div class="equipment">
+            {{> "systems/sfrpgbb/templates/partials/character-equipment.hbs"}}
+        </div>
     </div>
     <div class="rightColumn">
-        more stuff here
+        Spells will go here when Ian gets around to it.
     </div>
 </form>
 
@@ -65,5 +67,5 @@ function openPage(onPage, offPage) {
     x.style.display = "flex";
     y.style.display = "none";
 }
-window.onload = openPage('characterSheet', 'equipment');
+window.onload = openPage('equipment', 'characterSheet');
 </script>

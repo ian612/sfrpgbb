@@ -1,5 +1,15 @@
 export const sfrpgbb = {};
 
+sfrpgbb.equipmentTypes = {
+    none: "",
+    armor: "sfrpgbb.equipment.armor",
+    armorUpgrade: "sfrpgbb.equipment.armorUpgrade",
+    weapon: "sfrpgbb.equipment.weapon",
+    grenade: "sfrpgbb.equipment.grenade",
+    weaponFusion: "sfrpgbb.equipment.weaponFusion",
+    gear: "sfrpgbb.equipment.gear"
+}
+
 sfrpgbb.attackTypes = {
     none: "",
     meleeBasic: "sfrpgbb.attack.meleeBasic",

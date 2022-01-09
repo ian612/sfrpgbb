@@ -44,7 +44,14 @@
             "price": "Price (CR)",
             "description": "Description",
             "isMagic": "Magical",
-            "isTech": "Technological"
+            "isTech": "Technological",
+            "itemsAndEquipment": "Items and Equipment",
+            "armor": "Armor",
+            "armorUpgrade": "Armor Upgrade",
+            "weapon": "Weapon",
+            "grenade": "Grenade",
+            "weaponFusion": "Weapon Fusion",
+            "gear": "Gear"
         },
         "weapon": {
             "weaponType": "Weapon Type",
@@ -75,7 +82,8 @@
             "misc": "Misc",
             "name": "Name",
             "page": "Page",
-            "total": "Total"
+            "total": "Total",
+            "type": "Type"
         },
         "character": {
             "name": "Name",

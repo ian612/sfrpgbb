@@ -6,14 +6,15 @@ import sfrpgbbActorSheet from "./module/sheets/sfrpgbbActorSheet.js";
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/sfrpgbb/templates/partials/character-abilities.hbs",
+        "systems/sfrpgbb/templates/partials/character-attack.hbs",
+        "systems/sfrpgbb/templates/partials/character-defence.hbs",
+        "systems/sfrpgbb/templates/partials/character-equipment.hbs",
         "systems/sfrpgbb/templates/partials/character-information.hbs",
         "systems/sfrpgbb/templates/partials/character-movement.hbs",
-        "systems/sfrpgbb/templates/partials/character-defence.hbs",
-        "systems/sfrpgbb/templates/partials/character-attack.hbs",
         "systems/sfrpgbb/templates/partials/character-proficiencies.hbs",
         "systems/sfrpgbb/templates/partials/character-skills.hbs",
-        "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs",
-        "systems/sfrpgbb/templates/partials/character-spells.hbs"
+        "systems/sfrpgbb/templates/partials/character-spells.hbs",
+        "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs"
     ];
 
     return loadTemplates(templatePaths);
