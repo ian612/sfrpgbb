@@ -41,6 +41,7 @@
 .sfrpgbb.sheet.character form {
   display: flex;
   flex-direction: row;
+  flex-shrink: 1;
 }
 .sfrpgbb.sheet.character table {
   border: 1px solid blue;
@@ -77,12 +78,14 @@
   display: flex;
   flex-direction: column;
   padding: 3px;
+  justify-content: top;
 }
 .sfrpgbb.sheet.character .rightColumn {
   flex: 50%;
   display: flex;
   flex-direction: column;
   padding: 3px;
+  justify-content: top;
 }
 .sfrpgbb.sheet.character .superscript {
   font-family: "Exo 2";
