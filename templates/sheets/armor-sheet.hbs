@@ -47,8 +47,10 @@
                     <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
                 </td>
             </tr>
+
         </table>
-        <b>{{localize "sfrpgbb.equipment.description"}}</b>
+        
+        <b>{{localize "sfrpgbb.equipment.armor"}} - {{localize "sfrpgbb.equipment.description"}}</b>
         {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
     </div>
 </form>
