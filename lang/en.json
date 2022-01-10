@@ -7,7 +7,7 @@
     "ITEM.TypeWeapon": "Weapon",
     "ITEM.TypeWeaponfusion": "Weapon Fusion",
     "ITEM.TypeGrenade": "Grenade",
-    "ITEM.TypeGear": "Gear",
+    "ITEM.TypeGear": "Adventuring Gear",
 
     "sfrpgbb": {
         "attack": {
@@ -59,7 +59,7 @@
             "weapon": "Weapon",
             "grenade": "Grenade",
             "weaponFusion": "Weapon Fusion",
-            "gear": "Gear"
+            "gear": "Adventuring Gear"
         },
         "weapon": {
             "weaponType": "Weapon Type",

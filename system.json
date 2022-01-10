@@ -25,14 +25,21 @@
 	"primaryTokenAttribute": "@defence.hp",
 	"secondaryTokenAttribute": "@defence.rp",
 	"packs": [
-		{	
+		{
+			"name": "adventuring-gear",
+			"label": "Adventuring Gear",
+			"system": "sfrpgbb",
+			"path": "./packs/adventuring-gear.db",
+			"entity": "Item"
+		},
+		{
 			"name": "armor",
 			"label": "Armor",
 			"system": "sfrpgbb",
 			"path": "./packs/armor.db",
 			"entity": "Item"
 		},
-		{	
+		{
 			"name": "armor-upgrades",
 			"label": "Armor Upgrades",
 			"system": "sfrpgbb",
