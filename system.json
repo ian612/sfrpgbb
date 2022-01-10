@@ -31,34 +31,6 @@
 			"system": "sfrpgbb",
 			"path": "./packs/armor.db",
 			"entity": "Item"
-		},
-		{
-			"name": "spells",
-			"label": "Spells",
-			"system": "sfrpgbb",
-			"path": "./packs/spells.db",
-			"entity": "Item"
-		},
-		{
-			"name": "setting",
-			"label": "Setting",
-			"system": "sfrpg",
-			"path": "./packs/setting.db",
-			"entity": "JournalEntry"
-		},
-		{
-			"name": "rules",
-			"label": "SFRPGBB Rules",
-			"system": "sfrpg",
-			"path": "./packs/rules.db",
-			"entity": "JournalEntry"
-		},
-		{
-			"name": "conditions",
-			"label": "Conditions",
-			"system": "sfrpg",
-			"path": "./packs/conditions.db",
-			"entity": "Item"
 		}
 	]
 }
