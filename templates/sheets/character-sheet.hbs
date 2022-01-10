@@ -1,4 +1,5 @@
-<header class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="topPart">
     <div class="leftColumn">
         <div class="information">
             {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
@@ -15,7 +16,8 @@
             <button onclick="openPage('equipment', 'characterSheet')">Equipment and Spells</button>
         </div>
     </div>
-</header>
+    </div>
+</form>
 
 <form class="{{cssClass}}" id="characterSheet" autocomplete="off">
     <div class="leftColumn">
@@ -58,7 +60,6 @@
         Spells will go here when Ian gets around to it.
     </div>
 </form>
-
 
 <script>
 function openPage(onPage, offPage) {

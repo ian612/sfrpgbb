@@ -22,22 +22,6 @@
   font-family: "Exo 2";
   src: url('fonts/Exo2-VariableFont_wght.ttf');
 }
-.sfrpgbb.sheet.character header {
-  display: flex;
-  flex-direction: row;
-}
-.sfrpgbb.sheet.character header .leftColumn {
-  flex: 75%;
-  display: flex;
-  flex-direction: column;
-  padding: 3px;
-}
-.sfrpgbb.sheet.character header .rightColumn {
-  flex: 25%;
-  display: flex;
-  flex-direction: column;
-  padding: 3px;
-}
 .sfrpgbb.sheet.character form {
   display: flex;
   flex-direction: row;
@@ -69,9 +53,21 @@
 .sfrpgbb.sheet.character textarea {
   resize: none;
 }
-.sfrpgbb.sheet.character .topInfo {
+.sfrpgbb.sheet.character .topPart {
+  display: flex;
+  flex-direction: row;
+}
+.sfrpgbb.sheet.character .topPart .leftColumn {
+  flex: 75%;
+  display: flex;
+  flex-direction: column;
   padding: 3px;
-  float: bottom;
+}
+.sfrpgbb.sheet.character .topPart .rightColumn {
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
 }
 .sfrpgbb.sheet.character .leftColumn {
   flex: 50%;
