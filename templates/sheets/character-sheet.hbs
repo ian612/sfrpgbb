@@ -1,59 +1,63 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="topPart">
-    <div class="leftColumn">
-        <div class="information">
-            {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
+        <div class="leftColumn">
+            <div class="information">
+                {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
+            </div>
+            <div>
+                <button onclick="openPage('characterSheet', 'equipment')">Character Sheet</button>
+            </div>
         </div>
-        <div>
-            <button onclick="openPage('characterSheet', 'equipment')">Character Sheet</button>
-        </div>
-    </div>
-    <div class="rightColumn">
-        <div class="image">
-            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
-        </div>
-        <div>
-            <button onclick="openPage('equipment', 'characterSheet')">Equipment and Spells</button>
-        </div>
-    </div>
-    </div>
-    
-    <div class="leftColumn">
-        <div class="abilities">
-            {{> "systems/sfrpgbb/templates/partials/character-abilities.hbs"}}
-        </div>
-        <div class="skills">
-            {{> "systems/sfrpgbb/templates/partials/character-skills.hbs"}}
-        </div>
-        <div class="traits">
-            {{> "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs"}}
+        <div class="rightColumn">
+            <div class="image">
+                <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
+            </div>
+            <div>
+                <button onclick="openPage('equipment', 'characterSheet')">Equipment and Spells</button>
+            </div>
         </div>
     </div>
-    <div class="rightColumn">
-        <div class="movement">
-            {{> "systems/sfrpgbb/templates/partials/character-movement.hbs"}}
+
+    <div class="mainSheet" id="characterSheet">
+        <div class="leftColumn">
+            <div class="abilities">
+                {{> "systems/sfrpgbb/templates/partials/character-abilities.hbs"}}
+            </div>
+            <div class="skills">
+                {{> "systems/sfrpgbb/templates/partials/character-skills.hbs"}}
+            </div>
+            <div class="traits">
+                {{> "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs"}}
+            </div>
         </div>
-        <div class="defence">
-            {{> "systems/sfrpgbb/templates/partials/character-defence.hbs"}}
-        </div>
-        <div class="attack">
-            {{> "systems/sfrpgbb/templates/partials/character-attack.hbs"}}
-        </div>
-        <div class="proficiencies">
-            {{> "systems/sfrpgbb/templates/partials/character-proficiencies.hbs"}}
-        </div>
-        <div class="spells">
-            {{> "systems/sfrpgbb/templates/partials/character-spells.hbs"}}
+        <div class="rightColumn">
+            <div class="movement">
+                {{> "systems/sfrpgbb/templates/partials/character-movement.hbs"}}
+            </div>
+            <div class="defence">
+                {{> "systems/sfrpgbb/templates/partials/character-defence.hbs"}}
+            </div>
+            <div class="attack">
+                {{> "systems/sfrpgbb/templates/partials/character-attack.hbs"}}
+            </div>
+            <div class="proficiencies">
+                {{> "systems/sfrpgbb/templates/partials/character-proficiencies.hbs"}}
+            </div>
+            <div class="spells">
+                {{> "systems/sfrpgbb/templates/partials/character-spells.hbs"}}
+            </div>
         </div>
     </div>
-    
-    <div class="leftColumn">
-        <div class="equipment">
-            {{> "systems/sfrpgbb/templates/partials/character-equipment.hbs"}}
+
+    <div class="secondarySheet" id="equipment">
+        <div class="leftColumn">
+            <div class="equipment">
+                {{> "systems/sfrpgbb/templates/partials/character-equipment.hbs"}}
+            </div>
         </div>
-    </div>
-    <div class="rightColumn">
-        Spells will go here when Ian gets around to it.
+        <div class="rightColumn">
+            Spells will go here when Ian gets around to it.
+        </div>
     </div>
 </form>
 

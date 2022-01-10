@@ -24,7 +24,7 @@
 }
 .sfrpgbb.sheet.character form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-shrink: 1;
 }
 .sfrpgbb.sheet.character table {
@@ -69,14 +69,36 @@
   flex-direction: column;
   padding: 3px;
 }
-.sfrpgbb.sheet.character .leftColumn {
+.sfrpgbb.sheet.character .mainSheet {
+  display: flex;
+  flex-direction: row;
+}
+.sfrpgbb.sheet.character .mainSheet .leftColumn {
   flex: 50%;
   display: flex;
   flex-direction: column;
   padding: 3px;
   justify-content: top;
 }
-.sfrpgbb.sheet.character .rightColumn {
+.sfrpgbb.sheet.character .mainSheet .rightColumn {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  justify-content: top;
+}
+.sfrpgbb.sheet.character .secondarySheet {
+  display: flex;
+  flex-direction: row;
+}
+.sfrpgbb.sheet.character .secondarySheet .leftColumn {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  justify-content: top;
+}
+.sfrpgbb.sheet.character .secondarySheet .rightColumn {
   flex: 50%;
   display: flex;
   flex-direction: column;
@@ -146,8 +168,4 @@
 .sfrpgbb.sheet.character .defence td {
   font-family: "Exo 2";
   font-size: 10pt;
-}
-.sfrpgbb.sheet.character .equipment {
-  align-items: center;
-  justify-content: top;
 }
