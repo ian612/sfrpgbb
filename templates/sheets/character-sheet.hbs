@@ -4,17 +4,21 @@
             <div class="information">
                 {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
             </div>
+            <!--
             <div>
                 <button onclick="openPage('characterSheet', 'equipment')">Character Sheet</button>
             </div>
+            -->
         </div>
         <div class="rightColumn">
             <div class="image">
                 <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
             </div>
+            <!--
             <div>
                 <button onclick="openPage('equipment', 'characterSheet')">Equipment and Spells</button>
             </div>
+            -->
         </div>
     </div>
 
@@ -45,6 +49,9 @@
             </div>
             <div class="spells">
                 {{> "systems/sfrpgbb/templates/partials/character-spells.hbs"}}
+            </div>
+            <div class="equipment">
+                {{> "systems/sfrpgbb/templates/partials/character-equipment.hbs"}}
             </div>
         </div>
     </div>
