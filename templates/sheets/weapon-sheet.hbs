@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td>
-                    <input name="data.price" type="text" value="{{data.price}}" data-dtype="Number" />
+                    <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
                 </td>
                 <td>
                     <select name="data.weaponType">
@@ -53,7 +53,7 @@
                     </select>
                 </td>
                 <td>
-                    <input name="data.range" type="text" value="{{data.range}}" data-dtype="Number" />
+                    <input name="data.range" type="number" value="{{data.range}}" data-dtype="Number" />
                 </td>
                 <td>
                     <select name="data.special">
@@ -75,7 +75,7 @@
                 </td>
             </tr>
         </table>
-        {{localize "sfrpgbb.equipment.description"}}
+        <b>{{localize "sfrpgbb.equipment.description"}}</b>
         {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
     </div>
 </form>

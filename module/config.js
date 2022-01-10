@@ -19,6 +19,12 @@ sfrpgbb.attackTypes = {
     grenades: "sfrpgbb.attack.grenades"
 }
 
+sfrpgbb.armorTypes = {
+    none: "",
+    light: "sfrpgbb.armor.light",
+    heavy: "sfrpgbb.armor.heavy"
+}
+
 sfrpgbb.damageTypes = {
     none: "None",
     kinetic: "sfrpgbb.damage.kinetic",

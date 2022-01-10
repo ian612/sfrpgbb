@@ -278,7 +278,7 @@
         "armor": {
             "templates": ["equipment"],
             "type": "light",
-            "AC": 0,
+            "ac": 0,
             "upgrade": null
         },
         "armorUpgrade": {

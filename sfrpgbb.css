@@ -7,6 +7,11 @@
   display: flex;
   flex-direction: column;
 }
+.sfrpgbb.sheet.item .sheet-content th,
+.sfrpgbb.sheet.item .sheet-content td {
+  text-align: center;
+  vertical-align: bottom;
+}
 .sfrpgbb.sheet.item .sheet-content .editor {
   height: 100%;
 }

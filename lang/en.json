@@ -28,8 +28,6 @@
             "armorClassAC": "Armor Class (AC)",
             "armorUpgrades": "Armor Upgrades",
             "armorProficiencies": "Armor Proficiencies",
-            "light": "Light",
-            "heavy": "Heavy",
             "savingThrow": "Saving Throw",
             "savingThrows": "Saving Throws",
             "fortitude": "Fortitude",
@@ -84,6 +82,13 @@
             "weaponProficiencies": "Weapon Proficiencies",
             "notProficientAsterisk": "to attack if not proficient",
             "strAsterisk": "* Add your STR to melee weapon damage."
+        },
+        "armor": {
+            "acBonus": "AC Bonus",
+            "armorType": "Armor Type",
+            "light": "Light",
+            "heavy": "Heavy",
+            "upgrade": "Armor Upgrade(s)"
         },
         "general": {
             "class": "Class",

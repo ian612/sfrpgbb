@@ -26,31 +26,10 @@
 	"secondaryTokenAttribute": "@defence.rp",
 	"packs": [
 		{	
-			"name": "archetypes",
-			"label": "Archetypes",
+			"name": "armor",
+			"label": "Armor",
 			"system": "sfrpgbb",
-			"path": "./packs/archetypes.db",
-			"entity": "Item"
-		},
-		{
-			"name": "characters",
-			"label": "Characters",
-			"system": "sfrpgbb",
-			"path": "./packs/characters.db",
-			"entity": "Actor"
-		},
-		{
-			"name": "equipment",
-			"label": "Equipment",
-			"system": "sfrpgbb",
-			"path": "./packs/equipment.db",
-			"entity": "Item"
-		},
-		{
-			"name": "feats",
-			"label": "Feats",
-			"system": "sfrpgbb",
-			"path": "./packs/feats.db",
+			"path": "./packs/armor.db",
 			"entity": "Item"
 		},
 		{
@@ -58,27 +37,6 @@
 			"label": "Spells",
 			"system": "sfrpgbb",
 			"path": "./packs/spells.db",
-			"entity": "Item"
-		},
-		{
-			"name": "races",
-			"label": "Races",
-			"system": "sfrpgbb",
-			"path": "./packs/races.db",
-			"entity": "Item"
-		},
-		{
-			"name": "classes",
-			"label": "Classes",
-			"system": "sfrpgbb",
-			"path": "./packs/classes.db",
-			"entity": "Item"
-		},
-		{
-			"name": "themes",
-			"label": "Themes",
-			"system": "sfrpgbb",
-			"path": "./packs/themes.db",
 			"entity": "Item"
 		},
 		{
@@ -100,13 +58,6 @@
 			"label": "Conditions",
 			"system": "sfrpg",
 			"path": "./packs/conditions.db",
-			"entity": "Item"
-		},
-		{
-			"name": "class-features",
-			"label": "Class Features",
-			"system": "sfrpg",
-			"path": "./packs/class-features.db",
 			"entity": "Item"
 		}
 	]
