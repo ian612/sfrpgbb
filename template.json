@@ -52,60 +52,80 @@
             "skills": {
                 "skills": {
                     "athletics": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "culture": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "interaction": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "medicine": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "mysticism": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "perception": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "science": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "stealth": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "survival": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,
                         "misc": 0
                     },
                     "technology": {
+                        "classSkill": false,
+                        "trainedSkill": false,
                         "value": 0,
                         "class": 0,
                         "level": 0,

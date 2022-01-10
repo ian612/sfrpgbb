@@ -174,21 +174,25 @@ export class sfrpgbbActor extends Actor {
     /**
      * Calculate Saving Throws
      */
-     _calculateSaves(actorData) {
+    _calculateSaves(actorData) {
         const data = actorData.data;
 
+        // Fortitude
         const con = data.abilities.constitution.mod;
         const fortitudeClass = data.defence.save.fortitude.class;
         const fortitudeMisc = data.defence.save.fortitude.misc;
 
+        // Reflex
         const dex = data.abilities.dexterity.mod;
         const reflexClass = data.defence.save.reflex.class;
         const reflexMisc = data.defence.save.reflex.misc;
         
+        // Will
         const wis = data.abilities.wisdom.mod;
         const willClass = data.defence.save.will.class;
         const willMisc = data.defence.save.will.misc;
 
+        // Calculations
         data.defence.save.fortitude.value = con + fortitudeClass + fortitudeMisc;
         data.defence.save.reflex.value = dex + reflexClass + reflexMisc;
         data.defence.save.will.value = wis + willClass + willMisc;
@@ -197,7 +201,7 @@ export class sfrpgbbActor extends Actor {
     /**
      * Calculate Attack
      */
-     _calculateAttack(actorData) {
+    _calculateAttack(actorData) {
         const data = actorData.data;
         const str = data.abilities.strength.mod;
         const dex = data.abilities.dexterity.mod;
@@ -209,79 +213,82 @@ export class sfrpgbbActor extends Actor {
 
     /**
      * Calculate Skills
+     * 
+     * Code isn't very efficient, but I think it gives good intuition as to how things are being calculated
      */
-         _calculateSkills(actorData) {
-            const data = actorData.data;
+    _calculateSkills(actorData) {
+        const data = actorData.data;
+
+        // Character Level
+        const charLevel = data.information.level;
+        
+        // Ability Score Modifiers
+        const str = data.abilities.strength.mod;
+        const dex = data.abilities.dexterity.mod;
+        const con = data.abilities.constitution.mod;
+        const int = data.abilities.intelligence.mod;
+        const wis = data.abilities.wisdom.mod;
+        const cha = data.abilities.charisma.mod;
+
+        // Skills
+        let athletics = data.skills.athletics;
+        let culture = data.skills.culture;
+        let interaction = data.skills.interaction;
+        let medicine = data.skills.medicine;
+        let mysticism = data.skills.mysticism;
+        let perception = data.skills.perception;
+        let science = data.skills.science;
+        let stealth = data.skills.stealth;
+        let survival = data.skills.survival;
+        let technology = data.skills.technology;
+
+        // Add appropriate Ability mods to the data structure
+        athletics.abilityMod = str;
+        culture.abilityMod = int;
+        interaction.abilityMod = cha;
+        medicine.abilityMod = int;
+        mysticism.abilityMod = wis;
+        perception.abilityMod = wis;
+        science.abilityMod = int;
+        stealth.abilityMod = dex;
+        survival.abilityMod = wis;
+        technology.abilityMod = int;
+        
+        // Store skills in array
+        const skillList = {
+            athletics,
+            culture,
+            interaction,
+            medicine,
+            mysticism,
+            perception,
+            science,
+            stealth,
+            survival,
+            technology
+        };
+
+        // Calculate values based on level and skill proficiencies
+        for (let key in skillList) {
+            if (!skillList.hasOwnProperty(key)) continue;
             
-            // Ability Score Modifiers
-            const str = data.abilities.strength.mod;
-            const dex = data.abilities.dexterity.mod;
-            const con = data.abilities.constitution.mod;
-            const int = data.abilities.intelligence.mod;
-            const wis = data.abilities.wisdom.mod;
-            const cha = data.abilities.charisma.mod;
+            // Update skill values
+            let skill = skillList[key];
+            if (skill.classSkill) {
+                skill.class = 3;
+                skill.level = charLevel;
+            } else {
+                skill.class = 0;
+                skill.level = 0;
+            }
+            if (skill.trainedSkill) {
+                skill.level = charLevel;
+            } else if (!skill.classSkill) {
+                skill.level = 0;
+            }
 
-            // Athletics
-            const athleticsClass = data.skills.athletics.class;
-            const athleticsLevel = data.skills.athletics.level;
-            const athleticsMisc = data.skills.athletics.misc;
-            
-            // Culture
-            const cultureClass = data.skills.culture.class;
-            const cultureLevel = data.skills.culture.level;
-            const cultureMisc = data.skills.culture.misc;
-
-            // Interaction
-            const interactionClass = data.skills.interaction.class;
-            const interactionLevel = data.skills.interaction.level;
-            const interactionMisc = data.skills.interaction.misc;
-
-            // Medicine
-            const medicineClass = data.skills.medicine.class;
-            const medicineLevel = data.skills.medicine.level;
-            const medicineMisc = data.skills.medicine.misc;
-
-            // Mysticism
-            const mysticismClass = data.skills.mysticism.class;
-            const mysticismLevel = data.skills.mysticism.level;
-            const mysticismMisc = data.skills.mysticism.misc;
-
-            // Perception
-            const perceptionClass = data.skills.perception.class;
-            const perceptionLevel = data.skills.perception.level;
-            const perceptionMisc = data.skills.perception.misc;
-
-            // Science
-            const scienceClass = data.skills.science.class;
-            const scienceLevel = data.skills.science.level;
-            const scienceMisc = data.skills.science.misc;
-
-            // Stealth
-            const stealthClass = data.skills.stealth.class;
-            const stealthLevel = data.skills.stealth.level;
-            const stealthMisc = data.skills.stealth.misc;
-
-            // Survival
-            const survivalClass = data.skills.survival.class;
-            const survivalLevel = data.skills.survival.level;
-            const survivalMisc = data.skills.survival.misc;
-
-            // Technology
-            const technologyClass = data.skills.technology.class;
-            const technologyLevel = data.skills.technology.level;
-            const technologyMisc = data.skills.technology.misc;
-            
-            // Calculations
-            data.skills.athletics.value = str + athleticsClass + athleticsLevel + athleticsMisc;
-            data.skills.culture.value = int + cultureClass + cultureLevel + cultureMisc;
-            data.skills.interaction.value = cha + interactionClass + interactionLevel + interactionMisc;
-            data.skills.medicine.value = int + medicineClass + medicineLevel + medicineMisc;
-            data.skills.mysticism.value = wis + mysticismClass + mysticismLevel + mysticismMisc;
-            data.skills.perception.value = wis + perceptionClass + perceptionLevel + perceptionMisc;
-            data.skills.science.value = int + scienceClass + scienceLevel + scienceMisc;
-            data.skills.stealth.value = dex + stealthClass + stealthLevel + stealthMisc;
-            data.skills.survival.value = wis + survivalClass + survivalLevel + survivalMisc;
-            data.skills.technology.value = int + technologyClass + technologyLevel + technologyMisc;
-
+            // Calculate total skill bonuses
+            skill.value = skill.abilityMod + skill.class + skill.level + skill.misc;
         }
+    }
 }

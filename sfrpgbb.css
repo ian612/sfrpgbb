@@ -137,6 +137,11 @@
   background-color: blue;
   padding: 1px;
 }
+.sfrpgbb.sheet.character .skillBox {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+}
 .sfrpgbb.sheet.character .blankTable {
   font-family: "Exo 2";
   font-size: 10pt;

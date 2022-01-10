@@ -162,6 +162,7 @@
         "skill": {
             "skill": "Skill",
             "skills": "Skills",
+            "trained": "Trained",
             "athletics": "Athletics",
             "culture": "Culture",
             "interaction": "Interaction",
