@@ -45,6 +45,13 @@
 			"system": "sfrpgbb",
 			"path": "./packs/armor-upgrades.db",
 			"entity": "Item"
+		},
+		{
+			"name": "weapons",
+			"label": "Weapons",
+			"system": "sfrpgbb",
+			"path": "./packs/weapons.db",
+			"entity": "Item"
 		}
 	]
 }
