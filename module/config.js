@@ -15,8 +15,7 @@ sfrpgbb.attackTypes = {
     meleeBasic: "sfrpgbb.attack.meleeBasic",
     meleeAdvanced: "sfrpgbb.attack.meleeAdvanced",
     smallArms: "sfrpgbb.attack.smallArms",
-    longArms: "sfrpgbb.attack.longArms",
-    grenades: "sfrpgbb.attack.grenades"
+    longArms: "sfrpgbb.attack.longArms"
 }
 
 sfrpgbb.armorTypes = {
