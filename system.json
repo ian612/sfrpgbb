@@ -47,6 +47,13 @@
 			"entity": "Item"
 		},
 		{
+			"name": "grenadess",
+			"label": "Grenades",
+			"system": "sfrpgbb",
+			"path": "./packs/grenades.db",
+			"entity": "Item"
+		},
+		{
 			"name": "weapons",
 			"label": "Weapons",
 			"system": "sfrpgbb",

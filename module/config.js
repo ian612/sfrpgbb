@@ -1,15 +1,5 @@
 export const sfrpgbb = {};
 
-sfrpgbb.equipmentTypes = {
-    none: "",
-    armor: "sfrpgbb.equipment.armor",
-    armorUpgrade: "sfrpgbb.equipment.armorUpgrade",
-    weapon: "sfrpgbb.equipment.weapon",
-    grenade: "sfrpgbb.equipment.grenade",
-    weaponFusion: "sfrpgbb.equipment.weaponFusion",
-    gear: "sfrpgbb.equipment.gear"
-}
-
 sfrpgbb.attackTypes = {
     none: "",
     meleeBasic: "sfrpgbb.attack.meleeBasic",
@@ -32,6 +22,23 @@ sfrpgbb.damageTypes = {
     electricity: "sfrpgbb.damage.electricity",
     fire: "sfrpgbb.damage.fire",
     sonic: "sfrpgbb.damage.sonic"
+}
+
+sfrpgbb.equipmentTypes = {
+    none: "",
+    armor: "sfrpgbb.equipment.armor",
+    armorUpgrade: "sfrpgbb.equipment.armorUpgrade",
+    weapon: "sfrpgbb.equipment.weapon",
+    grenade: "sfrpgbb.equipment.grenade",
+    weaponFusion: "sfrpgbb.equipment.weaponFusion",
+    gear: "sfrpgbb.equipment.gear"
+}
+
+sfrpgbb.saveTypes = {
+    none: "",
+    fortitude: "sfrpgbb.defence.fortitude",
+    reflex: "sfrpgbb.defence.reflex",
+    will: "sfrpgbb.defence.will"
 }
 
 sfrpgbb.weaponSpecials = {

@@ -7,23 +7,14 @@
         <table>
             <tr>
                 <th>{{localize "sfrpgbb.equipment.price"}}</th>
-                <th>{{localize "sfrpgbb.weapon.weaponType"}}</th>
                 <th>{{localize "sfrpgbb.equipment.isTech"}}</th>
                 <th>{{localize "sfrpgbb.equipment.isMagic"}}</th>
-                <th></th>
+                <th colspan=2>{{localize "sfrpgbb.defence.saveType"}}</th>
+                <th>{{localize "sfrpgbb.defence.DC"}}</th>
             </tr>
             <tr>
                 <td>
                     <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
-                </td>
-                <td>
-                    <select name="data.weaponType">
-                        {{#select data.weaponType}}
-                        {{#each config.attackTypes as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
                 </td>
                 <td>
                     <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
@@ -31,13 +22,24 @@
                 <td>
                     <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
                 </td>
+                <td colspan=2>
+                    <select name="data.saveType">
+                        {{#select data.saveType}}
+                        {{#each config.saveTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+                <td>
+                    <input name="data.saveDC" type="number" value="{{data.saveDC}}" data-dtype="Number" />
+                </td>
             </tr>
             <tr>
                 <th>{{localize "sfrpgbb.weapon.damage"}}</th>
                 <th>{{localize "sfrpgbb.weapon.damageType"}}</th>
                 <th>{{localize "sfrpgbb.weapon.range"}}</th>
-                <th>{{localize "sfrpgbb.weapon.specialProperty"}}</th>
-                <th>{{localize "sfrpgbb.weapon.critical"}}</th>
+                <th colspan=3>{{localize "sfrpgbb.weapon.specialEffect"}}</th>
             </tr>
             <tr>
                 <td>
@@ -55,27 +57,12 @@
                 <td>
                     <input name="data.range" type="number" value="{{data.range}}" data-dtype="Number" />
                 </td>
-                <td>
-                    <select name="data.special">
-                        {{#select data.special}}
-                        {{#each config.weaponSpecials as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </td>
-                <td>
-                    <select name="data.critical">
-                        {{#select data.critical}}
-                        {{#each config.weaponCriticals as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
+                <td colspan=3>
+                    <input name="data.special" type="text" value="{{data.special}}" data-dtype="String" />
                 </td>
             </tr>
         </table>
-        <b>{{localize "sfrpgbb.equipment.weapon"}} - {{localize "sfrpgbb.equipment.description"}}</b>
+        <b>{{localize "sfrpgbb.equipment.grenade"}} - {{localize "sfrpgbb.equipment.description"}}</b>
         {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
     </div>
 </form>
