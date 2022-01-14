@@ -264,6 +264,7 @@
             "armorUpgrade",
             "weapon",
             "weaponFusion",
+            "grenade",
             "gear"
         ],
         "templates": {

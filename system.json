@@ -52,6 +52,13 @@
 			"system": "sfrpgbb",
 			"path": "./packs/weapons.db",
 			"entity": "Item"
+		},
+		{
+			"name": "weapon-fusions",
+			"label": "Weapon Fusions",
+			"system": "sfrpgbb",
+			"path": "./packs/weapon-fusions.db",
+			"entity": "Item"
 		}
 	]
 }
