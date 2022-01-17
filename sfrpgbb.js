@@ -14,6 +14,7 @@ async function preloadHandlebarsTemplates() {
         "systems/sfrpgbb/templates/partials/character-proficiencies.hbs",
         "systems/sfrpgbb/templates/partials/character-skills.hbs",
         "systems/sfrpgbb/templates/partials/character-spells.hbs",
+        "systems/sfrpgbb/templates/partials/character-spellList.hbs",
         "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs"
     ];
 

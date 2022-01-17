@@ -66,8 +66,10 @@ export class sfrpgbbActor extends Actor {
         this._calculateSkills(actorData);
 
         // Owned Items and related stuff
-        data.weapons = actorData.items.filter(function (item) { return item.type == "weapon"});
+        data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
+        data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
         data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
+        data.spellList = actorData.items.filter(function (item) { return item.type == "spell"});
 
         // Output data to a console (for debugging)
         console.log(actorData);

@@ -189,3 +189,6 @@
   font-family: "Exo 2";
   font-size: 10pt;
 }
+.sfrpgbb.sheet.character .item {
+  text-align: center;
+}
