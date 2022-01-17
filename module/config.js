@@ -41,6 +41,24 @@ sfrpgbb.saveTypes = {
     will: "sfrpgbb.defence.will"
 }
 
+sfrpgbb.spellBonusAbility = {
+    none: "",
+    intelligence: "sfrpgbb.ability.intelligence",
+    wisdom: "sfrpgbb.ability.wisdom"
+}
+
+sfrpgbb.spellTypes = {
+    targetsAllies: "sfrpgbb.spell.targetsAllies",
+    targetsEnemies: "sfrpgbb.spell.targetsEnemies",
+    utilitySpell: "sfrpgbb.spell.utilitySpell"
+}
+
+sfrpgbb.spellImages = {
+    targetsAllies: "systems\\sfrpgbb\\images\\spell_types\\target_allies.png",
+    targetsEnemies: "systems\\sfrpgbb\\images\\spell_types\\target_enemies.png",
+    utilitySpell: "systems\\sfrpgbb\\images\\spell_types\\utility_spell.png"
+}
+
 sfrpgbb.weaponSpecials = {
     none: "None",
     blast: "sfrpgbb.weapon.blast",

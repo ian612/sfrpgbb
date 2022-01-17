@@ -1,0 +1,47 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <div style="flex: 0 0 72px;">
+            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        </div>
+        <div class="spellName" style="flex-grow: 4;">
+            <h3><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize "sfrpgbb.general.name" }}"/></h3>
+            <div><b>{{localize "sfrpgbb.general.level"}} - </b> <input name="data.level" style="width: 10%; text-align: center;" type="number" value="{{data.level}}" data-dtype="Number" /></div>
+        </div>
+        <div style="flex-grow: 2;">
+            <select name="data.type">
+                {{#select data.type}}
+                {{#each config.spellTypes as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+        </div>
+        <div style="flex: 0 0 72px;">
+            {{#switch data.type}}
+                {{#case "targetsAllies"}}
+                    {{"config.spellImages.targetsAllies"}}
+                    <img src="{{config.spellImages.targetsAllies}}" height="64" width="64"/>
+                {{/case}}
+                {{#case "targetsEnemies"}}
+                    {{"config.spellImages.targetsEnemies"}}
+                    <img src="{{config.spellImages.targetsEnemies}}" height="64" width="64"/>
+                {{/case}}
+                {{#case "utilitySpell"}}
+                    {{"config.spellImages.utilitySpell"}}
+                    <img src="{{config.spellImages.utilitySpell}}" height="64" width="64"/>
+                {{/case}}
+            {{/switch}}
+        </div>
+    </header>
+
+    <div class="sheet-content">
+        <table>
+            <th style="text-align: left;"><b>{{localize "sfrpgbb.spell.range"}} - </b> <input name="data.range" style="width: 70%" type="text" value="{{data.range}}" data-dtype="String" /></th>
+            <th style="text-align: right;"><b>{{localize "sfrpgbb.spell.duration"}} - </b> <input name="data.duration" style="width: 60%" type="text" value="{{data.duration}}" data-dtype="String" /></th>
+        </table>
+        <div class="editor">
+            <b>{{localize "sfrpgbb.spell.spell"}} - {{localize "sfrpgbb.equipment.description"}}</b>
+            {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+        </div>
+    </div>
+</form>

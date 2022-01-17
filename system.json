@@ -54,6 +54,13 @@
 			"entity": "Item"
 		},
 		{
+			"name": "spells",
+			"label": "Spells",
+			"system": "sfrpgbb",
+			"path": "./packs/spells.db",
+			"entity": "Item"
+		},
+		{
 			"name": "weapons",
 			"label": "Weapons",
 			"system": "sfrpgbb",

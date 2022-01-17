@@ -265,7 +265,8 @@
             "weapon",
             "weaponFusion",
             "grenade",
-            "gear"
+            "gear",
+            "spell"
         ],
         "templates": {
             "equipment": {
@@ -309,6 +310,19 @@
             "templates": ["equipment"],
             "action": "useItem",
             "enableSkill": null
+        },
+        "spell": {
+            "type": null,
+            "description": null,
+            "level": 0,
+            "range": 0,
+            "duration": null,
+            "save": {
+                "hasSave": true,
+                "baseDC": 10,
+                "bonusAbility": null,
+                "savetype": "reflex"
+            }
         }
     }
 }

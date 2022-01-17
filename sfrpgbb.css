@@ -13,7 +13,17 @@
   vertical-align: bottom;
 }
 .sfrpgbb.sheet.item .sheet-content .editor {
-  height: 100%;
+  height: 90%;
+}
+.sfrpgbb.sheet.item .sheet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+}
+.sfrpgbb.sheet.item .sheet-header .spellName {
+  display: flex;
+  flex-direction: column;
 }
 @font-face {
   font-family: "Nodesto";

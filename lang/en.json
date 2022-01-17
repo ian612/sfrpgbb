@@ -8,6 +8,7 @@
     "ITEM.TypeWeaponfusion": "Weapon Fusion",
     "ITEM.TypeGrenade": "Grenade",
     "ITEM.TypeGear": "Adventuring Gear",
+    "ITEM.TypeSpell": "Spell",
 
     "sfrpgbb": {
         "attack": {
@@ -105,6 +106,7 @@
             "name": "Name",
             "pronouns": "Pronouns",
             "race": "Race",
+            "racial": "Racial",
             "racialTraits": "Racial Traits",
             "races": {
                 "android": "Android",
@@ -187,6 +189,7 @@
             "feet": "Feet"
         },
         "spell": {
+            "spell": "Spell",
             "spells": "Spells",
             "zeroLevel": "0 Level",
             "firstLevel": "1st Level",
@@ -194,7 +197,12 @@
             "spellSlots": "Spell Slots",
             "available": "Available",
             "damageOrDuration": "Damage or Duration",
-            "dc": "DC"
+            "dc": "DC",
+            "targetsAllies": "Targets Allies",
+            "targetsEnemies": "Targets Enemies",
+            "utilitySpell": "Utility Spell",
+            "range": "Range",
+            "duration": "Duration"
         }
     }
 }
