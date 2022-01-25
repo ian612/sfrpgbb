@@ -47,5 +47,42 @@ export default class sfrpgbbActorSheet extends ActorSheet {
           this.actor.deleteEmbeddedDocuments("Item", [li.data("itemId")]);
           li.slideUp(200, () => this.render(false));
         });
+
+        // Update Inventory Item Quantity
+        html.find(".item-quantity input").click(ev => ev.target.select()).change(this._onQuantityChange.bind(this));
+
+        // Update Inventory Item Equipped Status
+        html.find(".item-equipped input").click(ev => ev.target.select()).change(this._onEquippedChange.bind(this));
+    }
+
+    /**
+     * Change the quantity of an Owned Item within the Actor.
+     * @param {Event} event        The triggering click event.
+     * @returns {Promise<Item5e>}  Updated item.
+     * @private
+     */
+    async _onQuantityChange(event) {
+        event.preventDefault();
+        const itemId = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.items.get(itemId);
+        const quantity = parseInt(event.target.value);
+        event.target.value = quantity;
+        return item.update({ "data.quantity": quantity });
+    }
+
+    /**
+     * Change the equipped status of an Owned Item within the Actor.
+     * @param {Event} event        The triggering click event.
+     * @returns {Promise<Item5e>}  Updated item.
+     * @private
+     */
+     async _onEquippedChange(event) {
+        event.preventDefault();
+        const itemId = event.currentTarget.closest(".item").dataset.itemId;
+        const item = this.actor.items.get(itemId);
+        const equipped = event.target.checked;
+        event.target.value = equipped;
+        console.log(equipped)
+        return item.update({ "data.equipped": equipped });
     }
 }

@@ -52,6 +52,7 @@
         },
         "equipment": {
             "equipment": "Equipment",
+            "equipped": "Equipped",
             "credits": "Credits",
             "price": "Price (CR)",
             "description": "Description",
@@ -101,7 +102,8 @@
             "name": "Name",
             "page": "Page",
             "total": "Total",
-            "type": "Type"
+            "type": "Type",
+            "quantity": "Quantity"
         },
         "character": {
             "name": "Name",

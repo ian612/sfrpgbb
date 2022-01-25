@@ -64,4 +64,20 @@ Hooks.once("init", function() {
             return options.fn(this);
         }
     });
+
+    // Handlebars console log
+    Handlebars.registerHelper("log", function(something) {
+        console.log(something);
+    });
+
+    // Handlebars concatenation
+    Handlebars.registerHelper('concat', function() {
+        var outStr = '';
+        for(var arg in arguments){
+            if(typeof arguments[arg]!='object'){
+                outStr += arguments[arg];
+            }
+        }
+        return outStr;
+    });
 });

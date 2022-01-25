@@ -4,21 +4,11 @@
             <div class="information">
                 {{> "systems/sfrpgbb/templates/partials/character-information.hbs"}}
             </div>
-            <!--
-            <div>
-                <button onclick="openPage('characterSheet', 'equipment')">Character Sheet</button>
-            </div>
-            -->
         </div>
         <div class="rightColumn">
             <div class="image">
                 <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
             </div>
-            <!--
-            <div>
-                <button onclick="openPage('equipment', 'characterSheet')">Equipment and Spells</button>
-            </div>
-            -->
         </div>
     </div>
 
@@ -58,25 +48,4 @@
             </div>
         </div>
     </div>
-
-    <div class="secondarySheet" id="equipment">
-        <div class="leftColumn">
-            <div class="equipment">
-                {{> "systems/sfrpgbb/templates/partials/character-equipment.hbs"}}
-            </div>
-        </div>
-        <div class="rightColumn">
-            Spells will go here when Ian gets around to it.
-        </div>
-    </div>
 </form>
-
-<script>
-function openPage(onPage, offPage) {
-    var x = document.getElementById(onPage)
-    var y = document.getElementById(offPage)
-    x.style.display = "flex";
-    y.style.display = "none";
-}
-window.onload = openPage('characterSheet', 'equipment');
-</script>
