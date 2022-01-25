@@ -51,6 +51,7 @@
             "sonic": "Sonic"
         },
         "equipment": {
+            "equipment": "Equipment",
             "credits": "Credits",
             "price": "Price (CR)",
             "description": "Description",

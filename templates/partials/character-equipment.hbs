@@ -1,9 +1,11 @@
 <h2 style="text-align: center;">{{localize "sfrpgbb.equipment.itemsAndEquipment"}}</h2>
 
 <ol class="items-list">
+
+
     <li class="item flexrow item-header">
         <div class="item-image"><h3></h3></div>
-        <div class="item-name" style="flex-grow: 2;"><h3>{{localize "sfrpgbb.general.name"}}</h3></div>
+        <div class="item-name" style="flex-grow: 2;"><h3>{{localize "sfrpgbb.equipment.weapon"}}</h3></div>
         <div class="item-type"><h3>{{localize "sfrpgbb.general.type"}}</h3></div>
         <div class="item-controls">
             <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
@@ -19,6 +21,16 @@
         </div>
     </li>
     {{/each}}
+
+
+    <li class="item flexrow item-header">
+        <div class="item-image"><h3></h3></div>
+        <div class="item-name" style="flex-grow: 2;"><h3>{{localize "sfrpgbb.equipment.armor"}}</h3></div>
+        <div class="item-type"><h3>{{localize "sfrpgbb.general.type"}}</h3></div>
+        <div class="item-controls">
+            <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
+        </div>
+    </li>
     {{#each data.armor as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
@@ -29,6 +41,16 @@
         </div>
     </li>
     {{/each}}
+
+
+    <li class="item flexrow item-header">
+        <div class="item-image"><h3></h3></div>
+        <div class="item-name" style="flex-grow: 2;"><h3>{{localize "sfrpgbb.equipment.equipment"}}</h3></div>
+        <div class="item-type"><h3>{{localize "sfrpgbb.general.type"}}</h3></div>
+        <div class="item-controls">
+            <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
+        </div>
+    </li>
     {{#each data.equipment as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>

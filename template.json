@@ -272,8 +272,10 @@
             "equipment": {
                 "price": "",
                 "description": "",
+                "equipped": false,
                 "isTech": true,
-                "isMagic": false
+                "isMagic": false,
+                "quantity": 1
             }
         },
         "armor": {
