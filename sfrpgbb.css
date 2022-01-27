@@ -207,21 +207,23 @@
 .sfrpgbb.sheet.npc form {
   display: flex;
   flex-direction: column;
-  flex-shrink: 1;
-  font-family: "Orbitron";
+  font-family: "Exo 2";
   font-size: 10pt;
   padding: 5px;
 }
 .sfrpgbb.sheet.npc .infoBar {
   display: flex;
   flex-direction: column;
-  flex-shrink: 1;
 }
-.sfrpgbb.sheet.npc .infoBar .topRow {
+.sfrpgbb.sheet.npc .infoBar .topRow,
+.sfrpgbb.sheet.npc .infoBar .middleRow,
+.sfrpgbb.sheet.npc .infoBar .bottomRow {
   display: flex;
   flex-direction: row;
-  background-color: black;
   justify-content: space-between;
+}
+.sfrpgbb.sheet.npc .infoBar .topRow {
+  background-color: black;
 }
 .sfrpgbb.sheet.npc .infoBar .topRow input,
 .sfrpgbb.sheet.npc .infoBar .topRow select,
@@ -230,6 +232,14 @@
   color: white;
   background-color: black;
   text-transform: uppercase;
+  border-width: 0;
+  font-weight: bold;
+}
+.sfrpgbb.sheet.npc .infoBar .topRow .name,
+.sfrpgbb.sheet.npc .infoBar .topRow .alignment {
+  flex-grow: 0.5;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 .sfrpgbb.sheet.npc .infoBar .topRow .name {
   text-align: left;
@@ -238,14 +248,48 @@
   text-align: right;
 }
 .sfrpgbb.sheet.npc .infoBar .middleRow {
-  flex-direction: row;
+  flex-grow: 0.2;
   background-color: blue;
   color: white;
-  text-transform: uppercase;
+  padding: 0px 5px 0px 5px;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow input,
+.sfrpgbb.sheet.npc .infoBar .middleRow select,
+.sfrpgbb.sheet.npc .infoBar .middleRow textarea,
+.sfrpgbb.sheet.npc .infoBar .middleRow option {
+  color: white;
+  background-color: blue;
+  border: none;
+  flex: 0 0 2.5em;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow input {
+  padding: 0px 0px 0px 2px;
+  text-align: center;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow .initiative,
+.sfrpgbb.sheet.npc .infoBar .middleRow .speed,
+.sfrpgbb.sheet.npc .infoBar .middleRow .cr,
+.sfrpgbb.sheet.npc .infoBar .middleRow .xp,
+.sfrpgbb.sheet.npc .infoBar .middleRow .hp {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 24%;
+  padding-left: 3px;
+  padding-right: 3px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-left: solid 1px white;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow .cr,
+.sfrpgbb.sheet.npc .infoBar .middleRow .xp {
+  flex: 0 0 14%;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow .hp {
+  border-right: solid 1px white;
 }
 .sfrpgbb.sheet.npc .infoBar .bottomRow {
-  flex-direction: row;
-  background-color: blue;
-  color: #c7eafb;
+  background-color: #c7eafb;
+  color: black;
   text-transform: uppercase;
 }

@@ -40,6 +40,7 @@
             "will": "Will",
             "willSave": "Will Save",
             "hitPoints": "Hit Points",
+            "hp": "HP",
             "resolvePoints": "Resolve Points"
         },
         "damage": {
@@ -99,6 +100,7 @@
             "current": "Current",
             "level": "Level",
             "misc": "Misc",
+            "ft": "ft.",
             "name": "Name",
             "page": "Page",
             "total": "Total",
@@ -151,7 +153,9 @@
                 "chaoticEvil": "Chaotic Evil"
             },
             "currentXP": "Current XP",
-            "nextLevelXP": "Next Level XP"
+            "nextLevelXP": "Next Level XP",
+            "xp": "XP",
+            "cr": "CR"
         },
         "ability": {
             "abilityMod": "Ability Mod",

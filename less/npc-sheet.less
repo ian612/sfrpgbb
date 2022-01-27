@@ -15,24 +15,31 @@
     form {
         display: flex;
         flex-direction: column;
-        flex-shrink: 1;
-        font-family: "Orbitron";
+        font-family: "Exo 2";
         font-size: 10pt;
         padding: 5px;
     }
     .infoBar {
         display: flex;
         flex-direction: column;
-        flex-shrink: 1;
-        .topRow {
+        .topRow, .middleRow, .bottomRow {
             display: flex;
             flex-direction: row;
-            background-color: black;
             justify-content: space-between;
+        }
+        .topRow {
+            background-color: black;
             input, select, textarea, option {
                 color: white;
                 background-color: black;
                 text-transform: uppercase;
+                border-width: 0;
+                font-weight: bold;
+            }
+            .name, .alignment {
+                flex-grow: 0.5;
+                padding-left: 3px;
+                padding-right: 3px;
             }
             .name {
                 text-align: left;
@@ -42,15 +49,41 @@
             }
         }
         .middleRow {
-            flex-direction: row;
+            flex-grow: 0.2;
             background-color: blue;
             color: white;
-            text-transform: uppercase;
+            padding: 0px 5px 0px 5px;
+            input, select, textarea, option {
+                color: white;
+                background-color: blue;
+                border: none;
+                flex: 0 0 2.5em;
+            }
+            input {
+                padding: 0px 0px 0px 2px;
+                text-align: center;
+            }
+            .initiative, .speed, .cr, .xp, .hp {
+                display: flex;
+                flex-direction: row;
+                flex: 0 0 24%;
+                padding-left: 3px;
+                padding-right: 3px;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+                border-left: solid 1px white;
+            }
+            .cr, .xp {
+                flex: 0 0 14%;
+            }
+            .hp {
+                border-right: solid 1px white;
+            }
         }
         .bottomRow {
-            flex-direction: row;
-            background-color: blue;
-            color: #c7eafb;
+            background-color: #c7eafb;
+            color: black;
             text-transform: uppercase;
         }
     }

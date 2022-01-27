@@ -83,7 +83,10 @@ export class sfrpgbbActor extends Actor {
     
         // Make modifications to data here. For example:
         const data = actorData.data;
-        //data.xp = (data.cr * data.cr) * 100;
+
+        // Output data to a console (for debugging)
+        console.log(actorData)
+
     }
 
     /**
