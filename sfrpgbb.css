@@ -192,3 +192,60 @@
 .sfrpgbb.sheet.character .item {
   text-align: center;
 }
+@font-face {
+  font-family: "Nodesto";
+  src: url('fonts/NodestoCapsCondensed.otf');
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url('fonts/Orbitron-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: "Exo 2";
+  src: url('fonts/Exo2-VariableFont_wght.ttf');
+}
+.sfrpgbb.sheet.npc form {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  font-family: "Orbitron";
+  font-size: 10pt;
+  padding: 5px;
+}
+.sfrpgbb.sheet.npc .infoBar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+}
+.sfrpgbb.sheet.npc .infoBar .topRow {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+}
+.sfrpgbb.sheet.npc .infoBar .topRow input,
+.sfrpgbb.sheet.npc .infoBar .topRow select,
+.sfrpgbb.sheet.npc .infoBar .topRow textarea,
+.sfrpgbb.sheet.npc .infoBar .topRow option {
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+}
+.sfrpgbb.sheet.npc .infoBar .topRow .name {
+  text-align: left;
+}
+.sfrpgbb.sheet.npc .infoBar .topRow .alignment {
+  text-align: right;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow {
+  flex-direction: row;
+  background-color: blue;
+  color: white;
+  text-transform: uppercase;
+}
+.sfrpgbb.sheet.npc .infoBar .bottomRow {
+  flex-direction: row;
+  background-color: blue;
+  color: #c7eafb;
+  text-transform: uppercase;
+}

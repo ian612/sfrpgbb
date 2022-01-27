@@ -225,7 +225,8 @@
             "templates": ["senses", "abilities", "movement", "skills", "spells", "defence"],
             "information": {
                 "description": null,
-                "cr": 0
+                "cr": 0,
+                "alignment": null
             },
             "attack": {
                 "melee": {

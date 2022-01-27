@@ -1,0 +1,21 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="image">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160" width="160" style="display: block; margin-left: auto; margin-right: auto;"/>
+    </div>
+
+    <div class="infoBar">
+        <div class="topRow">
+            <div class="name"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "sfrpgbb.character.name"}}"/></div>
+            <div class="alignment">
+                <select name="data.information.alignment">
+                    {{#select data.information.alignment}}
+                    {{#each config.alignments as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </div>
+
+</form>
