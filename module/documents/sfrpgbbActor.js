@@ -53,7 +53,10 @@ export class sfrpgbbActor extends Actor {
         data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
         data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
         data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
-        data.spellList = actorData.items.filter(function (item) { return item.type == "spell"});
+        data.spellList = {};
+        data.spellList.zero = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 0))});
+        data.spellList.one = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 1))});
+        data.spellList.two = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 2))});
 
         // Character Sheet Stuff
         // Calculate character level based on XP
