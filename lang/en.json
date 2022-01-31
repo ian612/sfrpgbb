@@ -194,7 +194,8 @@
         "movement": {
             "initiative": "Initiative",
             "speed": "Speed",
-            "feet": "Feet"
+            "feet": "Feet",
+            "hvyArmorAsterisk": "* Reduce your speed by 5 ft. if wearing heavy armor."
         },
         "spell": {
             "spell": "Spell",

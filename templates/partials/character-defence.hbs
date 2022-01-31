@@ -50,7 +50,7 @@
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.defence.armor"}}</sup><br>
-            <input name="data.defence.armor.armorBonus" type="number" value="{{data.defence.armor.armorBonus}}" data-dtype="Number" />
+            {{numberFormat data.defence.armor.armorBonus decimals=0}}
         </td>
         <td class="plus">
             <br>+
@@ -61,10 +61,10 @@
         </td>
     </tr>
     <tr>
-        <td class="blockTitle blueRow" colspan=5>
+        <td class="blockTitle blueRow" colspan=3>
             {{localize "sfrpgbb.defence.armorProficiencies"}}
         </td>
-        <td colspan=2>
+        <td colspan=4>
             <input type="checkbox" name="data.defence.armor.proficiency.light" id="lightArmor" {{checked data.defence.armor.proficiency.light}} />
             <label for="lightArmor">{{localize "sfrpgbb.armor.light"}}</label>
         </td>

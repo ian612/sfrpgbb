@@ -49,6 +49,12 @@ export class sfrpgbbActor extends Actor {
             ability.mod = Math.floor((ability.value - 10) / 2);
         }
 
+        // Owned Items and related stuff
+        data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
+        data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
+        data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
+        data.spellList = actorData.items.filter(function (item) { return item.type == "spell"});
+
         // Character Sheet Stuff
         // Calculate character level based on XP
         this._calculateLevel(actorData);
@@ -64,12 +70,6 @@ export class sfrpgbbActor extends Actor {
         this._calculateAttack(actorData);
         // Calculate Skills
         this._calculateSkills(actorData);
-
-        // Owned Items and related stuff
-        data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
-        data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
-        data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
-        data.spellList = actorData.items.filter(function (item) { return item.type == "spell"});
 
         // Output data to a console (for debugging)
         console.log(actorData);
@@ -175,8 +175,22 @@ export class sfrpgbbActor extends Actor {
         const dex = data.abilities.dexterity.mod;
         const armor = data.defence.armor.armorBonus;
         const misc = data.defence.armor.misc;
+        
+        // placeholder for total of equipped armor bonuses
+        let AC = 0;
 
-        data.defence.armor.ac = 10 + dex + armor + misc;
+        // Add equipped armor AC to character armor AC
+        for (let [key, armorItem] of Object.entries(data.armor)) {
+            // 
+            console.log(armorItem);
+            if (armorItem.data.data.equipped) {
+                AC += armorItem.data.data.ac;
+            }
+        }
+
+        data.defence.armor.armorBonus = AC;
+
+        data.defence.armor.ac = 10 + dex + data.defence.armor.armorBonus + misc;
     }
 
     /**

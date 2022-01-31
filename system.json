@@ -3,7 +3,7 @@
 	"title": "Starfinder Beginner Box",
 	"description": "An implementation of the Starfinder Beginner Box ruleset for Foundy VTT.",
 	"author": "ian612",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "0.8.9",
 	"esmodules": [
