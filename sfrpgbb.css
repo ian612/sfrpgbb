@@ -156,6 +156,9 @@
   display: flex;
   flex-direction: row;
   flex-shrink: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
 }
 .sfrpgbb.sheet.character .blankTable {
   font-family: "Exo 2";
@@ -328,4 +331,8 @@
 }
 .sfrpgbb.sheet.npc .infoBar .bottomRow .perception input {
   text-align: left;
+}
+.sfrpgbb.sheet.npc .description {
+  display: flex;
+  flex-direction: row;
 }

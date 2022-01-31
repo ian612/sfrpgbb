@@ -20,7 +20,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.athletics.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.str"}}</sup><br>
-            {{numberFormat data.abilities.strength.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.strength.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -28,7 +28,7 @@
                 <input type="checkbox" name="data.skills.athletics.classSkill" {{checked data.skills.athletics.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.athletics.class" type="number" value="{{data.skills.athletics.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.athletics.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -37,7 +37,7 @@
                 <input type="checkbox" name="data.skills.athletics.trainedSkill" {{checked data.skills.athletics.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.athletics.level" type="number" value="{{data.skills.athletics.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.athletics.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -52,7 +52,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.culture.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat data.abilities.intelligence.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.intelligence.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -60,7 +60,7 @@
                 <input type="checkbox" name="data.skills.culture.classSkill" {{checked data.skills.culture.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.culture.class" type="number" value="{{data.skills.culture.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.culture.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -69,7 +69,7 @@
                 <input type="checkbox" name="data.skills.culture.trainedSkill" {{checked data.skills.culture.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.culture.level" type="number" value="{{data.skills.culture.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.culture.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -84,7 +84,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.interaction.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.cha"}}</sup><br>
-            {{numberFormat data.abilities.charisma.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.charisma.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -92,7 +92,7 @@
                 <input type="checkbox" name="data.skills.interaction.classSkill" {{checked data.skills.interaction.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.interaction.class" type="number" value="{{data.skills.interaction.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.interaction.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -101,7 +101,7 @@
                 <input type="checkbox" name="data.skills.interaction.trainedSkill" {{checked data.skills.interaction.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.interaction.level" type="number" value="{{data.skills.interaction.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.interaction.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -116,7 +116,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.medicine.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat data.abilities.intelligence.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.intelligence.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -124,7 +124,7 @@
                 <input type="checkbox" name="data.skills.medicine.classSkill" {{checked data.skills.medicine.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.medicine.class" type="number" value="{{data.skills.medicine.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.medicine.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -133,7 +133,7 @@
                 <input type="checkbox" name="data.skills.medicine.trainedSkill" {{checked data.skills.medicine.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.medicine.level" type="number" value="{{data.skills.medicine.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.medicine.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -148,7 +148,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.mysticism.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat data.abilities.wisdom.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.wisdom.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -156,7 +156,7 @@
                 <input type="checkbox" name="data.skills.mysticism.classSkill" {{checked data.skills.mysticism.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.mysticism.class" type="number" value="{{data.skills.mysticism.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.mysticism.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -165,7 +165,7 @@
                 <input type="checkbox" name="data.skills.mysticism.trainedSkill" {{checked data.skills.mysticism.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.mysticism.level" type="number" value="{{data.skills.mysticism.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.mysticism.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -180,7 +180,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.perception.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat data.abilities.wisdom.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.wisdom.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -188,7 +188,7 @@
                 <input type="checkbox" name="data.skills.perception.classSkill" {{checked data.skills.perception.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.perception.class" type="number" value="{{data.skills.perception.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.perception.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -197,7 +197,7 @@
                 <input type="checkbox" name="data.skills.perception.trainedSkill" {{checked data.skills.perception.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.perception.level" type="number" value="{{data.skills.perception.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.perception.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -212,7 +212,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.science.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat data.abilities.intelligence.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.intelligence.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -220,7 +220,7 @@
                 <input type="checkbox" name="data.skills.science.classSkill" {{checked data.skills.science.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.science.class" type="number" value="{{data.skills.science.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.science.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -229,7 +229,7 @@
                 <input type="checkbox" name="data.skills.science.trainedSkill" {{checked data.skills.science.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.science.level" type="number" value="{{data.skills.science.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.science.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -244,7 +244,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.stealth.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
-            {{numberFormat data.abilities.dexterity.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.dexterity.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -252,7 +252,7 @@
                 <input type="checkbox" name="data.skills.stealth.classSkill" {{checked data.skills.stealth.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.stealth.class" type="number" value="{{data.skills.stealth.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.stealth.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -261,7 +261,7 @@
                 <input type="checkbox" name="data.skills.stealth.trainedSkill" {{checked data.skills.stealth.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.stealth.level" type="number" value="{{data.skills.stealth.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.stealth.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -276,7 +276,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.survival.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat data.abilities.wisdom.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.wisdom.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -284,7 +284,7 @@
                 <input type="checkbox" name="data.skills.survival.classSkill" {{checked data.skills.survival.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.survival.class" type="number" value="{{data.skills.survival.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.survival.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -293,7 +293,7 @@
                 <input type="checkbox" name="data.skills.survival.trainedSkill" {{checked data.skills.survival.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.survival.level" type="number" value="{{data.skills.survival.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.survival.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -308,7 +308,7 @@
         <td class="blueBox rightThickBorder">{{numberFormat data.skills.technology.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat data.abilities.intelligence.mod decimals=0 sign=true}}
+            {{numberFormat data.abilities.intelligence.mod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
@@ -316,7 +316,7 @@
                 <input type="checkbox" name="data.skills.technology.classSkill" {{checked data.skills.technology.classSkill}} />
             </div>
             <div>
-                <input name="data.skills.technology.class" type="number" value="{{data.skills.technology.class}}" data-dtype="Number" />
+                {{numberFormat data.skills.technology.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
@@ -325,7 +325,7 @@
                 <input type="checkbox" name="data.skills.technology.trainedSkill" {{checked data.skills.technology.trainedSkill}} />
             </div>
             <div>
-                <input name="data.skills.technology.level" type="number" value="{{data.skills.technology.level}}" data-dtype="Number" />
+                {{numberFormat data.skills.technology.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
