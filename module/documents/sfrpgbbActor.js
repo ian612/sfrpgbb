@@ -84,8 +84,11 @@ export class sfrpgbbActor extends Actor {
         // Make modifications to data here. For example:
         const data = actorData.data;
 
+        // Enforce maximum and minimum HP and RP amounts
+        this._enforceMaxPoints(actorData);
+        
         // Output data to a console (for debugging)
-        console.log(actorData)
+        console.log(actorData);
 
     }
 

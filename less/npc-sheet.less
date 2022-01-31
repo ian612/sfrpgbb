@@ -72,20 +72,56 @@
                 justify-content: center;
                 align-items: center;
                 white-space: nowrap;
-                border-left: solid 1px white;
+                border-right: solid 1px white;
+            }
+            .initiative {
+                input {
+                    text-align: left;
+                }
             }
             .cr, .xp {
                 flex: 0 0 14%;
             }
             .hp {
-                border-right: solid 1px white;
+                border-right: none;
             }
         }
         .bottomRow {
+            flex-grow: 0.2;
             background-color: #c7eafb;
             color: black;
-            text-transform: uppercase;
+            padding: 0px 5px 0px 5px;
+            input, select, textarea, option {
+                color: black;
+                background-color: #c7eafb;
+                border: none;
+                flex: 0 0 2.5em;
+            }
+            input {
+                padding: 0px 0px 0px 2px;
+                text-align: center;
+            }
+            .darkvision, .seeInvisible, .perception {
+                display: flex;
+                flex-direction: row;
+                flex: 0 0 33%;
+                padding-left: 3px;
+                padding-right: 3px;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+                border-right: solid 1px black;
+            }
+            .perception {
+                border-right: none;
+                input {
+                    text-align: left;
+                }
+            }
         }
+    }
+    .description {
+
     }
 
 }

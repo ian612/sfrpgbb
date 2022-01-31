@@ -18,28 +18,50 @@
         </div>
         <div class="middleRow">
             <div class="initiative">
-                <b>{{localize "sfrpgbb.movement.initiative"}} -&nbsp;</b>
+                <b>{{localize "sfrpgbb.movement.initiative"}} :&nbsp;</b> {{#fetchPositive data.movement.initiative}}{{/fetchPositive}}
                 <input name="data.movement.initiative" type="number" value="{{data.movement.initiative}}" placeholder="+0" data-dtype="Number"/>
             </div>
             <div class="speed">
-                <b>{{localize "sfrpgbb.movement.speed"}} -&nbsp;</b>
+                <b>{{localize "sfrpgbb.movement.speed"}} :&nbsp;</b>
                 <input name="data.movement.speed" type="number" value="{{data.movement.speed}}" placeholder="0" data-dtype="Number"/>
                 &nbsp;{{localize "sfrpgbb.general.ft"}}
             </div>
             <div class="cr">
-                <b>{{localize "sfrpgbb.character.cr"}} -&nbsp;</b>
+                <b>{{localize "sfrpgbb.character.cr"}} :&nbsp;</b>
                 <input name="data.information.cr" type="number" value="{{data.information.cr}}" placeholder="1" data-dtype="Number"/>
             </div>
             <div class="xp">
-                <b>{{localize "sfrpgbb.character.xp"}} -&nbsp;</b>
+                <b>{{localize "sfrpgbb.character.xp"}} :&nbsp;</b>
                 <input name="data.information.xp" type="number" value="{{data.information.xp}}" placeholder="400" data-dtype="Number"/>
             </div>
             <div class="hp">
-                <b>{{localize "sfrpgbb.defence.hp"}} -&nbsp;</b>
+                <b>{{localize "sfrpgbb.defence.hp"}} :&nbsp;</b>
                 <input name="data.defence.hp.value" type="number" value="{{data.defence.hp.value}}" placeholder="10" data-dtype="Number"/>
                 &nbsp;/&nbsp;<input name="data.defence.hp.max" type="number" value="{{data.defence.hp.max}}" placeholder="10" data-dtype="Number"/>
             </div>
         </div>
+        <div class="bottomRow">
+            <div class="darkvision">
+                <b>{{localize "sfrpgbb.sense.darkvision"}} :&nbsp;</b>
+                <input type="checkbox" name="data.senses.darkvision.hasDarkvision" {{checked data.senses.darkvision.hasDarkvision}} />
+                {{#if data.senses.darkvision.hasDarkvision}}
+                <input name="data.senses.darkvision.range" type="number" value="{{data.senses.darkvision.range}}" placeholder="10" data-dtype="Number"/>
+                &nbsp;{{localize "sfrpgbb.general.ft"}}
+                {{/if}}
+            </div>
+            <div class="seeInvisible">
+                <b>{{localize "sfrpgbb.sense.seeInvisibility"}} :&nbsp;</b>
+                <input type="checkbox" name="data.senses.seeInvisible" {{checked data.senses.seeInvisible}} />
+            </div>
+            <div class="perception">
+                <b>{{localize "sfrpgbb.skill.perception"}} :&nbsp;</b> {{#fetchPositive data.skill.perception.value}}{{/fetchPositive}}
+                <input name="data.skill.perception.value" type="number" value="{{data.skill.perception.value}}" placeholder="+4" data-dtype="Number"/>
+            </div>
+        </div>
+    </div>
+    <div class="description">
+        <h3>{{localize "sfrpgbb.general.description"}}</h3>
+        <textarea name="data.information.description" rows="4" type="text" data-dtype="String">{{breaklines data.information.description}}</textarea>
     </div>
 
 </form>

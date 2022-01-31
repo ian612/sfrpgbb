@@ -279,17 +279,53 @@
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+.sfrpgbb.sheet.npc .infoBar .middleRow .initiative input {
+  text-align: left;
 }
 .sfrpgbb.sheet.npc .infoBar .middleRow .cr,
 .sfrpgbb.sheet.npc .infoBar .middleRow .xp {
   flex: 0 0 14%;
 }
 .sfrpgbb.sheet.npc .infoBar .middleRow .hp {
-  border-right: solid 1px white;
+  border-right: none;
 }
 .sfrpgbb.sheet.npc .infoBar .bottomRow {
+  flex-grow: 0.2;
   background-color: #c7eafb;
   color: black;
-  text-transform: uppercase;
+  padding: 0px 5px 0px 5px;
+}
+.sfrpgbb.sheet.npc .infoBar .bottomRow input,
+.sfrpgbb.sheet.npc .infoBar .bottomRow select,
+.sfrpgbb.sheet.npc .infoBar .bottomRow textarea,
+.sfrpgbb.sheet.npc .infoBar .bottomRow option {
+  color: black;
+  background-color: #c7eafb;
+  border: none;
+  flex: 0 0 2.5em;
+}
+.sfrpgbb.sheet.npc .infoBar .bottomRow input {
+  padding: 0px 0px 0px 2px;
+  text-align: center;
+}
+.sfrpgbb.sheet.npc .infoBar .bottomRow .darkvision,
+.sfrpgbb.sheet.npc .infoBar .bottomRow .seeInvisible,
+.sfrpgbb.sheet.npc .infoBar .bottomRow .perception {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 33%;
+  padding-left: 3px;
+  padding-right: 3px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-right: solid 1px black;
+}
+.sfrpgbb.sheet.npc .infoBar .bottomRow .perception {
+  border-right: none;
+}
+.sfrpgbb.sheet.npc .infoBar .bottomRow .perception input {
+  text-align: left;
 }

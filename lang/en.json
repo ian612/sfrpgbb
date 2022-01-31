@@ -98,6 +98,7 @@
         "general": {
             "class": "Class",
             "current": "Current",
+            "description": "Description",
             "level": "Level",
             "misc": "Misc",
             "ft": "ft.",
@@ -210,6 +211,10 @@
             "utilitySpell": "Utility Spell",
             "range": "Range",
             "duration": "Duration"
+        },
+        "sense": {
+            "darkvision": "Darkvision",
+            "seeInvisibility": "See Invisibility"
         }
     }
 }

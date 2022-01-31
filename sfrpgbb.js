@@ -80,4 +80,12 @@ Hooks.once("init", function() {
         }
         return outStr;
     });
+
+    // Handlebars check if negative
+    Handlebars.registerHelper('fetchPositive', function(value, options) {
+        if(value < 0) {
+          return '';
+        }
+        return '+';
+      });
 });
