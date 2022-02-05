@@ -13,9 +13,16 @@ async function preloadHandlebarsTemplates() {
         "systems/sfrpgbb/templates/partials/character-movement.hbs",
         "systems/sfrpgbb/templates/partials/character-proficiencies.hbs",
         "systems/sfrpgbb/templates/partials/character-skills.hbs",
-        "systems/sfrpgbb/templates/partials/character-spells.hbs",
         "systems/sfrpgbb/templates/partials/character-spellList.hbs",
-        "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs"
+        "systems/sfrpgbb/templates/partials/character-spells.hbs",
+        "systems/sfrpgbb/templates/partials/character-traits-features-feats.hbs",
+        "systems/sfrpgbb/templates/partials/npc-defence.hbs",
+        "systems/sfrpgbb/templates/partials/npc-description.hbs",
+        "systems/sfrpgbb/templates/partials/npc-equipment.hbs",
+        "systems/sfrpgbb/templates/partials/npc-infobar.hbs",
+        "systems/sfrpgbb/templates/partials/npc-offense.hbs",
+        "systems/sfrpgbb/templates/partials/npc-specialAbilities.hbs",
+        "systems/sfrpgbb/templates/partials/npc-statistics.hbs"
     ];
 
     return loadTemplates(templatePaths);
