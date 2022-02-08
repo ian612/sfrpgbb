@@ -334,5 +334,22 @@
 }
 .sfrpgbb.sheet.npc .description {
   display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .defence {
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .defence .ac,
+.sfrpgbb.sheet.npc .defence .saves {
+  display: flex;
   flex-direction: row;
+  flex: 0 0 10%;
+  justify-content: start;
+  align-items: center;
+}
+.sfrpgbb.sheet.npc .defence .ac input,
+.sfrpgbb.sheet.npc .defence .saves input {
+  border: none;
+  flex: 0 0 2.5em;
 }

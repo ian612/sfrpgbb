@@ -122,7 +122,22 @@
     }
     .description {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .defence {
+        display: flex;
+        flex-direction: column;
+        .ac, .saves {
+            display: flex;
+            flex-direction: row;
+            flex: 0 0 10%;
+            justify-content: start;
+            align-items: center;
+            input {
+                border: none;
+                flex: 0 0 2.5em;
+            }
+        }
     }
 
 }
