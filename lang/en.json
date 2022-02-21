@@ -104,6 +104,8 @@
             "ft": "ft.",
             "name": "Name",
             "page": "Page",
+            "specialAbilities": "Special Abilities",
+            "statistics": "Statistics",
             "total": "Total",
             "type": "Type",
             "quantity": "Quantity"

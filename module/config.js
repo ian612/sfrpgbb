@@ -114,3 +114,17 @@ sfrpgbb.alignments = {
     neutralEvil: "sfrpgbb.character.alignments.neutralEvil",
     chaoticEvil: "sfrpgbb.character.alignments.chaoticEvil"
 }
+
+sfrpgbb.skills = {
+    none: "",
+    athletics: "sfrpgbb.skill.athletics",
+    culture: "sfrpgbb.skill.culture",
+    interaction: "sfrpgbb.skill.interaction",
+    medicine: "sfrpgbb.skill.medicine",
+    mysticism: "sfrpgbb.skill.mysticism",
+    perception: "sfrpgbb.skill.perception",
+    science: "sfrpgbb.skill.science",
+    stealth: "sfrpgbb.skill.stealth",
+    survival: "sfrpgbb.skill.survival",
+    technology: "sfrpgbb.skill.technology",
+}

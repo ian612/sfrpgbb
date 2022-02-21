@@ -353,3 +353,20 @@
   border: none;
   flex: 0 0 2.5em;
 }
+.sfrpgbb.sheet.npc .statistics {
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .statistics .abilities,
+.sfrpgbb.sheet.npc .statistics .skills {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 10%;
+  justify-content: start;
+  align-items: center;
+}
+.sfrpgbb.sheet.npc .statistics .abilities input,
+.sfrpgbb.sheet.npc .statistics .skills input {
+  border: none;
+  flex: 0 0 2.5em;
+}
