@@ -116,7 +116,6 @@ sfrpgbb.alignments = {
 }
 
 sfrpgbb.skills = {
-    none: "",
     athletics: "sfrpgbb.skill.athletics",
     culture: "sfrpgbb.skill.culture",
     interaction: "sfrpgbb.skill.interaction",

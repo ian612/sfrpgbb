@@ -49,6 +49,6 @@
     </div>
     <div class="perception">
         <b>{{localize "sfrpgbb.skill.perception"}} :&nbsp;</b> {{#fetchPositive data.skill.perception.value}}{{/fetchPositive}}
-        <input name="data.skill.perception.value" type="number" value="{{data.skill.perception.value}}" placeholder="+4" data-dtype="Number"/>
+        <input name="data.skill.perception.value" type="number" value="{{data.skill.perception.value}}" placeholder="{{data.abilities.wisdom.mod}}"  data-dtype="Number"/>
     </div>
 </div>

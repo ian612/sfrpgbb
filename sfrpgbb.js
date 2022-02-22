@@ -90,9 +90,17 @@ Hooks.once("init", function() {
 
     // Handlebars check if negative
     Handlebars.registerHelper('fetchPositive', function(value, options) {
-        if(value < 0) {
+        if(value < 0 || value == null) {
           return '';
         }
         return '+';
+      });
+    
+    // Handlebars return true if value is null
+    Handlebars.registerHelper('isNull', function(value, options) {
+        if(value == null) {
+          return "nullBox";
+        }
+        return "fullBox";
       });
 });

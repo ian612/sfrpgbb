@@ -199,6 +199,9 @@
             "feet": "Feet",
             "hvyArmorAsterisk": "* Reduce your speed by 5 ft. if wearing heavy armor."
         },
+        "menu": {
+            "selectSkill": "Select a Skill"
+        },
         "spell": {
             "spell": "Spell",
             "spells": "Spells",

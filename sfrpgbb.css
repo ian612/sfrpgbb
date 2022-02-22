@@ -336,6 +336,9 @@
   display: flex;
   flex-direction: column;
 }
+.sfrpgbb.sheet.npc .description textarea {
+  border: none;
+}
 .sfrpgbb.sheet.npc .defence {
   display: flex;
   flex-direction: column;
@@ -351,7 +354,7 @@
 .sfrpgbb.sheet.npc .defence .ac input,
 .sfrpgbb.sheet.npc .defence .saves input {
   border: none;
-  flex: 0 0 2.5em;
+  flex: 0 0 1.5em;
 }
 .sfrpgbb.sheet.npc .statistics {
   display: flex;
@@ -368,5 +371,9 @@
 .sfrpgbb.sheet.npc .statistics .abilities input,
 .sfrpgbb.sheet.npc .statistics .skills input {
   border: none;
-  flex: 0 0 2.5em;
+  flex: 0 0 1.5em;
+}
+.sfrpgbb.sheet.npc .statistics .abilities .fullBox,
+.sfrpgbb.sheet.npc .statistics .skills .fullBox {
+  background-color: lightblue;
 }

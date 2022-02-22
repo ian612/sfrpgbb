@@ -34,7 +34,7 @@ export class sfrpgbbActor extends Actor {
         this._prepareNpcData(actorData);
     }
 
-    // Calculate values (such as ability scores)
+    // Calculate values for character sheet (such as ability scores, AC, etc.)
     _prepareCharacterData(actorData) {
         if (actorData.type !== 'character') return;
 
@@ -90,6 +90,11 @@ export class sfrpgbbActor extends Actor {
         // Enforce maximum and minimum HP and RP amounts
         this._enforceMaxPoints(actorData);
         
+        // Owned Items and related stuff
+        data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
+        data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
+        data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
+
         // Output data to a console (for debugging)
         console.log(actorData);
 
