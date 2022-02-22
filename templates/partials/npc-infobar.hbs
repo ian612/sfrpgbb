@@ -22,11 +22,11 @@
     </div>
     <div class="cr">
         <b>{{localize "sfrpgbb.character.cr"}} :&nbsp;</b>
-        <input name="data.information.cr" type="number" value="{{data.information.cr}}" placeholder="1" data-dtype="Number"/>
+        <input name="data.information.cr" type="text" value="{{data.information.cr}}" placeholder="1/2" data-dtype="String"/>
     </div>
     <div class="xp">
         <b>{{localize "sfrpgbb.character.xp"}} :&nbsp;</b>
-        <input name="data.information.xp" type="number" value="{{data.information.xp}}" placeholder="400" data-dtype="Number"/>
+        {{numberFormat data.information.xp decimals=0}}
     </div>
     <div class="hp">
         <b>{{localize "sfrpgbb.defence.hp"}} :&nbsp;</b>

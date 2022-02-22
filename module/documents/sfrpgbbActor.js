@@ -86,14 +86,16 @@ export class sfrpgbbActor extends Actor {
     
         // Make modifications to data here. For example:
         const data = actorData.data;
-
-        // Enforce maximum and minimum HP and RP amounts
-        this._enforceMaxPoints(actorData);
         
         // Owned Items and related stuff
         data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
         data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
         data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
+
+        // Enforce maximum and minimum HP and RP amounts
+        this._enforceMaxPoints(actorData);
+        // Calculate XP based on CR
+        this._calculateXP(actorData);
 
         // Output data to a console (for debugging)
         console.log(actorData);
@@ -319,6 +321,27 @@ export class sfrpgbbActor extends Actor {
 
             // Calculate total skill bonuses
             skill.value = skill.abilityMod + skill.class + skill.level + skill.misc;
+        }
+    }
+
+    /**
+     * Calculate XP based on NPC CR
+     */
+     _calculateXP(actorData) {
+        const data = actorData.data;
+        const CRprog = ["1/3", "1/2", "1", "2", "3", "4", "5", "6", "7"];
+        const XPprog = [135, 200, 400, 600, 800, 1200, 1600, 2400, 3200];
+        
+        // console.log(CRprog);
+        // console.log(XPprog);
+        // console.log(CRprog.includes(data.information.cr));
+        // console.log(CRprog.indexOf(data.information.cr));
+        
+        if (CRprog.includes(data.information.cr)) {
+            actorData.data.information.xp = XPprog[CRprog.indexOf(data.information.cr)];
+        }
+        else {
+            actorData.data.information.xp = null;
         }
     }
 }
