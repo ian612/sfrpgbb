@@ -365,7 +365,7 @@
   display: flex;
   flex-direction: row;
   flex: 0 0 10%;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .sfrpgbb.sheet.npc .statistics .abilities input,
@@ -376,4 +376,40 @@
 .sfrpgbb.sheet.npc .statistics .abilities .fullBox,
 .sfrpgbb.sheet.npc .statistics .skills .fullBox {
   background-color: lightblue;
+}
+.sfrpgbb.sheet.npc .equipment {
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .equipment .items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-basis: auto;
+}
+.sfrpgbb.sheet.npc .equipment .items .item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: auto;
+}
+.sfrpgbb.sheet.npc .equipment .items .item .item-image {
+  flex: 0 0 24px;
+}
+.sfrpgbb.sheet.npc .equipment .items .item .item-name {
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.sfrpgbb.sheet.npc .equipment .items .item .item-quantity {
+  flex: 0 0 1.5em;
+}
+.sfrpgbb.sheet.npc .equipment .items .item .item-quantity .input {
+  border: none;
+}
+.sfrpgbb.sheet.npc .equipment .items .item .item-controls {
+  flex: 0 0 2.5em;
 }
