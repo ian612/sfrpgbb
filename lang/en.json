@@ -20,7 +20,8 @@
             "grenades": "Grenades",
             "attacks": "Attacks",
             "meleeAttack": "Melee Attack",
-            "rangedAttack": "Ranged Attack"
+            "rangedAttack": "Ranged Attack",
+            "offence": "Offence"
         },
         "defence": {
             "defence": "Defence",

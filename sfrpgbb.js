@@ -20,7 +20,7 @@ async function preloadHandlebarsTemplates() {
         "systems/sfrpgbb/templates/partials/npc-description.hbs",
         "systems/sfrpgbb/templates/partials/npc-equipment.hbs",
         "systems/sfrpgbb/templates/partials/npc-infobar.hbs",
-        "systems/sfrpgbb/templates/partials/npc-offense.hbs",
+        "systems/sfrpgbb/templates/partials/npc-offence.hbs",
         "systems/sfrpgbb/templates/partials/npc-specialAbilities.hbs",
         "systems/sfrpgbb/templates/partials/npc-statistics.hbs"
     ];
