@@ -318,7 +318,7 @@
 .sfrpgbb.sheet.npc .infoBar .bottomRow .perception {
   display: flex;
   flex-direction: row;
-  flex: 0 0 33%;
+  flex: 0 0 40%;
   padding-left: 3px;
   padding-right: 3px;
   justify-content: center;
@@ -326,11 +326,16 @@
   white-space: nowrap;
   border-right: solid 1px black;
 }
+.sfrpgbb.sheet.npc .infoBar .bottomRow .seeInvisible {
+  flex: 0 0 30%;
+}
 .sfrpgbb.sheet.npc .infoBar .bottomRow .perception {
   border-right: none;
+  flex: 0 0 30%;
 }
 .sfrpgbb.sheet.npc .infoBar .bottomRow .perception input {
   text-align: left;
+  width: 2em;
 }
 .sfrpgbb.sheet.npc .description {
   display: flex;
@@ -381,35 +386,39 @@
   display: flex;
   flex-direction: column;
 }
-.sfrpgbb.sheet.npc .equipment .items {
+.sfrpgbb.sheet.npc .equipment .item-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  flex-basis: auto;
 }
-.sfrpgbb.sheet.npc .equipment .items .item {
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  flex-basis: auto;
+  flex-basis: 0;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 1px;
 }
-.sfrpgbb.sheet.npc .equipment .items .item .item-image {
-  flex: 0 0 24px;
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-image {
+  flex: 0 0 auto;
+  padding: 0 2px;
 }
-.sfrpgbb.sheet.npc .equipment .items .item .item-name {
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-name,
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-controls {
+  flex: 0 0 auto;
   padding: 0 2px;
   white-space: nowrap;
 }
-.sfrpgbb.sheet.npc .equipment .items .item .item-quantity {
-  flex: 0 0 1.5em;
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-quantity {
+  flex: 0 0 2em;
+  padding: 0 2px;
 }
-.sfrpgbb.sheet.npc .equipment .items .item .item-quantity .input {
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-quantity .input {
   border: none;
 }
-.sfrpgbb.sheet.npc .equipment .items .item .item-controls {
-  flex: 0 0 2.5em;
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-controls {
+  padding-right: 1.9em;
 }

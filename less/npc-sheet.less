@@ -104,7 +104,7 @@
             .darkvision, .seeInvisible, .perception {
                 display: flex;
                 flex-direction: row;
-                flex: 0 0 33%;
+                flex: 0 0 40%;
                 padding-left: 3px;
                 padding-right: 3px;
                 justify-content: center;
@@ -112,10 +112,15 @@
                 white-space: nowrap;
                 border-right: solid 1px black;
             }
+            .seeInvisible {
+                flex: 0 0 30%;
+            }
             .perception {
                 border-right: none;
+                flex: 0 0 30%;
                 input {
                     text-align: left;
+                    width: 2em
                 }
             }
         }
@@ -163,35 +168,38 @@
     .equipment {
         display: flex;
         flex-direction: column;
-        .items {
+        .item-wrapper {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: flex-start;
-            align-content: flex-start;
-            flex-basis: auto;
             .item {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
                 align-items: center;
                 justify-content: flex-start;
-                flex-basis: auto;
+                flex-basis: 0;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin: 1px;
                 .item-image {
-                    flex: 0 0 24px;
+                    flex: 0 0 auto;
+                    padding: 0 2px;
                 }
-                .item-name {
+                .item-name, .item-controls {
+                    flex: 0 0 auto;
                     padding: 0 2px;
                     white-space: nowrap;
                 }
                 .item-quantity {
-                    flex: 0 0 1.5em;
+                    flex: 0 0 2em;
+                    padding: 0 2px;
                     .input {
                         border: none;
                     }
                 }
                 .item-controls {
-                    flex: 0 0 2.5em;
+                    padding-right: 1.9em;
                 }
             }
         }
