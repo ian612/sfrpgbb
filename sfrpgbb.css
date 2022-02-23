@@ -358,7 +358,7 @@
 }
 .sfrpgbb.sheet.npc .offence .editor {
   height: 90%;
-  min-height: 80px;
+  min-height: 90px;
 }
 .sfrpgbb.sheet.npc .defence {
   display: flex;
@@ -407,6 +407,10 @@
   display: flex;
   flex-direction: column;
 }
+.sfrpgbb.sheet.npc .equipment .credits input {
+  text-align: center;
+  width: 4em;
+}
 .sfrpgbb.sheet.npc .equipment .item-wrapper {
   display: flex;
   flex-direction: row;
@@ -444,10 +448,10 @@
   padding-right: 1.9em;
 }
 .sfrpgbb.sheet.npc .specialAbilities {
-  min-height: 50px;
   display: flex;
   flex-direction: column;
 }
 .sfrpgbb.sheet.npc .specialAbilities .editor {
   height: 90%;
+  min-height: 90px;
 }

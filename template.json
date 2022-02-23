@@ -226,7 +226,8 @@
             "information": {
                 "description": null,
                 "cr": 0,
-                "alignment": null
+                "alignment": null,
+                "credits": 0
             },
             "attack": {
                 "melee": {
