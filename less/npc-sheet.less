@@ -16,7 +16,7 @@
         display: flex;
         flex-direction: column;
         font-family: "Exo 2";
-        font-size: 10pt;
+        font-size: 9pt;
         padding: 5px;
     }
     .infoBar {
@@ -35,6 +35,8 @@
                 text-transform: uppercase;
                 border-width: 0;
                 font-weight: bold;
+                font-family: "Exo 2";
+                font-size: 9pt;
             }
             .name, .alignment {
                 flex-grow: 0.5;
@@ -58,6 +60,8 @@
                 background-color: blue;
                 border: none;
                 flex: 0 0 2.5em;
+                font-family: "Exo 2";
+                font-size: 9pt;
             }
             input {
                 padding: 0px 0px 0px 2px;
@@ -96,6 +100,8 @@
                 background-color: #c7eafb;
                 border: none;
                 flex: 0 0 2.5em;
+                font-family: "Exo 2";
+                font-size: 9pt;
             }
             input {
                 padding: 0px 0px 0px 2px;
@@ -130,6 +136,16 @@
         flex-direction: column;
         textarea {
             border: none;
+            font-family: "Exo 2";
+            font-size: 9pt;
+        }
+    }
+    .offence {
+        display: flex;
+        flex-direction: column;
+        .editor {
+            height: 90%;
+            min-height: 80px;
         }
     }
     .defence {
@@ -144,6 +160,13 @@
             input {
                 border: none;
                 flex: 0 0 2em;
+            }
+        }
+        .extra {
+            textarea {
+                border: none;
+                font-family: "Exo 2";
+                font-size: 9pt;
             }
         }
     }
@@ -194,7 +217,7 @@
                 .item-quantity {
                     flex: 0 0 2em;
                     padding: 0 2px;
-                    .input {
+                    input {
                         border: none;
                     }
                 }
@@ -202,6 +225,14 @@
                     padding-right: 1.9em;
                 }
             }
+        }
+    }
+    .specialAbilities {
+        min-height: 50px;
+        display: flex;
+        flex-direction: column;
+        .editor {
+            height: 90%;
         }
     }
 }

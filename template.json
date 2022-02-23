@@ -243,11 +243,12 @@
                     "range": 30,
                     "special": null,
                     "critical": null
-                }
-            },
-            "specialAbilities": {
-                "description": ""
+                },
+            "defence": {
+                "extra": ""
             }
+            },
+            "specialAbilities": ""
         },
         "trap": {
             "cr": 0,

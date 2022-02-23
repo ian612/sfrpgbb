@@ -211,7 +211,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Exo 2";
-  font-size: 10pt;
+  font-size: 9pt;
   padding: 5px;
 }
 .sfrpgbb.sheet.npc .infoBar {
@@ -237,6 +237,8 @@
   text-transform: uppercase;
   border-width: 0;
   font-weight: bold;
+  font-family: "Exo 2";
+  font-size: 9pt;
 }
 .sfrpgbb.sheet.npc .infoBar .topRow .name,
 .sfrpgbb.sheet.npc .infoBar .topRow .alignment {
@@ -264,6 +266,8 @@
   background-color: blue;
   border: none;
   flex: 0 0 2.5em;
+  font-family: "Exo 2";
+  font-size: 9pt;
 }
 .sfrpgbb.sheet.npc .infoBar .middleRow input {
   padding: 0px 0px 0px 2px;
@@ -308,6 +312,8 @@
   background-color: #c7eafb;
   border: none;
   flex: 0 0 2.5em;
+  font-family: "Exo 2";
+  font-size: 9pt;
 }
 .sfrpgbb.sheet.npc .infoBar .bottomRow input {
   padding: 0px 0px 0px 2px;
@@ -343,6 +349,16 @@
 }
 .sfrpgbb.sheet.npc .description textarea {
   border: none;
+  font-family: "Exo 2";
+  font-size: 9pt;
+}
+.sfrpgbb.sheet.npc .offence {
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .offence .editor {
+  height: 90%;
+  min-height: 80px;
 }
 .sfrpgbb.sheet.npc .defence {
   display: flex;
@@ -360,6 +376,11 @@
 .sfrpgbb.sheet.npc .defence .saves input {
   border: none;
   flex: 0 0 2em;
+}
+.sfrpgbb.sheet.npc .defence .extra textarea {
+  border: none;
+  font-family: "Exo 2";
+  font-size: 9pt;
 }
 .sfrpgbb.sheet.npc .statistics {
   display: flex;
@@ -416,9 +437,17 @@
   flex: 0 0 2em;
   padding: 0 2px;
 }
-.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-quantity .input {
+.sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-quantity input {
   border: none;
 }
 .sfrpgbb.sheet.npc .equipment .item-wrapper .item .item-controls {
   padding-right: 1.9em;
+}
+.sfrpgbb.sheet.npc .specialAbilities {
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .specialAbilities .editor {
+  height: 90%;
 }
