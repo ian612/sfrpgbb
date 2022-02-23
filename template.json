@@ -205,11 +205,13 @@
                 "bonus": {
                     "melee": {
                         "value": 0,
-                        "class": 0
+                        "class": 0,
+                        "damageBonus": 0
                     },
                     "ranged": {
                         "value": 0,
-                        "class": 0
+                        "class": 0,
+                        "damageBonus": 0
                     }
                 },
                 "proficiency": {

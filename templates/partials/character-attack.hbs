@@ -1,6 +1,6 @@
 <table>
     <tr>
-        <th colspan="5">{{localize "sfrpgbb.attack.attacks"}}</th>
+        <th colspan="6">{{localize "sfrpgbb.attack.attacks"}}</th>
     </tr>
     <tr>
         <td class="blockTitle">
@@ -17,9 +17,13 @@
         <td class="plus">
             <br>+
         </td>
-        <td class="blockTitle">
+        <td class="blockTitle rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
-            <input name="data.attack.bonus.melee.class" type="number" value="{{data.attack.bonus.melee.class}}" data-dtype="Number" />
+            <input name="data.attack.bonus.melee.class" type="number" style="width: 3em" value="{{data.attack.bonus.melee.class}}" data-dtype="Number" />
+        </td>
+        <td class="blueBox">
+            <sup class="superscript">{{localize "sfrpgbb.attack.damageBonus"}}</sup><br>
+            {{fetchPositive data.abilities.strength.mod}} <input name="data.attack.bonus.melee.damageBonus" type="number" style="width: 3em" value="{{data.attack.bonus.melee.damageBonus}}" data-dtype="Number" />
         </td>
     </tr>
     <tr>
@@ -37,9 +41,13 @@
         <td class="plus">
             <br>+
         </td>
-        <td class="blockTitle">
+        <td class="blockTitle rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
-            <input name="data.attack.bonus.ranged.class" type="number" value="{{data.attack.bonus.ranged.class}}" data-dtype="Number" />
+            <input name="data.attack.bonus.ranged.class" type="number" style="width: 3em;" value="{{data.attack.bonus.ranged.class}}" data-dtype="Number" />
+        </td>
+        <td class="blueBox">
+            <sup class="superscript">{{localize "sfrpgbb.attack.damageBonus"}}</sup><br>
+            {{fetchPositive data.abilities.strength.mod}} <input name="data.attack.bonus.ranged.damageBonus" type="number" style="width: 3em;" value="{{data.attack.bonus.ranged.damageBonus}}" data-dtype="Number" />
         </td>
     </tr>
 </table>

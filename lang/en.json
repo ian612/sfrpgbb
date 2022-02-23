@@ -21,7 +21,8 @@
             "attacks": "Attacks",
             "meleeAttack": "Melee Attack",
             "rangedAttack": "Ranged Attack",
-            "offence": "Offence"
+            "offence": "Offence",
+            "damageBonus": "Damage Bonus"
         },
         "defence": {
             "defence": "Defence",
