@@ -1,0 +1,31 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize "sfrpgbb.general.name" }}"/></h1>
+    </header>
+    <div class="sheet-content">
+        <table>
+
+            <tr>
+                <th>{{localize "sfrpgbb.equipment.price"}}</th>
+                <th>{{localize "sfrpgbb.equipment.isTech"}}</th>
+                <th>{{localize "sfrpgbb.equipment.isMagic"}}</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
+                </td>
+                <td>
+                    <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
+                </td>
+            </tr>
+
+        </table>
+        <b>{{localize "ITEM.TypeNpcability"}} - {{localize "sfrpgbb.general.description"}}</b>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+    </div>
+</form>
