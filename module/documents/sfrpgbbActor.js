@@ -91,6 +91,19 @@ export class sfrpgbbActor extends Actor {
         data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
         data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
         data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
+        data.spellList = {};
+        data.spellList.zero = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 0))});
+        data.spellList.one = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 1))});
+        data.spellList.two = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 2))});
+        data.npcAbilities = {};
+        data.npcAbilities.defence = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "defence"))});
+        data.npcAbilities.energyResist = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "energyResist"))});
+        data.npcAbilities.immunity = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "immunity"))});
+        data.npcAbilities.movement = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "movement"))});
+        data.npcAbilities.offence = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "offence"))});
+        data.npcAbilities.other = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "other"))});
+        data.npcAbilities.sense = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "sense"))});
+        data.npcAbilities.weakness = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "weakness"))});
 
         // Enforce maximum and minimum HP and RP amounts
         this._enforceMaxPoints(actorData);

@@ -134,8 +134,8 @@ sfrpgbb.npcAbilityTypes = {
     energyResist: "sfrpgbb.defence.energyResist",
     immunity: "sfrpgbb.defence.immunity",
     movement: "sfrpgbb.movement.movement",
-    sense: "sfrpgbb.sense.sense",
     offence: "sfrpgbb.attack.offence",
     other: "sfrpgbb.general.other",
+    sense: "sfrpgbb.sense.sense",
     weakness: "sfrpgbb.defence.weakness"
 }
