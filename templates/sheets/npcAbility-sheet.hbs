@@ -7,24 +7,39 @@
         <table>
 
             <tr>
-                <th>{{localize "sfrpgbb.equipment.price"}}</th>
-                <th>{{localize "sfrpgbb.equipment.isTech"}}</th>
-                <th>{{localize "sfrpgbb.equipment.isMagic"}}</th>
+                <th>{{localize "sfrpgbb.npc.abilityType"}}</th>
+                <th>{{localize "sfrpgbb.weapon.damageType"}}</th>
+                <th>{{localize "sfrpgbb.npc.value"}}</th>
             </tr>
 
             <tr>
                 <td>
-                    <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
+                    <select name="data.type">
+                        {{#select data.type}}
+                        {{#each config.npcAbilityTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
                 </td>
                 <td>
-                    <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
+                    <select name="data.damageType">
+                        {{#select data.damageType}}
+                        {{#each config.damageTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
                 </td>
                 <td>
-                    <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
+                    <input name="data.value" type="number" value="{{data.value}}" placeholder="{{localize "sfrpgbb.npc.units" }}" data-dtype="Number" />
                 </td>
             </tr>
 
         </table>
+        <b>{{localize "ITEM.TypeNpcability"}} - {{localize "sfrpgbb.npc.shortDescription"}}</b>
+        <input name="data.shortDescription" type="text" value="{{data.shortDescription}}" placeholder="{{localize "sfrpgbb.npc.shortDescription" }}" data-dtype="String" />
+        <br>
         <b>{{localize "ITEM.TypeNpcability"}} - {{localize "sfrpgbb.general.description"}}</b>
         {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
     </div>

@@ -15,12 +15,13 @@ sfrpgbb.armorTypes = {
 }
 
 sfrpgbb.damageTypes = {
-    none: "None",
+    none: "sfrpgbb.general.none",
     kinetic: "sfrpgbb.damage.kinetic",
     acid: "sfrpgbb.damage.acid",
     cold: "sfrpgbb.damage.cold",
     electricity: "sfrpgbb.damage.electricity",
     fire: "sfrpgbb.damage.fire",
+    radiation: "sfrpgbb.damage.radiation",
     sonic: "sfrpgbb.damage.sonic"
 }
 
@@ -129,12 +130,12 @@ sfrpgbb.skills = {
 }
 
 sfrpgbb.npcAbilityTypes = {
-    sense: "",
-    movement: "sfrpgbb.movement.movement",
     defence: "sfrpgbb.defence.defence",
-    weakness: "sfrpgbb.defence.weakness",
-    immunity: "sfrpgbb.defence.immunity",
     energyResist: "sfrpgbb.defence.energyResist",
-    offence: "sfrpgbb.offence.offence",
-    other: "sfrpgbb.general.other"
+    immunity: "sfrpgbb.defence.immunity",
+    movement: "sfrpgbb.movement.movement",
+    sense: "sfrpgbb.sense.sense",
+    offence: "sfrpgbb.attack.offence",
+    other: "sfrpgbb.general.other",
+    weakness: "sfrpgbb.defence.weakness"
 }

@@ -335,6 +335,7 @@
             },
         "npcAbility": {
             "type": null,
+            "damageType": null,
             "description": null,
             "quickDescription": null,
             "value": 0
