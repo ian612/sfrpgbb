@@ -135,6 +135,8 @@
                 }
             },
             "spells": {
+                "casterType": "none",
+                "spellDCBonus": 0,
                 "spells": {
                     "hasSpells": false,
                     "lvl1": {
@@ -246,10 +248,10 @@
                     "range": 30,
                     "special": null,
                     "critical": null
-                },
+                }
+            },
             "defence": {
                 "extra": ""
-            }
             },
             "specialAbilities": ""
         },
@@ -271,7 +273,8 @@
             "weaponFusion",
             "grenade",
             "gear",
-            "spell"
+            "spell",
+            "npcAbility"
         ],
         "templates": {
             "equipment": {
@@ -329,7 +332,13 @@
                 "baseDC": 10,
                 "bonusAbility": null,
                 "savetype": "reflex"
-            }
+            },
+        "npcAbility": {
+            "type": null,
+            "description": null,
+            "quickDescription": null,
+            "value": 0
+        }
         }
     }
 }

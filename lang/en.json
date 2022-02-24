@@ -9,6 +9,7 @@
     "ITEM.TypeGrenade": "Grenade",
     "ITEM.TypeGear": "Adventuring Gear",
     "ITEM.TypeSpell": "Spell",
+    "ITEM.TypeNpcability": "NPC Ability",
 
     "sfrpgbb": {
         "attack": {
@@ -43,7 +44,12 @@
             "willSave": "Will Save",
             "hitPoints": "Hit Points",
             "hp": "HP",
-            "resolvePoints": "Resolve Points"
+            "resolvePoints": "Resolve Points",
+            "immunity": "Immunity",
+            "immunities": "Immunities",
+            "energyResist": "Energy Resistance",
+            "weakness": "Weakness",
+            "weaknesses": "Weaknesses"
         },
         "damage": {
             "kinetic": "Kinetic",
@@ -110,7 +116,8 @@
             "statistics": "Statistics",
             "total": "Total",
             "type": "Type",
-            "quantity": "Quantity"
+            "quantity": "Quantity",
+            "other": "Other"
         },
         "character": {
             "name": "Name",
@@ -196,6 +203,7 @@
             "themeKnowledge": "Theme Knowledge"
         },
         "movement": {
+            "movement": "Movement",
             "initiative": "Initiative",
             "speed": "Speed",
             "feet": "Feet",

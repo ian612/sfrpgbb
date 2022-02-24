@@ -127,3 +127,14 @@ sfrpgbb.skills = {
     survival: "sfrpgbb.skill.survival",
     technology: "sfrpgbb.skill.technology",
 }
+
+sfrpgbb.npcAbilityTypes = {
+    sense: "",
+    movement: "sfrpgbb.movement.movement",
+    defence: "sfrpgbb.defence.defence",
+    weakness: "sfrpgbb.defence.weakness",
+    immunity: "sfrpgbb.defence.immunity",
+    energyResist: "sfrpgbb.defence.energyResist",
+    offence: "sfrpgbb.offence.offence",
+    other: "sfrpgbb.general.other"
+}
