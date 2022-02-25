@@ -116,6 +116,7 @@
             "armorProficiencies": "Armor Proficiencies",
             "DC": "DC",
             "defence": "Defence",
+            "defensiveAbilities": "Defensive Abilities",
             "energyResist": "Energy Resistance",
             "fortitude": "Fortitude",
             "fortitudeSave": "Fortitude Save",

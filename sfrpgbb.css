@@ -377,6 +377,52 @@
   border: none;
   flex: 0 0 2em;
 }
+.sfrpgbb.sheet.npc .defence .extra-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: 0;
+  border: 2px solid #6b5428;
+  border-radius: 5px;
+  margin: 1px;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-image,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-image {
+  flex: 0 0 auto;
+  padding: 0 2px;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-name,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-name,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-controls,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-controls {
+  flex: 0 0 auto;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity {
+  flex: 0 0 2em;
+  padding: 0 2px;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity input,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity input {
+  border: none;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-controls,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-controls {
+  padding-right: 1.9em;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label {
+  border: none;
+}
 .sfrpgbb.sheet.npc .defence .extra textarea {
   border: none;
   font-family: "Exo 2";

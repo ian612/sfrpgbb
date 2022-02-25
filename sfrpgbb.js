@@ -103,4 +103,12 @@ Hooks.once("init", function() {
         }
         return "fullBox";
       });
+    
+    // Handlebars check if an array is empty
+    Handlebars.registerHelper('hasData', function(value, options) {
+        if(value.length) {
+            return true;
+        }
+        return false;
+      });
 });
