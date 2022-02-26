@@ -5,7 +5,8 @@ sfrpgbb.attackTypes = {
     meleeBasic: "sfrpgbb.attack.meleeBasic",
     meleeAdvanced: "sfrpgbb.attack.meleeAdvanced",
     smallArms: "sfrpgbb.attack.smallArms",
-    longArms: "sfrpgbb.attack.longArms"
+    longArms: "sfrpgbb.attack.longArms",
+    other: "sfrpgbb.general.other"
 }
 
 sfrpgbb.armorTypes = {
@@ -136,6 +137,5 @@ sfrpgbb.npcAbilityTypes = {
     movement: "sfrpgbb.movement.movement",
     offence: "sfrpgbb.attack.offence",
     other: "sfrpgbb.general.other",
-    sense: "sfrpgbb.sense.sense",
     weakness: "sfrpgbb.defence.weakness"
 }

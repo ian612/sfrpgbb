@@ -102,7 +102,6 @@ export class sfrpgbbActor extends Actor {
         data.npcAbilities.movement = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "movement"))});
         data.npcAbilities.offence = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "offence"))});
         data.npcAbilities.other = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "other"))});
-        data.npcAbilities.sense = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "sense"))});
         data.npcAbilities.weakness = actorData.items.filter(function (item) { return ((item.type == "npcAbility") && (item.data.data.type == "weakness"))});
 
         // Enforce maximum and minimum HP and RP amounts

@@ -278,5 +278,42 @@
             height: 90%;
             min-height: 90px;
         }
+        .ability-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            .ability-fullText {
+                .item {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: top;
+                    justify-content: flex-start;
+                    flex-basis: 0;
+                    margin: 1px;
+                    .item-image {
+                        flex: 0 0 auto;
+                        padding: 0 2px;
+                    }
+                    .item-name, .item-controls {
+                        flex: 1 1 auto;
+                        padding: 0 2px;
+                        flex-wrap: wrap;
+                        text-align: left;
+                    }
+                    .item-controls {
+                        padding-right: 1.9em;
+                        flex: 0 0 auto;
+                    }
+                }
+            }
+        }
+        .extra {
+            textarea {
+                border: none;
+                font-family: "Exo 2";
+                font-size: 9pt;
+            }
+        }
     }
 }

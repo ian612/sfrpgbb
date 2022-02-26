@@ -94,7 +94,7 @@ Hooks.once("init", function() {
           return '';
         }
         return '+';
-      });
+    });
     
     // Handlebars return true if value is null
     Handlebars.registerHelper('isNull', function(value, options) {
@@ -102,7 +102,7 @@ Hooks.once("init", function() {
           return "nullBox";
         }
         return "fullBox";
-      });
+    });
     
     // Handlebars check if an array is empty
     Handlebars.registerHelper('hasData', function(value, options) {
@@ -110,5 +110,11 @@ Hooks.once("init", function() {
             return true;
         }
         return false;
-      });
+    });
+    
+    // Remove html tags from text that is to be displayed
+    Handlebars.registerHelper('stripTags', function(param) {
+        var regex = /(<([^>]+)>)/ig
+        return param.replace(regex, "");
+    });
 });

@@ -1,2 +1,111 @@
 <h2>{{localize "sfrpgbb.general.specialAbilities"}}</h2>
-{{editor content=data.specialAbilities target="data.specialAbilities" button=true owner=owner editable=true}}
+
+<div class="ability-wrapper">
+
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.defence)}}
+        {{#each data.npcAbilities.defence as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.immunity)}}
+        {{#each data.npcAbilities.immunity as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.weakness)}}
+        {{#each data.npcAbilities.weakness as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.movement)}}
+        {{#each data.npcAbilities.movement as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.offence)}}
+        {{#each data.npcAbilities.offence as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+    
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.movement)}}
+        {{#each data.npcAbilities.movement as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+    
+    <div class="ability-fullText">
+        {{#if (hasData data.npcAbilities.other)}}
+        {{#each data.npcAbilities.other as |item id|}}
+        <div class="item flexrow" data-item-id="{{item.id}}">
+            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-controls">
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{/each}}
+        {{/if}}
+    </div>
+</div>
+
+<!-- defence: "sfrpgbb.defence.defence",
+     energyResist: "sfrpgbb.defence.energyResist",
+     immunity: "sfrpgbb.defence.immunity",
+     movement: "sfrpgbb.movement.movement",
+     offence: "sfrpgbb.attack.offence",
+     other: "sfrpgbb.general.other",
+     sense: "sfrpgbb.sense.sense",
+     weakness: "sfrpgbb.defence.weakness" -->
