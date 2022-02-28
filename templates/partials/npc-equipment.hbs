@@ -3,7 +3,18 @@
 <div class="credits"><b>Credits: </b> <input name="data.information.credits" type="number" value="{{data.information.credits}}" data-dtype="Number" /> CR</div>
 
 <div class="item-wrapper">
-    {{#each data.weapons as |item id|}}
+    {{#each data.meleeWeapons as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        <div class="item-quantity"><input type="number" value="{{item.data.data.quantity}}" data-dtype="Number" /></div>
+        <div class="item-controls">
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+
+    {{#each data.rangedWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>

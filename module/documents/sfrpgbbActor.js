@@ -89,7 +89,8 @@ export class sfrpgbbActor extends Actor {
         
         // Owned Items and related stuff
         data.equipment = actorData.items.filter(function (item) { return ((item.type == "gear") || (item.type == "armorUpgrade") || (item.type == "weaponFusion")) });
-        data.weapons = actorData.items.filter(function (item) { return ((item.type == "weapon") || (item.type == "grenade")) });
+        data.rangedWeapons = actorData.items.filter(function (item) { return (item.type == "weapon" && (item.data.data.weaponType == "smallArms" || item.data.data.weaponType == "longArms")) || (item.type == "grenade") });
+        data.meleeWeapons = actorData.items.filter(function (item) { return (item.type == "weapon" && (item.data.data.weaponType == "meleeBasic" || item.data.data.weaponType == "meleeAdvanced")) });
         data.armor = actorData.items.filter(function (item) { return item.type == "armor"});
         data.spellList = {};
         data.spellList.zero = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 0))});
