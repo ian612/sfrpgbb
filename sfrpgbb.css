@@ -360,41 +360,39 @@
   height: 90%;
   min-height: 90px;
 }
-.sfrpgbb.sheet.npc .offence .wrapper {
+.sfrpgbb.sheet.npc .offence .wrapper-movement {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
-.sfrpgbb.sheet.npc .offence .wrapper .item {
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: top;
+  align-items: center;
   justify-content: flex-start;
   flex-basis: 0;
   margin: 1px;
 }
-.sfrpgbb.sheet.npc .offence .wrapper .item .item-image {
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-image {
   flex: 0 0 auto;
   padding: 0 2px;
 }
-.sfrpgbb.sheet.npc .offence .wrapper .item .item-name,
-.sfrpgbb.sheet.npc .offence .wrapper .item .item-controls {
-  flex: 1 1 auto;
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-name,
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-controls {
+  flex: 0 0 auto;
   padding: 0 2px;
-  flex-wrap: wrap;
-  text-align: left;
+  white-space: nowrap;
 }
-.sfrpgbb.sheet.npc .offence .wrapper .item .item-quantity {
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-quantity {
   flex: 0 0 2em;
   padding: 0 2px;
 }
-.sfrpgbb.sheet.npc .offence .wrapper .item .item-quantity input {
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-quantity input {
   border: none;
 }
-.sfrpgbb.sheet.npc .offence .wrapper .item .item-controls {
+.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-controls {
   padding-right: 1.9em;
-  flex: 0 0 auto;
 }
 .sfrpgbb.sheet.npc .defence {
   display: flex;
