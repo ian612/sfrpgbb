@@ -103,6 +103,11 @@ sfrpgbb.classes = {
     technomancer: "sfrpgbb.character.classes.technomancer"
 }
 
+sfrpgbb.casterClasses = {
+    mystic: "sfrpgbb.character.classes.mystic",
+    technomancer: "sfrpgbb.character.classes.technomancer"
+}
+
 sfrpgbb.alignments = {
     none: "",
     lawfulGood: "sfrpgbb.character.alignments.lawfulGood",

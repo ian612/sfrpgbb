@@ -139,6 +139,7 @@
                     "isCaster": false,
                     "casterType": "none",
                     "spellDCBonus": 0,
+                    "spellDamageBonus": 0,
                     "lvl1": {
                         "value": 0,
                         "max": 0
