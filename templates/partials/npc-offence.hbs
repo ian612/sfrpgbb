@@ -9,10 +9,12 @@
 
     <div class="caster">
         <div class="caster-select">
+            <b>Is Caster?</b>
             <input name="data.spells.isCaster" type="checkbox" {{checked data.spells.isCaster}} />
         </div>
         {{#if data.spells.isCaster}}
         <div class="caster-type">
+            <b>Caster Type</b>
             <select name="data.spells.casterType">
                 {{#select data.spells.casterType}}
                     {{#each config.casterClasses as |name type|}}
@@ -22,7 +24,8 @@
             </select>
         </div>
         <div class="caster-bonus">
-            <input name="data.spells.spellDCBonus" type="number" value="{{data.spells.spellDCBonus}}" data-dtype="Number" />
+            <b>Spell DC Bonus</b>
+            <div class="bonus">{{fetchPositive data.spells.spellDCBonus}} <input name="data.spells.spellDCBonus" type="number" value="{{data.spells.spellDCBonus}}" data-dtype="Number" /></div>
         </div>
         {{/if}}
     </div>
