@@ -360,27 +360,79 @@
   height: 90%;
   min-height: 90px;
 }
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster {
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster .caster-select,
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster .caster-type,
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster .caster-bonus {
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-select,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-select,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-type,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-type,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-ranged,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-ranged,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-melee,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-melee,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-multi,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-multi {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 2px;
 }
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster .caster-select .bonus,
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster .caster-type .bonus,
-.sfrpgbb.sheet.npc .offence .wrapper-selector .caster .caster-bonus .bonus {
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-select .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-select .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-type .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-type .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-bonus .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-bonus .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-ranged .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-ranged .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-melee .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-melee .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-multi .label,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-multi .label {
+  flex: 0 0 auto;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-select .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-select .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-type .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-type .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-bonus .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-bonus .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-ranged .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-ranged .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-melee .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-melee .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-multi .bonus,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-multi .bonus {
   display: flex;
   flex-direction: row;
-  flex: 0 0 3em;
+  flex: 0 0 auto;
   margin: 1px;
+  align-items: center;
+  justify-content: center;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-select .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-select .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-type .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-type .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .caster-bonus .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .caster-bonus .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-ranged .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-ranged .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-melee .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-melee .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row1 .attack-multi .bonus input,
+.sfrpgbb.sheet.npc .offence .wrapper-selector .row2 .attack-multi .bonus input {
+  flex: 0 0 3em;
+  text-align: center;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-movement {
   display: flex;
@@ -415,6 +467,52 @@
 }
 .sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-controls {
   padding-right: 1.9em;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .item,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  flex-basis: 0;
+  border: 2px solid #6b5428;
+  border-radius: 5px;
+  margin: 1px;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-image,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-image {
+  flex: 0 0 auto;
+  padding: 0 2px;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-name,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-name,
+.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-controls,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-controls {
+  flex: 0 0 auto;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-quantity,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-quantity {
+  flex: 0 0 2em;
+  padding: 0 2px;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-quantity input,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-quantity input {
+  border: none;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-controls,
+.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-controls {
+  padding-right: 1.9em;
+}
+.sfrpgbb.sheet.npc .offence .wrapper-other .label {
+  border: none;
 }
 .sfrpgbb.sheet.npc .defence {
   display: flex;

@@ -46,6 +46,7 @@
             "meleeBasic": "Basic Melee",
             "meleeAdvanced": "Advanced Melee",
             "offence": "Offence",
+            "offensiveAbilities": "Offensive Abilities",
             "rangedAttack": "Ranged Attack",
             "smallArms": "Small Arms"
         },
@@ -180,7 +181,15 @@
         },
         "npc": {
             "abilityType": "Ability Type",
+            "casterType": "Caster Type",
+            "isCaster": "Caster?",
+            "meleeAttack": "Melee Attack Bonus",
+            "meleeDamage": "Melee Damage Bonus",
+            "multiAttack": "Multi-attack?",
+            "rangedAttack": "Ranged Attack Bonus",
+            "rangedDamage": "Ranged Damage Bonus",
             "shortDescription": "Short Description",
+            "spellDCBonus": "Spell DC Bonus",
             "units": "Dmg Reduction, Speed in ft, etc",
             "value": "Value"
         },

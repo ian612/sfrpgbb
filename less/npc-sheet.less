@@ -148,24 +148,32 @@
             min-height: 90px;
         }
         .wrapper-selector {
-            .attack {
-
-            }
-            .caster {
+            .row1, .row2 {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                .caster-select, .caster-type, .caster-bonus {
+                .caster-select, .caster-type, .caster-bonus, .attack-ranged, .attack-melee, .attack-multi {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     margin: 2px;
+                    .label {
+                        flex: 0 0 auto;
+                        padding: 0 2px;
+                        white-space: nowrap;
+                    }
                     .bonus {
                         display: flex;
                         flex-direction: row;
-                        flex: 0 0 3em;
+                        flex: 0 0 auto;
                         margin: 1px;
+                        align-items: center;
+                        justify-content: center;
+                        input {
+                            flex: 0 0 3em;
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -201,6 +209,44 @@
                 .item-controls {
                     padding-right: 1.9em;
                 }
+            }
+        }
+        .wrapper-other {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .item, .label {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                flex-basis: 0;
+                border: 2px solid rgb(107, 84, 40);
+                border-radius: 5px;
+                margin: 1px;
+                .item-image {
+                    flex: 0 0 auto;
+                    padding: 0 2px;
+                }
+                .item-name, .item-controls {
+                    flex: 0 0 auto;
+                    padding: 0 2px;
+                    white-space: nowrap;
+                }
+                .item-quantity {
+                    flex: 0 0 2em;
+                    padding: 0 2px;
+                    input {
+                        border: none;
+                    }
+                }
+                .item-controls {
+                    padding-right: 1.9em;
+                }
+            }
+            .label {
+                border: none;
             }
         }
     }
