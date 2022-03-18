@@ -6,9 +6,17 @@
             <b class="label">{{localize "sfrpgbb.npc.rangedAttack"}}</b>
             <div class="bonus">{{fetchPositive data.attack.ranged.attackBonus}} <input name="data.attack.ranged.attackBonus" type="number" value="{{data.attack.ranged.attackBonus}}" data-dtype="Number" /></div>
         </div>
+        <div class="damage-ranged">
+            <b class="label">{{localize "sfrpgbb.npc.rangedDamage"}}</b>
+            <div class="bonus">{{fetchPositive data.attack.ranged.damageBonus}} <input name="data.attack.ranged.damageBonus" type="number" value="{{data.attack.ranged.damageBonus}}" data-dtype="Number" /></div>
+        </div>
         <div class="attack-melee">
             <b class="label">{{localize "sfrpgbb.npc.meleeAttack"}}</b>
             <div class="bonus">{{fetchPositive data.attack.melee.attackBonus}} <input name="data.attack.melee.attackBonus" type="number" value="{{data.attack.melee.attackBonus}}" data-dtype="Number" /></div>
+        </div>
+        <div class="damage-melee">
+            <b class="label">{{localize "sfrpgbb.npc.meleeDamage"}}</b>
+            <div class="bonus">{{fetchPositive data.attack.melee.damageBonus}} <input name="data.attack.melee.damageBonus" type="number" value="{{data.attack.melee.damageBonus}}" data-dtype="Number" /></div>
         </div>
         <div class="attack-multi">
             <b class="label">{{localize "sfrpgbb.npc.multiAttack"}}</b>
@@ -21,14 +29,6 @@
     </div>
     
     <div class="row2">
-        <div class="attack-ranged">
-            <b class="label">{{localize "sfrpgbb.npc.rangedDamage"}}</b>
-            <div class="bonus">{{fetchPositive data.attack.ranged.damageBonus}} <input name="data.attack.ranged.damagekBonus" type="number" value="{{data.attack.ranged.damageBonus}}" data-dtype="Number" /></div>
-        </div>
-        <div class="attack-melee">
-            <b class="label">{{localize "sfrpgbb.npc.meleeDamage"}}</b>
-            <div class="bonus">{{fetchPositive data.attack.melee.damageBonus}} <input name="data.attack.melee.damageBonus" type="number" value="{{data.attack.melee.damageBonus}}" data-dtype="Number" /></div>
-        </div>
         {{#if data.spells.isCaster}}
         <div class="caster-bonus">
             <b class="label">{{localize "sfrpgbb.npc.spellDCBonus"}}</b>
@@ -51,6 +51,7 @@
 
 <div class="wrapper-movement">
     {{#if (hasData data.npcAbilities.movement)}}
+    <b class="label">{{localize "sfrpgbb.movement.movement"}}:&nbsp;</b>
     {{#each data.npcAbilities.movement as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
@@ -65,11 +66,33 @@
 </div>
 
 <div class="wrapper-melee">
-    <!-- -->
+    {{#if (hasData data.meleeWeapons)}}
+    <b class="label">{{localize "sfrpgbb.attack.meleeWeapon"}}:&nbsp;</b>
+    {{#each data.meleeWeapons as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat data.attack.melee.attackBonus decimals=0 sign=true}} ({{item.data.data.damage}}{{numberFormat data.attack.melee.damageBonus decimals=0 sign=true}} {{item.data.data.damageType}})</div>
+        <div class="item-controls">
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
 </div>
 
 <div class="wrapper-ranged">
-    <!-- -->
+    {{#if (hasData data.rangedWeapons)}}
+    <b class="label">{{localize "sfrpgbb.attack.rangedWeapon"}}:&nbsp;</b>
+    {{#each data.rangedWeapons as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat data.attack.ranged.attackBonus decimals=0 sign=true}} ({{item.data.data.damage}}{{numberFormat data.attack.ranged.damageBonus decimals=0 sign=true}} {{item.data.data.damageType}})</div>
+        <div class="item-controls">
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
 </div>
 
 <div class="wrapper-other">

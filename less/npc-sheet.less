@@ -152,7 +152,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                .caster-select, .caster-type, .caster-bonus, .attack-ranged, .attack-melee, .attack-multi {
+                .caster-select, .caster-type, .caster-bonus, .attack-ranged, .damage-ranged, .attack-melee, .damage-melee, .attack-multi {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -161,7 +161,7 @@
                     .label {
                         flex: 0 0 auto;
                         padding: 0 2px;
-                        white-space: nowrap;
+                        text-align: center;
                     }
                     .bonus {
                         display: flex;
@@ -180,9 +180,9 @@
         }
         .wrapper-movement {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             flex-wrap: nowrap;
-            .item {
+            .item, .label {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
@@ -211,7 +211,7 @@
                 }
             }
         }
-        .wrapper-other {
+        .wrapper-melee, .wrapper-ranged, .wrapper-other {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -222,8 +222,6 @@
                 align-items: center;
                 justify-content: flex-start;
                 flex-basis: 0;
-                border: 2px solid rgb(107, 84, 40);
-                border-radius: 5px;
                 margin: 1px;
                 .item-image {
                     flex: 0 0 auto;
@@ -247,6 +245,12 @@
             }
             .label {
                 border: none;
+            }
+        }
+        .wrapper-other {
+            .item {
+                border: 2px solid rgb(107, 84, 40);
+                border-radius: 5px;
             }
         }
     }

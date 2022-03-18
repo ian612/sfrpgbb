@@ -42,12 +42,14 @@
             "damageBonus": "Damage Bonus",
             "grenades": "Grenades",
             "longArms": "Long Arms",
+            "meleeAdvanced": "Advanced Melee",
             "meleeAttack": "Melee Attack",
             "meleeBasic": "Basic Melee",
-            "meleeAdvanced": "Advanced Melee",
+            "meleeWeapon": "Melee Weapon",
             "offence": "Offence",
             "offensiveAbilities": "Offensive Abilities",
             "rangedAttack": "Ranged Attack",
+            "rangedWeapon": "Ranged Weapon",
             "smallArms": "Small Arms"
         },
         "character": {
