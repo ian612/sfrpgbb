@@ -352,6 +352,67 @@
   font-family: "Exo 2";
   font-size: 9pt;
 }
+.sfrpgbb.sheet.npc .defence {
+  display: flex;
+  flex-direction: column;
+}
+.sfrpgbb.sheet.npc .defence .ac,
+.sfrpgbb.sheet.npc .defence .saves {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 10%;
+  justify-content: start;
+  align-items: center;
+}
+.sfrpgbb.sheet.npc .defence .ac input,
+.sfrpgbb.sheet.npc .defence .saves input {
+  border: none;
+  flex: 0 0 2em;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1px;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-image,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-image {
+  flex: 0 0 auto;
+  padding: 0 2px;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-name,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-name,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-controls,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-controls {
+  flex: 0 0 auto;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity {
+  flex: 0 0 2em;
+  padding: 0 2px;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity input,
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity input {
+  border: none;
+}
+.sfrpgbb.sheet.npc .defence .extra-wrapper .label {
+  border: none;
+}
+.sfrpgbb.sheet.npc .defence .extra textarea {
+  border: none;
+  font-family: "Exo 2";
+  font-size: 9pt;
+}
 .sfrpgbb.sheet.npc .offence {
   display: flex;
   flex-direction: column;
@@ -474,22 +535,19 @@
 .sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-name,
 .sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-controls,
 .sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-controls {
-  flex: 0 0 auto;
+  flex: 0 0 0;
   padding: 0 2px;
   white-space: nowrap;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-quantity,
 .sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-quantity {
-  flex: 0 0 2em;
+  flex: 0 0 4em;
   padding: 0 2px;
+  padding-right: 2em;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-quantity input,
 .sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-quantity input {
   border: none;
-}
-.sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-controls,
-.sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-controls {
-  padding-right: 1.9em;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-melee,
 .sfrpgbb.sheet.npc .offence .wrapper-ranged,
@@ -509,7 +567,6 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  flex-basis: 0;
   margin: 1px;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-melee .item .item-image,
@@ -554,90 +611,10 @@
 .sfrpgbb.sheet.npc .offence .wrapper-other .label .item-quantity input {
   border: none;
 }
-.sfrpgbb.sheet.npc .offence .wrapper-melee .item .item-controls,
-.sfrpgbb.sheet.npc .offence .wrapper-ranged .item .item-controls,
-.sfrpgbb.sheet.npc .offence .wrapper-other .item .item-controls,
-.sfrpgbb.sheet.npc .offence .wrapper-melee .label .item-controls,
-.sfrpgbb.sheet.npc .offence .wrapper-ranged .label .item-controls,
-.sfrpgbb.sheet.npc .offence .wrapper-other .label .item-controls {
-  padding-right: 1.9em;
-}
 .sfrpgbb.sheet.npc .offence .wrapper-melee .label,
 .sfrpgbb.sheet.npc .offence .wrapper-ranged .label,
 .sfrpgbb.sheet.npc .offence .wrapper-other .label {
   border: none;
-}
-.sfrpgbb.sheet.npc .offence .wrapper-other .item {
-  border: 2px solid #6b5428;
-  border-radius: 5px;
-}
-.sfrpgbb.sheet.npc .defence {
-  display: flex;
-  flex-direction: column;
-}
-.sfrpgbb.sheet.npc .defence .ac,
-.sfrpgbb.sheet.npc .defence .saves {
-  display: flex;
-  flex-direction: row;
-  flex: 0 0 10%;
-  justify-content: start;
-  align-items: center;
-}
-.sfrpgbb.sheet.npc .defence .ac input,
-.sfrpgbb.sheet.npc .defence .saves input {
-  border: none;
-  flex: 0 0 2em;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  flex-basis: 0;
-  border: 2px solid #6b5428;
-  border-radius: 5px;
-  margin: 1px;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-image,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-image {
-  flex: 0 0 auto;
-  padding: 0 2px;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-name,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-name,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-controls,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-controls {
-  flex: 0 0 auto;
-  padding: 0 2px;
-  white-space: nowrap;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity {
-  flex: 0 0 2em;
-  padding: 0 2px;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity input,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity input {
-  border: none;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-controls,
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-controls {
-  padding-right: 1.9em;
-}
-.sfrpgbb.sheet.npc .defence .extra-wrapper .label {
-  border: none;
-}
-.sfrpgbb.sheet.npc .defence .extra textarea {
-  border: none;
-  font-family: "Exo 2";
-  font-size: 9pt;
 }
 .sfrpgbb.sheet.npc .statistics {
   display: flex;

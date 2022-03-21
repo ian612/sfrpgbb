@@ -158,6 +158,7 @@
             "class": "Class",
             "current": "Current",
             "description": "Description",
+            "dc": "DC",
             "ft": "ft.",
             "level": "Level",
             "misc": "Misc",

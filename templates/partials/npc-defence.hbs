@@ -15,11 +15,9 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
     </div>
     {{/each}}
+    &nbsp;&nbsp;&nbsp;
     {{/if}}
 
     {{#if (hasData data.npcAbilities.immunity)}}
@@ -28,11 +26,9 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
     </div>
     {{/each}}
+    &nbsp;&nbsp;&nbsp;
     {{/if}}
     
     {{#if (hasData data.npcAbilities.energyResist)}}
@@ -40,13 +36,10 @@
     {{#each data.npcAbilities.energyResist as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.data.data.damageType}}</a></div>
-        <div class="item-value"> {{numberFormat item.data.data.value}} </div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
     </div>
     {{/each}}
+    &nbsp;&nbsp;&nbsp;
     {{/if}}
 
     {{#if (hasData data.npcAbilities.weakness)}}
@@ -55,10 +48,8 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
     </div>
     {{/each}}
+    &nbsp;&nbsp;&nbsp;
     {{/if}}
 </div>

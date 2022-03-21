@@ -57,9 +57,6 @@
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><b><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></b></div>
         <div class="item-quantity"><input type="number" value="{{item.data.data.value}}" data-dtype="Number" /></div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
     </div>
     {{/each}}
     {{/if}}
@@ -71,10 +68,7 @@
     {{#each data.meleeWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat data.attack.melee.attackBonus decimals=0 sign=true}} ({{item.data.data.damage}}{{numberFormat data.attack.melee.damageBonus decimals=0 sign=true}} {{item.data.data.damageType}})</div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../data.attack.melee.attackBonus decimals=0 sign=true}} ({{item.data.data.damage}}{{numberFormat ../data.attack.melee.damageBonus decimals=0 sign=true}} {{item.data.data.damageType}})</div>
     </div>
     {{/each}}
     {{/if}}
@@ -86,10 +80,7 @@
     {{#each data.rangedWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat data.attack.ranged.attackBonus decimals=0 sign=true}} ({{item.data.data.damage}}{{numberFormat data.attack.ranged.damageBonus decimals=0 sign=true}} {{item.data.data.damageType}})</div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../data.attack.ranged.attackBonus decimals=0 sign=true}} ({{item.data.data.damage}}{{#if (isEqual item.data.type "grenade" false)}}{{numberFormat ../data.attack.ranged.damageBonus decimals=0 sign=true}}{{/if}} {{item.data.data.damageType}}{{#if (isEqual item.data.type "grenade" true)}}, {{item.data.data.saveType}} {{localize sfrpgbb.general.dc}}{{item.data.data.saveDC}}{{/if}})</div>
     </div>
     {{/each}}
     {{/if}}
@@ -102,28 +93,12 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
-        <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
     </div>
     {{/each}}
     {{/if}}
 </div>
 
-{{editor content=data.attack.description target="data.attack.description" button=true owner=owner editable=true}}
-
 <!-- The above is temporary, will do something a little nicer later when I have more time
-<div class="selectors">
-    selectors - Melee Attack Bonus, Ranged Attack Bonus, IsCaster, Spell Class (Tech or Mystic), Multiattack
-</div>
-
-<div class="melee">
-    melee
-</div>
-
-<div class="Ranged">
-    ranged
-</div>
 
 <div class="Spells">
     spells

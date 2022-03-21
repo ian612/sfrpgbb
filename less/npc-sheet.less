@@ -140,6 +140,60 @@
             font-size: 9pt;
         }
     }
+    .defence {
+        display: flex;
+        flex-direction: column;
+        .ac, .saves {
+            display: flex;
+            flex-direction: row;
+            flex: 0 0 10%;
+            justify-content: start;
+            align-items: center;
+            input {
+                border: none;
+                flex: 0 0 2em;
+            }
+        }
+        .extra-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .item, .label {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                margin: 1px;
+                .item-image {
+                    flex: 0 0 auto;
+                    padding: 0 2px;
+                }
+                .item-name, .item-controls {
+                    flex: 0 0 auto;
+                    padding: 0 2px;
+                    white-space: nowrap;
+                }
+                .item-quantity {
+                    flex: 0 0 2em;
+                    padding: 0 2px;
+                    input {
+                        border: none;
+                    }
+                }
+            }
+            .label {
+                border: none;
+            }
+        }
+        .extra {
+            textarea {
+                border: none;
+                font-family: "Exo 2";
+                font-size: 9pt;
+            }
+        }
+    }
     .offence {
         display: flex;
         flex-direction: column;
@@ -195,19 +249,17 @@
                     padding: 0 2px;
                 }
                 .item-name, .item-controls {
-                    flex: 0 0 auto;
+                    flex: 0 0 0;
                     padding: 0 2px;
                     white-space: nowrap;
                 }
                 .item-quantity {
-                    flex: 0 0 2em;
+                    flex: 0 0 4em;
                     padding: 0 2px;
+                    padding-right: 2em;
                     input {
                         border: none;
                     }
-                }
-                .item-controls {
-                    padding-right: 1.9em;
                 }
             }
         }
@@ -221,7 +273,6 @@
                 flex-wrap: nowrap;
                 align-items: center;
                 justify-content: flex-start;
-                flex-basis: 0;
                 margin: 1px;
                 .item-image {
                     flex: 0 0 auto;
@@ -239,78 +290,9 @@
                         border: none;
                     }
                 }
-                .item-controls {
-                    padding-right: 1.9em;
-                }
             }
             .label {
                 border: none;
-            }
-        }
-        .wrapper-other {
-            .item {
-                border: 2px solid rgb(107, 84, 40);
-                border-radius: 5px;
-            }
-        }
-    }
-    .defence {
-        display: flex;
-        flex-direction: column;
-        .ac, .saves {
-            display: flex;
-            flex-direction: row;
-            flex: 0 0 10%;
-            justify-content: start;
-            align-items: center;
-            input {
-                border: none;
-                flex: 0 0 2em;
-            }
-        }
-        .extra-wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            .item, .label {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-                justify-content: flex-start;
-                flex-basis: 0;
-                border: 2px solid rgb(107, 84, 40);
-                border-radius: 5px;
-                margin: 1px;
-                .item-image {
-                    flex: 0 0 auto;
-                    padding: 0 2px;
-                }
-                .item-name, .item-controls {
-                    flex: 0 0 auto;
-                    padding: 0 2px;
-                    white-space: nowrap;
-                }
-                .item-quantity {
-                    flex: 0 0 2em;
-                    padding: 0 2px;
-                    input {
-                        border: none;
-                    }
-                }
-                .item-controls {
-                    padding-right: 1.9em;
-                }
-            }
-            .label {
-                border: none;
-            }
-        }
-        .extra {
-            textarea {
-                border: none;
-                font-family: "Exo 2";
-                font-size: 9pt;
             }
         }
     }

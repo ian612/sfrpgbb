@@ -111,6 +111,20 @@ Hooks.once("init", function() {
         }
         return false;
     });
+
+    // Handlebars check if two values are equal
+    Handlebars.registerHelper('isEqual', function(value, target, dontInvert, options) {
+        if(value == target) {
+            if(dontInvert) {
+                return true;
+            }
+            return false;
+        }
+        if(dontInvert) {
+            return false;
+        }
+        return true;
+    });
     
     // Remove html tags from text that is to be displayed
     Handlebars.registerHelper('stripTags', function(param) {
