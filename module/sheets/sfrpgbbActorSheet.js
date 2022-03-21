@@ -67,7 +67,12 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemId);
         const quantity = parseInt(event.target.value);
         event.target.value = quantity;
-        return item.update({ "data.quantity": quantity });
+        if(item.data.type == "npcAbility") {
+            return item.update({ "data.value": quantity });
+        }
+        else{
+            return item.update({ "data.quantity": quantity });
+        }
     }
 
     /**
