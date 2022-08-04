@@ -25,6 +25,9 @@
   display: flex;
   flex-direction: column;
 }
+.sfrpgbb.sheet.item .sheet-header .icon {
+  border: 0px;
+}
 @font-face {
   font-family: "Nodesto";
   src: url('fonts/NodestoCapsCondensed.otf');
@@ -41,6 +44,9 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 1;
+}
+.sfrpgbb.sheet.character form .icon {
+  border: 0px;
 }
 .sfrpgbb.sheet.character table {
   border: 1px solid blue;
@@ -213,6 +219,9 @@
   font-family: "Exo 2";
   font-size: 9pt;
   padding: 5px;
+}
+.sfrpgbb.sheet.npc form .icon {
+  border: 0px;
 }
 .sfrpgbb.sheet.npc .infoBar {
   display: flex;

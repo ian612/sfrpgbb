@@ -1,7 +1,7 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
         <div style="flex: 0 0 72px;">
-            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+            <img class="icon" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
         </div>
         <div class="spellName" style="flex-grow: 4;">
             <h3><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize "sfrpgbb.general.name" }}"/></h3>
@@ -20,15 +20,15 @@
             {{#switch data.type}}
                 {{#case "targetsAllies"}}
                     {{"config.spellImages.targetsAllies"}}
-                    <img src="{{config.spellImages.targetsAllies}}" height="64" width="64"/>
+                    <img class="icon" src="{{config.spellImages.targetsAllies}}" height="64" width="64"/>
                 {{/case}}
                 {{#case "targetsEnemies"}}
                     {{"config.spellImages.targetsEnemies"}}
-                    <img src="{{config.spellImages.targetsEnemies}}" height="64" width="64"/>
+                    <img class="icon" src="{{config.spellImages.targetsEnemies}}" height="64" width="64"/>
                 {{/case}}
                 {{#case "utilitySpell"}}
                     {{"config.spellImages.utilitySpell"}}
-                    <img src="{{config.spellImages.utilitySpell}}" height="64" width="64"/>
+                    <img class="icon" src="{{config.spellImages.utilitySpell}}" height="64" width="64"/>
                 {{/case}}
             {{/switch}}
         </div>
