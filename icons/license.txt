@@ -3,6 +3,16 @@ The Creative Commons license 3.0 can be found here - https://creativecommons.org
 
 A list of the icons' authors follows below
 
+Carl Olsen
+----------------
+spider-climb.svg - Spider
+
+
+DarkZaitzev
+----------------
+psychokinetic-hand.svg - Robber hand
+
+
 Delapouite
 ----------------
 advanced-tool-kit.svg - Swiss army knife
@@ -61,6 +71,22 @@ stellar-cannon.svg - Sawed-off shotgun
 flamejet.svg - Water gun
 handcannon.svg - Revolver
 scorchgun.svg - Water gun
+dancing-lights.svg - Sparkles
+daze.svg - Knocked out stars
+fatigue.svg - Tired eye
+token-spell.svg - Magic hat
+detect-thoughts.svg - Hive mind
+hold-portal.svg - Locked door
+lesser-remove-condition.svg - Healing
+mystic-cure.svg - Caduceus
+greater-mystic-cure.svg - Caduceus
+inject-nanobots.svg - Nano bot
+invisibility.svg - Invisible
+knock.svg - Door ring handle
+levitate.svg - Sun cloud
+microbot-assault.svg - Delivery drone
+remove-condition.svg - Healing
+see-invisibility.svg - All seeing eye
 
 
 Lord Berandas
@@ -116,6 +142,33 @@ handcoil.svg - Minigun
 laser-pistol.svg - Bolter gun
 sonic-pistol.svg - Bolter gun
 zero-pistol.svg - Bolter gun
+detect-magic.svg - Magic palm
+energy-ray.svg - Fire ray
+ghost-sound.svg - Spectre
+telekinetic-projectile.svg - Striking balls
+telepathic-message.svg - Telepathy
+charm-person.svg - Charm
+command.svg - Sonic shout
+detect-radiation.svg - Radioactive
+fear.svg - Terror
+grease.svg - Oily spiral
+jolting-surge.svg - Lightning spanner
+keen-senses.svg - Beast eye
+magic-missile.svg - Lightning trio
+mind-thrust.svg - Frontal lobe
+minor-holographic-image.svg - Ghost ally
+overheat.svg - Flamed leaf
+reflecting-armor.svg - Bolt shield
+slow-fall.svg - Falling leaf
+supercharge-weapon.svg - Energise
+caustic-conversion.svg - Acid blob
+greater-fear.svg - Terror
+greater-mind-thrust.svg - Frontal lobe
+holographic-image.svg - Ghost ally
+force-blast.svg - Corner explosion
+hold-person.svg - Transportation rings
+inflict-pain.svg - Back pain
+mirror-image.svg - Mirror mirror
 
 
 sbed
@@ -142,6 +195,7 @@ sonic-bolter.svg - P90
 disintegrator-pistol.svg - CZ Skorpion
 rotating-pistol.svg - Revolver
 semi-auto-pistol.svg - Glock
+daze-monster.svg - Knockout
 
 
 Willdabeast
