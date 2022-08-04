@@ -1,0 +1,149 @@
+All icons included with this game system are sourced from game-icons.net, and are modified and licensed under the Creative Commons license 3.0 by attribution.
+The Creative Commons license 3.0 can be found here - https://creativecommons.org/licenses/by/3.0/
+
+A list of the icons' authors follows below
+
+Delapouite
+----------------
+advanced-tool-kit.svg - Swiss army knife
+animistic-tools.svg - Swiss army knife
+backpack.svg - Backpack
+bedroll.svg - Rolled cloth
+blanket.svg - Rolled cloth
+cable-line.svg - Rope coil
+canteen.svg - Watter bottle
+emergency-beacon.svg - Virtual marker
+emergency-raft.svg - raft
+field-rations.svg - Opened food can
+fire-extinguisher.svg - Fire extinguisher
+flashlight.svg - Flashlight
+greater-healing-serum.svg - Health capsule
+greater-ring-of-resistance.svg - Globe ring
+healing-serum.svg - Health capsule
+lighter.svg - Lighter
+mindlink-circlet.svg - Power ring
+personal-comm-unit.svg - Walkie Talkie
+restoration-gauntlet.svg - Gauntlet
+ring-of-resistance.svg - Globe ring
+system-wide-comm-unit.svg - Wifi router
+tent.svg - Camping tent
+tool-kit.svg - Swiss army knife
+officers-plate.svg - Shoulder armor
+overplate.svg - Breastplate
+tempweave.svg - Saiyan suit
+thinplate.svg - Leather armor
+cryo-shielding.svg - Belt armor
+infrared-sensors.svg - Steampunk goggles
+insulated-shielding.svg - Belt armor
+leapers.svg - Metal boot
+thermal-shielding.svg - Belt armor
+concussion-grenade-I.svg - Stun grenade
+concussion-grenade-II.svg - Stun grenade
+riot-grenade-I.svg - Stun grenade
+riot-grenade-II.svg - Stun grenade
+disruptive.svg - Holy water
+inspiring.svg - Inspiration
+staggering.svg - Pull
+doshko.svg - Magic trident
+fangblade.svg - Chainsaw
+flame-doshko.svg - Magic trident
+longsword.svg - Two handed sword
+plasma-sword.svg - Light Sabers
+pulse-gauntlet.svg - Armor punch
+solar-brand.svg - Wolverine claws
+swoop-hammer.svg - Toy mallet
+battle-staff.svg - Bo
+seismic-pick.svg - War pick
+shell-knuckles.svg - Armor punch
+flamethrower.svg - flamethrower
+laser-rifle.svg - MP5
+stellar-cannon.svg - Sawed-off shotgun
+flamejet.svg - Water gun
+handcannon.svg - Revolver
+scorchgun.svg - Water gun
+
+
+Lord Berandas
+----------------
+chemalyzer.svg - Microscope
+
+
+Lorc
+----------------
+digital-harrow-deck.svg - Poker Hand
+grappler.svg - Grapple
+medpatch.svg - Bandage roll
+space-suit.svg - Space suit
+spell-ampoule.svg - Corked tube
+spell-gem.svg - Crystal shine
+carbon-skin.svg - Mail shirt
+ceremonial-plate.svg - Breastplate
+defiance-squad-armor.svg - Lamellar
+defrex-hide.svg - Leather vest
+second-skin.svg - Plastron
+force-field.svg - Forward field
+jetpack.svg - Jetpack
+jump-jets.svg - Wingfoot
+longstrider-module.svg - Steeltoe boots
+radiation-buffer.svg - Shieldcomb
+targeting-computer.svg - Dead eye
+fragmentation-grenade-I.svg - Grenade
+fragmentation-grenade-II.svg - Grenade
+incendiary-grenade-I.svg - Flash grenade
+incendiary-grenade-II.svg - Flash grenade
+shock-grenade-I.svg - Flash grenade
+shock-grenade-II.svg - Flash grenade
+accurate.svg - On target
+blasting.svg - Corner explosion
+called.svg - Bouncing sword
+defending.svg - Arrows shield
+illuminating.svg - Sunbeams
+seeking.svg - Winged arrow
+spellthrower.svg - Lightning slashes
+venomous.svg - Chemical arrow
+cryopike.svg - Arrowhead
+shadow-chain.svg - Barbed coil
+taclash.svg - Whip
+dueling-sword.svg - Sword hilt
+unarmed-strike.svg - Punch
+arc-rifle.svg - Minigun
+freeze-ray.svg - Sentry gun
+zero-cannon.svg - Sentry gun
+arc-pistol.svg - Ray gun
+forked-pistol.svg - Minigun
+hail-pistol.svg - Ray gun
+handcoil.svg - Minigun
+laser-pistol.svg - Bolter gun
+sonic-pistol.svg - Bolter gun
+zero-pistol.svg - Bolter gun
+
+
+sbed
+----------------
+medkit.svg - Medical pack
+knockdown.svg - Falling
+
+
+Skoll
+----------------
+datapad.svg - Tablet
+microcord.svg - Kevlar vest
+burning.svg - Burning skull
+gale-baton.svg - Baton
+tactical-baton.svg - Telescopic baton
+tactical-switchblade.svg - Switchblade.svg
+artillery-laser.svg - P90
+autocannon.svg - Famas
+disintegrator-rifle.svg - Famas
+forked-rifle.svg - Winchester rifle
+hunting-rifle.svg - Steyr AUG
+red-star-rifle.svg - Machine gun
+sonic-bolter.svg - P90
+disintegrator-pistol.svg - CZ Skorpion
+rotating-pistol.svg - Revolver
+semi-auto-pistol.svg - Glock
+
+
+Willdabeast
+----------------
+glamer-projector.svg - Chain mail
