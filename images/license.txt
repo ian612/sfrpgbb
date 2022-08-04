@@ -1,0 +1,14 @@
+All icons included with this game system are sourced from game-icons.net, and are modified and licensed under the Creative Commons license 3.0 by attribution.
+The Creative Commons license 3.0 can be found here - https://creativecommons.org/licenses/by/3.0/
+
+A list of the icons' authors follows below
+
+Delapouite
+----------------
+target_allies.svg - Flower star
+utility-spell.svg - Polar star
+
+
+Lorc
+----------------
+target_enemies.svg - Piece skull
