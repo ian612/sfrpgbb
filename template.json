@@ -320,7 +320,6 @@
             "duration": null,
             "save": {
                 "hasSave": true,
-                "baseDC": 10,
                 "bonusAbility": null,
                 "savetype": "reflex"
             },
