@@ -266,7 +266,7 @@
                 }
             }
         }
-        .wrapper-melee, .wrapper-ranged, .wrapper-other {
+        .wrapper-melee, .wrapper-ranged, .wrapper-spells, .wrapper-other {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -296,6 +296,13 @@
             }
             .label {
                 border: none;
+                .slots {
+                    input {
+                        border: none;
+                        width: 1em;
+                        text-align: center;
+                    }
+                }
             }
         }
     }

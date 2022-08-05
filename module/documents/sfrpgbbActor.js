@@ -204,8 +204,7 @@ export class sfrpgbbActor extends Actor {
 
         // Add equipped armor AC to character armor AC
         for (let [key, armorItem] of Object.entries(data.armor)) {
-            // 
-            console.log(armorItem);
+            //console.log(armorItem);
             if (armorItem.data.data.equipped) {
                 AC += armorItem.data.data.ac;
             }

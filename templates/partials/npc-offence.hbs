@@ -86,6 +86,51 @@
     {{/if}}
 </div>
 
+<div class="wrapper-spells">
+    {{#if (hasData data.spellList.two)}}
+    <b class="label">{{localize "sfrpgbb.spell.secondLevel"}} {{localize "sfrpgbb.spell.spells"}} [<div class="slots"><input type="number" name="data.spells.lvl2.max" value="{{data.spells.lvl2.max}}" data-dtype="Number" /></div>&nbsp;{{localize "sfrpgbb.spell.slot-s"}}]:&nbsp;</b>
+    {{#each data.spellList.two as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> </div>
+        <div class="item-controls">
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
+
+<div class="wrapper-spells">
+    {{#if (hasData data.spellList.one)}}
+    <b class="label">{{localize "sfrpgbb.spell.firstLevel"}} {{localize "sfrpgbb.spell.spells"}} [<div class="slots"><input type="number" name="data.spells.lvl1.max" value="{{data.spells.lvl1.max}}" data-dtype="Number" /></div>&nbsp;{{localize "sfrpgbb.spell.slot-s"}}]:&nbsp;</b>
+    {{#each data.spellList.one as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> </div>
+        <div class="item-controls">
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
+
+<div class="wrapper-spells">
+    {{#if (hasData data.spellList.zero)}}
+    <b class="label">{{localize "sfrpgbb.spell.zeroLevel"}} {{localize "sfrpgbb.spell.spells"}}:&nbsp;</b>
+    {{#each data.spellList.zero as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> </div>
+        <div class="item-controls">
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
+
 <div class="wrapper-other">
     {{#if (hasData data.npcAbilities.offence)}}
     <b class="label">{{localize "sfrpgbb.attack.offensiveAbilities"}}: </b>

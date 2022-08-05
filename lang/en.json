@@ -226,6 +226,7 @@
             "dc": "DC",
             "duration": "Duration",
             "range": "Range",
+            "slot-s": "Slot(s)",
             "spell": "Spell",
             "spells": "Spells",
             "spellSlots": "Spell Slots",
