@@ -93,6 +93,13 @@ levitate.svg - Sun cloud
 microbot-assault.svg - Delivery drone
 remove-condition.svg - Healing
 see-invisibility.svg - All seeing eye
+acid-immunity.svg - Dragon shield
+assemble.svg - Factory
+cold-immunity.svg - Dragon shield
+electricity-immunity.svg - Dragon shield
+fire-immunity.svg - Dragon shield
+radiation-immunity.svg - Dragon shield
+sonic-immunity.svg - Dragon shield
 
 
 Lord Berandas
@@ -192,6 +199,8 @@ force-blast.svg - Corner explosion
 hold-person.svg - Transportation rings
 inflict-pain.svg - Back pain
 mirror-image.svg - Mirror mirror
+adaptation.svg - DNA 2
+amorphous.svg - Acid blob
 
 
 sbed
@@ -225,3 +234,9 @@ daze-monster.svg - Knockout
 Willdabeast
 ----------------
 glamer-projector.svg - Chain mail
+energy-resistance-acid - Round shield
+energy-resistance-cold - Round shield
+energy-resistance-electricity - Round shield
+energy-resistance-fire - Round shield
+energy-resistance-radiation - Round shield
+energy-resistance-sonic - Round shield
