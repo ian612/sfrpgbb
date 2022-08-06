@@ -139,6 +139,7 @@ arc-pistol.svg - Ray gun
 forked-pistol.svg - Minigun
 hail-pistol.svg - Ray gun
 handcoil.svg - Minigun
+junklaser.svg - Bolter gun
 laser-pistol.svg - Bolter gun
 sonic-pistol.svg - Bolter gun
 zero-pistol.svg - Bolter gun
