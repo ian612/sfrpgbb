@@ -8,6 +8,11 @@ Carl Olsen
 spider-climb.svg - Spider
 
 
+Caro Asercion
+----------------
+burrow.svg - Mole
+climb.svg - Mountain climbing
+
 Cathelineau
 ----------------
 pseudopod.svg - Transparent slime
@@ -16,6 +21,7 @@ pseudopod.svg - Transparent slime
 DarkZaitzev
 ----------------
 psychokinetic-hand.svg - Robber hand
+trick-attack.svg - Running ninja
 
 
 Delapouite
@@ -96,15 +102,40 @@ see-invisibility.svg - All seeing eye
 acid-immunity.svg - Dragon shield
 assemble.svg - Factory
 cold-immunity.svg - Dragon shield
+combat-tracking.svg - VR headset
+construct-immunities.svg - Battle Mech
+create-darkness.svg - Wireframe globe
+desert-stride.svg - Sandal
+disassemble.svg - Factory arm
+disturbing-speech.svg - Convince
 electricity-immunity.svg - Dragon shield
 fire-immunity.svg - Dragon shield
+formian-toxin.svg - Praying mantis
+hive-mind.svg - Hive mind
+hologram-tether.svg - Lasso
+hyper.svg - Shield bash
+ingested-adaptation.svg - Eating pelican
+large.svg - Giant
+mindlink.svg - Hive mind
+nanite-repair.svg - Nano bot
+racial-traits-android.svg - Cyborg face
+racial-traits-human.svg - Monk face
+racial-traits-lashunta.svg - Female elf face
+racial-traits-shirren.svg - Scarab beetle
+racial-traits-vesk.svg - Gecko
+racial-traits-ysoki.svg - Rat
 radiation-immunity.svg - Dragon shield
+see-invisibility.svg - Eye of Horus
+shortwave.svg - Radio tower
 sonic-immunity.svg - Dragon shield
+void-adaptation.svg - Astronaut helmet
 
 
 Lord Berandas
 ----------------
 chemalyzer.svg - Microscope
+hologram.svg - Holosphere
+hologram-rejuvenation.svg - Holosphere
 
 
 Lorc
@@ -201,12 +232,52 @@ inflict-pain.svg - Back pain
 mirror-image.svg - Mirror mirror
 adaptation.svg - DNA 2
 amorphous.svg - Acid blob
+atrophied.svg - Body swapping
+bone-poison.svg - Marrow drain
+breath-weapon-electricity.svg - Energy breath
+breath-weapon-fire.svg - Dragon breath
+custom-rig.svg - Processor
+dispiriting-taunt.svg - Imp laugh
+electrical-discharge.svg - Lightning branches
+energy-shield.svg - Energy shield
+evasion.svg - Dodging
+evisceration.svg - Machete
+fear-immunity.svg - Terror
+fly.svg - Feathered wing
+get-em.svg - Pointing
+jolting-arc.svg - Lightning bow
+leech-life.svg - Life tap
+limited-telepathy.svg - Telepathy
+multiattack.svg - All for one
+ooze-immunities.svg - Acid blob
+phase-defence.svg - Relationship bounds
+phase-movement.svg - Relationship bounds
+phase-through.svg - Ghost Ally
+plant-immunities.svg - Linden leaf
+psychic-assault.svg - Psychic waves
+reach.svg - Grab
+reactor-sprite.svg - Fairy
+self-destruct.svg - Squib
+share-pain.svg - Duality
+spell-cache.svg - Energise
+swarm-mind.svg - Brain
+telepathy.svg - Telepathy
+trill.svg - Echo ripples
+void-flyer.svg - Butterfly
+vulnerable-to-acid.svg - Broken Shield
+vulnerable-to-cold.svg - Broken Shield
+vulnerable-to-critical-hits.svg - Broken Shield
+vulnerable-to-electricity.svg - Broken Shield
+vulnerable-to-fire.svg - Broken Shield
+vulnerable-to-radiation.svg - Broken Shield
+vulnerable-to-sonic.svg - Broken Shield
 
 
 sbed
 ----------------
 medkit.svg - Medical pack
 knockdown.svg - Falling
+fast-healing.svg - Health increase
 
 
 Skoll
@@ -229,11 +300,16 @@ rotating-pistol.svg - Revolver
 semi-auto-pistol.svg - Glock
 bite.svg - Fangs
 daze-monster.svg - Knockout
+empowered-weapon.svg - Steyr AUG
+snipers-aim.svg - Headshot
+sunlight-dependency.svg - Solar power
+unliving.svg - Raise zombie
 
 
 Willdabeast
 ----------------
 glamer-projector.svg - Chain mail
+damage-reduction.svg - Round shield
 energy-resistance-acid - Round shield
 energy-resistance-cold - Round shield
 energy-resistance-electricity - Round shield
