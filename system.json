@@ -54,6 +54,13 @@
 			"entity": "Item"
 		},
 		{
+			"name": "natural-weapons",
+			"label": "Natural Weapons",
+			"system": "sfrpgbb",
+			"path": "./packs/natural-weapons.db",
+			"entity": "Item"
+		},
+		{
 			"name": "npc-abilities",
 			"label": "NPC Abilities",
 			"system": "sfrpgbb",

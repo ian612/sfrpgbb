@@ -8,6 +8,11 @@ Carl Olsen
 spider-climb.svg - Spider
 
 
+Cathelineau
+----------------
+pseudopod.svg - Transparent slime
+
+
 DarkZaitzev
 ----------------
 psychokinetic-hand.svg - Robber hand
@@ -71,6 +76,7 @@ stellar-cannon.svg - Sawed-off shotgun
 flamejet.svg - Water gun
 handcannon.svg - Revolver
 scorchgun.svg - Water gun
+tail-slap.svg - Reptile tail
 dancing-lights.svg - Sparkles
 daze.svg - Knocked out stars
 fatigue.svg - Tired eye
@@ -143,6 +149,22 @@ junklaser.svg - Bolter gun
 laser-pistol.svg - Bolter gun
 sonic-pistol.svg - Bolter gun
 zero-pistol.svg - Bolter gun
+acid-cannon.svg - Fire tail
+acid-spit.svg - Chemical bolt
+attach.svg - Lamprey mouth
+claw.svg - Barbed nails
+hooves.svg - Hoof
+laser.svg - Laser blast
+mutating-touch.svg - DNA 1
+probe.svg - Alien stare
+proboscis.svg - Needle drill
+projectile-vomit.svg - Energy breath
+pulse.svg - Focused lightning
+slam.svg - Slap
+stinger.svg - Scorpion Tail
+tentacle.svg - Suckered tentacle
+thorn-dart.svg - Thorned arrow
+venom-spit.svg - Foamy disc
 detect-magic.svg - Magic palm
 energy-ray.svg - Fire ray
 ghost-sound.svg - Spectre
@@ -196,6 +218,7 @@ sonic-bolter.svg - P90
 disintegrator-pistol.svg - CZ Skorpion
 rotating-pistol.svg - Revolver
 semi-auto-pistol.svg - Glock
+bite.svg - Fangs
 daze-monster.svg - Knockout
 
 
