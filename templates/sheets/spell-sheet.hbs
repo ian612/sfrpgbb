@@ -36,8 +36,39 @@
 
     <div class="sheet-content">
         <table>
-            <th style="text-align: left;"><b>{{localize "sfrpgbb.spell.range"}} - </b> <input name="data.range" style="width: 70%" type="text" value="{{data.range}}" data-dtype="String" /></th>
-            <th style="text-align: right;"><b>{{localize "sfrpgbb.spell.duration"}} - </b> <input name="data.duration" style="width: 60%" type="text" value="{{data.duration}}" data-dtype="String" /></th>
+            <tr>
+                <th colspan=2 style="text-align: left;"><b>{{localize "sfrpgbb.spell.range"}} - </b> <input name="data.range" style="width: 70%" type="text" value="{{data.range}}" data-dtype="String" /></th>
+                <th colspan=2 style="text-align: right;"><b>{{localize "sfrpgbb.spell.duration"}} - </b> <input name="data.duration" style="width: 60%" type="text" value="{{data.duration}}" data-dtype="String" /></th>
+            </tr>
+
+            <tr>
+                <th>{{localize "sfrpgbb.attack.meleeAttack"}}</th>
+                <th>{{localize "sfrpgbb.attack.rangedAttack"}}</th>
+                <th>{{localize "sfrpgbb.spell.hasSave"}}</th>
+                <th>{{localize "sfrpgbb.defence.saveType"}}</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input name="data.meleeAttack" type="checkbox" {{checked data.meleeAttack}} />
+                </td>
+                <td>
+                    <input name="data.rangedAttack" type="checkbox" {{checked data.rangedAttack}} />
+                </td>
+                <td>
+                    <input name="data.hasSave" type="checkbox" {{checked data.hasSave}} />
+                </td>
+                <td>
+                    <select name="data.saveType">
+                        {{#select data.saveType}}
+                        {{#each config.saveTypes as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+            </tr>
+
         </table>
         <div class="editor">
             <b>{{localize "sfrpgbb.spell.spell"}} - {{localize "sfrpgbb.general.description"}}</b>
