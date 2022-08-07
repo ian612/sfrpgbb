@@ -318,18 +318,16 @@
             "level": 0,
             "range": 0,
             "duration": null,
-            "save": {
-                "hasSave": true,
-                "baseDC": 10,
-                "bonusAbility": null,
-                "savetype": "reflex"
+            "meleeAttack": false,
+            "rangedAttack": false,
+            "hasSave": false,
+            "savetype": "reflex"
             },
         "npcAbility": {
             "type": null,
             "damageType": null,
             "description": null,
             "value": 0
-        }
         }
     }
 }

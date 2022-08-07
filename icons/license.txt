@@ -1,23 +1,318 @@
-icons inside this list of folders follow this license agreement below :
+All icons included with this game system are sourced from game-icons.net, and are modified and licensed under the Creative Commons license 3.0 by attribution.
+The Creative Commons license 3.0 can be found here - https://creativecommons.org/licenses/by/3.0/
 
- - spells
- - feats
- - equipment
+A list of the icons' authors follows below
 
-Humble 7000 Game Dev ICONS Bundle EULA
-“End Product” means any digital product, games, websites, software, applications, video content, audio content.
+Carl Olsen
+----------------
+spider-climb.svg - Spider
 
-1. Seller grants to the Purchaser a non-exclusive perpetual license to:
-- use and/or modify or manipulate the Licensed Assets and make a Derivative Work from it;
-- use Licensed Assets to create an unlimited number of End Products for Sale, in which the End Product for Sale may be sold an unlimited number of times;
-- use the Licensed Assets in End Product that are either used for the Purchaser's own personal use or used for the Purchaser's commercial use in which case it may be distributed, sold and supplied by the Purchaser for any fee;
 
-2. A License does not allow the Purchaser to:
-- Use, sell, share, transfer, give away, sublicense or redistribute the Licensed Asset or Derivative Works other than as part of the relevant End Product;
-- Extract the Licensed Asset or Derivative Works and use them outside of the relevant End Product.
-- Use or/and incorporated the Licensed Asset or Derivative Works into a logo, service mark or trademark.
-- Purchaser may not use the Licensed Asset or Derivative Works in End Product containing models and/or property in a manner that is unlawful, harmful, abusive, racially or ethnically offensive, defamatory, deceptive, infringing, invasive of personal privacy or publicity rights, harassing, humiliating to other people, libelous, obscene, threatening, profane, or promotes racism, bigotry, hatred or physical harm of any kind against any group or individual, or is otherwise objectionable.
+Caro Asercion
+----------------
+burrow.svg - Mole
+climb.svg - Mountain climbing
 
-##### INFORMATION ABOUT THIS LICENSE ######################################################################
-## The license was buy by @beans (discord nickname) for the official system Starfinder end product only. ##
-###########################################################################################################
+Cathelineau
+----------------
+pseudopod.svg - Transparent slime
+
+
+DarkZaitzev
+----------------
+psychokinetic-hand.svg - Robber hand
+trick-attack.svg - Running ninja
+
+
+Delapouite
+----------------
+advanced-tool-kit.svg - Swiss army knife
+animistic-tools.svg - Swiss army knife
+backpack.svg - Backpack
+bedroll.svg - Rolled cloth
+blanket.svg - Rolled cloth
+cable-line.svg - Rope coil
+canteen.svg - Watter bottle
+emergency-beacon.svg - Virtual marker
+emergency-raft.svg - raft
+field-rations.svg - Opened food can
+fire-extinguisher.svg - Fire extinguisher
+flashlight.svg - Flashlight
+greater-healing-serum.svg - Health capsule
+greater-ring-of-resistance.svg - Globe ring
+healing-serum.svg - Health capsule
+lighter.svg - Lighter
+mindlink-circlet.svg - Power ring
+personal-comm-unit.svg - Walkie Talkie
+restoration-gauntlet.svg - Gauntlet
+ring-of-resistance.svg - Globe ring
+system-wide-comm-unit.svg - Wifi router
+tent.svg - Camping tent
+tool-kit.svg - Swiss army knife
+officers-plate.svg - Shoulder armor
+overplate.svg - Breastplate
+tempweave.svg - Saiyan suit
+thinplate.svg - Leather armor
+cryo-shielding.svg - Belt armor
+infrared-sensors.svg - Steampunk goggles
+insulated-shielding.svg - Belt armor
+leapers.svg - Metal boot
+thermal-shielding.svg - Belt armor
+concussion-grenade-I.svg - Stun grenade
+concussion-grenade-II.svg - Stun grenade
+riot-grenade-I.svg - Stun grenade
+riot-grenade-II.svg - Stun grenade
+disruptive.svg - Holy water
+inspiring.svg - Inspiration
+staggering.svg - Pull
+doshko.svg - Magic trident
+fangblade.svg - Chainsaw
+flame-doshko.svg - Magic trident
+longsword.svg - Two handed sword
+plasma-sword.svg - Light Sabers
+pulse-gauntlet.svg - Armor punch
+solar-brand.svg - Wolverine claws
+swoop-hammer.svg - Toy mallet
+battle-staff.svg - Bo
+seismic-pick.svg - War pick
+shell-knuckles.svg - Armor punch
+flamethrower.svg - flamethrower
+laser-rifle.svg - MP5
+stellar-cannon.svg - Sawed-off shotgun
+flamejet.svg - Water gun
+handcannon.svg - Revolver
+scorchgun.svg - Water gun
+tail-slap.svg - Reptile tail
+dancing-lights.svg - Sparkles
+daze.svg - Knocked out stars
+fatigue.svg - Tired eye
+token-spell.svg - Magic hat
+detect-thoughts.svg - Hive mind
+hold-portal.svg - Locked door
+lesser-remove-condition.svg - Healing
+mystic-cure.svg - Caduceus
+greater-mystic-cure.svg - Caduceus
+inject-nanobots.svg - Nano bot
+invisibility.svg - Invisible
+knock.svg - Door ring handle
+levitate.svg - Sun cloud
+microbot-assault.svg - Delivery drone
+remove-condition.svg - Healing
+see-invisibility.svg - All seeing eye
+acid-immunity.svg - Dragon shield
+assemble.svg - Factory
+cold-immunity.svg - Dragon shield
+combat-tracking.svg - VR headset
+construct-immunities.svg - Battle Mech
+create-darkness.svg - Wireframe globe
+desert-stride.svg - Sandal
+disassemble.svg - Factory arm
+disturbing-speech.svg - Convince
+electricity-immunity.svg - Dragon shield
+fire-immunity.svg - Dragon shield
+formian-toxin.svg - Praying mantis
+hive-mind.svg - Hive mind
+hologram-tether.svg - Lasso
+hyper.svg - Shield bash
+ingested-adaptation.svg - Eating pelican
+large.svg - Giant
+mindlink.svg - Hive mind
+nanite-repair.svg - Nano bot
+racial-traits-android.svg - Cyborg face
+racial-traits-human.svg - Monk face
+racial-traits-lashunta.svg - Female elf face
+racial-traits-shirren.svg - Scarab beetle
+racial-traits-vesk.svg - Gecko
+racial-traits-ysoki.svg - Rat
+radiation-immunity.svg - Dragon shield
+see-invisibility.svg - Eye of Horus
+shortwave.svg - Radio tower
+sonic-immunity.svg - Dragon shield
+void-adaptation.svg - Astronaut helmet
+
+
+Lord Berandas
+----------------
+chemalyzer.svg - Microscope
+hologram.svg - Holosphere
+hologram-rejuvenation.svg - Holosphere
+
+
+Lorc
+----------------
+digital-harrow-deck.svg - Poker Hand
+grappler.svg - Grapple
+medpatch.svg - Bandage roll
+space-suit.svg - Space suit
+spell-ampoule.svg - Corked tube
+spell-gem.svg - Crystal shine
+carbon-skin.svg - Mail shirt
+ceremonial-plate.svg - Breastplate
+defiance-squad-armor.svg - Lamellar
+defrex-hide.svg - Leather vest
+second-skin.svg - Plastron
+force-field.svg - Forward field
+jetpack.svg - Jetpack
+jump-jets.svg - Wingfoot
+longstrider-module.svg - Steeltoe boots
+radiation-buffer.svg - Shieldcomb
+targeting-computer.svg - Dead eye
+fragmentation-grenade-I.svg - Grenade
+fragmentation-grenade-II.svg - Grenade
+incendiary-grenade-I.svg - Flash grenade
+incendiary-grenade-II.svg - Flash grenade
+shock-grenade-I.svg - Flash grenade
+shock-grenade-II.svg - Flash grenade
+accurate.svg - On target
+blasting.svg - Corner explosion
+called.svg - Bouncing sword
+defending.svg - Arrows shield
+illuminating.svg - Sunbeams
+seeking.svg - Winged arrow
+spellthrower.svg - Lightning slashes
+venomous.svg - Chemical arrow
+cryopike.svg - Arrowhead
+shadow-chain.svg - Barbed coil
+taclash.svg - Whip
+dueling-sword.svg - Sword hilt
+unarmed-strike.svg - Punch
+arc-rifle.svg - Minigun
+freeze-ray.svg - Sentry gun
+zero-cannon.svg - Sentry gun
+arc-pistol.svg - Ray gun
+forked-pistol.svg - Minigun
+hail-pistol.svg - Ray gun
+handcoil.svg - Minigun
+junklaser.svg - Bolter gun
+laser-pistol.svg - Bolter gun
+sonic-pistol.svg - Bolter gun
+zero-pistol.svg - Bolter gun
+acid-cannon.svg - Fire tail
+acid-spit.svg - Chemical bolt
+attach.svg - Lamprey mouth
+claw.svg - Barbed nails
+hooves.svg - Hoof
+laser.svg - Laser blast
+mutating-touch.svg - DNA 1
+probe.svg - Alien stare
+proboscis.svg - Needle drill
+projectile-vomit.svg - Energy breath
+pulse.svg - Focused lightning
+slam.svg - Slap
+stinger.svg - Scorpion Tail
+tentacle.svg - Suckered tentacle
+thorn-dart.svg - Thorned arrow
+venom-spit.svg - Foamy disc
+detect-magic.svg - Magic palm
+energy-ray.svg - Fire ray
+ghost-sound.svg - Spectre
+telekinetic-projectile.svg - Striking balls
+telepathic-message.svg - Telepathy
+charm-person.svg - Charm
+command.svg - Sonic shout
+detect-radiation.svg - Radioactive
+fear.svg - Terror
+grease.svg - Oily spiral
+jolting-surge.svg - Lightning spanner
+keen-senses.svg - Beast eye
+magic-missile.svg - Lightning trio
+mind-thrust.svg - Frontal lobe
+minor-holographic-image.svg - Ghost ally
+overheat.svg - Flamed leaf
+reflecting-armor.svg - Bolt shield
+slow-fall.svg - Falling leaf
+supercharge-weapon.svg - Energise
+caustic-conversion.svg - Acid blob
+greater-fear.svg - Terror
+greater-mind-thrust.svg - Frontal lobe
+holographic-image.svg - Ghost ally
+force-blast.svg - Corner explosion
+hold-person.svg - Transportation rings
+inflict-pain.svg - Back pain
+mirror-image.svg - Mirror mirror
+adaptation.svg - DNA 2
+amorphous.svg - Acid blob
+atrophied.svg - Body swapping
+bone-poison.svg - Marrow drain
+breath-weapon-electricity.svg - Energy breath
+breath-weapon-fire.svg - Dragon breath
+custom-rig.svg - Processor
+dispiriting-taunt.svg - Imp laugh
+electrical-discharge.svg - Lightning branches
+energy-shield.svg - Energy shield
+evasion.svg - Dodging
+evisceration.svg - Machete
+fear-immunity.svg - Terror
+fly.svg - Feathered wing
+get-em.svg - Pointing
+jolting-arc.svg - Lightning bow
+leech-life.svg - Life tap
+limited-telepathy.svg - Telepathy
+multiattack.svg - All for one
+ooze-immunities.svg - Acid blob
+phase-defence.svg - Relationship bounds
+phase-movement.svg - Relationship bounds
+phase-through.svg - Ghost Ally
+plant-immunities.svg - Linden leaf
+psychic-assault.svg - Psychic waves
+reach.svg - Grab
+reactor-sprite.svg - Fairy
+self-destruct.svg - Squib
+share-pain.svg - Duality
+spell-cache.svg - Energise
+swarm-mind.svg - Brain
+telepathy.svg - Telepathy
+trill.svg - Echo ripples
+void-flyer.svg - Butterfly
+vulnerable-to-acid.svg - Broken Shield
+vulnerable-to-cold.svg - Broken Shield
+vulnerable-to-critical-hits.svg - Broken Shield
+vulnerable-to-electricity.svg - Broken Shield
+vulnerable-to-fire.svg - Broken Shield
+vulnerable-to-radiation.svg - Broken Shield
+vulnerable-to-sonic.svg - Broken Shield
+
+
+sbed
+----------------
+medkit.svg - Medical pack
+knockdown.svg - Falling
+fast-healing.svg - Health increase
+
+
+Skoll
+----------------
+datapad.svg - Tablet
+microcord.svg - Kevlar vest
+burning.svg - Burning skull
+gale-baton.svg - Baton
+tactical-baton.svg - Telescopic baton
+tactical-switchblade.svg - Switchblade.svg
+artillery-laser.svg - P90
+autocannon.svg - Famas
+disintegrator-rifle.svg - Famas
+forked-rifle.svg - Winchester rifle
+hunting-rifle.svg - Steyr AUG
+red-star-rifle.svg - Machine gun
+sonic-bolter.svg - P90
+disintegrator-pistol.svg - CZ Skorpion
+rotating-pistol.svg - Revolver
+semi-auto-pistol.svg - Glock
+bite.svg - Fangs
+daze-monster.svg - Knockout
+empowered-weapon.svg - Steyr AUG
+snipers-aim.svg - Headshot
+sunlight-dependency.svg - Solar power
+unliving.svg - Raise zombie
+
+
+Willdabeast
+----------------
+glamer-projector.svg - Chain mail
+damage-reduction.svg - Round shield
+energy-resistance-acid - Round shield
+energy-resistance-cold - Round shield
+energy-resistance-electricity - Round shield
+energy-resistance-fire - Round shield
+energy-resistance-radiation - Round shield
+energy-resistance-sonic - Round shield

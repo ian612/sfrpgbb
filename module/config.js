@@ -55,9 +55,9 @@ sfrpgbb.spellTypes = {
 }
 
 sfrpgbb.spellImages = {
-    targetsAllies: "systems\\sfrpgbb\\images\\spell_types\\target_allies.png",
-    targetsEnemies: "systems\\sfrpgbb\\images\\spell_types\\target_enemies.png",
-    utilitySpell: "systems\\sfrpgbb\\images\\spell_types\\utility_spell.png"
+    targetsAllies: "systems\\sfrpgbb\\images\\spell_types\\target-allies.svg",
+    targetsEnemies: "systems\\sfrpgbb\\images\\spell_types\\target-enemies.svg",
+    utilitySpell: "systems\\sfrpgbb\\images\\spell_types\\utility-spell.svg"
 }
 
 sfrpgbb.weaponSpecials = {

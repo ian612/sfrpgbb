@@ -3,7 +3,7 @@
 	"title": "Starfinder Beginner Box",
 	"description": "An implementation of the Starfinder Beginner Box ruleset for Foundy VTT.",
 	"author": "ian612",
-	"version": "0.1.4",
+	"version": "0.1.7",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "9",
 	"esmodules": [
@@ -47,10 +47,24 @@
 			"entity": "Item"
 		},
 		{
-			"name": "grenadess",
+			"name": "grenades",
 			"label": "Grenades",
 			"system": "sfrpgbb",
 			"path": "./packs/grenades.db",
+			"entity": "Item"
+		},
+		{
+			"name": "natural-weapons",
+			"label": "Natural Weapons",
+			"system": "sfrpgbb",
+			"path": "./packs/natural-weapons.db",
+			"entity": "Item"
+		},
+		{
+			"name": "npc-abilities",
+			"label": "NPC Abilities",
+			"system": "sfrpgbb",
+			"path": "./packs/npc-abilities.db",
 			"entity": "Item"
 		},
 		{
