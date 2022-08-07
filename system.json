@@ -26,6 +26,13 @@
 	"secondaryTokenAttribute": "@defence.rp",
 	"packs": [
 		{
+			"name": "alien-adversaries",
+			"label": "Alien Adversaries",
+			"system": "sfrpgbb",
+			"path": "./packs/alien-adversaries.db",
+			"entity": "Actor"
+		},
+		{
 			"name": "adventuring-gear",
 			"label": "Adventuring Gear",
 			"system": "sfrpgbb",

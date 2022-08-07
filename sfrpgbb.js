@@ -128,10 +128,13 @@ Hooks.once("init", function() {
     
     // Remove html tags from text that is to be displayed
     Handlebars.registerHelper('stripTags', function(param) {
-        if(param === undefined) {
-            param = ""
-        }
         var regex = /(<([^>]+)>)/ig
+        if(param === undefined) {
+            return param;
+        }
+        if(param == null) {
+            return param;
+        }
         return param.replace(regex, "");
     });
 });
