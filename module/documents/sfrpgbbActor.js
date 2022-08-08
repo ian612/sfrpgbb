@@ -372,7 +372,7 @@ export class sfrpgbbActor extends Actor {
         // If there are any NPC abilities in the list of items, run this section
         if (npcAbilities.length > 0){
             for (let i = 0; i < npcAbilities.length; i++) {
-                //console.log(npcAbilities[i]);
+                console.log("Invalid item for this sheet type (Player Character). Not added.")
                 this.deleteEmbeddedDocuments("Item", [npcAbilities[i].id])
             }
         }
