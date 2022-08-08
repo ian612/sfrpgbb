@@ -32,6 +32,26 @@
     {{/if}}
 </div>
 
+<div class="wrapper-melee">
+    {{#if data.attack.multiattack}}
+    <b class="label">{{localize "sfrpgbb.npc.multiattack"}}:&nbsp;</b>
+    {{#each data.meleeWeapons as |item id|}}
+    <div class="item flexrow" data-item-id="{{item.id}}">
+        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name">
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../data.attack.melee.attackBonus decimals=0 sign=true}}
+            {{#if (isEqual item.data.data.damageType "none" true)}}
+                ({{localize "sfrpgbb.npc.noDamage"}})
+            {{/if}}
+            {{#if (isEqual item.data.data.damageType "none" false)}}
+                ({{item.data.data.damage}}{{numberFormat ../data.attack.melee.damageBonus decimals=0 sign=true}} {{item.data.data.damageType}})
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
+
 <div class="wrapper-ranged">
     {{#if (hasData data.rangedWeapons)}}
     <b class="label">{{localize "sfrpgbb.attack.rangedWeapon"}}:&nbsp;</b>
@@ -129,7 +149,7 @@
             <div class="bonus">{{fetchPositive data.attack.ranged.damageBonus}} <input name="data.attack.ranged.damageBonus" type="number" value="{{data.attack.ranged.damageBonus}}" data-dtype="Number" /></div>
         </div>
         <div class="attack-multi">
-            <b class="label">{{localize "sfrpgbb.npc.multiAttack"}}</b>
+            <b class="label">{{localize "sfrpgbb.npc.multiattack"}}</b>
             <input name="data.attack.multiattack" type="checkbox" {{checked data.attack.multiattack}} />
         </div>
         <div class="caster-select">

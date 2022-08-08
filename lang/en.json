@@ -186,10 +186,10 @@
         "npc": {
             "abilityType": "Ability Type",
             "casterType": "Caster Type",
-            "isCaster": "Caster?",
+            "isCaster": "Caster",
             "meleeAttack": "Melee Attack Bonus",
             "meleeDamage": "Melee Damage Bonus",
-            "multiAttack": "Multi-attack?",
+            "multiattack": "Multiattack",
             "noDamage": "no damage; see below",
             "rangedAttack": "Ranged Attack Bonus",
             "rangedDamage": "Ranged Damage Bonus",
