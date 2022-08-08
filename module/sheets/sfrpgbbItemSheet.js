@@ -20,7 +20,8 @@ export default class sfrpgbbItemSheet extends ItemSheet {
             data: baseData.item.data.data,
             config: CONFIG.sfrpgbb
         };
-        console.log(sheetData.data);
+        //Debugging code
+        //console.log(sheetData.data);
 
         return sheetData;
     }
