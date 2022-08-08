@@ -190,6 +190,7 @@
             "meleeAttack": "Melee Attack Bonus",
             "meleeDamage": "Melee Damage Bonus",
             "multiAttack": "Multi-attack?",
+            "noDamage": "no damage; see below",
             "rangedAttack": "Ranged Attack Bonus",
             "rangedDamage": "Ranged Damage Bonus",
             "shortDescription": "Short Description",
