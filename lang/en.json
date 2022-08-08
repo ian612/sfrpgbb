@@ -160,6 +160,7 @@
             "description": "Description",
             "dc": "DC",
             "ft": "ft.",
+            "innate": "Innate",
             "level": "Level",
             "misc": "Misc",
             "name": "Name",

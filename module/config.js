@@ -104,6 +104,7 @@ sfrpgbb.classes = {
 }
 
 sfrpgbb.casterClasses = {
+    innate: "sfrpgbb.general.innate",
     mystic: "sfrpgbb.character.classes.mystic",
     technomancer: "sfrpgbb.character.classes.technomancer"
 }
