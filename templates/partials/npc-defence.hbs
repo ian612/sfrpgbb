@@ -15,6 +15,7 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        {{#if (isEqual item.data.data.value null false)}}<div class="item-quantity"><input type="number" value="{{item.data.data.value}}" data-dtype="Number" /></div>{{/if}}
     </div>
     {{/each}}
     &nbsp;&nbsp;&nbsp;
@@ -37,6 +38,7 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        {{#if (isEqual item.data.data.value null false)}}<div class="item-quantity"><input type="number" value="{{item.data.data.value}}" data-dtype="Number" /></div>{{/if}}
     </div>
     {{/each}}
     &nbsp;&nbsp;&nbsp;

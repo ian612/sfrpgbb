@@ -413,6 +413,8 @@
 .sfrpgbb.sheet.npc .defence .extra-wrapper .item .item-quantity input,
 .sfrpgbb.sheet.npc .defence .extra-wrapper .label .item-quantity input {
   border: none;
+  width: 2em;
+  text-align: center;
 }
 .sfrpgbb.sheet.npc .defence .extra-wrapper .label {
   border: none;
@@ -550,13 +552,15 @@
 }
 .sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-quantity,
 .sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-quantity {
-  flex: 0 0 4em;
+  flex: 0 0 2.5em;
   padding: 0 2px;
   padding-right: 2em;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-movement .item .item-quantity input,
 .sfrpgbb.sheet.npc .offence .wrapper-movement .label .item-quantity input {
   border: none;
+  width: 2.5em;
+  text-align: center;
 }
 .sfrpgbb.sheet.npc .offence .wrapper-melee,
 .sfrpgbb.sheet.npc .offence .wrapper-ranged,

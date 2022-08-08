@@ -106,6 +106,12 @@ Hooks.once("init", function() {
     
     // Handlebars check if an array is empty
     Handlebars.registerHelper('hasData', function(value, options) {
+        if(value === undefined){
+            return false;
+        }
+        if(value == null){
+            return false;
+        }
         if(value.length) {
             return true;
         }
