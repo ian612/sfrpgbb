@@ -107,7 +107,7 @@ construct-immunities.svg - Battle Mech
 create-darkness.svg - Wireframe globe
 desert-stride.svg - Sandal
 disassemble.svg - Factory arm
-disturbing-speech.svg - Convince
+disturbing-screech.svg - Convince
 electricity-immunity.svg - Dragon shield
 fire-immunity.svg - Dragon shield
 formian-toxin.svg - Praying mantis
