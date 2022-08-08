@@ -57,6 +57,8 @@ export class sfrpgbbActor extends Actor {
         data.spellList.zero = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 0))});
         data.spellList.one = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 1))});
         data.spellList.two = actorData.items.filter(function (item) { return ((item.type == "spell") && (item.data.data.level == 2))});
+        // If any NPC Abilities get added, file them here
+        data.npcAbilities = actorData.items.filter(function (item) { return item.type == "npcAbility"});
 
         // Character Sheet Stuff
         // Calculate character level based on XP
@@ -74,8 +76,11 @@ export class sfrpgbbActor extends Actor {
         // Calculate Skills
         this._calculateSkills(actorData);
 
+        // Delete NPC abilities that have been added to character sheets by accident
+        this._deleteNPCAbilities(actorData);
+
         // Output data to a console (for debugging)
-        console.log(actorData);
+        //console.log(actorData);
     }
 
     /**
@@ -111,7 +116,7 @@ export class sfrpgbbActor extends Actor {
         this._calculateXP(actorData);
 
         // Output data to a console (for debugging)
-        console.log(actorData);
+        //console.log(actorData);
 
     }
 
@@ -355,5 +360,22 @@ export class sfrpgbbActor extends Actor {
         else {
             actorData.data.information.xp = null;
         }
+    }
+
+    /**
+     * Delete NPC Ability items that have been added to player character sheets
+     */
+    _deleteNPCAbilities(actorData) {
+        const data = actorData.items;
+        const npcAbilities = data.filter(function (item) { return item.type == "npcAbility"});
+
+        // If there are any NPC abilities in the list of items, run this section
+        if (npcAbilities.length > 0){
+            for (let i = 0; i < npcAbilities.length; i++) {
+                //console.log(npcAbilities[i]);
+                this.deleteEmbeddedDocuments("Item", [npcAbilities[i].id])
+            }
+        }
+
     }
 }
