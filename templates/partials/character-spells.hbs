@@ -2,6 +2,30 @@
     <tr>
         <th colspan=4>{{localize "sfrpgbb.spell.spells"}}</th>
     </tr>
+
+    <tr>
+        <td class="blueRow bottomThickBorder">{{localize "sfrpgbb.npc.spellDCBonus"}}</td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">Total</sup><br>
+            {{numberFormat data.spells.spellDCBonus decimals=0 sign=true}}
+
+        </td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">Casting Ability</sup><br>
+            <select name="data.spells.bonusAbility">
+                {{#select data.spells.bonusAbility}}
+                    {{#each config.spellBonusAbility as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                {{/select}}
+            </select>
+        </td>
+        <td class="blockTitle bottomThickBorder">
+            <sup class="superscript">MISC</sup><br>
+            <input name="data.spells.spellDCMisc" value="{{data.spells.spellDCMisc}}" type="number" data-dtype="Number"/>
+        </td>
+    </tr>
+
     <tr>
         <td class="blueRow bottomThickBorder">{{localize "sfrpgbb.spell.firstLevel"}}</td>
         <td class="blueBox bottomThickBorder">{{localize "sfrpgbb.spell.spellSlots"}}</td>
@@ -14,6 +38,7 @@
             <input name="data.spells.lvl1.max" value="{{data.spells.lvl1.max}}" type="number" data-dtype="Number"/>
         </td>
     </tr>
+
     <tr>
         <td class="blueRow">{{localize "sfrpgbb.spell.secondLevel"}}</td>
         <td class="blueBox">{{localize "sfrpgbb.spell.spellSlots"}}</td>
@@ -26,4 +51,5 @@
             <input name="data.spells.lvl2.max" value="{{data.spells.lvl2.max}}" type="number" data-dtype="Number"/>
         </td>
     </tr>
+
 </table>

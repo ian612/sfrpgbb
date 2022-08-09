@@ -137,6 +137,8 @@
                 "spells": {
                     "isCaster": false,
                     "casterType": "none",
+                    "bonusAbility": "",
+                    "spellDCMisc": 0,
                     "spellDCBonus": 0,
                     "spellDamageBonus": 0,
                     "lvl1": {

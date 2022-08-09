@@ -44,8 +44,8 @@ sfrpgbb.saveTypes = {
 
 sfrpgbb.spellBonusAbility = {
     none: "",
-    intelligence: "sfrpgbb.ability.intelligence",
-    wisdom: "sfrpgbb.ability.wisdom"
+    int: "sfrpgbb.ability.int",
+    wis: "sfrpgbb.ability.wis"
 }
 
 sfrpgbb.spellTypes = {

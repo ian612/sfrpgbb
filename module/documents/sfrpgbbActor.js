@@ -260,6 +260,13 @@ export class sfrpgbbActor extends Actor {
         const rangedClass = data.attack.bonus.ranged.class;
         data.attack.bonus.melee.value = str + meleeClass;
         data.attack.bonus.ranged.value = dex + rangedClass;
+
+        if (data.spells.bonusAbility == "int") {
+            data.spells.spellDCBonus = data.abilities.intelligence.mod + data.spells.spellDCMisc
+        }
+        if (data.spells.bonusAbility == "wis") {
+            data.spells.spellDCBonus = data.abilities.wisdom.mod + data.spells.spellDCMisc
+        }
     }
 
     /**
