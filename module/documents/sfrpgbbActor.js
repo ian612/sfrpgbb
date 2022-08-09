@@ -118,7 +118,7 @@ export class sfrpgbbActor extends Actor {
         this._calcMultiattack(actorData);
 
         // Output data to a console (for debugging)
-        console.log(actorData);
+        //console.log(actorData);
 
     }
 

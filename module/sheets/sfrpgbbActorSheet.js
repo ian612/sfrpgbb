@@ -87,7 +87,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemId);
         const equipped = event.target.checked;
         event.target.value = equipped;
-        console.log(equipped)
+        //console.log(equipped)
         return item.update({ "data.equipped": equipped });
     }
 }
