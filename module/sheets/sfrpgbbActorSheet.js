@@ -32,7 +32,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         if (!this.options.editable) return;
         
         // Add Inventory Item
-        // html.find('.item-create').click(ev => this._onItemCreate(ev));;
+        //html.find('.item-create').click(ev => this._onItemCreate(ev));;
 
         // Update Inventory Item
         html.find('.item-edit').click(ev => {
