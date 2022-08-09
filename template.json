@@ -2,8 +2,7 @@
     "Actor":{
         "types":[
             "character",
-            "npc",
-            "trap"
+            "npc"
         ],
         "templates": {
             "senses":{
