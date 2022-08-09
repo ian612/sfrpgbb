@@ -114,6 +114,8 @@ export class sfrpgbbActor extends Actor {
         this._enforceMaxPoints(actorData);
         // Calculate XP based on CR
         this._calculateXP(actorData);
+        // Calculate multiattack bonus
+        this._calcMultiattack(actorData);
 
         // Output data to a console (for debugging)
         console.log(actorData);
@@ -342,6 +344,23 @@ export class sfrpgbbActor extends Actor {
     }
 
     /**
+     * Delete NPC Ability items that have been added to player character sheets
+     */
+    _deleteNPCAbilities(actorData) {
+        const data = actorData.items;
+        const npcAbilities = data.filter(function (item) { return item.type == "npcAbility"});
+
+        // If there are any NPC abilities in the list of items, run this section
+        if (npcAbilities.length > 0){
+            for (let i = 0; i < npcAbilities.length; i++) {
+                console.log("Invalid item for this sheet type (Player Character). Not added.")
+                this.deleteEmbeddedDocuments("Item", [npcAbilities[i].id])
+            }
+        }
+
+    }
+
+    /**
      * Calculate XP based on NPC CR
      */
      _calculateXP(actorData) {
@@ -363,19 +382,10 @@ export class sfrpgbbActor extends Actor {
     }
 
     /**
-     * Delete NPC Ability items that have been added to player character sheets
+     * Calculate NPC Multiattack attack bonus
      */
-    _deleteNPCAbilities(actorData) {
-        const data = actorData.items;
-        const npcAbilities = data.filter(function (item) { return item.type == "npcAbility"});
-
-        // If there are any NPC abilities in the list of items, run this section
-        if (npcAbilities.length > 0){
-            for (let i = 0; i < npcAbilities.length; i++) {
-                console.log("Invalid item for this sheet type (Player Character). Not added.")
-                this.deleteEmbeddedDocuments("Item", [npcAbilities[i].id])
-            }
-        }
-
+    _calcMultiattack(actorData) {
+        const data = actorData.data;
+        data.attack.melee.multiattackBonus = data.attack.melee.attackBonus - 6;
     }
 }

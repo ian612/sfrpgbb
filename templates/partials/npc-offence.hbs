@@ -39,7 +39,8 @@
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../data.attack.melee.attackBonus decimals=0 sign=true}}
+            {{#if (isEqual item.data.data.quantity 1 false)}} {{item.data.data.quantity}}x {{/if}}
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../data.attack.melee.multiattackBonus decimals=0 sign=true}}
             {{#if (isEqual item.data.data.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
