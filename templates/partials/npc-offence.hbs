@@ -79,7 +79,13 @@
     {{#each data.spellList.two as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> </div>
+        <div class="item-name">
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}
+                {{#if item.data.data.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../data.spells.spellDCBonus 12}} {{localize (concat "sfrpgbb.defence." item.data.data.saveType)}}) {{/if}}
+                {{#if item.data.data.meleeAttack}} ({{numberFormat ../data.attack.melee.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
+                {{#if item.data.data.rangedAttack}} ({{numberFormat ../data.attack.ranged.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
+            </a>
+        </div>
         <div class="item-controls">
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
@@ -94,7 +100,13 @@
     {{#each data.spellList.one as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> </div>
+        <div class="item-name">
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}
+                {{#if item.data.data.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../data.spells.spellDCBonus 11}} {{localize (concat "sfrpgbb.defence." item.data.data.saveType)}}) {{/if}}
+                {{#if item.data.data.meleeAttack}} ({{numberFormat ../data.attack.melee.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
+                {{#if item.data.data.rangedAttack}} ({{numberFormat ../data.attack.ranged.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
+            </a>
+        </div>
         <div class="item-controls">
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
@@ -109,7 +121,13 @@
     {{#each data.spellList.zero as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a> </div>
+        <div class="item-name">
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}
+                {{#if item.data.data.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../data.spells.spellDCBonus 10}} {{localize (concat "sfrpgbb.defence." item.data.data.saveType)}}) {{/if}}
+                {{#if item.data.data.meleeAttack}} ({{numberFormat ../data.attack.melee.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
+                {{#if item.data.data.rangedAttack}} ({{numberFormat ../data.attack.ranged.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
+            </a>
+        </div>
         <div class="item-controls">
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
         </div>

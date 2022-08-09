@@ -152,4 +152,9 @@ Hooks.once("init", function() {
 
         return new Handlebars.SafeString(param.replace(regex, ""));
     });
+
+    // Add two numbers
+    Handlebars.registerHelper('add', function(one, two) {
+        return (one+two);
+    });
 });

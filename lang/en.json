@@ -125,6 +125,7 @@
             "fortitudeSave": "Fortitude Save",
             "hitPoints": "Hit Points",
             "hp": "HP",
+            "none": "",
             "immunity": "Immunity",
             "immunities": "Immunities",
             "reflex": "Reflex",

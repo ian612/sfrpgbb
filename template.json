@@ -320,7 +320,7 @@
             "meleeAttack": false,
             "rangedAttack": false,
             "hasSave": false,
-            "savetype": "reflex"
+            "saveType": "reflex"
             },
         "npcAbility": {
             "type": null,
