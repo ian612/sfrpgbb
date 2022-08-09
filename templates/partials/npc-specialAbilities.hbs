@@ -91,7 +91,7 @@
         {{#each data.npcAbilities.other as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
             <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.data.data.description}}</div>
+            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{{stripTags item.data.data.description}}}</div>
             <div class="item-controls">
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>

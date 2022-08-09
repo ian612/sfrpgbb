@@ -141,6 +141,15 @@ Hooks.once("init", function() {
         if(param == null) {
             return param;
         }
-        return param.replace(regex, "");
+        
+        // Reduce preview length
+        /*
+        * if(param.length > 200) {
+        *    let tmpString = param.slice(0,200)
+        *    return new Handlebars.SafeString(tmpString.replace(regex, ""));
+        * }
+        */
+
+        return new Handlebars.SafeString(param.replace(regex, ""));
     });
 });
