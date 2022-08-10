@@ -3,7 +3,7 @@
 	"title": "Starfinder Beginner Box",
 	"description": "An implementation of the Starfinder Beginner Box ruleset for Foundy VTT.",
 	"author": "ian612",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"minimumCoreVersion": "0.8.9",
 	"compatibleCoreVersion": "9",
 	"esmodules": [
@@ -102,5 +102,8 @@
 			"path": "./packs/weapon-fusions.db",
 			"entity": "Item"
 		}
-	]
+	],
+	"url": "https://github.com/ian612/sfrpgbb",
+	"manifest": "https://raw.githubusercontent.com/ian612/sfrpgbb/main/system.json",
+	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v0.2.1.zip"
 }
