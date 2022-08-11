@@ -3,7 +3,18 @@ Foundry VTT System for the Starfinder Beginner Box Ruleset (https://github.com/i
 
 Written by Ian Bennett (ian612)
 
-Licensing Stuff
+About
+---------------
+This system implements the rules decribed in the Starfinder Beginner Box for Foundry VTT. Due to differences in game mechanics between Starfinder and its Beginner Box, this system is implemented separately from the full Starfinder game.
+
+The Beginner Box allows players and GMs to get their feet wet in the Starfinder universe, and enables play from levels 1 to 4.
+
+Player Characters and NPCs/Aliens/Enemies are defined as actors, while spells, NPC abilities, and all types of gear (weapons, armor, equipment, etc.) are implemented as items. Inventory and Spell management is done via dragging and dropping items onto character/NPC sheets.
+
+Some calculations are handled automatically (total weapon bonuses, armor class, spell DC, etc.), but there is not a lot of roll automation in the system.
+
+
+Licensing
 ---------------
 This game system definition uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This game system definition is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/community/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.
 
