@@ -33,6 +33,7 @@ bedroll.svg - Rolled cloth
 blanket.svg - Rolled cloth
 cable-line.svg - Rope coil
 canteen.svg - Watter bottle
+credstick.svg - Swipe card
 emergency-beacon.svg - Virtual marker
 emergency-raft.svg - raft
 field-rations.svg - Opened food can
