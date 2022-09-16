@@ -41,7 +41,7 @@ export class sfrpgbbActor extends Actor {
         const data = actorData.data;
 
         //print out the data structure in the console if needed
-        console.log(actorData);
+        console.log(this);
 
         //data.abilities.str = Math.floor((data.abilities.strength - 10) / 2);
         for (let [key, ability] of Object.entries(data.abilities)) {
