@@ -9,19 +9,19 @@
     <tr>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.general.current"}}</sup><br>
-            <input name="data.defence.hp.value" type="number" value="{{data.defence.hp.value}}" data-dtype="Number" />
+            <input name="system.defence.hp.value" type="number" value="{{system.defence.hp.value}}" data-dtype="Number" />
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            <input name="data.defence.hp.max" type="number" value="{{data.defence.hp.max}}" data-dtype="Number" />
+            <input name="system.defence.hp.max" type="number" value="{{system.defence.hp.max}}" data-dtype="Number" />
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.general.current"}}</sup><br>
-            <input name="data.defence.rp.value" type="number" value="{{data.defence.rp.value}}" data-dtype="Number" />
+            <input name="system.defence.rp.value" type="number" value="{{system.defence.rp.value}}" data-dtype="Number" />
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            <input name="data.defence.rp.max" type="number" value="{{data.defence.rp.max}}" data-dtype="Number" />
+            <input name="system.defence.rp.max" type="number" value="{{system.defence.rp.max}}" data-dtype="Number" />
         </td>
     </tr>
 </table>
@@ -33,7 +33,7 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.armor.ac decimals=0}}
+            {{numberFormat system.defence.armor.ac decimals=0}}
         </td>
         <td class="blockTitle">
             <br>10
@@ -43,21 +43,21 @@
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
-            {{numberFormat data.abilities.dexterity.mod decimals=0}}
+            {{numberFormat system.abilities.dexterity.mod decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.defence.armor"}}</sup><br>
-            {{numberFormat data.defence.armor.armorBonus decimals=0}}
+            {{numberFormat system.defence.armor.armorBonus decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.defence.armor.misc" type="number" style="width: 3em;" value="{{data.defence.armor.misc}}" data-dtype="Number" />
+            <input name="system.defence.armor.misc" type="number" style="width: 3em;" value="{{system.defence.armor.misc}}" data-dtype="Number" />
         </td>
     </tr>
     <tr>
@@ -65,11 +65,11 @@
             {{localize "sfrpgbb.defence.armorProficiencies"}}
         </td>
         <td colspan=4>
-            <input type="checkbox" name="data.defence.armor.proficiency.light" id="lightArmor" {{checked data.defence.armor.proficiency.light}} />
+            <input type="checkbox" name="system.defence.armor.proficiency.light" id="lightArmor" {{checked system.defence.armor.proficiency.light}} />
             <label for="lightArmor">{{localize "sfrpgbb.armor.light"}}</label>
         </td>
         <td colspan=2>
-            <input type="checkbox" name="data.defence.armor.proficiency.heavy" id="heavyArmor" {{checked data.defence.armor.proficiency.heavy}} />
+            <input type="checkbox" name="system.defence.armor.proficiency.heavy" id="heavyArmor" {{checked system.defence.armor.proficiency.heavy}} />
             <label for="heavyArmor">{{localize "sfrpgbb.armor.heavy"}}</label>
         </td>
     </tr>
@@ -89,23 +89,23 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.save.fortitude.value decimals=0 sign=true}}
+            {{numberFormat system.defence.save.fortitude.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.con"}}</sup><br>
-            {{numberFormat data.abilities.constitution.mod decimals=0}}
+            {{numberFormat system.abilities.constitution.mod decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <br><input name="data.defence.save.fortitude.class" type="number" value="{{data.defence.save.fortitude.class}}" data-dtype="Number" />
+            <br><input name="system.defence.save.fortitude.class" type="number" value="{{system.defence.save.fortitude.class}}" data-dtype="Number" />
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <br><input name="data.defence.save.fortitude.misc" type="number" value="{{data.defence.save.fortitude.misc}}" data-dtype="Number" />
+            <br><input name="system.defence.save.fortitude.misc" type="number" value="{{system.defence.save.fortitude.misc}}" data-dtype="Number" />
         </td>
     </tr>
     <tr>
@@ -114,23 +114,23 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.save.reflex.value decimals=0 sign=true}}
+            {{numberFormat system.defence.save.reflex.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
-            {{numberFormat data.abilities.dexterity.mod decimals=0}}
+            {{numberFormat system.abilities.dexterity.mod decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <br><input name="data.defence.save.reflex.class" type="number" value="{{data.defence.save.reflex.class}}" data-dtype="Number" />
+            <br><input name="system.defence.save.reflex.class" type="number" value="{{system.defence.save.reflex.class}}" data-dtype="Number" />
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <br><input name="data.defence.save.reflex.misc" type="number" value="{{data.defence.save.reflex.misc}}" data-dtype="Number" />
+            <br><input name="system.defence.save.reflex.misc" type="number" value="{{system.defence.save.reflex.misc}}" data-dtype="Number" />
         </td>
     </tr>
     <tr>
@@ -139,23 +139,23 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.defence.save.will.value decimals=0 sign=true}}
+            {{numberFormat system.defence.save.will.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat data.abilities.wisdom.mod decimals=0}}
+            {{numberFormat system.abilities.wisdom.mod decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <br><input name="data.defence.save.will.class" type="number" value="{{data.defence.save.will.class}}" data-dtype="Number" />
+            <br><input name="system.defence.save.will.class" type="number" value="{{system.defence.save.will.class}}" data-dtype="Number" />
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle">
-            <br><input name="data.defence.save.will.misc" type="number" value="{{data.defence.save.will.misc}}" data-dtype="Number" />
+            <br><input name="system.defence.save.will.misc" type="number" value="{{system.defence.save.will.misc}}" data-dtype="Number" />
         </td>
     </tr>
 </table>

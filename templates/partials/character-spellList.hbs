@@ -10,7 +10,7 @@
             <!--<a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
         </div>
     </li>
-    {{#each data.spellList.zero as |item id|}}
+    {{#each system.spellList.zero as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title="Edit Spell"><h4 class="item-name">{{item.name}}</h4></a></div>
@@ -28,7 +28,7 @@
             <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
         </div>
     </li>
-    {{#each data.spellList.one as |item id|}}
+    {{#each system.spellList.one as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title="Edit Spell"><h4 class="item-name">{{item.name}}</h4></a></div>
@@ -46,7 +46,7 @@
             <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
         </div>
     </li>
-    {{#each data.spellList.two as |item id|}}
+    {{#each system.spellList.two as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title="Edit Spell"><h4 class="item-name">{{item.name}}</h4></a></div>

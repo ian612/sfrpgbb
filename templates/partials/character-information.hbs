@@ -4,13 +4,13 @@
     </tr>
     <tr>
         <td colspan="4"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "sfrpgbb.character.name"}}"/></td>
-        <td><input name="data.information.pronouns" type="text" value="{{data.information.pronouns}}" placeholder={{localize "sfrpgbb.character.pronouns"}} /></td>
+        <td><input name="system.information.pronouns" type="text" value="{{system.information.pronouns}}" placeholder={{localize "sfrpgbb.character.pronouns"}} /></td>
     </tr>
     <tr>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.character.race"}}</sup><br>
-            <select name="data.information.race">
-                {{#select data.information.race}}
+            <select name="system.information.race">
+                {{#select system.information.race}}
                 {{#each config.races as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
@@ -19,8 +19,8 @@
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.character.theme"}}</sup><br>
-            <select name="data.information.theme">
-                {{#select data.information.theme}}
+            <select name="system.information.theme">
+                {{#select system.information.theme}}
                 {{#each config.themes as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
@@ -29,8 +29,8 @@
         </td>
         <td colspan=2>
             <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
-            <select name="data.information.class">
-                {{#select data.information.class}}
+            <select name="system.information.class">
+                {{#select system.information.class}}
                 {{#each config.classes as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
@@ -39,14 +39,14 @@
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.equipment.credits"}}</sup><br>
-            <input name="data.information.credits" type="number" value="{{data.information.credits}}" placeholder="0" data-dtype="Number" />
+            <input name="system.information.credits" type="number" value="{{system.information.credits}}" placeholder="0" data-dtype="Number" />
         </td>
     </tr>
     <tr>
         <td colspan="2">
             <sup class="superscript">{{localize "sfrpgbb.character.alignment"}}</sup><br>
-            <select name="data.information.alignment">
-                {{#select data.information.alignment}}
+            <select name="system.information.alignment">
+                {{#select system.information.alignment}}
                 {{#each config.alignments as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
@@ -55,15 +55,15 @@
         </td>
         <td style="width: 10%;">
             <sup class="superscript">{{localize "sfrpgbb.character.currentXP"}}</sup><br>
-            <input name="data.information.xp" type="number" value="{{data.information.xp}}" placeholder="0" data-dtype="Number" />
+            <input name="system.information.xp" type="number" value="{{system.information.xp}}" placeholder="0" data-dtype="Number" />
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.character.nextLevelXP"}}</sup><br>
-            {{numberFormat data.information.nextXP decimals=0 sign=false}}
+            {{numberFormat system.information.nextXP decimals=0 sign=false}}
         </td>
         <td>
             <sup class="superscript">{{localize "sfrpgbb.general.level"}}</sup><br>
-            {{numberFormat data.information.level decimals=0 sign=false}}
+            {{numberFormat system.information.level decimals=0 sign=false}}
         </td>
     </tr>
 </table>

@@ -1,6 +1,6 @@
 export default class sfrpgbbActorSheet extends ActorSheet {
     get template() {
-        return `systems/sfrpgbb/templates/sheets/${this.actor.data.type}-sheet.hbs`;
+        return `systems/sfrpgbb/templates/sheets/${this.document.type}-sheet.hbs`;
     }
 
     static get defaultOptions() {
@@ -12,13 +12,12 @@ export default class sfrpgbbActorSheet extends ActorSheet {
     }
 
     getData() {
-        const baseData = super.getData();
         let sheetData = {
-            owner: this.actor.isOwner,
-            editable: this.actor.isEditable,
-            actor: baseData.actor,
-            data: baseData.actor.data.data,
-            items: baseData.actor.data.items,
+            owner: this.document.isOwner,
+            editable: this.isEditable,
+            actor: this.document,
+            system: this.document.system,
+            items: this.document.items,
             config: CONFIG.sfrpgbb
         };
         return sheetData;

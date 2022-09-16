@@ -1,8 +1,8 @@
 <div class="topRow">
     <div class="name"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "sfrpgbb.character.name"}}"/></div>
     <div class="alignment">
-        <select name="data.information.alignment">
-            {{#select data.information.alignment}}
+        <select name="system.information.alignment">
+            {{#select system.information.alignment}}
             {{#each config.alignments as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
             {{/each}}
@@ -12,43 +12,43 @@
 </div>
 <div class="middleRow">
     <div class="initiative">
-        <b>{{localize "sfrpgbb.movement.initiative"}} :&nbsp;</b> {{#fetchPositive data.movement.initiative}}{{/fetchPositive}}
-        <input name="data.movement.initiative" type="number" value="{{data.movement.initiative}}" placeholder="+0" data-dtype="Number"/>
+        <b>{{localize "sfrpgbb.movement.initiative"}} :&nbsp;</b> {{#fetchPositive system.movement.initiative}}{{/fetchPositive}}
+        <input name="system.movement.initiative" type="number" value="{{system.movement.initiative}}" placeholder="+0" data-dtype="Number"/>
     </div>
     <div class="speed">
         <b>{{localize "sfrpgbb.movement.speed"}} :&nbsp;</b>
-        <input name="data.movement.speed" type="number" value="{{data.movement.speed}}" placeholder="0" data-dtype="Number"/>
+        <input name="system.movement.speed" type="number" value="{{system.movement.speed}}" placeholder="0" data-dtype="Number"/>
         &nbsp;{{localize "sfrpgbb.general.ft"}}
     </div>
     <div class="cr">
         <b>{{localize "sfrpgbb.character.cr"}} :&nbsp;</b>
-        <input name="data.information.cr" type="text" value="{{data.information.cr}}" placeholder="1/2" data-dtype="String"/>
+        <input name="system.information.cr" type="text" value="{{system.information.cr}}" placeholder="1/2" data-dtype="String"/>
     </div>
     <div class="xp">
         <b>{{localize "sfrpgbb.character.xp"}} :&nbsp;</b>
-        {{numberFormat data.information.xp decimals=0}}
+        {{numberFormat system.information.xp decimals=0}}
     </div>
     <div class="hp">
         <b>{{localize "sfrpgbb.defence.hp"}} :&nbsp;</b>
-        <input name="data.defence.hp.value" type="number" value="{{data.defence.hp.value}}" placeholder="10" data-dtype="Number"/>
-        &nbsp;/&nbsp;<input name="data.defence.hp.max" type="number" value="{{data.defence.hp.max}}" placeholder="10" data-dtype="Number"/>
+        <input name="system.defence.hp.value" type="number" value="{{system.defence.hp.value}}" placeholder="10" data-dtype="Number"/>
+        &nbsp;/&nbsp;<input name="system.defence.hp.max" type="number" value="{{system.defence.hp.max}}" placeholder="10" data-dtype="Number"/>
     </div>
 </div>
 <div class="bottomRow">
     <div class="darkvision">
         <b>{{localize "sfrpgbb.sense.darkvision"}} :&nbsp;</b>
-        <input type="checkbox" name="data.senses.darkvision.hasDarkvision" {{checked data.senses.darkvision.hasDarkvision}} />
-        {{#if data.senses.darkvision.hasDarkvision}}
-        <input name="data.senses.darkvision.range" type="number" value="{{data.senses.darkvision.range}}" placeholder="10" data-dtype="Number"/>
+        <input type="checkbox" name="system.senses.darkvision.hasDarkvision" {{checked system.senses.darkvision.hasDarkvision}} />
+        {{#if system.senses.darkvision.hasDarkvision}}
+        <input name="system.senses.darkvision.range" type="number" value="{{system.senses.darkvision.range}}" placeholder="10" data-dtype="Number"/>
         &nbsp;{{localize "sfrpgbb.general.ft"}}
         {{/if}}
     </div>
     <div class="seeInvisible">
         <b>{{localize "sfrpgbb.sense.seeInvisibility"}} :&nbsp;</b>
-        <input type="checkbox" name="data.senses.seeInvisible" {{checked data.senses.seeInvisible}} />
+        <input type="checkbox" name="system.senses.seeInvisible" {{checked system.senses.seeInvisible}} />
     </div>
     <div class="perception">
-        <b>{{localize "sfrpgbb.skill.perception"}} :&nbsp;</b> {{#fetchPositive data.skill.perception.value}}{{/fetchPositive}}
-        <input name="data.skill.perception.value" type="number" value="{{data.skill.perception.value}}" placeholder="{{data.abilities.wisdom.mod}}"  data-dtype="Number"/>
+        <b>{{localize "sfrpgbb.skill.perception"}} :&nbsp;</b> {{#fetchPositive system.skill.perception.value}}{{/fetchPositive}}
+        <input name="system.skill.perception.value" type="number" value="{{system.skill.perception.value}}" placeholder="{{system.abilities.wisdom.mod}}"  data-dtype="Number"/>
     </div>
 </div>

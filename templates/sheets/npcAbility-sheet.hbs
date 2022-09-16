@@ -14,8 +14,8 @@
 
             <tr>
                 <td>
-                    <select name="data.type">
-                        {{#select data.type}}
+                    <select name="system.type">
+                        {{#select system.type}}
                         {{#each config.npcAbilityTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -23,8 +23,8 @@
                     </select>
                 </td>
                 <td>
-                    <select name="data.damageType">
-                        {{#select data.damageType}}
+                    <select name="system.damageType">
+                        {{#select system.damageType}}
                         {{#each config.damageTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -32,12 +32,12 @@
                     </select>
                 </td>
                 <td>
-                    <input name="data.value" type="number" value="{{data.value}}" placeholder="{{localize "sfrpgbb.npc.units" }}" data-dtype="Number" />
+                    <input name="system.value" type="number" value="{{system.value}}" placeholder="{{localize "sfrpgbb.npc.units" }}" data-dtype="Number" />
                 </td>
             </tr>
 
         </table>
         <b>{{localize "ITEM.TypeNpcability"}} - {{localize "sfrpgbb.general.description"}}</b>
-        {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+        {{editor system.description target="system.description" button=true owner=owner editable=true}}
     </div>
 </form>

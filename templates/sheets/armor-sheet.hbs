@@ -14,11 +14,11 @@
 
             <tr>
                 <td>
-                    <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
+                    <input name="system.price" type="number" value="{{system.price}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <select name="data.armorType">
-                        {{#select data.armorType}}
+                    <select name="system.armorType">
+                        {{#select system.armorType}}
                         {{#each config.armorTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -26,7 +26,7 @@
                     </select>
                 </td>
                 <td colspan=2>
-                    <input name="data.ac" type="number" value="{{data.ac}}" data-dtype="Number" />
+                    <input name="system.ac" type="number" value="{{system.ac}}" data-dtype="Number" />
                 </td>
             </tr>
 
@@ -38,19 +38,19 @@
 
             <tr>
                 <td colspan=2>
-                    <input name="data.upgrade" type="text" value="{{data.upgrade}}" />
+                    <input name="system.upgrade" type="text" value="{{system.upgrade}}" />
                 </td>
                 <td>
-                    <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
+                    <input name="system.isTech" type="checkbox" {{checked system.isTech}} />
                 </td>
                 <td>
-                    <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
+                    <input name="system.isMagic" type="checkbox" {{checked system.isMagic}} />
                 </td>
             </tr>
 
         </table>
         
         <b>{{localize "sfrpgbb.equipment.armor"}} - {{localize "sfrpgbb.general.description"}}</b>
-        {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+        {{editor system.description target="system.description" button=true owner=owner editable=true}}
     </div>
 </form>

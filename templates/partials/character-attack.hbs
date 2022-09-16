@@ -8,22 +8,22 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.attack.bonus.melee.value decimals=0 sign=true}}
+            {{numberFormat system.attack.bonus.melee.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.strength"}}</sup><br>
-            {{numberFormat data.abilities.strength.mod decimals=0}}
+            {{numberFormat system.abilities.strength.mod decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
-            <input name="data.attack.bonus.melee.class" type="number" style="width: 3em" value="{{data.attack.bonus.melee.class}}" data-dtype="Number" />
+            <input name="system.attack.bonus.melee.class" type="number" style="width: 3em" value="{{system.attack.bonus.melee.class}}" data-dtype="Number" />
         </td>
         <td class="blueBox">
             <sup class="superscript">{{localize "sfrpgbb.attack.damageBonus"}}</sup><br>
-            {{fetchPositive data.abilities.strength.mod}} <input name="data.attack.bonus.melee.damageBonus" type="number" style="width: 3em" value="{{data.attack.bonus.melee.damageBonus}}" data-dtype="Number" />
+            {{fetchPositive system.abilities.strength.mod}} <input name="system.attack.bonus.melee.damageBonus" type="number" style="width: 3em" value="{{system.attack.bonus.melee.damageBonus}}" data-dtype="Number" />
         </td>
     </tr>
     <tr>
@@ -32,22 +32,22 @@
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            {{numberFormat data.attack.bonus.ranged.value decimals=0 sign=true}}
+            {{numberFormat system.attack.bonus.ranged.value decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.dexterity"}}</sup><br>
-            {{numberFormat data.abilities.dexterity.mod decimals=0}}
+            {{numberFormat system.abilities.dexterity.mod decimals=0}}
         </td>
         <td class="plus">
             <br>+
         </td>
         <td class="blockTitle rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
-            <input name="data.attack.bonus.ranged.class" type="number" style="width: 3em;" value="{{data.attack.bonus.ranged.class}}" data-dtype="Number" />
+            <input name="system.attack.bonus.ranged.class" type="number" style="width: 3em;" value="{{system.attack.bonus.ranged.class}}" data-dtype="Number" />
         </td>
         <td class="blueBox">
             <sup class="superscript">{{localize "sfrpgbb.attack.damageBonus"}}</sup><br>
-            {{fetchPositive data.abilities.strength.mod}} <input name="data.attack.bonus.ranged.damageBonus" type="number" style="width: 3em;" value="{{data.attack.bonus.ranged.damageBonus}}" data-dtype="Number" />
+            {{fetchPositive system.abilities.strength.mod}} <input name="system.attack.bonus.ranged.damageBonus" type="number" style="width: 3em;" value="{{system.attack.bonus.ranged.damageBonus}}" data-dtype="Number" />
         </td>
     </tr>
 </table>

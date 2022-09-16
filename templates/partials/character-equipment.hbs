@@ -12,12 +12,12 @@
             <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a> -->
         </div>
     </li>
-    {{#each data.weapons as |item id|}}
+    {{#each system.weapons as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title="Edit Item"><h4 class="item-name">{{item.name}}</h4></a></div>
-        <div class="item-equipped"><input type="checkbox" {{checked item.data.data.equipped}} /></div>
-        <div class="item-quantity"><input type="number" value="{{item.data.data.quantity}}" data-dtype="Number" /></div>
+        <div class="item-equipped"><input type="checkbox" {{checked item.system.equipped}} /></div>
+        <div class="item-quantity"><input type="number" value="{{item.system.quantity}}" data-dtype="Number" /></div>
         <div class="item-controls">
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
@@ -34,12 +34,12 @@
             <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a> -->
         </div>
     </li>
-    {{#each data.armor as |item id|}}
+    {{#each system.armor as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title="Edit Item"><h4 class="item-name">{{item.name}}</h4></a></div>
-        <div class="item-equipped"><input type="checkbox" {{checked item.data.data.equipped}} /></div>
-        <div class="item-quantity"><input type="number" value="{{item.data.data.quantity}}" data-dtype="Number" /></div>
+        <div class="item-equipped"><input type="checkbox" {{checked item.system.equipped}} /></div>
+        <div class="item-quantity"><input type="number" value="{{item.system.quantity}}" data-dtype="Number" /></div>
         <div class="item-controls">
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
@@ -56,12 +56,12 @@
             <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a> -->
         </div>
     </li>
-    {{#each data.equipment as |item id|}}
+    {{#each system.equipment as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title="Edit Item"><h4 class="item-name">{{item.name}}</h4></a></div>
-        <div class="item-equipped"><input type="checkbox" {{checked item.data.data.equipped}} /></div>
-        <div class="item-quantity"><input type="number" value="{{item.data.data.quantity}}" data-dtype="Number" /></div>
+        <div class="item-equipped"><input type="checkbox" {{checked item.system.equipped}} /></div>
+        <div class="item-quantity"><input type="number" value="{{item.system.quantity}}" data-dtype="Number" /></div>
         <div class="item-controls">
             <a class="item-control item-delete" title="Delete Spell"><i class="fas fa-trash"></i></a>
         </div>
