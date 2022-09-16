@@ -7,13 +7,13 @@
         <td class="blueRow bottomThickBorder">{{localize "sfrpgbb.npc.spellDCBonus"}}</td>
         <td class="blockTitle bottomThickBorder">
             <sup class="superscript">Total</sup><br>
-            {{numberFormat data.spells.spellDCBonus decimals=0 sign=true}}
+            {{numberFormat system.spells.spellDCBonus decimals=0 sign=true}}
 
         </td>
         <td class="blockTitle bottomThickBorder">
             <sup class="superscript">Casting Ability</sup><br>
-            <select name="data.spells.bonusAbility">
-                {{#select data.spells.bonusAbility}}
+            <select name="system.spells.bonusAbility">
+                {{#select system.spells.bonusAbility}}
                     {{#each config.spellBonusAbility as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                     {{/each}}
@@ -22,7 +22,7 @@
         </td>
         <td class="blockTitle bottomThickBorder">
             <sup class="superscript">MISC</sup><br>
-            <input name="data.spells.spellDCMisc" value="{{data.spells.spellDCMisc}}" type="number" data-dtype="Number"/>
+            <input name="system.spells.spellDCMisc" value="{{system.spells.spellDCMisc}}" type="number" data-dtype="Number"/>
         </td>
     </tr>
 
@@ -31,11 +31,11 @@
         <td class="blueBox bottomThickBorder">{{localize "sfrpgbb.spell.spellSlots"}}</td>
         <td class="blockTitle bottomThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.spell.available"}}</sup><br>
-            <input name="data.spells.lvl1.value" value="{{data.spells.lvl1.value}}" type="number" data-dtype="Number"/>
+            <input name="system.spells.lvl1.value" value="{{system.spells.lvl1.value}}" type="number" data-dtype="Number"/>
         </td>
         <td class="blockTitle bottomThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            <input name="data.spells.lvl1.max" value="{{data.spells.lvl1.max}}" type="number" data-dtype="Number"/>
+            <input name="system.spells.lvl1.max" value="{{system.spells.lvl1.max}}" type="number" data-dtype="Number"/>
         </td>
     </tr>
 
@@ -44,11 +44,11 @@
         <td class="blueBox">{{localize "sfrpgbb.spell.spellSlots"}}</td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.spell.available"}}</sup><br>
-            <input name="data.spells.lvl2.value" value="{{data.spells.lvl2.value}}" type="number" data-dtype="Number"/>
+            <input name="system.spells.lvl2.value" value="{{system.spells.lvl2.value}}" type="number" data-dtype="Number"/>
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
-            <input name="data.spells.lvl2.max" value="{{data.spells.lvl2.max}}" type="number" data-dtype="Number"/>
+            <input name="system.spells.lvl2.max" value="{{system.spells.lvl2.max}}" type="number" data-dtype="Number"/>
         </td>
     </tr>
 

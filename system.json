@@ -38,77 +38,77 @@
 			"label": "Alien Adversaries",
 			"system": "sfrpgbb",
 			"path": "./packs/alien-adversaries.db",
-			"entity": "Actor"
+			"type": "Actor"
 		},
 		{
 			"name": "iconic-characters",
 			"label": "Iconic Characters",
 			"system": "sfrpgbb",
 			"path": "./packs/iconic-characters.db",
-			"entity": "Actor"
+			"type": "Actor"
 		},
 		{
 			"name": "adventuring-gear",
 			"label": "Adventuring Gear",
 			"system": "sfrpgbb",
 			"path": "./packs/adventuring-gear.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "armor",
 			"label": "Armor",
 			"system": "sfrpgbb",
 			"path": "./packs/armor.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "armor-upgrades",
 			"label": "Armor Upgrades",
 			"system": "sfrpgbb",
 			"path": "./packs/armor-upgrades.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "grenades",
 			"label": "Grenades",
 			"system": "sfrpgbb",
 			"path": "./packs/grenades.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "natural-weapons",
 			"label": "Natural Weapons",
 			"system": "sfrpgbb",
 			"path": "./packs/natural-weapons.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "npc-abilities",
 			"label": "NPC Abilities",
 			"system": "sfrpgbb",
 			"path": "./packs/npc-abilities.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "spells",
 			"label": "Spells",
 			"system": "sfrpgbb",
 			"path": "./packs/spells.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "weapons",
 			"label": "Weapons",
 			"system": "sfrpgbb",
 			"path": "./packs/weapons.db",
-			"entity": "Item"
+			"type": "Item"
 		},
 		{
 			"name": "weapon-fusions",
 			"label": "Weapon Fusions",
 			"system": "sfrpgbb",
 			"path": "./packs/weapon-fusions.db",
-			"entity": "Item"
+			"type": "Item"
 		}
 	],
 	"url": "https://github.com/ian612/sfrpgbb",

@@ -14,18 +14,18 @@
 
             <tr>
                 <td>
-                    <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
+                    <input name="system.price" type="number" value="{{system.price}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
+                    <input name="system.isTech" type="checkbox" {{checked system.isTech}} />
                 </td>
                 <td>
-                    <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
+                    <input name="system.isMagic" type="checkbox" {{checked system.isMagic}} />
                 </td>
             </tr>
 
         </table>
         <b>{{localize "sfrpgbb.equipment.gear"}} - {{localize "sfrpgbb.general.description"}}</b>
-        {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+        {{editor system.description target="system.description" button=true owner=owner editable=true}}
     </div>
 </form>

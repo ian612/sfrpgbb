@@ -1,6 +1,6 @@
 export default class sfrpgbbItemSheet extends ItemSheet {
     get template() {
-        return `systems/sfrpgbb/templates/sheets/${this.item.data.type}-sheet.hbs`;
+        return `systems/sfrpgbb/templates/sheets/${this.document.type}-sheet.hbs`;
     }
 
     static get defaultOptions() {
@@ -12,17 +12,13 @@ export default class sfrpgbbItemSheet extends ItemSheet {
     }
 
     getData() {
-        const baseData = super.getData();
         let sheetData = {
-            owner: this.item.isOwner,
-            editable: this.item.isEditable,
-            item: baseData.item,
-            data: baseData.item.data.data,
+            owner: this.document.isOwner,
+            editable: this.isEditable,
+            item: this.document,
+            system: this.document.system,
             config: CONFIG.sfrpgbb
         };
-        //Debugging code
-        //console.log(sheetData.data);
-
         return sheetData;
     }
 }

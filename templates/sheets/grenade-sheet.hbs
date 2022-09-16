@@ -14,17 +14,17 @@
             </tr>
             <tr>
                 <td>
-                    <input name="data.price" type="number" value="{{data.price}}" data-dtype="Number" />
+                    <input name="system.price" type="number" value="{{system.price}}" data-dtype="Number" />
                 </td>
                 <td>
-                    <input name="data.isTech" type="checkbox" {{checked data.isTech}} />
+                    <input name="system.isTech" type="checkbox" {{checked system.isTech}} />
                 </td>
                 <td>
-                    <input name="data.isMagic" type="checkbox" {{checked data.isMagic}} />
+                    <input name="system.isMagic" type="checkbox" {{checked system.isMagic}} />
                 </td>
                 <td colspan=2>
-                    <select name="data.saveType">
-                        {{#select data.saveType}}
+                    <select name="system.saveType">
+                        {{#select system.saveType}}
                         {{#each config.saveTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -32,7 +32,7 @@
                     </select>
                 </td>
                 <td>
-                    <input name="data.saveDC" type="number" value="{{data.saveDC}}" data-dtype="Number" />
+                    <input name="system.saveDC" type="number" value="{{system.saveDC}}" data-dtype="Number" />
                 </td>
             </tr>
             <tr>
@@ -43,11 +43,11 @@
             </tr>
             <tr>
                 <td>
-                    <input name="data.damage" type="text" value="{{data.damage}}" />
+                    <input name="system.damage" type="text" value="{{system.damage}}" />
                 </td>
                 <td>
-                    <select name="data.damageType">
-                        {{#select data.damageType}}
+                    <select name="system.damageType">
+                        {{#select system.damageType}}
                         {{#each config.damageTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -55,14 +55,14 @@
                     </select>
                 </td>
                 <td>
-                    <input name="data.range" type="number" value="{{data.range}}" data-dtype="Number" />
+                    <input name="system.range" type="number" value="{{system.range}}" data-dtype="Number" />
                 </td>
                 <td colspan=3>
-                    <input name="data.special" type="text" value="{{data.special}}" data-dtype="String" />
+                    <input name="system.special" type="text" value="{{system.special}}" data-dtype="String" />
                 </td>
             </tr>
         </table>
         <b>{{localize "sfrpgbb.equipment.grenade"}} - {{localize "sfrpgbb.general.description"}}</b>
-        {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+        {{editor system.description target="system.description" button=true owner=owner editable=true}}
     </div>
 </form>

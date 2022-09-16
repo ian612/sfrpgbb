@@ -8,21 +8,21 @@
             {{localize "sfrpgbb.general.total"}}
         </td>
         <td class="blueBox rightThickBorder">
-            {{numberFormat data.movement.initiative decimals=0 sign=true}}
+            {{numberFormat system.movement.initiative decimals=0 sign=true}}
         </td>
         <td class="blockTitle">
             <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
-            {{numberFormat data.abilities.dexterity.mod decimals=0}}
+            {{numberFormat system.abilities.dexterity.mod decimals=0}}
         </td>
         <td class="plus">
             +
         </td>
         <td class="blockTitle rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
-            <input name="data.movement.miscInitiative" type="number" value="{{data.movement.miscInitiative}}" data-dtype="Number" />
+            <input name="system.movement.miscInitiative" type="number" value="{{system.movement.miscInitiative}}" data-dtype="Number" />
         </td>
         <td class="blueBox">
-            <input name="data.movement.speed" type="number" value="{{data.movement.speed}}" data-dtype="Number" />
+            <input name="system.movement.speed" type="number" value="{{system.movement.speed}}" data-dtype="Number" />
         </td>
         <td class="blockTitle">
             {{localize "sfrpgbb.movement.feet"}}

@@ -5,11 +5,11 @@
         </div>
         <div class="spellName" style="flex-grow: 4;">
             <h3><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize "sfrpgbb.general.name" }}"/></h3>
-            <div><b>{{localize "sfrpgbb.general.level"}} - </b> <input name="data.level" style="width: 10%; text-align: center;" type="number" value="{{data.level}}" data-dtype="Number" /></div>
+            <div><b>{{localize "sfrpgbb.general.level"}} - </b> <input name="system.level" style="width: 10%; text-align: center;" type="number" value="{{system.level}}" data-dtype="Number" /></div>
         </div>
         <div style="flex-grow: 2;">
-            <select name="data.type">
-                {{#select data.type}}
+            <select name="system.type">
+                {{#select system.type}}
                 {{#each config.spellTypes as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
@@ -17,7 +17,7 @@
             </select>
         </div>
         <div style="flex: 0 0 72px;">
-            {{#switch data.type}}
+            {{#switch system.type}}
                 {{#case "targetsAllies"}}
                     {{"config.spellImages.targetsAllies"}}
                     <img class="icon" src="{{config.spellImages.targetsAllies}}" height="64" width="64"/>
@@ -37,8 +37,8 @@
     <div class="sheet-content">
         <table>
             <tr>
-                <th colspan=2 style="text-align: left;"><b>{{localize "sfrpgbb.spell.range"}} - </b> <input name="data.range" style="width: 70%" type="text" value="{{data.range}}" data-dtype="String" /></th>
-                <th colspan=2 style="text-align: right;"><b>{{localize "sfrpgbb.spell.duration"}} - </b> <input name="data.duration" style="width: 60%" type="text" value="{{data.duration}}" data-dtype="String" /></th>
+                <th colspan=2 style="text-align: left;"><b>{{localize "sfrpgbb.spell.range"}} - </b> <input name="system.range" style="width: 70%" type="text" value="{{system.range}}" data-dtype="String" /></th>
+                <th colspan=2 style="text-align: right;"><b>{{localize "sfrpgbb.spell.duration"}} - </b> <input name="system.duration" style="width: 60%" type="text" value="{{system.duration}}" data-dtype="String" /></th>
             </tr>
 
             <tr>
@@ -50,17 +50,17 @@
 
             <tr>
                 <td>
-                    <input name="data.meleeAttack" type="checkbox" {{checked data.meleeAttack}} />
+                    <input name="system.meleeAttack" type="checkbox" {{checked system.meleeAttack}} />
                 </td>
                 <td>
-                    <input name="data.rangedAttack" type="checkbox" {{checked data.rangedAttack}} />
+                    <input name="system.rangedAttack" type="checkbox" {{checked system.rangedAttack}} />
                 </td>
                 <td>
-                    <input name="data.hasSave" type="checkbox" {{checked data.hasSave}} />
+                    <input name="system.hasSave" type="checkbox" {{checked system.hasSave}} />
                 </td>
                 <td>
-                    <select name="data.saveType">
-                        {{#select data.saveType}}
+                    <select name="system.saveType">
+                        {{#select system.saveType}}
                         {{#each config.saveTypes as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -72,7 +72,7 @@
         </table>
         <div class="editor">
             <b>{{localize "sfrpgbb.spell.spell"}} - {{localize "sfrpgbb.general.description"}}</b>
-            {{editor content=data.description target="data.description" button=true owner=owner editable=true}}
+            {{editor system.description target="system.description" button=true owner=owner editable=true}}
         </div>
     </div>
 </form>
