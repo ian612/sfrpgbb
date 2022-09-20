@@ -6,12 +6,12 @@
     <tr>
         <td class="blueRow bottomThickBorder">{{localize "sfrpgbb.npc.spellDCBonus"}}</td>
         <td class="blockTitle bottomThickBorder">
-            <sup class="superscript">Total</sup><br>
+            <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
             {{numberFormat system.spells.spellDCBonus decimals=0 sign=true}}
 
         </td>
         <td class="blockTitle bottomThickBorder">
-            <sup class="superscript">Casting Ability</sup><br>
+            <sup class="superscript">{{localize "sfrpgbb.character.castingAbility"}}</sup><br>
             <select name="system.spells.bonusAbility">
                 {{#select system.spells.bonusAbility}}
                     {{#each config.spellBonusAbility as |name type|}}
@@ -21,7 +21,7 @@
             </select>
         </td>
         <td class="blockTitle bottomThickBorder">
-            <sup class="superscript">MISC</sup><br>
+            <sup class="superscript">{{localize "sfrpgbb.general.misc"}}</sup><br>
             <input name="system.spells.spellDCMisc" value="{{system.spells.spellDCMisc}}" type="number" data-dtype="Number"/>
         </td>
     </tr>
