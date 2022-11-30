@@ -8,10 +8,10 @@
 		"discord": "Graham_Negative#9479"
 		}
 	],
-	"version": "1.1.1",
+	"version": "1.2.0",
 	"compatibility": {
 		"minimum": 10,
-		"verified": 10.285,
+		"verified": 10,
 		"maximum": 10
 	  },
 	"esmodules": [
