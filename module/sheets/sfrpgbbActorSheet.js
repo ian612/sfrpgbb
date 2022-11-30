@@ -52,6 +52,9 @@ export default class sfrpgbbActorSheet extends ActorSheet {
 
         // Update Inventory Item Equipped Status
         html.find(".item-equipped input").click(ev => ev.target.select()).change(this._onEquippedChange.bind(this));
+
+        // Roll skill checks
+        html.find('.btn-roll').click(this._rollstuff.bind(this));
     }
 
     /**
@@ -66,11 +69,11 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         const item = this.actor.items.get(itemId);
         const quantity = parseInt(event.target.value);
         event.target.value = quantity;
-        if(item.data.type == "npcAbility") {
-            return item.update({ "data.value": quantity });
+        if(item.system.type == "npcAbility") {
+            return item.update({ "system.value": quantity });
         }
         else{
-            return item.update({ "data.quantity": quantity });
+            return item.update({ "system.quantity": quantity });
         }
     }
 
@@ -80,13 +83,40 @@ export default class sfrpgbbActorSheet extends ActorSheet {
      * @returns {Promise<Item5e>}  Updated item.
      * @private
      */
-     async _onEquippedChange(event) {
+    async _onEquippedChange(event) {
         event.preventDefault();
         const itemId = event.currentTarget.closest(".item").dataset.itemId;
         const item = this.actor.items.get(itemId);
         const equipped = event.target.checked;
         event.target.value = equipped;
         //console.log(equipped)
-        return item.update({ "data.equipped": equipped });
+        return item.update({ "system.equipped": equipped });
+    }
+
+    /**
+     * Roll some dice
+     * @param {Event} event        The triggering click event.
+     * @returns {Promise<Item5e>}  Updated item.
+     * @private
+     */
+    async _rollstuff(event) {
+        event.preventDefault();
+        const tmp = this.object.system.skills.athletics.value;
+        console.log(tmp);
+
+        // Build the roll
+        let r = new Roll("1d20 + @mod", {mod: tmp});
+
+        // The parsed terms of the roll formula
+        console.log(r.terms);    // [Die, OperatorTerm, NumericTerm, OperatorTerm, NumericTerm]
+        
+        // Execute the roll
+        await r.evaluate();
+
+        // The resulting equation after it was rolled
+        console.log(r.result);   // 16 + 2 + 4
+
+        // The total resulting from the roll
+        console.log(r.total);    // 22
     }
 }
