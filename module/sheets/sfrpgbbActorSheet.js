@@ -57,6 +57,22 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         html.find('.btn-roll').click(this._rollstuff.bind(this));
     }
 
+    _rollButton(event) {
+        let rollFormula = "1d20 + @actionValue";
+        let rollData = {
+            actionValue: event.currentTarget.dataset.actionValue
+        }
+        let messageData = {
+            speaker: ChatMessage.getSpeaker()
+        }
+
+        new Roll(rollFormula, rollData).roll().toMessage(messageData);
+        
+        //Dice.TaskCheck({
+        //    actionValue: event.currentTarget.dataset.actionValue
+        //});
+    }
+
     /**
      * Change the quantity of an Owned Item within the Actor.
      * @param {Event} event        The triggering click event.
@@ -100,8 +116,21 @@ export default class sfrpgbbActorSheet extends ActorSheet {
      * @private
      */
     async _rollstuff(event) {
+
+        //
+        //let rollFormula = "1d20 + @actionValue";
+        //let rollData = {
+        //    actionValue: event.currentTarget.dataset.actionValue
+        //}
+        //let messageData = {
+        //    speaker: ChatMessage.getSpeaker()
+        //}
+        
+        //new Roll(rollFormula, rollData).roll().toMessage(messageData);
+        //
+
         event.preventDefault();
-        const tmp = this.object.system.skills.athletics.value;
+        const tmp = event.currentTarget.dataset.actionValue;
         console.log(tmp);
 
         // Build the roll
@@ -111,7 +140,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         console.log(r.terms);    // [Die, OperatorTerm, NumericTerm, OperatorTerm, NumericTerm]
         
         // Execute the roll
-        await r.evaluate();
+        r.roll({async:true});
 
         // The resulting equation after it was rolled
         console.log(r.result);   // 16 + 2 + 4
