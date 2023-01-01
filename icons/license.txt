@@ -108,7 +108,7 @@ construct-immunities.svg - Battle Mech
 create-darkness.svg - Wireframe globe
 desert-stride.svg - Sandal
 disassemble.svg - Factory arm
-disturbing-screech.svg - Convince
+disturbing-speech.svg - Convince
 electricity-immunity.svg - Dragon shield
 fire-immunity.svg - Dragon shield
 formian-toxin.svg - Praying mantis
@@ -239,6 +239,7 @@ breath-weapon-electricity.svg - Energy breath
 breath-weapon-fire.svg - Dragon breath
 custom-rig.svg - Processor
 dispiriting-taunt.svg - Imp laugh
+disturbing-screech.svg - Shouting
 electrical-discharge.svg - Lightning branches
 energy-shield.svg - Energy shield
 evasion.svg - Dodging
