@@ -18,7 +18,7 @@
     {{#if (isEqual s "themeKnowledge" false)}}
     <tr>
         <td class="blockTitle"><a class="btn-roll" title="{{s}}" data-action-value="{{skill.value}}">{{localize (concat "sfrpgbb.skill." s)}}</a></td>
-        <td class="blueBox rightThickBorder finalMod">{{numberFormat skill.value decimals=0 sign=true}}</td>
+        <td class="blueBox rightThickBorder">{{numberFormat skill.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize (concat "sfrpgbb.ability." skill.abilityName)}}</sup><br>
             {{numberFormat skill.abilityMod decimals=0}}
