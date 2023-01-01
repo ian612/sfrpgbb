@@ -14,325 +14,42 @@
         <td class="blueRow" colspan=2> {{localize "sfrpgbb.general.misc"}}</td>
     </tr>
 
-    <!-- Athletics -->
+    {{#each system.skills as |skill s|}}
+    {{#if (isEqual s "themeKnowledge" false)}}
     <tr>
-        <td class="blockTitle"><a class="btn-roll" title="athletics">{{localize "sfrpgbb.skill.athletics"}}</a></td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.athletics.value decimals=0 sign=true}}</td>
+        <td class="blockTitle"><a class="btn-roll" title="{{s}}" data-action-value="{{skill.value}}">{{localize (concat "sfrpgbb.skill." s)}}</a></td>
+        <td class="blueBox rightThickBorder finalMod">{{numberFormat skill.value decimals=0 sign=true}}</td>
         <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.str"}}</sup><br>
-            {{numberFormat system.abilities.strength.mod decimals=0}}
+            <sup class="superscript">{{localize (concat "sfrpgbb.ability." skill.abilityName)}}</sup><br>
+            {{numberFormat skill.abilityMod decimals=0}}
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
             <div>
-                <input type="checkbox" name="system.skills.athletics.classSkill" {{checked system.skills.athletics.classSkill}} />
+                <input type="checkbox" name="system.skills.{{s}}.classSkill" {{checked skill.classSkill}} />
             </div>
             <div>
-                {{numberFormat system.skills.athletics.class decimals=0}}
+                {{numberFormat skill.class decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
             <div>
-                <input type="checkbox" name="system.skills.athletics.trainedSkill" {{checked system.skills.athletics.trainedSkill}} />
+                <input type="checkbox" name="system.skills.{{s}}.trainedSkill" {{checked skill.trainedSkill}} {{#if skill.classSkill}} disabled="disabled" {{/if}}/>
             </div>
             <div>
-                {{numberFormat system.skills.athletics.level decimals=0}}
+                {{numberFormat skill.level decimals=0}}
             </div>
         </td>
         <td class="plus">+</td>
         <td class="blockTitle">
-            <input name="system.skills.athletics.misc" type="number" value="{{system.skills.athletics.misc}}" data-dtype="Number" />
+            <input name="system.skills.{{s}}.misc" type="number" value="{{skill.misc}}" data-dtype="Number" />
         </td>
     </tr>
+    {{/if}}
+    {{/each}}
 
-    <!-- Culture -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.culture"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.culture.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat system.abilities.intelligence.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.culture.classSkill" {{checked system.skills.culture.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.culture.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.culture.trainedSkill" {{checked system.skills.culture.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.culture.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.culture.misc" type="number" value="{{system.skills.culture.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-
-    <!-- Interaction -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.interaction"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.interaction.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.cha"}}</sup><br>
-            {{numberFormat system.abilities.charisma.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.interaction.classSkill" {{checked system.skills.interaction.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.interaction.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.interaction.trainedSkill" {{checked system.skills.interaction.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.interaction.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.interaction.misc" type="number" value="{{system.skills.interaction.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Medicine -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.medicine"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.medicine.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat system.abilities.intelligence.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.medicine.classSkill" {{checked system.skills.medicine.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.medicine.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.medicine.trainedSkill" {{checked system.skills.medicine.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.medicine.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.medicine.misc" type="number" value="{{system.skills.medicine.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Mysticism -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.mysticism"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.mysticism.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat system.abilities.wisdom.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.mysticism.classSkill" {{checked system.skills.mysticism.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.mysticism.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.mysticism.trainedSkill" {{checked system.skills.mysticism.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.mysticism.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.mysticism.misc" type="number" value="{{system.skills.mysticism.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Perception -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.perception"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.perception.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat system.abilities.wisdom.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.perception.classSkill" {{checked system.skills.perception.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.perception.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.perception.trainedSkill" {{checked system.skills.perception.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.perception.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.perception.misc" type="number" value="{{system.skills.perception.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Science -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.science"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.science.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat system.abilities.intelligence.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.science.classSkill" {{checked system.skills.science.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.science.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.science.trainedSkill" {{checked system.skills.science.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.science.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.science.misc" type="number" value="{{system.skills.science.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Stealth -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.stealth"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.stealth.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.dex"}}</sup><br>
-            {{numberFormat system.abilities.dexterity.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.stealth.classSkill" {{checked system.skills.stealth.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.stealth.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.stealth.trainedSkill" {{checked system.skills.stealth.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.stealth.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.stealth.misc" type="number" value="{{system.skills.stealth.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Survival -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.survival"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.survival.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.wis"}}</sup><br>
-            {{numberFormat system.abilities.wisdom.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.survival.classSkill" {{checked system.skills.survival.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.survival.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.survival.trainedSkill" {{checked system.skills.survival.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.survival.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.survival.misc" type="number" value="{{system.skills.survival.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
-    
-    <!-- Technology -->
-    <tr>
-        <td class="blockTitle">{{localize "sfrpgbb.skill.technology"}}</td>
-        <td class="blueBox rightThickBorder">{{numberFormat system.skills.technology.value decimals=0 sign=true}}</td>
-        <td>
-            <sup class="superscript">{{localize "sfrpgbb.ability.int"}}</sup><br>
-            {{numberFormat system.abilities.intelligence.mod decimals=0}}
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.technology.classSkill" {{checked system.skills.technology.classSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.technology.class decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle skillBox">
-            <div>
-                <input type="checkbox" name="system.skills.technology.trainedSkill" {{checked system.skills.technology.trainedSkill}} />
-            </div>
-            <div>
-                {{numberFormat system.skills.technology.level decimals=0}}
-            </div>
-        </td>
-        <td class="plus">+</td>
-        <td class="blockTitle">
-            <input name="system.skills.technology.misc" type="number" value="{{system.skills.technology.misc}}" data-dtype="Number" />
-        </td>
-    </tr>
+    <!-- Theme Knowledge -->
     <tr>
         <td colspan=2 class="blockTitle">{{localize "sfrpgbb.skill.themeKnowledge"}}</td>
         <td colspan=7><textarea name="system.skills.themeKnowledge" rows="2" type="text" data-dtype="String">{{breaklines system.skills.themeKnowledge}}</textarea></td>
