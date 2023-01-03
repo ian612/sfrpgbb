@@ -2,9 +2,39 @@
     <tr>
         <th colspan="6">{{localize "sfrpgbb.attack.attacks"}}</th>
     </tr>
+    
+    <!--
+    {{#each system.attack.bonus as |attackType nm|}}
     <tr>
         <td class="blockTitle">
-            {{localize "sfrpgbb.attack.meleeAttack"}}
+            <a class="btn-roll" title="sfrpgbb.skill.meleeAttack" data-action-value="{{system.attack.bonus.melee.value}}"> {{localize "sfrpgbb.attack.meleeAttack"}} </a>
+        </td>
+        <td class="blueBox rightThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
+            {{numberFormat system.attack.bonus.melee.value decimals=0 sign=true}}
+        </td>
+        <td class="blockTitle">
+            <sup class="superscript">{{localize "sfrpgbb.ability.strength"}}</sup><br>
+            {{numberFormat system.abilities.strength.mod decimals=0}}
+        </td>
+        <td class="plus">
+            <br>+
+        </td>
+        <td class="blockTitle rightThickBorder">
+            <sup class="superscript">{{localize "sfrpgbb.general.class"}}</sup><br>
+            <input name="system.attack.bonus.melee.class" type="number" style="width: 3em" value="{{system.attack.bonus.melee.class}}" data-dtype="Number" />
+        </td>
+        <td class="blueBox">
+            <sup class="superscript">{{localize "sfrpgbb.attack.damageBonus"}}</sup><br>
+            {{fetchPositive system.abilities.strength.mod}} <input name="system.attack.bonus.melee.damageBonus" type="number" style="width: 3em" value="{{system.attack.bonus.melee.damageBonus}}" data-dtype="Number" />
+        </td>
+    </tr>
+    {{/each}}
+    -->
+
+    <tr>
+        <td class="blockTitle">
+            <a class="btn-roll" title="sfrpgbb.skill.meleeAttack" data-action-value="{{system.attack.bonus.melee.value}}"> {{localize "sfrpgbb.attack.meleeAttack"}} </a>
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
@@ -28,7 +58,7 @@
     </tr>
     <tr>
         <td class="blockTitle">
-            {{localize "sfrpgbb.attack.rangedAttack"}}
+            <a class="btn-roll" title="sfrpgbb.skill.rangedAttack" data-action-value="{{system.attack.bonus.ranged.value}}"> {{localize "sfrpgbb.attack.rangedAttack"}} </a>
         </td>
         <td class="blueBox rightThickBorder">
             <sup class="superscript">{{localize "sfrpgbb.general.total"}}</sup><br>
