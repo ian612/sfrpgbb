@@ -6,11 +6,11 @@
     {{#each system.abilities as |ability nm|}}
     <tr>
         <td class="rightThickBorder">
-            <a class="btn-roll" title={{localize (concat "sfrpgbb.ability." nm)}} data-action-value="{{ability.mod}}"> {{localize (concat "sfrpgbb.ability." ability.shortName)}} </a>
+            <a class="btn-roll" title={{localize (concat "sfrpgbb.ability." nm)}} data-action-value="{{ability.mod}}" data-label="{{localize (concat "sfrpgbb.ability." nm)}} {{localize "sfrpgbb.ability.abilityCheck"}}"> {{localize (concat "sfrpgbb.ability." ability.shortName)}} </a>
         </td>
         <td class="rightThickBorder">{{numberFormat ability.mod decimals=0 sign=true}}</td>
         <td class="rightThickBorder">
-            <a class="btn-roll" title={{localize (concat "sfrpgbb.ability." nm)}} data-action-value="{{ability.mod}}"> {{localize (concat "sfrpgbb.ability." nm)}} </a>
+            <a class="btn-roll" title={{localize (concat "sfrpgbb.ability." nm)}} data-action-value="{{ability.mod}}" data-label="{{localize (concat "sfrpgbb.ability." nm)}} {{localize "sfrpgbb.ability.abilityCheck"}}"> {{localize (concat "sfrpgbb.ability." nm)}} </a>
         </td>
         <td><input name="system.abilities.{{nm}}.value" type="number" value="{{ability.value}}" data-dtype="Number" /></td>
     </tr>

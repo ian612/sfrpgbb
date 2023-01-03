@@ -14,10 +14,10 @@
         <td class="blueRow" colspan=2> {{localize "sfrpgbb.general.misc"}}</td>
     </tr>
 
-    {{#each system.skills as |skill s|}}
-    {{#if (isEqual s "themeKnowledge" false)}}
+    {{#each system.skills as |skill nm|}}
+    {{#if (isEqual nm "themeKnowledge" false)}}
     <tr>
-        <td class="blockTitle"><a class="btn-roll" title={{localize (concat "sfrpgbb.skill." s)}} data-action-value="{{skill.value}}"> {{localize (concat "sfrpgbb.skill." s)}} </a></td>
+        <td class="blockTitle"><a class="btn-roll" title={{localize (concat "sfrpgbb.skill." nm)}} data-action-value="{{skill.value}}" data-label="{{localize (concat "sfrpgbb.skill." nm)}} {{localize "sfrpgbb.skill.skillCheck"}}"> {{localize (concat "sfrpgbb.skill." nm)}} </a></td>
         <td class="blueBox rightThickBorder">{{numberFormat skill.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize (concat "sfrpgbb.ability." skill.abilityName)}}</sup><br>
@@ -26,7 +26,7 @@
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
             <div>
-                <input type="checkbox" name="system.skills.{{s}}.classSkill" {{checked skill.classSkill}} />
+                <input type="checkbox" name="system.skills.{{nm}}.classSkill" {{checked skill.classSkill}} />
             </div>
             <div>
                 {{numberFormat skill.class decimals=0}}
@@ -35,7 +35,7 @@
         <td class="plus">+</td>
         <td class="blockTitle skillBox">
             <div>
-                <input type="checkbox" name="system.skills.{{s}}.trainedSkill" {{checked skill.trainedSkill}} {{#if skill.classSkill}} disabled="disabled" {{/if}}/>
+                <input type="checkbox" name="system.skills.{{nm}}.trainedSkill" {{checked skill.trainedSkill}} {{#if skill.classSkill}} disabled="disabled" {{/if}}/>
             </div>
             <div>
                 {{numberFormat skill.level decimals=0}}
@@ -43,7 +43,7 @@
         </td>
         <td class="plus">+</td>
         <td class="blockTitle">
-            <input name="system.skills.{{s}}.misc" type="number" value="{{skill.misc}}" data-dtype="Number" />
+            <input name="system.skills.{{nm}}.misc" type="number" value="{{skill.misc}}" data-dtype="Number" />
         </td>
     </tr>
     {{/if}}

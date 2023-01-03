@@ -54,23 +54,14 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         html.find(".item-equipped input").click(ev => ev.target.select()).change(this._onEquippedChange.bind(this));
 
         // Roll skill checks
-        html.find('.btn-roll').click(this._rollstuff.bind(this));
-    }
+        html.find('.btn-roll').click(this._rolld20.bind(this));
 
-    _rollButton(event) {
-        let rollFormula = "1d20 + @actionValue";
-        let rollData = {
-            actionValue: event.currentTarget.dataset.actionValue
-        }
-        let messageData = {
-            speaker: ChatMessage.getSpeaker()
-        }
+        // Roll Attack
 
-        new Roll(rollFormula, rollData).roll().toMessage(messageData);
-        
-        //Dice.TaskCheck({
-        //    actionValue: event.currentTarget.dataset.actionValue
-        //});
+
+        // Roll Spell Attack
+
+
     }
 
     /**
@@ -115,7 +106,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
      * @returns {Promise<Item5e>}  Updated item.
      * @private
      */
-    async _rollstuff(event) {
+    async _rolld20(event) {
 
         //
         //let rollFormula = "1d20 + @actionValue";
@@ -130,22 +121,31 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         //
 
         event.preventDefault();
-        const tmp = event.currentTarget.dataset.actionValue;
-        console.log(tmp);
+        const modifier = event.currentTarget.dataset.actionValue;
+        const rollText = event.currentTarget.dataset.label;
+        //console.log(tmp);
+        //console.log(event.currentTarget);
+        //console.log(event.currentTarget.dataset);
 
         // Build the roll
-        let r = new Roll("1d20 + @mod", {mod: tmp});
-
-        // The parsed terms of the roll formula
-        console.log(r.terms);    // [Die, OperatorTerm, NumericTerm, OperatorTerm, NumericTerm]
+        let r = new Roll("1d20 + @mod", {mod: modifier});
         
         // Execute the roll
-        r.roll({async:true});
+        await r.roll({async:true});
+        
+        // Send the result of the roll to the chat
+        await r.toMessage({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: rollText
+        });
+
+        // The parsed terms of the roll formula
+        //console.log(r.terms);    // [Die, OperatorTerm, NumericTerm, OperatorTerm, NumericTerm]
 
         // The resulting equation after it was rolled
-        console.log(r.result);   // 16 + 2 + 4
+        //console.log(r.result);   // 16 + 2 + 4
 
         // The total resulting from the roll
-        console.log(r.total);    // 22
+        //console.log(r.total);    // 22
     }
 }

@@ -13,6 +13,8 @@
 
     "sfrpgbb": {
         "ability": {
+            "ability": "Ability",
+            "abilityCheck": "Ability Check",
             "abilityMod": "Ability Mod",
             "abilityMods": "Ability Mods",
             "abilityScores": "Ability Scores",
@@ -39,15 +41,18 @@
         "attack": {
             "none": "",
             "attacks": "Attacks",
+            "attackRoll": "Attack Roll",
             "damageBonus": "Damage Bonus",
             "grenades": "Grenades",
             "longArms": "Long Arms",
+            "melee": "Melee",
             "meleeAdvanced": "Advanced Melee",
             "meleeAttack": "Melee Attack",
             "meleeBasic": "Basic Melee",
             "meleeWeapon": "Melee Weapon",
             "offence": "Offence",
             "offensiveAbilities": "Offensive Abilities",
+            "ranged": "Ranged",
             "rangedAttack": "Ranged Attack",
             "rangedWeapon": "Ranged Weapon",
             "smallArms": "Small Arms"
@@ -212,6 +217,7 @@
         "skill": {
             "skill": "Skill",
             "skills": "Skills",
+            "skillCheck": "Skill Check",
             "trained": "Trained",
             "athletics": "Athletics",
             "culture": "Culture",
