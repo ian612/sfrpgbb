@@ -17,21 +17,27 @@
             "abilities": {
                 "abilities": {
                     "strength": {
+                        "shortName": "str",
                         "value": 10
                     },
                     "dexterity": {
+                        "shortName": "dex",
                         "value": 10
                     },
                     "constitution": {
+                        "shortName": "con",
                         "value": 10
                     },
                     "intelligence": {
+                        "shortName": "int",
                         "value": 10
                     },
                     "wisdom": {
+                        "shortName": "wis",
                         "value": 10
                     },
                     "charisma": {
+                        "shortName": "cha",
                         "value": 10
                     }
                 }
@@ -51,6 +57,7 @@
             "skills": {
                 "skills": {
                     "athletics": {
+                        "abilityName": "str",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -59,6 +66,7 @@
                         "misc": 0
                     },
                     "culture": {
+                        "abilityName": "int",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -67,6 +75,7 @@
                         "misc": 0
                     },
                     "interaction": {
+                        "abilityName": "cha",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -75,6 +84,7 @@
                         "misc": 0
                     },
                     "medicine": {
+                        "abilityName": "int",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -83,6 +93,7 @@
                         "misc": 0
                     },
                     "mysticism": {
+                        "abilityName": "wis",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -91,6 +102,7 @@
                         "misc": 0
                     },
                     "perception": {
+                        "abilityName": "wis",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -99,6 +111,7 @@
                         "misc": 0
                     },
                     "science": {
+                        "abilityName": "int",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -107,6 +120,7 @@
                         "misc": 0
                     },
                     "stealth": {
+                        "abilityName": "dex",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -115,6 +129,7 @@
                         "misc": 0
                     },
                     "survival": {
+                        "abilityName": "wis",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,
@@ -123,6 +138,7 @@
                         "misc": 0
                     },
                     "technology": {
+                        "abilityName": "int",
                         "classSkill": false,
                         "trainedSkill": false,
                         "value": null,

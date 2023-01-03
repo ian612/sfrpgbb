@@ -305,18 +305,6 @@ export class sfrpgbbActor extends Actor {
         stealth.abilityMod = dex;
         survival.abilityMod = wis;
         technology.abilityMod = int;
-
-        // Add ability Modifier names to data structure
-        athletics.abilityName = "str";
-        culture.abilityName = "int";
-        interaction.abilityName = "cha";
-        medicine.abilityName = "int";
-        mysticism.abilityName = "wis";
-        perception.abilityName = "wis";
-        science.abilityName = "int";
-        stealth.abilityName = "dex";
-        survival.abilityName = "wis";
-        technology.abilityName = "int";
         
         // Store skills in array
         const skillList = {
