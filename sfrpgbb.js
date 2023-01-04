@@ -37,47 +37,6 @@ function registerSystemSettings() {
     });
 }
 
-function migrateActorData(actor) {
-    let updateData = {};
-
-    if (actor.type != "npc") {
-        return updateData;
-    }
-
-    let atk = actor.system.attack;
-    //let updateTemp = {};
-    //console.log(actor)
-    //console.log(atk.bonus.melee.value)
-    //console.log(atk.melee.attackBonus)
-
-    // Move attack and damage bonuses to new locations
-    if (!atk.bonus.melee.value) {
-        if (!(atk.melee.attackBonus == null)) {
-            updateData["system.attack.bonus.melee.value"] = atk.melee.attackBonus;
-        }
-    }
-    if (!atk.bonus.ranged.value) {
-        if (!(atk.ranged.attackBonus == null)) {
-            updateData["system.attack.bonus.ranged.value"] = atk.ranged.attackBonus;
-        }
-    }
-    if (!atk.bonus.melee.damageBonus) {
-        if (!(atk.melee.damageBonus == null)) {
-            updateData["system.attack.bonus.melee.damageBonus"] = atk.melee.damageBonus;
-        }
-    }
-    if (!atk.bonus.ranged.damageBonus) {
-        if (!(atk.ranged.damageBonus == null)) {
-            updateData["system.attack.bonus.ranged.damageBonus"] = atk.ranged.damageBonus;
-        }
-    }
-
-    //console.log(updateTemp);
-    //console.log(updateData);
-    //updateData.system = actor.system;
-    return updateData;
-}
-
 async function migrateWorld() {
     // Migrate Actors in Actor List
     for (let actor of game.actors.contents) {
@@ -91,11 +50,126 @@ async function migrateWorld() {
         }
     }
 
-    // Migrate Actors in the compendiums
-
     // Migrate Actors in Scenes
+    for (let scene of game.scenes.contents) {
+        let sceneUpdate = migrateSceneData(scene);
+        if (!foundry.utils.isEmpty(sceneUpdate)) {
+            console.log(`Migrating Scene ${scene.name}.`);
+            await scene.update(sceneUpdate);
+        }
+        else {
+            console.log(`Scene ${scene.name} needs no migration.`);
+        }
+    }
 
+    // Migrate Actors in the Compendiums
+    /*for (let pack of game.packs) {
+        if (pack.metadata.package != "world") {
+            continue;
+        }
+    
+        const packType = pack.metadata.entity;
+        if (!["Actor", "Scene"].includes(packType)) {
+            continue;
+        }
+    
+        const wasLocked = pack.locked;
+        await pack.configure({ locked: false });
+    
+        await pack.migrate();
+        const documents = await pack.getDocuments();
+    
+        for (let document of documents) {
+            let updateData = {};
+            switch (packType) {
+                case "Actor":
+                    updateData = migrateActorData(document.data);
+                    break;
+                case "Scene":
+                    updateData = migrateSceneData(document.data);
+                    break;
+            }
+            if (foundry.utils.isObjectEmpty(updateData)) {
+                continue;
+            }
+            await document.update(updateData);
+            console.log(`Migrated ${packType} entity ${document.name} in Compendium ${pack.collection}`);
+        }
+    
+        await pack.configure({ locked: wasLocked });
+    }*/
+    
+    //game.settings.set('sfrpgbb', 'systemMigrationVersion', game.system.data.version);
 }
+
+
+function migrateActorData(actor) {
+    let updateData = {};
+
+    if (actor.type != "npc") {
+        return updateData;
+    }
+
+    //let updateTemp = {};
+    //console.log("actor")
+    //console.log(actor)
+    //console.log(actor.system.attack.bonus.melee.value)
+    //console.log(actor.system.attack.melee.attackBonus)
+
+    // Move attack and damage bonuses to new locations
+    if (actor.system && actor.system.attack.bonus.melee.value == null) {
+        if (actor.system.attack.melee && !(actor.system.attack.melee.attackBonus == null)) {
+            updateData["system.attack.bonus.melee.value"] = actor.system.attack.melee.attackBonus;
+        }
+    }
+    if (actor.system && actor.system.attack.bonus.ranged.value == null) {
+        if (actor.system.attack.ranged && !(actor.system.attack.ranged.attackBonus == null)) {
+            updateData["system.attack.bonus.ranged.value"] = actor.system.attack.ranged.attackBonus;
+        }
+    }
+    if (actor.system && actor.system.attack.bonus.melee.damageBonus == null) {
+        if (actor.system.attack.melee && !(actor.system.attack.melee.damageBonus == null)) {
+            updateData["system.attack.bonus.melee.damageBonus"] = actor.system.attack.melee.damageBonus;
+        }
+    }
+    if (actor.system && actor.system.attack.bonus.ranged.damageBonus == null) {
+        if (actor.system.attack.ranged && !(actor.system.attack.ranged.damageBonus == null)) {
+            updateData["system.attack.bonus.ranged.damageBonus"] = actor.system.attack.ranged.damageBonus;
+        }
+    }
+
+    //console.log(updateTemp);
+    //console.log("updateData")
+    //console.log(updateData);
+    //updateData.system = actor.system;
+    return updateData;
+}
+
+function migrateSceneData(scene) {
+    // We actually don't need this, I don't think, but I've left it in for weird corner cases
+    // Any tokens in the scene won't have the new values that have been edited, so for these values they'll default back to the actor, which should be updated
+    const tokens = scene.tokens.map(token => {
+        const t = token.toJSON();
+  
+        if (!t.actorLink) {
+            //console.log("t");
+            //console.log(t);
+
+            const actor = duplicate(t.actorData);
+            actor.type = token.actor?.type;
+            console.log("actor");
+            console.log(actor);
+            console.log("token");
+            console.log(token);
+
+            const update = migrateActorData(actor);
+            mergeObject(t.actorData, update);
+        }
+        return t;
+    });
+  
+    return { tokens };
+  }
 
 Hooks.once("init", function() {
     console.log("sfrpgbb | Initializing Starfinder Beginner Box System");
