@@ -388,6 +388,6 @@ export class sfrpgbbActor extends Actor {
      * Calculate NPC Multiattack attack bonus
      */
     _calcMultiattack(data) {
-        data.attack.melee.multiattackBonus = data.attack.melee.attackBonus - 6;
+        data.attack.bonus.melee.multiattackBonus = data.attack.bonus.melee.value - 6;
     }
 }

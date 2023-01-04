@@ -1,4 +1,6 @@
 <h2>{{localize "sfrpgbb.attack.offence"}}</h2>
+
+<!-- Movement -->
 <div class="wrapper-movement">
     {{#if (hasData system.npcAbilities.movement)}}
     <b class="label">{{localize "sfrpgbb.movement.movement"}}:&nbsp;</b>
@@ -12,19 +14,22 @@
     {{/if}}
 </div>
 
+<!-- Melee Weapons -->
 <div class="wrapper-melee">
     {{#if (hasData system.meleeWeapons)}}
-    <b class="label">{{localize "sfrpgbb.attack.meleeWeapon"}}:&nbsp;</b>
+    <b class="label">
+        <a class="btn-roll" title="{{localize "sfrpgbb.attack.meleeWeapon"}}" data-action-value="{{system.attack.bonus.melee.value}}" data-label="{{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.meleeWeapon"}} </a>:&nbsp;
+    </b>
     {{#each system.meleeWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.melee.attackBonus decimals=0 sign=true}}
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
             {{#if (isEqual item.system.damageType "none" false)}}
-                ({{item.system.damage}}{{numberFormat ../system.attack.melee.damageBonus decimals=0 sign=true}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}})
+                ({{item.system.damage}}{{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}})
             {{/if}}
         </div>
     </div>
@@ -32,6 +37,7 @@
     {{/if}}
 </div>
 
+<!-- Multiattack -->
 <div class="wrapper-melee">
     {{#if system.attack.multiattack}}
     <b class="label">{{localize "sfrpgbb.npc.multiattack"}}:&nbsp;</b>
@@ -40,7 +46,7 @@
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
             {{#if (isEqual item.system.quantity 1 false)}} {{item.system.quantity}}x {{/if}}
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.melee.multiattackBonus decimals=0 sign=true}}
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.multiattackBonus decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
@@ -53,19 +59,22 @@
     {{/if}}
 </div>
 
+<!-- Ranged Weapons -->
 <div class="wrapper-ranged">
     {{#if (hasData system.rangedWeapons)}}
-    <b class="label">{{localize "sfrpgbb.attack.rangedWeapon"}}:&nbsp;</b>
+    <b class="label">
+        <a class="btn-roll" title="{{localize "sfrpgbb.attack.rangedWeapon"}}" data-action-value="{{system.attack.bonus.ranged.value}}" data-label="{{localize "sfrpgbb.attack.ranged"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.rangedWeapon"}} </a>:&nbsp;
+    </b>
     {{#each system.rangedWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.ranged.attackBonus decimals=0 sign=true}}
+            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
             {{#if (isEqual item.system.damageType "none" false)}}
-                ({{item.system.damage}}{{#if (isEqual item.system.type "grenade" false)}}{{numberFormat ../system.attack.ranged.damageBonus decimals=0 sign=true}}{{/if}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}}{{#if (isEqual item.system.type "grenade" true)}}, {{item.system.saveType}} {{localize "sfrpgbb.general.dc"}} {{item.system.saveDC}}{{/if}})
+                ({{item.system.damage}}{{#if (isEqual item.system.type "grenade" false)}}{{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}}{{/if}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}}{{#if (isEqual item.system.type "grenade" true)}}, {{item.system.saveType}} {{localize "sfrpgbb.general.dc"}} {{item.system.saveDC}}{{/if}})
             {{/if}}
         </div>
     </div>
@@ -82,8 +91,8 @@
         <div class="item-name">
             <a class="item-control item-edit" title="Edit Item">{{item.name}}
                 {{#if item.system.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../system.spells.spellDCBonus 12}} {{localize (concat "sfrpgbb.defence." item.system.saveType)}}) {{/if}}
-                {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.melee.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
-                {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.ranged.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
+                {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
+                {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
             </a>
         </div>
         <div class="item-controls">
@@ -103,8 +112,8 @@
         <div class="item-name">
             <a class="item-control item-edit" title="Edit Item">{{item.name}}
                 {{#if item.system.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../system.spells.spellDCBonus 11}} {{localize (concat "sfrpgbb.defence." item.system.saveType)}}) {{/if}}
-                {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.melee.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
-                {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.ranged.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
+                {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
+                {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
             </a>
         </div>
         <div class="item-controls">
@@ -124,8 +133,8 @@
         <div class="item-name">
             <a class="item-control item-edit" title="Edit Item">{{item.name}}
                 {{#if item.system.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../system.spells.spellDCBonus 10}} {{localize (concat "sfrpgbb.defence." item.system.saveType)}}) {{/if}}
-                {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.melee.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
-                {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.ranged.attackBonus decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
+                {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
+                {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
             </a>
         </div>
         <div class="item-controls">
@@ -153,19 +162,19 @@
     <div class="row1">
         <div class="attack-melee">
             <b class="label">{{localize "sfrpgbb.npc.meleeAttack"}}</b>
-            <div class="bonus">{{fetchPositive system.attack.melee.attackBonus}} <input name="system.attack.melee.attackBonus" type="number" value="{{system.attack.melee.attackBonus}}" data-dtype="Number" /></div>
+            <div class="bonus">{{fetchPositive system.attack.bonus.melee.value}} <input name="system.attack.bonus.melee.value" type="number" value="{{system.attack.bonus.melee.value}}" data-dtype="Number" /></div>
         </div>
         <div class="damage-melee">
             <b class="label">{{localize "sfrpgbb.npc.meleeDamage"}}</b>
-            <div class="bonus">{{fetchPositive system.attack.melee.damageBonus}} <input name="system.attack.melee.damageBonus" type="number" value="{{system.attack.melee.damageBonus}}" data-dtype="Number" /></div>
+            <div class="bonus">{{fetchPositive system.attack.bonus.melee.damageBonus}} <input name="system.attack.bonus.melee.damageBonus" type="number" value="{{system.attack.bonus.melee.damageBonus}}" data-dtype="Number" /></div>
         </div>
         <div class="attack-ranged">
             <b class="label">{{localize "sfrpgbb.npc.rangedAttack"}}</b>
-            <div class="bonus">{{fetchPositive system.attack.ranged.attackBonus}} <input name="system.attack.ranged.attackBonus" type="number" value="{{system.attack.ranged.attackBonus}}" data-dtype="Number" /></div>
+            <div class="bonus">{{fetchPositive system.attack.bonus.ranged.value}} <input name="system.attack.bonus.ranged.value" type="number" value="{{system.attack.bonus.ranged.value}}" data-dtype="Number" /></div>
         </div>
         <div class="damage-ranged">
             <b class="label">{{localize "sfrpgbb.npc.rangedDamage"}}</b>
-            <div class="bonus">{{fetchPositive system.attack.ranged.damageBonus}} <input name="system.attack.ranged.damageBonus" type="number" value="{{system.attack.ranged.damageBonus}}" data-dtype="Number" /></div>
+            <div class="bonus">{{fetchPositive system.attack.bonus.ranged.damageBonus}} <input name="system.attack.bonus.ranged.damageBonus" type="number" value="{{system.attack.bonus.ranged.damageBonus}}" data-dtype="Number" /></div>
         </div>
         <div class="attack-multi">
             <b class="label">{{localize "sfrpgbb.npc.multiattack"}}</b>

@@ -204,22 +204,6 @@
                         }
                     }
                 }
-            }
-        },
-        "character": {
-            "templates": ["senses", "abilities", "movement", "skills", "spells", "defence"],
-            "information": {
-                "description": "",
-                "pronouns": "",
-                "race": "",
-                "theme": "",
-                "class": "",
-                "xp": 0,
-                "alignment": "",
-                "racialTraits": "",
-                "classFeatures": "",
-                "feats": "",
-                "credits": 0
             },
             "attack": {
                 "bonus": {
@@ -234,6 +218,7 @@
                         "damageBonus": 0
                     }
                 },
+                "multiattack": false,
                 "proficiency": {
                     "meleeBasic": true,
                     "meleeAdvanced": false,
@@ -243,24 +228,29 @@
                 }
             }
         },
+        "character": {
+            "templates": ["senses", "abilities", "movement", "skills", "spells", "defence", "attack"],
+            "information": {
+                "description": "",
+                "pronouns": "",
+                "race": "",
+                "theme": "",
+                "class": "",
+                "xp": 0,
+                "alignment": "",
+                "racialTraits": "",
+                "classFeatures": "",
+                "feats": "",
+                "credits": 0
+            }
+        },
         "npc": {
-            "templates": ["senses", "abilities", "movement", "skills", "spells", "defence"],
+            "templates": ["senses", "abilities", "movement", "skills", "spells", "defence", "attack"],
             "information": {
                 "description": null,
                 "cr": 0,
                 "alignment": null,
                 "credits": 0
-            },
-            "attack": {
-                "multiattack": false,
-                "melee": {
-                    "attackBonus": 0,
-                    "damageBonus": 0
-                },
-                "ranged": {
-                    "attackBonus": 0,
-                    "damageBonus": 0
-                }
             }
         },
         "trap": {

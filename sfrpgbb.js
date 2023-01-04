@@ -28,6 +28,75 @@ async function preloadHandlebarsTemplates() {
     return loadTemplates(templatePaths);
 }
 
+function registerSystemSettings() {
+    game.settings.register("sfrpgbb", "systemMigrationVersion", {
+        config: false,
+        scope: "world",
+        type: String,
+        default: ""
+    });
+}
+
+function migrateActorData(actor) {
+    let updateData = {};
+
+    if (actor.type != "npc") {
+        return updateData;
+    }
+
+    let atk = actor.system.attack;
+    //let updateTemp = {};
+    //console.log(actor)
+    //console.log(atk.bonus.melee.value)
+    //console.log(atk.melee.attackBonus)
+
+    // Move attack and damage bonuses to new locations
+    if (!atk.bonus.melee.value) {
+        if (!(atk.melee.attackBonus == null)) {
+            updateData["system.attack.bonus.melee.value"] = atk.melee.attackBonus;
+        }
+    }
+    if (!atk.bonus.ranged.value) {
+        if (!(atk.ranged.attackBonus == null)) {
+            updateData["system.attack.bonus.ranged.value"] = atk.ranged.attackBonus;
+        }
+    }
+    if (!atk.bonus.melee.damageBonus) {
+        if (!(atk.melee.damageBonus == null)) {
+            updateData["system.attack.bonus.melee.damageBonus"] = atk.melee.damageBonus;
+        }
+    }
+    if (!atk.bonus.ranged.damageBonus) {
+        if (!(atk.ranged.damageBonus == null)) {
+            updateData["system.attack.bonus.ranged.damageBonus"] = atk.ranged.damageBonus;
+        }
+    }
+
+    //console.log(updateTemp);
+    //console.log(updateData);
+    //updateData.system = actor.system;
+    return updateData;
+}
+
+async function migrateWorld() {
+    // Migrate Actors in Actor List
+    for (let actor of game.actors.contents) {
+        const updateData = migrateActorData(actor);
+        if (!foundry.utils.isEmpty(updateData)) {
+            console.log(`Migrating Actor entity ${actor.name}.`);
+            await actor.update(updateData);
+        }
+        else {
+            console.log(`Actor ${actor.name} needs no migration.`);
+        }
+    }
+
+    // Migrate Actors in the compendiums
+
+    // Migrate Actors in Scenes
+
+}
+
 Hooks.once("init", function() {
     console.log("sfrpgbb | Initializing Starfinder Beginner Box System");
 
@@ -43,6 +112,8 @@ Hooks.once("init", function() {
     Actors.registerSheet("sfrpgbb", sfrpgbbActorSheet, {makeDefault: true});
 
     preloadHandlebarsTemplates();
+
+    registerSystemSettings();
 
     // Handlebars replace newline characters with html newline in textarea display
     Handlebars.registerHelper('breaklines', function(text) {
@@ -156,5 +227,20 @@ Hooks.once("init", function() {
     // Add two numbers
     Handlebars.registerHelper('add', function(one, two) {
         return (one+two);
+    });
+
+    Hooks.once("ready", function () {
+        if (!game.user.isGM) {
+            return;
+        }
+
+        const currentVersion = game.settings.get("sfrpgbb", "systemMigrationVersion");
+        const NEEDS_MIGRATION_VERSION = 1.2;
+        const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion)
+
+        if (needsMigration) {
+            console.log("We need to migrate");
+            migrateWorld();
+        }
     });
 });

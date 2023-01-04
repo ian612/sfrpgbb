@@ -3,9 +3,15 @@
     <b>{{localize "sfrpgbb.defence.ac"}}</b>: <input name="system.defence.armor.ac" type="number" value="{{system.defence.armor.ac}}" placeholder="10" data-dtype="Number"/>
 </div>
 <div class="saves">
-    <b>{{localize "sfrpgbb.defence.fortitude"}}</b>: {{fetchPositive system.defence.save.fortitude.value}}<input name="system.defence.save.fortitude.value" type="number" value="{{system.defence.save.fortitude.value}}" placeholder="0" data-dtype="Number"/>,&nbsp;
-    <b>{{localize "sfrpgbb.defence.reflex"}}</b>: {{fetchPositive system.defence.save.reflex.value}}<input name="system.defence.save.reflex.value" type="number" value="{{system.defence.save.reflex.value}}" placeholder="0" data-dtype="Number"/>,&nbsp;
-    <b>{{localize "sfrpgbb.defence.will"}}</b>: {{fetchPositive system.defence.save.will.value}}<input name="system.defence.save.will.value" type="number" value="{{system.defence.save.will.value}}" placeholder="0" data-dtype="Number"/>
+    <b>
+        <a class="btn-roll" title={{localize "sfrpgbb.defence.fortitude"}} data-action-value="{{system.defence.save.fortitude.value}}" data-label="{{localize "sfrpgbb.defence.fortitude"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.fortitudeSave"}} </a>
+    </b>: {{fetchPositive system.defence.save.fortitude.value}}<input name="system.defence.save.fortitude.value" type="number" value="{{system.defence.save.fortitude.value}}" placeholder="0" data-dtype="Number"/>,&nbsp;
+    <b>
+        <a class="btn-roll" title={{localize "sfrpgbb.defence.reflex"}} data-action-value="{{system.defence.save.reflex.value}}" data-label="{{localize "sfrpgbb.defence.reflex"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.reflexSave"}} </a>
+    </b>: {{fetchPositive system.defence.save.reflex.value}}<input name="system.defence.save.reflex.value" type="number" value="{{system.defence.save.reflex.value}}" placeholder="0" data-dtype="Number"/>,&nbsp;
+    <b>
+        <a class="btn-roll" title={{localize "sfrpgbb.defence.will"}} data-action-value="{{system.defence.save.will.value}}" data-label="{{localize "sfrpgbb.defence.will"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.willSave"}} </a>
+    </b>: {{fetchPositive system.defence.save.will.value}}<input name="system.defence.save.will.value" type="number" value="{{system.defence.save.will.value}}" placeholder="0" data-dtype="Number"/>
 </div>
 
 <div class="extra-wrapper">
