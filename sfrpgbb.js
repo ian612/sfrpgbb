@@ -40,66 +40,78 @@ function registerSystemSettings() {
 async function migrateWorld() {
     // Migrate Actors in Actor List
     for (let actor of game.actors.contents) {
+        //console.log(actor);
         const updateData = migrateActorData(actor);
         if (!foundry.utils.isEmpty(updateData)) {
             console.log(`Migrating Actor entity ${actor.name}.`);
             await actor.update(updateData);
         }
         else {
-            console.log(`Actor ${actor.name} needs no migration.`);
+            console.log(`No migration needed for Actor entity ${actor.name}.`);
         }
     }
 
     // Migrate Actors in Scenes
     for (let scene of game.scenes.contents) {
+        //console.log(scene);
         let sceneUpdate = migrateSceneData(scene);
         if (!foundry.utils.isEmpty(sceneUpdate)) {
             console.log(`Migrating Scene ${scene.name}.`);
             await scene.update(sceneUpdate);
         }
         else {
-            console.log(`Scene ${scene.name} needs no migration.`);
+            console.log(`No migration needed for Scene entity ${scene.name}.`);
         }
     }
 
     // Migrate Actors in the Compendiums
-    /*for (let pack of game.packs) {
-        if (pack.metadata.package != "world") {
+    for (let pack of game.packs) {
+        /*if (pack.metadata.package != "world") {
             continue;
-        }
+        }*/
     
-        const packType = pack.metadata.entity;
+        const packType = pack.metadata.type;
         if (!["Actor", "Scene"].includes(packType)) {
             continue;
         }
     
         const wasLocked = pack.locked;
+
+        //console.log(pack);
+        //console.log(pack.metadata.label);
         await pack.configure({ locked: false });
     
         await pack.migrate();
         const documents = await pack.getDocuments();
     
         for (let document of documents) {
+            //console.log(document);
             let updateData = {};
             switch (packType) {
                 case "Actor":
-                    updateData = migrateActorData(document.data);
+                    updateData = migrateActorData(document);
                     break;
                 case "Scene":
-                    updateData = migrateSceneData(document.data);
+                    updateData = migrateSceneData(document);
                     break;
             }
-            if (foundry.utils.isObjectEmpty(updateData)) {
+            if (foundry.utils.isEmpty(updateData)) {
+                console.log(`No data to migrate in ${packType} entity ${document.name} in Compendium ${pack.collection}`);
                 continue;
             }
             await document.update(updateData);
+            //console.log(document);
+            //console.log(updateData);
             console.log(`Migrated ${packType} entity ${document.name} in Compendium ${pack.collection}`);
         }
     
         await pack.configure({ locked: wasLocked });
-    }*/
+    }
     
-    //game.settings.set('sfrpgbb', 'systemMigrationVersion', game.system.data.version);
+    //console.log(game);
+    game.settings.set('sfrpgbb', 'systemMigrationVersion', game.system.version);
+    console.log("Needed data migration has been completed.")
+    ui.notifications.info("World Data Migration is Complete.");
 }
 
 
@@ -113,27 +125,27 @@ function migrateActorData(actor) {
     //let updateTemp = {};
     //console.log("actor")
     //console.log(actor)
-    //console.log(actor.system.attack.bonus.melee.value)
-    //console.log(actor.system.attack.melee.attackBonus)
+    //console.log(actor.system.attack?.bonus?.melee?.value)
+    //console.log(actor.system.attack?.melee?.attackBonus)
 
     // Move attack and damage bonuses to new locations
-    if (actor.system && actor.system.attack.bonus.melee.value == null) {
-        if (actor.system.attack.melee && !(actor.system.attack.melee.attackBonus == null)) {
+    if (actor.system && actor.system.attack?.bonus?.melee?.value == null) {
+        if (actor.system.attack?.melee && !(actor.system.attack?.melee?.attackBonus == null)) {
             updateData["system.attack.bonus.melee.value"] = actor.system.attack.melee.attackBonus;
         }
     }
-    if (actor.system && actor.system.attack.bonus.ranged.value == null) {
-        if (actor.system.attack.ranged && !(actor.system.attack.ranged.attackBonus == null)) {
+    if (actor.system && actor.system.attack?.bonus?.ranged?.value == null) {
+        if (actor.system.attack?.ranged && !(actor.system.attack?.ranged?.attackBonus == null)) {
             updateData["system.attack.bonus.ranged.value"] = actor.system.attack.ranged.attackBonus;
         }
     }
-    if (actor.system && actor.system.attack.bonus.melee.damageBonus == null) {
-        if (actor.system.attack.melee && !(actor.system.attack.melee.damageBonus == null)) {
+    if (actor.system && actor.system.attack?.bonus?.melee?.damageBonus == null) {
+        if (actor.system.attack?.melee && !(actor.system.attack?.melee?.damageBonus == null)) {
             updateData["system.attack.bonus.melee.damageBonus"] = actor.system.attack.melee.damageBonus;
         }
     }
-    if (actor.system && actor.system.attack.bonus.ranged.damageBonus == null) {
-        if (actor.system.attack.ranged && !(actor.system.attack.ranged.damageBonus == null)) {
+    if (actor.system && actor.system.attack?.bonus?.ranged?.damageBonus == null) {
+        if (actor.system.attack?.ranged && !(actor.system.attack?.ranged?.damageBonus == null)) {
             updateData["system.attack.bonus.ranged.damageBonus"] = actor.system.attack.ranged.damageBonus;
         }
     }
@@ -157,10 +169,10 @@ function migrateSceneData(scene) {
 
             const actor = duplicate(t.actorData);
             actor.type = token.actor?.type;
-            console.log("actor");
-            console.log(actor);
-            console.log("token");
-            console.log(token);
+            //console.log("actor");
+            //console.log(actor);
+            //console.log("token");
+            //console.log(token);
 
             const update = migrateActorData(actor);
             mergeObject(t.actorData, update);
@@ -169,7 +181,7 @@ function migrateSceneData(scene) {
     });
   
     return { tokens };
-  }
+}
 
 Hooks.once("init", function() {
     console.log("sfrpgbb | Initializing Starfinder Beginner Box System");
@@ -302,19 +314,52 @@ Hooks.once("init", function() {
     Handlebars.registerHelper('add', function(one, two) {
         return (one+two);
     });
+});
 
-    Hooks.once("ready", function () {
-        if (!game.user.isGM) {
-            return;
+Hooks.once("ready", function () {
+    if (!game.user.isGM) {
+        return;
+    }
+
+    const currentVersion = game.settings.get("sfrpgbb", "systemMigrationVersion");
+    const MIGRATION_COMPATIBLE_VERSION = 0;
+    const NEEDS_MIGRATION_VERSION = 1.2;
+    // the or (||) statement from needsMigration and canMigrate may need to be removed in future releases
+    const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);
+    const canMigrate = !currentVersion || isNewerVersion(currentVersion, MIGRATION_COMPATIBLE_VERSION);
+
+    if (needsMigration) {
+        console.log("We need to migrate to the new data template.");
+        if (canMigrate) {
+            const myDialog = new Dialog({
+                title: "Migration Warning!",
+                content: `This dialog box is to alert you that since the last update of the game system, significant changes were made to the data structure `
+                            + `which require migration to function properly. <br><br> Just in case anything goes wrong, PLEASE MAKE A BACKUP COPY OF YOUR WORLD BEFORE MIGRATING!!!`,
+                buttons: {
+                    button1: {
+                        label: "I have a backup. <br> Migrate my world data.",
+                        callback: () => {
+                            ui.notifications.info("World Data Migration Beginning...");
+                            console.log("Migration Commencing");
+                            migrateWorld();
+                        }
+                    },
+                    button2: {
+                        label: "Don't migrate data. <br> Use the world as-is. <br> (errors may occur)",
+                        callback: () => {
+                            ui.notifications.info("World Data Migration Cancelled.");
+                            console.log("We need to migrate but the user has chosen not to.");
+                        }
+                    }
+                }
+            })
+            myDialog.render(true);
         }
-
-        const currentVersion = game.settings.get("sfrpgbb", "systemMigrationVersion");
-        const NEEDS_MIGRATION_VERSION = 1.2;
-        const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion)
-
-        if (needsMigration) {
-            console.log("We need to migrate");
-            migrateWorld();
+        else {
+            console.log("The current system version is too old and we can't reliably migrate automatically :(");
         }
-    });
+    }
+    else {
+        console.log("No need to migrate data today.");
+    }
 });
