@@ -25,11 +25,12 @@
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
             <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}}
+            {{log ../system}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
             {{#if (isEqual item.system.damageType "none" false)}}
-                ({{item.system.damage}}{{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}})
+                ({{item.system.damage}}{{numberFormat ../system.attack.bonus.melee.damageBonus decimals=0 sign=true}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}})
             {{/if}}
         </div>
     </div>
@@ -46,12 +47,13 @@
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
             {{#if (isEqual item.system.quantity 1 false)}} {{item.system.quantity}}x {{/if}}
+            {{log ../system}}
             <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.multiattackBonus decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
             {{#if (isEqual item.system.damageType "none" false)}}
-                ({{item.system.damage}}{{numberFormat ../system.attack.melee.damageBonus decimals=0 sign=true}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}})
+                ({{item.system.damage}}{{numberFormat ../system.attack.bonus.melee.damageBonus decimals=0 sign=true}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}})
             {{/if}}
         </div>
     </div>
@@ -74,7 +76,7 @@
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
             {{#if (isEqual item.system.damageType "none" false)}}
-                ({{item.system.damage}}{{#if (isEqual item.system.type "grenade" false)}}{{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}}{{/if}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}}{{#if (isEqual item.system.type "grenade" true)}}, {{item.system.saveType}} {{localize "sfrpgbb.general.dc"}} {{item.system.saveDC}}{{/if}})
+                ({{item.system.damage}}{{#if (isEqual item.system.type "grenade" false)}}{{numberFormat ../system.attack.bonus.ranged.damageBonus decimals=0 sign=true}}{{/if}} {{localize (concat "sfrpgbb.damage." item.system.damageType)}}{{#if (isEqual item.system.type "grenade" true)}}, {{item.system.saveType}} {{localize "sfrpgbb.general.dc"}} {{item.system.saveDC}}{{/if}})
             {{/if}}
         </div>
     </div>

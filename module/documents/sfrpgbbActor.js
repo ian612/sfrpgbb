@@ -388,10 +388,12 @@ export class sfrpgbbActor extends Actor {
      * Calculate NPC Multiattack attack bonus
      */
     _calcMultiattack(data) {
-        // if statement catch to stop errors from unmigrated data created in versions prior to 1.2
-        //console.log(data);
-        if (!(data.attack?.bonus?.melee?.multiattackBonus == null)) {
+        // this function will throw an error prior to system data structure migration
+        try {
             data.attack.bonus.melee.multiattackBonus = data.attack.bonus.melee.value - 6;
+        }
+        catch {
+            console.log("Calculation of NPC multiattack bonus may throw an error prior to world data migration in v1.2. This is okay, just run migration and the error should go away.");
         }
     }
 }
