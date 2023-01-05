@@ -206,25 +206,27 @@
                 }
             },
             "attack": {
-                "bonus": {
-                    "melee": {
-                        "value": 0,
-                        "class": 0,
-                        "damageBonus": 0
+                "attack": {
+                    "bonus": {
+                        "melee": {
+                            "value": 0,
+                            "class": 0,
+                            "damageBonus": 0
+                        },
+                        "ranged": {
+                            "value": 0,
+                            "class": 0,
+                            "damageBonus": 0
+                        }
                     },
-                    "ranged": {
-                        "value": 0,
-                        "class": 0,
-                        "damageBonus": 0
+                    "multiattack": false,
+                    "proficiency": {
+                        "meleeBasic": true,
+                        "meleeAdvanced": false,
+                        "smallArms": true,
+                        "longArms": false,
+                        "grenades": false
                     }
-                },
-                "multiattack": false,
-                "proficiency": {
-                    "meleeBasic": true,
-                    "meleeAdvanced": false,
-                    "smallArms": true,
-                    "longArms": false,
-                    "grenades": false
                 }
             }
         },

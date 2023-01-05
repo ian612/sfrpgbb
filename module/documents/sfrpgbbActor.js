@@ -77,7 +77,7 @@ export class sfrpgbbActor extends Actor {
         // Calculate Attack
         this._calculateAttack(data);
         // Calculate Skills
-        this._calculateSkills(data);
+        this._calculateSkills(data, this.type);
 
         // Delete NPC abilities that have been added to character sheets by accident
         this._deleteNPCAbilities(items);
@@ -118,11 +118,13 @@ export class sfrpgbbActor extends Actor {
         this._enforceMaxPoints(data);
         // Calculate XP based on CR
         this._calculateXP(data);
+        // Calculate Skills
+        this._calculateSkills(data, this.type);
         // Calculate multiattack bonus
         this._calcMultiattack(data);
 
         // Output data to a console (for debugging)
-        //console.log(actorData);
+        console.log(data);
 
     }
 
@@ -250,6 +252,7 @@ export class sfrpgbbActor extends Actor {
      * Calculate Attack
      */
     _calculateAttack(data) {
+        console.log(data);
         const str = data.abilities.strength.mod;
         const dex = data.abilities.dexterity.mod;
         const meleeClass = data.attack.bonus.melee.class;
@@ -270,9 +273,90 @@ export class sfrpgbbActor extends Actor {
      * 
      * Code isn't very efficient, but I think it gives good intuition as to how things are being calculated
      */
-    _calculateSkills(data) {
+    _calculateSkills(data, type) {
         // Character Level
         const charLevel = data.information.level;
+        
+        // Ability Score Modifiers
+        const str = data.abilities.strength.mod;
+        const dex = data.abilities.dexterity.mod;
+        const con = data.abilities.constitution.mod;
+        const int = data.abilities.intelligence.mod;
+        const wis = data.abilities.wisdom.mod;
+        const cha = data.abilities.charisma.mod;
+
+        // Skills
+        let athletics = data.skills.athletics;
+        let culture = data.skills.culture;
+        let interaction = data.skills.interaction;
+        let medicine = data.skills.medicine;
+        let mysticism = data.skills.mysticism;
+        let perception = data.skills.perception;
+        let science = data.skills.science;
+        let stealth = data.skills.stealth;
+        let survival = data.skills.survival;
+        let technology = data.skills.technology;
+
+        // Add appropriate Ability mods to the data structure
+        athletics.abilityMod = str;
+        culture.abilityMod = int;
+        interaction.abilityMod = cha;
+        medicine.abilityMod = int;
+        mysticism.abilityMod = wis;
+        perception.abilityMod = wis;
+        science.abilityMod = int;
+        stealth.abilityMod = dex;
+        survival.abilityMod = wis;
+        technology.abilityMod = int;
+        
+        // Store skills in array
+        const skillList = {
+            athletics,
+            culture,
+            interaction,
+            medicine,
+            mysticism,
+            perception,
+            science,
+            stealth,
+            survival,
+            technology
+        };
+
+        console.log("everyone");
+        if (type == "character") {
+            console.log("character");
+            // Calculate values based on level and skill proficiencies
+            for (let key in skillList) {
+                if (!skillList.hasOwnProperty(key)) continue;
+                
+                // Update skill values
+                let skill = skillList[key];
+                if (skill.classSkill) {
+                    skill.class = 3;
+                    skill.level = charLevel;
+                } else {
+                    skill.class = 0;
+                    skill.level = 0;
+                }
+                if (skill.trainedSkill) {
+                    skill.level = charLevel;
+                } else if (!skill.classSkill) {
+                    skill.level = 0;
+                }
+
+                // Calculate total skill bonuses
+                skill.value = skill.abilityMod + skill.class + skill.level + skill.misc;
+            }
+        }
+    }
+
+    /**
+     * Calculate NPC Skill attribute bonuses
+     * 
+     * Code isn't very efficient, but I think it gives good intuition as to how things are being calculated
+     *
+    _calculateNPCSkills(data) {
         
         // Ability Score Modifiers
         const str = data.abilities.strength.mod;
@@ -343,6 +427,7 @@ export class sfrpgbbActor extends Actor {
             skill.value = skill.abilityMod + skill.class + skill.level + skill.misc;
         }
     }
+    */
 
     /**
      * Delete NPC Ability items that have been added to player character sheets

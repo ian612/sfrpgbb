@@ -25,7 +25,6 @@
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
             <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}}
-            {{log ../system}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
@@ -47,7 +46,6 @@
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
             {{#if (isEqual item.system.quantity 1 false)}} {{item.system.quantity}}x {{/if}}
-            {{log ../system}}
             <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.multiattackBonus decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})

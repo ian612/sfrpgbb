@@ -48,7 +48,7 @@
         <input type="checkbox" name="system.senses.seeInvisible" {{checked system.senses.seeInvisible}} />
     </div>
     <div class="perception">
-        <b>{{localize "sfrpgbb.skill.perception"}} :&nbsp;</b> {{#fetchPositive system.skill.perception.value}}{{/fetchPositive}}
-        <input name="system.skill.perception.value" type="number" value="{{system.skill.perception.value}}" placeholder="{{system.abilities.wisdom.mod}}"  data-dtype="Number"/>
+        <b>{{localize "sfrpgbb.skill.perception"}} :&nbsp;</b> {{#fetchPositive system.skills.perception.value}}{{/fetchPositive}}
+        <input name="system.skills.perception.value" type="number" value="{{system.skills.perception.value}}" placeholder="{{system.abilities.wisdom.mod}}"  data-dtype="Number"/>
     </div>
 </div>

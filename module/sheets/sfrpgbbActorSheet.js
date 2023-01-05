@@ -108,24 +108,26 @@ export default class sfrpgbbActorSheet extends ActorSheet {
      */
     async _rolld20(event) {
 
-        //
-        //let rollFormula = "1d20 + @actionValue";
-        //let rollData = {
-        //    actionValue: event.currentTarget.dataset.actionValue
-        //}
-        //let messageData = {
-        //    speaker: ChatMessage.getSpeaker()
-        //}
-        
-        //new Roll(rollFormula, rollData).roll().toMessage(messageData);
-        //
-
         event.preventDefault();
-        const modifier = event.currentTarget.dataset.actionValue;
+        const firstMod = event.currentTarget.dataset.actionValue;
+        const secondMod = event.currentTarget.dataset.abilityMod;
         const rollText = event.currentTarget.dataset.label;
-        //console.log(tmp);
-        //console.log(event.currentTarget);
+        let modifier = null;
+        
         //console.log(event.currentTarget.dataset);
+        //console.log(event.currentTarget);
+        //console.log(secondMod);
+
+        // For modifier values that are blank (i.e. NPC skills), check for a secondary ability modifier and use that instead
+        // If neither exist, add nothing to the roll
+        if (firstMod != "") {
+            modifier = firstMod;
+            //console.log("first")
+        }
+        else {
+            modifier = secondMod;
+            //console.log("second")
+        }
 
         // Build the roll
         let r = new Roll("1d20 + @mod", {mod: modifier});
