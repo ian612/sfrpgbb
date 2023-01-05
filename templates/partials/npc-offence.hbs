@@ -18,7 +18,7 @@
 <div class="wrapper-melee">
     {{#if (hasData system.meleeWeapons)}}
     <b class="label">
-        <a class="btn-roll" title="{{localize "sfrpgbb.attack.meleeWeapon"}}" data-action-value="{{system.attack.bonus.melee.value}}" data-label="{{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.meleeWeapon"}} </a>:&nbsp;
+        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.attack.meleeWeapon"}}" data-action-value="{{system.attack.bonus.melee.value}}" data-label="{{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.meleeWeapon"}} </a>:&nbsp;
     </b>
     {{#each system.meleeWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
@@ -40,7 +40,9 @@
 <!-- Multiattack -->
 <div class="wrapper-melee">
     {{#if system.attack.multiattack}}
-    <b class="label">{{localize "sfrpgbb.npc.multiattack"}}:&nbsp;</b>
+    <b class="label">
+        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.npc.multiattack"}}" data-action-value="{{system.attack.bonus.melee.multiattackBonus}}" data-label="{{localize "sfrpgbb.npc.multiattack"}} {{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.npc.multiattack"}} </a>:&nbsp;
+    </b>
     {{#each system.meleeWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
@@ -63,7 +65,7 @@
 <div class="wrapper-ranged">
     {{#if (hasData system.rangedWeapons)}}
     <b class="label">
-        <a class="btn-roll" title="{{localize "sfrpgbb.attack.rangedWeapon"}}" data-action-value="{{system.attack.bonus.ranged.value}}" data-label="{{localize "sfrpgbb.attack.ranged"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.rangedWeapon"}} </a>:&nbsp;
+        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.attack.rangedWeapon"}}" data-action-value="{{system.attack.bonus.ranged.value}}" data-label="{{localize "sfrpgbb.attack.ranged"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.rangedWeapon"}} </a>:&nbsp;
     </b>
     {{#each system.rangedWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">

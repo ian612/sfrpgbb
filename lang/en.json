@@ -166,6 +166,7 @@
         },
         "general": {
             "class": "Class",
+            "clickToRoll": "Click to roll",
             "current": "Current",
             "description": "Description",
             "dc": "DC",
@@ -179,6 +180,7 @@
             "other": "Other",
             "page": "Page",
             "quantity": "Quantity",
+            "roll": "Roll",
             "specialAbilities": "Special Abilities",
             "statistics": "Statistics",
             "total": "Total",
