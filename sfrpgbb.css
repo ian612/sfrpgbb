@@ -211,6 +211,13 @@
 .sfrpgbb.sheet.character .item {
   text-align: center;
 }
+.sfrpgbb.sheet.character .img-rollable {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.sfrpgbb.sheet.character .img-rollable:hover {
+  opacity: 0.75;
+}
 @font-face {
   font-family: "Nodesto";
   src: url('fonts/NodestoCapsCondensed.otf');

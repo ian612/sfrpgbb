@@ -17,7 +17,8 @@
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image">
             <a class="dmg-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
-            <img src="{{item.img}}" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="36" height="36"/> </a>
+                <img class="img-rollable" src="{{item.img}}" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="36" height="36"/>
+            </a>
         </div>
         <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title={{localize "sfrpgbb.equipment.editItem"}}><h4 class="item-name">{{item.name}}</h4></a></div>
         <div class="item-equipped"><input type="checkbox" {{checked item.system.equipped}} /></div>
