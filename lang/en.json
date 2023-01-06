@@ -258,6 +258,7 @@
             "blastBoost": "Blast, Boost",
             "critical": "Critical Hit Effect",
             "damage": "Damage",
+            "damageRoll": "Damage Roll",
             "damageType": "Damage Type",
             "knockdown": "Knockdown",
             "notProficientAsterisk": "to attack if not proficient",

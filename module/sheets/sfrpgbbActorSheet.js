@@ -53,14 +53,11 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         // Update Inventory Item Equipped Status
         html.find(".item-equipped input").click(ev => ev.target.select()).change(this._onEquippedChange.bind(this));
 
-        // Roll skill checks
+        // Roll d20 rolls
         html.find('.btn-roll').click(this._rolld20.bind(this));
 
-        // Roll Attack
-
-
-        // Roll Spell Attack
-
+        // Roll Weapon Damage
+        html.find('.dmg-roll').click(this._rollDamage.bind(this));
 
     }
 
@@ -149,5 +146,47 @@ export default class sfrpgbbActorSheet extends ActorSheet {
 
         // The total resulting from the roll
         //console.log(r.total);    // 22
+    }
+
+    /**
+     * Roll some damage dice
+     * @param {Event} event        The triggering click event.
+     * @returns {Promise<Item5e>}  Updated item.
+     * @private
+     */
+    async _rollDamage(event) {
+
+        event.preventDefault();
+        const rollData = event.currentTarget.dataset;
+        let bonus = 0;
+        console.log(rollData);
+
+        // Select whether it's a melee or ranged weapon, choose appropriate damage bonus
+        if (rollData.weaponType == "meleeBasic" || rollData.weaponType == "meleeAdvanced") {
+            bonus = rollData.meleeDamage;
+        }
+        else if (rollData.weaponType == "smallArms" || rollData.weaponType == "longArms") {
+            bonus = rollData.rangedDamage;
+        }
+        else {
+            bonus = 0;
+        }
+
+        // Construct the roll dialog text
+        let rollText = rollData.weaponName + " " + game.i18n.translations.sfrpgbb.weapon.damageRoll + " (" + rollData.damageType + ")";
+        console.log(rollText);
+
+        // Build the roll
+        let r = new Roll("@dice + @mod", {dice: rollData.dice, mod: bonus});
+        
+        // Execute the roll
+        await r.roll({async:true});
+        
+        // Send the result of the roll to the chat
+        await r.toMessage({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: rollText
+        });
+
     }
 }
