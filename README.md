@@ -11,7 +11,7 @@ The Beginner Box allows players and GMs to get their feet wet in the Starfinder 
 
 Player Characters and NPCs/Aliens/Enemies are defined as actors, while spells, NPC abilities, and all types of gear (weapons, armor, equipment, etc.) are implemented as items. Inventory and Spell management is done via dragging and dropping items onto character/NPC sheets.
 
-Some calculations are handled automatically (total weapon bonuses, armor class, spell DC, etc.), but there is not a lot of roll automation in the system.
+Some calculations are handled automatically (total weapon bonuses, armor class, spell DC, etc.). Roll automation has been added from version 1.2 and onward. Ability checks, skill checks, saving throws, and attack rolls can all be made by clicking the appropriate text on the character or npc sheet. Damage for weapons can be likewise rolled by clicking on its thumbnail picture on the character or npc sheet.
 
 
 Licensing
