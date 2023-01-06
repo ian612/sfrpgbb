@@ -112,6 +112,6 @@
 		}
 	],
 	"url": "https://github.com/ian612/sfrpgbb",
-	"manifest": "https://raw.githubusercontent.com/ian612/sfrpgbb/main/system.json",
-	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v1.1.1.zip"
+	"manifest": "https://raw.githubusercontent.com/ian612/sfrpgbb/v1.2.0/system.json",
+	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v1.2.0.zip"
 }
