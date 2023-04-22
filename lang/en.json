@@ -11,6 +11,12 @@
     "ITEM.TypeWeapon": "Weapon",
     "ITEM.TypeWeaponfusion": "Weapon Fusion",
 
+    "SETTINGS.DiagName": "Name Here",
+    "SETTINGS.DiagHint": "This is a big hint",
+    "SETTINGS.Diag5105": "Starfinder Standard (5-10-5)",
+    "SETTINGS.Diag555": "Alternative (5-5-5)",
+    "SETTINGS.DiagEucl": "Euclidean Distance",
+
     "sfrpgbb": {
         "ability": {
             "ability": "Ability",
