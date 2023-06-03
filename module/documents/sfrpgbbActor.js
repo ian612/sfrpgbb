@@ -124,7 +124,7 @@ export class sfrpgbbActor extends Actor {
         this._calcMultiattack(data);
 
         // Output data to a console (for debugging)
-        console.log(data);
+        // console.log(data);
 
     }
 
@@ -212,7 +212,6 @@ export class sfrpgbbActor extends Actor {
 
         // Add equipped armor AC to character armor AC
         for (let [key, armorItem] of Object.entries(data.armor)) {
-            //console.log(armorItem);
             if (armorItem.system.equipped) {
                 AC += armorItem.system.ac;
             }
@@ -252,7 +251,6 @@ export class sfrpgbbActor extends Actor {
      * Calculate Attack
      */
     _calculateAttack(data) {
-        console.log(data);
         const str = data.abilities.strength.mod;
         const dex = data.abilities.dexterity.mod;
         const meleeClass = data.attack.bonus.melee.class;
@@ -323,9 +321,7 @@ export class sfrpgbbActor extends Actor {
             technology
         };
 
-        console.log("everyone");
         if (type == "character") {
-            console.log("character");
             // Calculate values based on level and skill proficiencies
             for (let key in skillList) {
                 if (!skillList.hasOwnProperty(key)) continue;
