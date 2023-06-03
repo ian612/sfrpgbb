@@ -13,10 +13,11 @@
         </div>
     </li>
     
+    {{log system}}
     {{#each system.weapons as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image">
-            <a class="dmg-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
+            <a class="dmg-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-owner-str="{{../system.abilities.strength.mod}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
                 <img class="img-rollable" src="{{item.img}}" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="36" height="36"/>
             </a>
         </div>

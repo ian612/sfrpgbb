@@ -274,7 +274,7 @@
             "specialEffect": "Special Effect",
             "specialProperty": "Special Property",
             "stagger": "Stagger",
-            "strAsterisk": "* Add your STR to melee weapon damage.",
+            "strAsterisk": "*STR is also added to melee weapon rolls",
             "totalAttack": "Total Attack",
             "vs": "VS",
             "weaponFusion": "Weapon Fusion",
