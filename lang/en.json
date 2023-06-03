@@ -11,11 +11,12 @@
     "TYPES.Item.weapon": "Weapon",
     "TYPES.Item.weaponfusion": "Weapon Fusion",
 
-    "SETTINGS.DiagName": "Name Here",
-    "SETTINGS.DiagHint": "This is a big hint",
+    "SETTINGS.DiagName": "Diagonal Movement Calculation",
+    "SETTINGS.DiagHint": "This determines how diagonal movement is calculated.",
     "SETTINGS.Diag5105": "Starfinder Standard (5-10-5)",
     "SETTINGS.Diag555": "Alternative (5-5-5)",
-    "SETTINGS.DiagEucl": "Euclidean Distance",
+    "SETTINGS.DiagEucl": "Euclidean Distance (exact)",
+    "SETTINGS.DiagEuc5": "Euclidean Distance (round to 5)",
 
     "sfrpgbb": {
         "ability": {

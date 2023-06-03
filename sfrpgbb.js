@@ -1,5 +1,6 @@
 import {sfrpgbb} from "./module/config.js";
 import {sfrpgbbActor} from "./module/documents/sfrpgbbActor.js";
+import { measureDistances } from "./module/canvas.js";
 import sfrpgbbItemSheet from "./module/sheets/sfrpgbbItemSheet.js";
 import sfrpgbbActorSheet from "./module/sheets/sfrpgbbActorSheet.js";
 
@@ -28,6 +29,13 @@ async function preloadHandlebarsTemplates() {
     return loadTemplates(templatePaths);
 }
 
+
+/*
+*
+* Settings
+*
+*/
+
 function registerSystemSettings() {
     // Version Migration
     game.settings.register("sfrpgbb", "systemMigrationVersion", {
@@ -48,11 +56,19 @@ function registerSystemSettings() {
         choices: {
             5105: "SETTINGS.Diag5105",
             555: "SETTINGS.Diag555",
+            EUC5: "SETTINGS.DiagEuc5",
             EUCL: "SETTINGS.DiagEucl"
         },
         onChange: rule => canvas.grid.diagonalRule = rule
     });
 }
+
+
+/*
+*
+* Migration
+*
+*/
 
 async function migrateWorld() {
     // Migrate Actors in Actor List
@@ -200,50 +216,6 @@ function migrateSceneData(scene) {
     return { tokens };
 }
 
-/** @inheritDoc */
-function measureDistances(segments, options={}) {
-    if ( !options.gridSpaces ) return BaseGrid.prototype.measureDistances.call(this, segments, options);
-    
-    // Track the total number of diagonals
-    let nDiagonal = 0;
-    const rule = this.parent.diagonalRule;
-    const d = canvas.dimensions;
-    console.log("I'm running!");
-    
-    // Iterate over measured segments
-    return segments.map(s => {
-        let r = s.ray;
-  
-        // Determine the total distance traveled
-        let nx = Math.abs(Math.ceil(r.dx / d.size));
-        let ny = Math.abs(Math.ceil(r.dy / d.size));
-    
-        // Determine the number of straight and diagonal moves
-        let nd = Math.min(nx, ny);
-        let ns = Math.abs(ny - nx);
-        nDiagonal += nd;
-    
-        // Starfinder Standard Movement
-        if (rule === "5105") {
-            let nd10 = Math.floor(nDiagonal / 2) - Math.floor((nDiagonal - nd) / 2);
-            let spaces = (nd10 * 2) + (nd - nd10) + ns;
-            return spaces * canvas.dimensions.distance;
-        }
-  
-        // Euclidean Measurement
-        else if (rule === "EUCL") {
-            return Math.round(Math.hypot(nx, ny) * canvas.scene.grid.distance);
-        }
-        
-        // 5e Standard, 5-5-5 movement
-        else return (ns + nd) * canvas.scene.grid.distance;
-    });
-}
-  
-var canvas$1 = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    measureDistances: measureDistances
-});
 
 /*
 *
@@ -255,7 +227,7 @@ Hooks.on("canvasInit", gameCanvas => {
     gameCanvas.grid.diagonalRule = game.settings.get("sfrpgbb", "diagonalMovement");
     console.log(gameCanvas);
     console.log(canvas);
-    SquareGrid.prototype.measureDistances = canvas.measureDistances;
+    SquareGrid.prototype.measureDistances = measureDistances;
   });
 
 Hooks.once("init", function() {
