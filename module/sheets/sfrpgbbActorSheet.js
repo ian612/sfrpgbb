@@ -1,3 +1,5 @@
+import { sfrpgbb } from "../config.js";
+
 export default class sfrpgbbActorSheet extends ActorSheet {
     get template() {
         return `systems/sfrpgbb/templates/sheets/${this.document.type}-sheet.hbs`;
@@ -159,11 +161,13 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         event.preventDefault();
         const rollData = event.currentTarget.dataset;
         let bonus = 0;
-        //console.log(rollData);
+        let abilityBonus = 0;
+        console.log(rollData);
 
         // Select whether it's a melee or ranged weapon, choose appropriate damage bonus
         if (rollData.weaponType == "meleeBasic" || rollData.weaponType == "meleeAdvanced") {
             bonus = rollData.meleeDamage;
+            abilityBonus = rollData.ownerStr;
         }
         else if (rollData.weaponType == "smallArms" || rollData.weaponType == "longArms") {
             bonus = rollData.rangedDamage;
@@ -173,11 +177,12 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         }
 
         // Construct the roll dialog text
-        let rollText = rollData.weaponName + " " + game.i18n.translations.sfrpgbb.weapon.damageRoll + " (" + rollData.damageType + ")";
+        let rollText = rollData.weaponName + " " + game.i18n.translations.sfrpgbb.weapon.damageRoll + " (" + game.i18n.localize(sfrpgbb.damageTypes[rollData.damageType]) + ")";
         //console.log(rollText);
 
         // Build the roll
-        let r = new Roll("@dice + @mod", {dice: rollData.dice, mod: bonus});
+        console.log(`@dice ${Number(bonus) ? '+ @mod' : ''} ${Number(abilityBonus) ? '+ @abilityMod' : ''}`)
+        let r = new Roll(`@dice ${Number(bonus) ? '+ @mod' : ''} ${Number(abilityBonus) ? '+ @abilityMod' : ''}`, {dice: rollData.dice, mod: bonus, abilityMod: abilityBonus});
         
         // Execute the roll
         await r.roll({async:true});
