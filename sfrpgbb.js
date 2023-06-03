@@ -223,10 +223,8 @@ function migrateSceneData(scene) {
 *
 */
 
-Hooks.on("canvasInit", gameCanvas => {
-    gameCanvas.grid.diagonalRule = game.settings.get("sfrpgbb", "diagonalMovement");
-    console.log(gameCanvas);
-    console.log(canvas);
+Hooks.on("canvasInit", function() {
+    canvas.grid.diagonalRule = game.settings.get("sfrpgbb", "diagonalMovement");
     SquareGrid.prototype.measureDistances = measureDistances;
   });
 
