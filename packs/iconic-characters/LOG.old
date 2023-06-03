@@ -1,0 +1,5 @@
+2023/06/03-09:22:43.210 792c Delete type=3 #1
+2023/06/03-09:30:51.566 6ec4 Level-0 table #5: started
+2023/06/03-09:30:51.568 6ec4 Level-0 table #5: 47215 bytes OK
+2023/06/03-09:30:51.569 6ec4 Delete type=0 #3
+2023/06/03-09:30:51.588 6ec4 Manual compaction at level-0 from '!actors!4qca6ByiJ6UOiMRq' @ 72057594037927935 : 1 .. '!actors.items!y46nFaJXBlBAAXuD.qkp7dtj58hyQTpPk' @ 0 : 0; will stop at (end)
