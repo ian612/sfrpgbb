@@ -159,7 +159,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         event.preventDefault();
         const rollData = event.currentTarget.dataset;
         let bonus = 0;
-        console.log(rollData);
+        //console.log(rollData);
 
         // Select whether it's a melee or ranged weapon, choose appropriate damage bonus
         if (rollData.weaponType == "meleeBasic" || rollData.weaponType == "meleeAdvanced") {
@@ -174,7 +174,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
 
         // Construct the roll dialog text
         let rollText = rollData.weaponName + " " + game.i18n.translations.sfrpgbb.weapon.damageRoll + " (" + rollData.damageType + ")";
-        console.log(rollText);
+        //console.log(rollText);
 
         // Build the roll
         let r = new Roll("@dice + @mod", {dice: rollData.dice, mod: bonus});

@@ -1,5 +1,6 @@
 import {sfrpgbb} from "./module/config.js";
 import {sfrpgbbActor} from "./module/documents/sfrpgbbActor.js";
+import { measureDistances } from "./module/canvas.js";
 import sfrpgbbItemSheet from "./module/sheets/sfrpgbbItemSheet.js";
 import sfrpgbbActorSheet from "./module/sheets/sfrpgbbActorSheet.js";
 
@@ -28,14 +29,46 @@ async function preloadHandlebarsTemplates() {
     return loadTemplates(templatePaths);
 }
 
+
+/*
+*
+* Settings
+*
+*/
+
 function registerSystemSettings() {
+    // Version Migration
     game.settings.register("sfrpgbb", "systemMigrationVersion", {
         config: false,
         scope: "world",
         type: String,
         default: ""
     });
+
+    // Diagonal Movement Rule
+    game.settings.register("sfrpgbb", "diagonalMovement", {
+        name: "SETTINGS.DiagName",
+        hint: "SETTINGS.DiagHint",
+        scope: "world",
+        config: true,
+        default: "5105",
+        type: String,
+        choices: {
+            5105: "SETTINGS.Diag5105",
+            555: "SETTINGS.Diag555",
+            EUC5: "SETTINGS.DiagEuc5",
+            EUCL: "SETTINGS.DiagEucl"
+        },
+        onChange: rule => canvas.grid.diagonalRule = rule
+    });
 }
+
+
+/*
+*
+* Migration
+*
+*/
 
 async function migrateWorld() {
     // Migrate Actors in Actor List
@@ -182,6 +215,18 @@ function migrateSceneData(scene) {
   
     return { tokens };
 }
+
+
+/*
+*
+* Hooks
+*
+*/
+
+Hooks.on("canvasInit", function() {
+    canvas.grid.diagonalRule = game.settings.get("sfrpgbb", "diagonalMovement");
+    SquareGrid.prototype.measureDistances = measureDistances;
+  });
 
 Hooks.once("init", function() {
     console.log("sfrpgbb | Initializing Starfinder Beginner Box System");

@@ -1,15 +1,22 @@
 {
-    "ACTOR.TypeCharacter": "Player Character",
-    "ACTOR.TypeNpc": "Non-Player Character",
-    "ACTOR.TypeTrap": "Trap",
-    "ITEM.TypeArmor": "Armor",
-    "ITEM.TypeArmorupgrade": "Armor Upgrade",
-    "ITEM.TypeGear": "Adventuring Gear",
-    "ITEM.TypeGrenade": "Grenade",
-    "ITEM.TypeNpcability": "NPC Ability",
-    "ITEM.TypeSpell": "Spell",
-    "ITEM.TypeWeapon": "Weapon",
-    "ITEM.TypeWeaponfusion": "Weapon Fusion",
+    "TYPES.Actor.character": "Player Character",
+    "TYPES.Actor.npc": "Non-Player Character",
+    "TYPES.Actor.trap": "Trap",
+    "TYPES.Item.armor": "Armor",
+    "TYPES.Item.armorupgrade": "Armor Upgrade",
+    "TYPES.Item.gear": "Adventuring Gear",
+    "TYPES.Item.grenade": "Grenade",
+    "TYPES.Item.npcability": "NPC Ability",
+    "TYPES.Item.spell": "Spell",
+    "TYPES.Item.weapon": "Weapon",
+    "TYPES.Item.weaponfusion": "Weapon Fusion",
+
+    "SETTINGS.DiagName": "Diagonal Movement Calculation",
+    "SETTINGS.DiagHint": "This determines how diagonal movement is calculated.",
+    "SETTINGS.Diag5105": "Starfinder Standard (5-10-5)",
+    "SETTINGS.Diag555": "Alternative (5-5-5)",
+    "SETTINGS.DiagEucl": "Euclidean Distance (exact)",
+    "SETTINGS.DiagEuc5": "Euclidean Distance (round to 5)",
 
     "sfrpgbb": {
         "ability": {
