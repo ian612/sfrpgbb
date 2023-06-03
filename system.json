@@ -36,81 +36,81 @@
 			"name": "alien-adversaries",
 			"label": "Alien Adversaries",
 			"system": "sfrpgbb",
-			"path": "./packs/alien-adversaries.db",
+			"path": "./packs/alien-adversaries",
 			"type": "Actor"
 		},
 		{
 			"name": "iconic-characters",
 			"label": "Iconic Characters",
 			"system": "sfrpgbb",
-			"path": "./packs/iconic-characters.db",
+			"path": "./packs/iconic-characters",
 			"type": "Actor"
 		},
 		{
 			"name": "adventuring-gear",
 			"label": "Adventuring Gear",
 			"system": "sfrpgbb",
-			"path": "./packs/adventuring-gear.db",
+			"path": "./packs/adventuring-gear",
 			"type": "Item"
 		},
 		{
 			"name": "armor",
 			"label": "Armor",
 			"system": "sfrpgbb",
-			"path": "./packs/armor.db",
+			"path": "./packs/armor",
 			"type": "Item"
 		},
 		{
 			"name": "armor-upgrades",
 			"label": "Armor Upgrades",
 			"system": "sfrpgbb",
-			"path": "./packs/armor-upgrades.db",
+			"path": "./packs/armor-upgrades",
 			"type": "Item"
 		},
 		{
 			"name": "grenades",
 			"label": "Grenades",
 			"system": "sfrpgbb",
-			"path": "./packs/grenades.db",
+			"path": "./packs/grenades",
 			"type": "Item"
 		},
 		{
 			"name": "natural-weapons",
 			"label": "Natural Weapons",
 			"system": "sfrpgbb",
-			"path": "./packs/natural-weapons.db",
+			"path": "./packs/natural-weapons",
 			"type": "Item"
 		},
 		{
 			"name": "npc-abilities",
 			"label": "NPC Abilities",
 			"system": "sfrpgbb",
-			"path": "./packs/npc-abilities.db",
+			"path": "./packs/npc-abilities",
 			"type": "Item"
 		},
 		{
 			"name": "spells",
 			"label": "Spells",
 			"system": "sfrpgbb",
-			"path": "./packs/spells.db",
+			"path": "./packs/spells",
 			"type": "Item"
 		},
 		{
 			"name": "weapons",
 			"label": "Weapons",
 			"system": "sfrpgbb",
-			"path": "./packs/weapons.db",
+			"path": "./packs/weapons",
 			"type": "Item"
 		},
 		{
 			"name": "weapon-fusions",
 			"label": "Weapon Fusions",
 			"system": "sfrpgbb",
-			"path": "./packs/weapon-fusions.db",
+			"path": "./packs/weapon-fusions",
 			"type": "Item"
 		}
 	],
 	"url": "https://github.com/ian612/sfrpgbb",
 	"manifest": "https://raw.githubusercontent.com/ian612/sfrpgbb/main/system.json",
-	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v1.2.1.zip"
+	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v1.3.zip"
 }
