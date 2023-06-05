@@ -8,7 +8,7 @@
 		"discord": "Graham_Negative#9479"
 		}
 	],
-	"version": "1.3.1",
+	"version": "1.3.2",
 	"compatibility": {
 		"minimum": 11.299,
 		"verified": 11.300
@@ -112,5 +112,5 @@
 	],
 	"url": "https://github.com/ian612/sfrpgbb",
 	"manifest": "https://raw.githubusercontent.com/ian612/sfrpgbb/main/system.json",
-	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v1.3.1.zip"
+	"download": "https://github.com/ian612/sfrpgbb/archive/refs/tags/v1.3.2.zip"
 }
