@@ -231,7 +231,9 @@ Hooks.on("canvasInit", function() {
 Hooks.once("init", function() {
     console.log("sfrpgbb | Initializing Starfinder Beginner Box System");
 
+    // load config
     CONFIG.sfrpgbb = sfrpgbb;
+    CONFIG.statusEffects = sfrpgbb.statusEffects;
 
     // Define custom Document classes
     CONFIG.Actor.documentClass = sfrpgbbActor;

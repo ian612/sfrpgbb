@@ -116,6 +116,18 @@
             },
             "xp": "XP"
         },
+        "conditions": {
+            "dead": "Dead",
+            "asleep": "Asleep",
+            "flatFooted": "Flat-footed",
+            "frightened": "Frightened",
+            "hampered": "Hampered",
+            "helpless": "Helpless",
+            "impaired": "Impaired",
+            "offKilter": "Off-kilter",
+            "staggered": "Staggered",
+            "unconscious": "Unconscious"
+        },
         "damage": {
             "kinetic": "Kinetic",
             "acid": "Acid",
