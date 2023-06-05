@@ -144,3 +144,16 @@ sfrpgbb.npcAbilityTypes = {
     other: "sfrpgbb.general.other",
     weakness: "sfrpgbb.defence.weakness"
 }
+
+sfrpgbb.statusEffects = [
+    {id: "dead",        label: "sfrpgbb.conditions.dead",        icon: "icons/svg/skull.svg"},
+    {id: "asleep",      label: "sfrpgbb.conditions.asleep",      icon: "icons/svg/sleep.svg"},
+    {id: "flat-footed", label: "sfrpgbb.conditions.flatFooted",  icon: "icons/svg/paralysis.svg"},
+    {id: "frightened",  label: "sfrpgbb.conditions.frightened",  icon: "icons/svg/terror.svg"},
+    {id: "hampered",    label: "sfrpgbb.conditions.hampered",    icon: "icons/svg/trap.svg"},
+    {id: "helpless",    label: "sfrpgbb.conditions.helpless",    icon: "icons/svg/silenced.svg"},
+    {id: "impaired",    label: "sfrpgbb.conditions.impaired",    icon: "icons/svg/daze.svg"},
+    {id: "off-kilter",  label: "sfrpgbb.conditions.offKilter",   icon: "icons/svg/falling.svg"},
+    {id: "staggered",   label: "sfrpgbb.conditions.staggered",   icon: "icons/svg/stoned.svg"},
+    {id: "unconscious", label: "sfrpgbb.conditions.unconscious", icon: "icons/svg/unconscious.svg"}
+]
