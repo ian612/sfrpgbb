@@ -19,6 +19,8 @@ This system has multiple versions, please check below to see which version of Fo
 - Foundry v9 - System version 1.0.1 and earlier
 - Foundry v10 - System version 1.1 to 1.2
 - Foundry v11 - System version 1.3
+- Foundry v12 - System version 1.3 _should_ work
+- Foundry v13 - System version 1.3.2
 
 ### Beginner Box Adventure Content
 Please note that this game system implements rules and data compendiums only. It **DOES NOT** include the Beginner Box adventure, maps, or artwork due to licensing limitations. If you want to use this system to run the Starfinder Beginner Box adventure, you will need to import the adventure notes, maps, and artwork yourself from your pdf or physical copy of the Beginner Box. More information about the Starfinder Beginner Box, including how to purchase it, can be found on [Paizo's website](https://paizo.com/starfinder/beginnerbox).
