@@ -4,13 +4,13 @@
 </div>
 <div class="saves">
     <b>
-        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.defence.fortitude"}}" data-action-value="{{system.defence.save.fortitude.value}}" data-label="{{localize "sfrpgbb.defence.fortitude"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.fortitudeSave"}} </a>
+        <a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.defence.fortitude"}}" data-action-value="{{system.defence.save.fortitude.value}}" data-label="{{localize "sfrpgbb.defence.fortitude"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.fortitudeSave"}} </a>
     </b>: {{fetchPositive system.defence.save.fortitude.value}}<input name="system.defence.save.fortitude.value" type="number" value="{{system.defence.save.fortitude.value}}" placeholder="0" data-dtype="Number"/>,&nbsp;
     <b>
-        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.defence.reflex"}}" data-action-value="{{system.defence.save.reflex.value}}" data-label="{{localize "sfrpgbb.defence.reflex"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.reflexSave"}} </a>
+        <a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.defence.reflex"}}" data-action-value="{{system.defence.save.reflex.value}}" data-label="{{localize "sfrpgbb.defence.reflex"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.reflexSave"}} </a>
     </b>: {{fetchPositive system.defence.save.reflex.value}}<input name="system.defence.save.reflex.value" type="number" value="{{system.defence.save.reflex.value}}" placeholder="0" data-dtype="Number"/>,&nbsp;
     <b>
-        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.defence.will"}}" data-action-value="{{system.defence.save.will.value}}" data-label="{{localize "sfrpgbb.defence.will"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.willSave"}} </a>
+        <a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.defence.will"}}" data-action-value="{{system.defence.save.will.value}}" data-label="{{localize "sfrpgbb.defence.will"}} {{localize "sfrpgbb.defence.savingThrow"}}"> {{localize "sfrpgbb.defence.willSave"}} </a>
     </b>: {{fetchPositive system.defence.save.will.value}}<input name="system.defence.save.will.value" type="number" value="{{system.defence.save.will.value}}" placeholder="0" data-dtype="Number"/>
 </div>
 
@@ -19,8 +19,8 @@
     <b class="label">{{localize "sfrpgbb.defence.defensiveAbilities"}}: </b>
     {{#each system.npcAbilities.defence as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a></div>
         {{#if (isEqual item.system.value null false)}}<div class="item-quantity"><input type="number" value="{{item.system.value}}" data-dtype="Number" /></div>{{/if}}
     </div>
     {{/each}}
@@ -31,19 +31,19 @@
     <b class="label">{{localize "sfrpgbb.defence.immunities"}}: </b>
     {{#each system.npcAbilities.immunity as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a></div>
     </div>
     {{/each}}
     &nbsp;&nbsp;&nbsp;
     {{/if}}
-    
+
     {{#if (hasData system.npcAbilities.energyResist)}}
     <b class="label">{{localize "sfrpgbb.defence.energyResist"}}: </b>
     {{#each system.npcAbilities.energyResist as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a></div>
         {{#if (isEqual item.system.value null false)}}<div class="item-quantity"><input type="number" value="{{item.system.value}}" data-dtype="Number" /></div>{{/if}}
     </div>
     {{/each}}
@@ -54,8 +54,8 @@
     <b class="label">{{localize "sfrpgbb.defence.weaknesses"}}: </b>
     {{#each system.npcAbilities.weakness as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a></div>
     </div>
     {{/each}}
     &nbsp;&nbsp;&nbsp;

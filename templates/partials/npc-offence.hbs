@@ -6,8 +6,8 @@
     <b class="label">{{localize "sfrpgbb.movement.movement"}}:&nbsp;</b>
     {{#each system.npcAbilities.movement as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><b><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></b></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><b><a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a></b></div>
         {{#if (isEqual item.system.value null false)}}<div class="item-quantity"><input type="number" value="{{item.system.value}}" data-dtype="Number" /></div>{{/if}}
     </div>
     {{/each}}
@@ -18,17 +18,17 @@
 <div class="wrapper-melee">
     {{#if (hasData system.meleeWeapons)}}
     <b class="label">
-        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.attack.meleeWeapon"}}" data-action-value="{{system.attack.bonus.melee.value}}" data-label="{{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.meleeWeapon"}} </a>:&nbsp;
+        <a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.attack.meleeWeapon"}}" data-action-value="{{system.attack.bonus.melee.value}}" data-label="{{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.meleeWeapon"}} </a>:&nbsp;
     </b>
     {{#each system.meleeWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image">
-            <a class="dmg-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
-                <img class="img-rollable" src="{{item.img}}" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="24" height="24"/>
+            <a class="dmg-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
+                <img class="img-rollable" src="{{item.img}}" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="24" height="24"/>
             </a>
         </div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}}
+            <a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
@@ -45,18 +45,18 @@
 <div class="wrapper-melee">
     {{#if system.attack.multiattack}}
     <b class="label">
-        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.npc.multiattack"}}" data-action-value="{{system.attack.bonus.melee.multiattackBonus}}" data-label="{{localize "sfrpgbb.npc.multiattack"}} {{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.npc.multiattack"}} </a>:&nbsp;
+        <a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.npc.multiattack"}}" data-action-value="{{system.attack.bonus.melee.multiattackBonus}}" data-label="{{localize "sfrpgbb.npc.multiattack"}} {{localize "sfrpgbb.attack.melee"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.npc.multiattack"}} </a>:&nbsp;
     </b>
     {{#each system.meleeWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image">
-            <a class="dmg-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
-                <img class="img-rollable" src="{{item.img}}" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="24" height="24"/>
+            <a class="dmg-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
+                <img class="img-rollable" src="{{item.img}}" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="24" height="24"/>
             </a>
         </div>
         <div class="item-name">
             {{#if (isEqual item.system.quantity 1 false)}} {{item.system.quantity}}x {{/if}}
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.multiattackBonus decimals=0 sign=true}}
+            <a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.melee.multiattackBonus decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
@@ -73,17 +73,17 @@
 <div class="wrapper-ranged">
     {{#if (hasData system.rangedWeapons)}}
     <b class="label">
-        <a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.attack.rangedWeapon"}}" data-action-value="{{system.attack.bonus.ranged.value}}" data-label="{{localize "sfrpgbb.attack.ranged"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.rangedWeapon"}} </a>:&nbsp;
+        <a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize "sfrpgbb.attack.rangedWeapon"}}" data-action-value="{{system.attack.bonus.ranged.value}}" data-label="{{localize "sfrpgbb.attack.ranged"}} {{localize "sfrpgbb.attack.attackRoll"}}"> {{localize "sfrpgbb.attack.rangedWeapon"}} </a>:&nbsp;
     </b>
     {{#each system.rangedWeapons as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
         <div class="item-image">
-            <a class="dmg-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
-                <img class="img-rollable" src="{{item.img}}" title="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="24" height="24"/>
+            <a class="dmg-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" data-weapon-name="{{item.name}}" data-weapon-type="{{item.system.weaponType}}" data-damage-type="{{item.system.damageType}}" data-dice={{item.system.damage}} data-melee-damage={{../system.attack.bonus.melee.damageBonus}} data-ranged-damage={{../system.attack.bonus.ranged.damageBonus}}>
+                <img class="img-rollable" src="{{item.img}}" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{item.name}} {{localize "sfrpgbb.weapon.damage"}}" width="24" height="24"/>
             </a>
         </div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}}
+            <a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a> {{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}}
             {{#if (isEqual item.system.damageType "none" true)}}
                 ({{localize "sfrpgbb.npc.noDamage"}})
             {{/if}}
@@ -101,16 +101,16 @@
     <b class="label">{{localize "sfrpgbb.spell.secondLevel"}} {{localize "sfrpgbb.spell.spells"}} [<div class="slots"><input type="number" name="system.spells.lvl2.max" value="{{system.spells.lvl2.max}}" data-dtype="Number" /></div>&nbsp;{{localize "sfrpgbb.spell.slot-s"}}]:&nbsp;</b>
     {{#each system.spellList.two as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}
+            <a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}
                 {{#if item.system.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../system.spells.spellDCBonus 12}} {{localize (concat "sfrpgbb.defence." item.system.saveType)}}) {{/if}}
                 {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
                 {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
             </a>
         </div>
         <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
     </div>
     {{/each}}
@@ -122,16 +122,16 @@
     <b class="label">{{localize "sfrpgbb.spell.firstLevel"}} {{localize "sfrpgbb.spell.spells"}} [<div class="slots"><input type="number" name="system.spells.lvl1.max" value="{{system.spells.lvl1.max}}" data-dtype="Number" /></div>&nbsp;{{localize "sfrpgbb.spell.slot-s"}}]:&nbsp;</b>
     {{#each system.spellList.one as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}
+            <a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}
                 {{#if item.system.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../system.spells.spellDCBonus 11}} {{localize (concat "sfrpgbb.defence." item.system.saveType)}}) {{/if}}
                 {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
                 {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
             </a>
         </div>
         <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
     </div>
     {{/each}}
@@ -143,16 +143,16 @@
     <b class="label">{{localize "sfrpgbb.spell.zeroLevel"}} {{localize "sfrpgbb.spell.spells"}}:&nbsp;</b>
     {{#each system.spellList.zero as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
         <div class="item-name">
-            <a class="item-control item-edit" title="Edit Item">{{item.name}}
+            <a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}
                 {{#if item.system.hasSave}} ({{localize "sfrpgbb.general.dc"}} {{add ../system.spells.spellDCBonus 10}} {{localize (concat "sfrpgbb.defence." item.system.saveType)}}) {{/if}}
                 {{#if item.system.meleeAttack}} ({{numberFormat ../system.attack.bonus.melee.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.meleeAttack"}}) {{/if}}
                 {{#if item.system.rangedAttack}} ({{numberFormat ../system.attack.bonus.ranged.value decimals=0 sign=true}} {{localize "sfrpgbb.attack.rangedAttack"}}) {{/if}}
             </a>
         </div>
         <div class="item-controls">
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
     </div>
     {{/each}}
@@ -164,8 +164,8 @@
     <b class="label">{{localize "sfrpgbb.attack.offensiveAbilities"}}: </b>
     {{#each system.npcAbilities.offence as |item id|}}
     <div class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <div class="item-name"><a class="item-control item-edit" title="Edit Item">{{item.name}}</a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+        <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item">{{item.name}}</a></div>
     </div>
     {{/each}}
     {{/if}}
@@ -199,7 +199,7 @@
             <input name="system.spells.isCaster" type="checkbox" {{checked system.spells.isCaster}} />
         </div>
     </div>
-    
+
     <div class="row2">
         {{#if system.spells.isCaster}}
         <div class="caster-bonus">

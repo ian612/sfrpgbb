@@ -17,7 +17,7 @@
     {{#each system.skills as |skill nm|}}
     {{#if (isEqual nm "themeKnowledge" false)}}
     <tr>
-        <td class="blockTitle"><a class="btn-roll" title="{{localize "sfrpgbb.general.clickToRoll"}} {{localize (concat "sfrpgbb.skill." nm)}}" data-action-value="{{skill.value}}" data-label="{{localize (concat "sfrpgbb.skill." nm)}} {{localize "sfrpgbb.skill.skillCheck"}}"> {{localize (concat "sfrpgbb.skill." nm)}} </a></td>
+        <td class="blockTitle"><a class="btn-roll" data-tooltip="{{localize "sfrpgbb.general.clickToRoll"}} {{localize (concat "sfrpgbb.skill." nm)}}" data-action-value="{{skill.value}}" data-label="{{localize (concat "sfrpgbb.skill." nm)}} {{localize "sfrpgbb.skill.skillCheck"}}"> {{localize (concat "sfrpgbb.skill." nm)}} </a></td>
         <td class="blueBox rightThickBorder">{{numberFormat skill.value decimals=0 sign=true}}</td>
         <td>
             <sup class="superscript">{{localize (concat "sfrpgbb.ability." skill.abilityName)}}</sup><br>

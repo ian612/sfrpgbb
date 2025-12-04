@@ -6,10 +6,10 @@
         {{#if (hasData system.npcAbilities.defence)}}
         {{#each system.npcAbilities.defence as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}
@@ -20,10 +20,10 @@
         {{#if (hasData system.npcAbilities.energyResist)}}
         {{#each system.npcAbilities.energyResist as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}
@@ -34,10 +34,10 @@
         {{#if (hasData system.npcAbilities.immunity)}}
         {{#each system.npcAbilities.immunity as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}
@@ -48,10 +48,10 @@
         {{#if (hasData system.npcAbilities.weakness)}}
         {{#each system.npcAbilities.weakness as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}
@@ -62,10 +62,10 @@
         {{#if (hasData system.npcAbilities.movement)}}
         {{#each system.npcAbilities.movement as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}
@@ -76,24 +76,24 @@
         {{#if (hasData system.npcAbilities.offence)}}
         {{#each system.npcAbilities.offence as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{stripTags item.system.description}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}
         {{/if}}
     </div>
-    
+
     <div class="ability-fullText">
         {{#if (hasData system.npcAbilities.other)}}
         {{#each system.npcAbilities.other as |item id|}}
         <div class="item flexrow" data-item-id="{{item.id}}">
-            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-            <div class="item-name"><a class="item-control item-edit" title="Edit Item"><b>{{item.name}} </b></a>{{{stripTags item.system.description}}}</div>
+            <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="24" height="24"/></div>
+            <div class="item-name"><a class="item-control item-edit" data-tooltip="Edit Item"><b>{{item.name}} </b></a>{{{stripTags item.system.description}}}</div>
             <div class="item-controls">
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                <a class="item-control item-delete" data-tooltip="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>
         {{/each}}

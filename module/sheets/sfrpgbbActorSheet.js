@@ -28,10 +28,10 @@ export default class sfrpgbbActorSheet extends ActorSheet {
     /** @override */
     activateListeners(html) {
         super.activateListeners(html);
-        
+
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
-        
+
         // Add Inventory Item
         //html.find('.item-create').click(ev => this._onItemCreate(ev));;
 
@@ -41,7 +41,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
           const item = this.actor.items.get(li.data("itemId"));
           item.sheet.render(true);
         });
-        
+
         // Delete Inventory Item
         html.find('.item-delete').click(ev => {
           const li = $(ev.currentTarget).parents(".item");
@@ -112,7 +112,7 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         const secondMod = event.currentTarget.dataset.abilityMod;
         const rollText = event.currentTarget.dataset.label;
         let modifier = null;
-        
+
         //console.log(event.currentTarget.dataset);
         //console.log(event.currentTarget);
         //console.log(secondMod);
@@ -130,10 +130,10 @@ export default class sfrpgbbActorSheet extends ActorSheet {
 
         // Build the roll
         let r = new Roll("1d20 + @mod", {mod: modifier});
-        
+
         // Execute the roll
         await r.roll({async:true});
-        
+
         // Send the result of the roll to the chat
         await r.toMessage({
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -162,7 +162,6 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         const rollData = event.currentTarget.dataset;
         let bonus = 0;
         let abilityBonus = 0;
-        console.log(rollData);
 
         // Select whether it's a melee or ranged weapon, choose appropriate damage bonus
         if (rollData.weaponType == "meleeBasic" || rollData.weaponType == "meleeAdvanced") {
@@ -183,10 +182,10 @@ export default class sfrpgbbActorSheet extends ActorSheet {
         // Build the roll
         console.log(`@dice ${Number(bonus) ? '+ @mod' : ''} ${Number(abilityBonus) ? '+ @abilityMod' : ''}`)
         let r = new Roll(`@dice ${Number(bonus) ? '+ @mod' : ''} ${Number(abilityBonus) ? '+ @abilityMod' : ''}`, {dice: rollData.dice, mod: bonus, abilityMod: abilityBonus});
-        
+
         // Execute the roll
         await r.roll({async:true});
-        
+
         // Send the result of the roll to the chat
         await r.toMessage({
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),

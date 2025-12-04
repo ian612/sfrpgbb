@@ -1,6 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header">
-        <img class="icon" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <img class="icon" src="{{item.img}}" data-edit="img" data-tooltip="{{item.name}}" height="64" width="64"/>
         <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize "sfrpgbb.general.name" }}"/></h1>
     </header>
     <div class="sheet-content">
@@ -49,7 +49,7 @@
             </tr>
 
         </table>
-        
+
         <b>{{localize "sfrpgbb.equipment.armor"}} - {{localize "sfrpgbb.general.description"}}</b>
         {{editor system.description target="system.description" button=true owner=owner editable=true}}
     </div>

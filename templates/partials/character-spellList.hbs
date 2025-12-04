@@ -7,15 +7,15 @@
         <div class="item-image"><h3>&nbsp;</h3></div>
         <div class="item-name" style="flex-grow: 2;"><h3><b>{{localize "sfrpgbb.spell.zeroLevel"}}</b></h3></div>
         <div class="item-controls"><h3>&nbsp;</h3>
-            <!--<a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
+            <!--<a class="item-control item-create" data-tooltip="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
         </div>
     </li>
     {{#each system.spellList.zero as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
-        <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title={{localize "sfrpgbb.general.details"}}><h4 class="item-name">{{item.name}}</h4></a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="36" height="36"/></div>
+        <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" data-tooltip={{localize "sfrpgbb.general.details"}}><h4 class="item-name">{{item.name}}</h4></a></div>
         <div class="item-controls">
-            <a class="item-control item-delete" title={{localize "sfrpgbb.spell.deleteSpell"}}><i class="fas fa-trash"></i></a>
+            <a class="item-control item-delete" data-tooltip={{localize "sfrpgbb.spell.deleteSpell"}}><i class="fas fa-trash"></i></a>
         </div>
     </li>
     {{/each}}
@@ -25,15 +25,15 @@
         <div class="item-image"><h3>&nbsp;</h3></div>
         <div class="item-name" style="flex-grow: 2;"><h3><b>{{localize "sfrpgbb.spell.firstLevel"}}</b></h3></div>
         <div class="item-controls"><h3>&nbsp;</h3>
-            <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
+            <!-- <a class="item-control item-create" data-tooltip="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
         </div>
     </li>
     {{#each system.spellList.one as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
-        <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title={{localize "sfrpgbb.spell.editSpell"}}><h4 class="item-name">{{item.name}}</h4></a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="36" height="36"/></div>
+        <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" data-tooltip={{localize "sfrpgbb.general.details"}}><h4 class="item-name">{{item.name}}</h4></a></div>
         <div class="item-controls">
-            <a class="item-control item-delete" title={{localize "sfrpgbb.spell.deleteSpell"}}><i class="fas fa-trash"></i></a>
+            <a class="item-control item-delete" data-tooltip={{localize "sfrpgbb.spell.deleteSpell"}}><i class="fas fa-trash"></i></a>
         </div>
     </li>
     {{/each}}
@@ -43,15 +43,15 @@
         <div class="item-image"><h3>&nbsp;</h3></div>
         <div class="item-name" style="flex-grow: 2;"><h3><b>{{localize "sfrpgbb.spell.secondLevel"}}</b></h3></div>
         <div class="item-controls"><h3>&nbsp;</h3>
-            <!-- <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
+            <!-- <a class="item-control item-create" data-tooltip="Create item" data-type="item"><i class="fas fa-plus"></i> Add spell</a> -->
         </div>
     </li>
     {{#each system.spellList.two as |item id|}}
     <li class="item flexrow" data-item-id="{{item.id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="36" height="36"/></div>
-        <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" title={{localize "sfrpgbb.spell.editSpell"}}><h4 class="item-name">{{item.name}}</h4></a></div>
+        <div class="item-image"><img src="{{item.img}}" data-tooltip="{{item.name}}" width="36" height="36"/></div>
+        <div class="item-name" style="flex-grow: 2;"><a class="item-control item-edit" data-tooltip={{localize "sfrpgbb.general.details"}}><h4 class="item-name">{{item.name}}</h4></a></div>
         <div class="item-controls">
-            <a class="item-control item-delete" title={{localize "sfrpgbb.spell.deleteSpell"}}><i class="fas fa-trash"></i></a>
+            <a class="item-control item-delete" data-tooltip={{localize "sfrpgbb.spell.deleteSpell"}}><i class="fas fa-trash"></i></a>
         </div>
     </li>
     {{/each}}

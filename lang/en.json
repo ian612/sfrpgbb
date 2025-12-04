@@ -50,6 +50,7 @@
             "attacks": "Attacks",
             "attackRoll": "Attack Roll",
             "damageBonus": "Damage Bonus",
+            "damageTooltip": "Click the Weapon's Icon to Roll Damage",
             "grenades": "Grenades",
             "longArms": "Long Arms",
             "melee": "Melee",
