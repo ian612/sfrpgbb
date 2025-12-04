@@ -28,6 +28,7 @@ Delapouite
 ----------------
 advanced-tool-kit.svg - Swiss army knife
 animistic-tools.svg - Swiss army knife
+astronaut-helmet.svg
 backpack.svg - Backpack
 bedroll.svg - Rolled cloth
 blanket.svg - Rolled cloth
@@ -141,6 +142,7 @@ hologram-rejuvenation.svg - Holosphere
 
 Lorc
 ----------------
+alien-stare.svg
 digital-harrow-deck.svg - Poker Hand
 grappler.svg - Grapple
 medpatch.svg - Bandage roll
